@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Sprites Turing",
-    "path":"folders/Sprites/Sprites Turing.yy",
+    "name":"Sprites Cenários",
+    "path":"folders/Sprites Cenários.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
