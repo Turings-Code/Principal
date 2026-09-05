@@ -3,7 +3,7 @@ var move_y = 0;
 if (room == rm_turing) {
 	vel = 7; }
 else if (room == rm_bletchley) {
-	vel = 3; }
+	vel = 7; }
 else if (room == rm_hust8) {
 	vel = 2; }
 
