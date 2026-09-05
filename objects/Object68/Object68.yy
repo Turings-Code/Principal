@@ -6,8 +6,8 @@
   "name":"Object68",
   "overriddenProperties":[],
   "parent":{
-    "name":"Jogo",
-    "path":"Jogo.yyp",
+    "name":"Sprites Turing",
+    "path":"folders/Sprites/Sprites Turing.yy",
   },
   "parentObjectId":null,
   "persistent":false,

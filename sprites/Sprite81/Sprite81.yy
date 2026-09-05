@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Jogo",
-    "path":"Jogo.yyp",
+    "name":"Sprites Fase 1 (hust 8)",
+    "path":"folders/Sprites/Sprites Fase 1 (hust 8).yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
