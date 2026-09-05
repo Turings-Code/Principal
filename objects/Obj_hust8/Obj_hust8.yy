@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"Object68",
+  "%Name":"Obj_hust8",
   "eventList":[],
   "managed":true,
-  "name":"Object68",
+  "name":"Obj_hust8",
   "overriddenProperties":[],
   "parent":{
     "name":"Sprites Turing",
