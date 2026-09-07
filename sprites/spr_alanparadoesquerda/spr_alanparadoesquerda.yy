@@ -1,12 +1,12 @@
 {
   "$GMSprite":"v2",
-  "%Name":"Sprite1",
+  "%Name":"spr_alanparadoesquerda",
   "bboxMode":2,
   "bbox_bottom":220,
   "bbox_left":12,
   "bbox_right":95,
   "bbox_top":170,
-  "collisionKind":0,
+  "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
@@ -21,19 +21,19 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"83eb83aa-d0f0-45e7-8a53-3237d02623a4","blendMode":0,"displayName":"default","isLocked":false,"name":"83eb83aa-d0f0-45e7-8a53-3237d02623a4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"Sprite1",
+  "name":"spr_alanparadoesquerda",
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Sprites Turing",
-    "path":"folders/Sprites/Sprites Turing.yy",
+    "name":"Sprites Personagens",
+    "path":"folders/Sprites/Sprites Personagens.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"Sprite1",
+    "%Name":"spr_alanparadoesquerda",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"Sprite1",
+    "name":"spr_alanparadoesquerda",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,7 +69,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c7d94a52-3369-4c47-8b39-4d44a39e45aa","path":"sprites/Sprite1/Sprite1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c7d94a52-3369-4c47-8b39-4d44a39e45aa","path":"sprites/spr_alanparadoesquerda/spr_alanparadoesquerda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"4c0dc7b2-6746-4f1b-a1bf-1495c67b5037","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

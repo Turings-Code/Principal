@@ -1,5 +1,6 @@
 var move_x = 0;
 var move_y = 0;
+
 if (room == rm_turing) {
 	vel = 7; }
 else if (room == rm_bletchley) {
@@ -9,39 +10,44 @@ else if (room == rm_hust8) {
 
 if (keyboard_check(ord("S"))) {
     move_y = vel;
-    sprite_index = Sprite1_1;
+    sprite_index = spr_alanbaixo;
     direcao = "cima";
 }
-else if (keyboard_check(ord("W"))) {
+if (keyboard_check(ord("W"))) {
     move_y = -(vel);
-    sprite_index = Sprite1_2;
+    sprite_index = spr_alancima;
     direcao = "baixo";
 }
-else if (keyboard_check(ord("A"))) {
+if (keyboard_check(ord("A"))) {
     move_x = -(vel);
-    sprite_index = Sprite1_E;
+    sprite_index = spr_alanesquerda;
     direcao = "esquerda";
 }
-else if (keyboard_check(ord("D"))) {
+if (keyboard_check(ord("D"))) {
     move_x = vel;
-    sprite_index = Sprite1_D;
+    sprite_index = spr_alandireita;
     direcao = "direita";
 }
-else {
+
+if (move_x != 0 && move_y != 0) {
+    move_x *= 0.9;
+    move_y *= 0.9;
+}
+
+if (move_x == 0 && move_y == 0) {
     if (direcao == "cima") {
-        sprite_index = Sprite1;
+        sprite_index = spr_alanparado;
     }
     else if (direcao == "baixo") {
-        sprite_index = Sprite2;
+        sprite_index = spr_alanparadocima;
     }
     else if (direcao == "esquerda") {
-        sprite_index = SpriteE;
+        sprite_index = spr_alanparadoesquerda;
     }
     else if (direcao == "direita") {
-        sprite_index = SpriteD;
+        sprite_index = spr_alanparadodireita;
     }
 }
 
 scr_collision_move(move_x, move_y);
-
 depth = -y;
