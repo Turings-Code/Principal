@@ -1,13 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_bleatchleypark",
-  "eventList":[],
+  "%Name":"obj_bleatchleypark",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_alan","path":"objects/obj_alan/obj_alan.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"Obj_bleatchleypark",
+  "name":"obj_bleatchleypark",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sprites Turing",
-    "path":"folders/Sprites/Sprites Turing.yy",
+    "name":"Objetos",
+    "path":"folders/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,9 +33,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_base2",
-    "path":"sprites/spr_base2/spr_base2.yy",
+    "name":"spr_base",
+    "path":"sprites/spr_base/spr_base.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

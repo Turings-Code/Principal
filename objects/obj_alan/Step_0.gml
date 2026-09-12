@@ -5,8 +5,8 @@ if (room == rm_turing) {
 	vel = 7; }
 else if (room == rm_bletchley) {
 	vel = 7; }
-else if (room == rm_hust8) {
-	vel = 2; }
+else if (room == rm_hut8) {
+	vel = 7; }
 
 if (keyboard_check(ord("S"))) {
     move_y = vel;

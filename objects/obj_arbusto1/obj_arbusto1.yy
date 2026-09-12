@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_hust8",
-  "eventList":[],
+  "%Name":"obj_arbusto1",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"Obj_hust8",
+  "name":"obj_arbusto1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sprites Turing",
-    "path":"folders/Sprites/Sprites Turing.yy",
+    "name":"Objetos",
+    "path":"folders/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_base2",
-    "path":"sprites/spr_base2/spr_base2.yy",
+    "name":"spr_arbusto1",
+    "path":"sprites/spr_arbusto1/spr_arbusto1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
