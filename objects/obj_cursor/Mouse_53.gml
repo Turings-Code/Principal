@@ -8,7 +8,7 @@ if (place_meeting(x, y, obj_area2)) {
     with (obj_error) { instance_destroy(); }
 } else if (place_meeting(x, y, obj_area6)&&!place_meeting(x, y, obj_descricao)&&!place_meeting(x, y, obj_areapai)) {
 	room_goto(rm_creditos);} else if (place_meeting(x, y, obj_area7)&&!place_meeting(x, y, obj_descricao)&&!place_meeting(x, y, obj_areapai)) {
-	room_goto(rm_turing);} 
+	room_goto(rm_quarto);} 
 
 if (instance_exists(obj_descricao)) {
     with (obj_descricao) { instance_destroy(); }}

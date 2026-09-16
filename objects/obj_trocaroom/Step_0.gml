@@ -1,6 +1,7 @@
+if(instance_exists(obj_troca)&&instance_exists(obj_alan)){
 if (place_meeting(obj_alan.x, obj_alan.y, obj_troca)) {
             estado = "entrando";
-        }
+        }}
 if (room != room_anterior) {
 
     estado = "saindo";
@@ -12,6 +13,15 @@ if (estado == "entrando") {
     if (alpha >= 1) {
         alpha = 1;
         room_goto(rm_bletchley);
+        
+    }
+}}
+if(room=rm_quarto){
+if (estado == "entrando") {
+    alpha += 0.02;
+    if (alpha >= 1) {
+        alpha = 1;
+        room_goto(rm_turing);
         
     }
 }}

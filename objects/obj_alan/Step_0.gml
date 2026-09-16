@@ -2,19 +2,26 @@ var move_x = 0;
 var move_y = 0;
 
 if (room == rm_turing) {
-	vel = 7; }
+	vel = 9; }
 else if (room == rm_bletchley) {
 	vel = 7; }
 else if (room == rm_hut8) {
 	vel = 7; }
+else if (room == rm_quarto) {
+	vel = 7; }
+
+var vel_y = vel;
+if (room == rm_turing && x >= 100 && x <= 500 && y >= 1660 && y <= 2300) {
+    vel_y -= 2;
+}
 
 if (keyboard_check(ord("S"))) {
-    move_y = vel;
+    move_y = vel_y;
     sprite_index = spr_alanbaixo;
     direcao = "cima";
 }
 if (keyboard_check(ord("W"))) {
-    move_y = -(vel);
+    move_y = -(vel_y);
     sprite_index = spr_alancima;
     direcao = "baixo";
 }
@@ -48,6 +55,8 @@ if (move_x == 0 && move_y == 0) {
         sprite_index = spr_alanparadodireita;
     }
 }
+
+
 
 scr_collision_move(move_x, move_y);
 depth = -y;
