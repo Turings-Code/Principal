@@ -9,6 +9,8 @@ else if (room == rm_hut8) {
 	vel = 7; }
 else if (room == rm_quarto) {
 	vel = 7; }
+else if (room == rm_hut6) {
+	vel = 9; }
 
 var vel_y = vel;
 if (room == rm_turing && x >= 100 && x <= 500 && y >= 1660 && y <= 2300) {
