@@ -1,0 +1,2 @@
+mouseemcima=false;
+acabou=false; 

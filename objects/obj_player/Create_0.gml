@@ -1,0 +1,12 @@
+grav = 0.5;
+vspeed = 0; 
+jump_force = -10;
+image_xscale=7;
+image_yscale=7;
+image_alpha=0;
+vida = 3;
+escudo_ativo = false;
+tempo_escudo = 0;
+piscar = false;
+piscar_timer = 0;
+time = 0;
