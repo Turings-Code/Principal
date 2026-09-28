@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_fun_credits",
+  "%Name":"snd_credits",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":67.66295,
   "exportDir":"",
-  "name":"snd_fun_credits",
+  "name":"snd_credits",
   "parent":{
     "name":"Sons_do_MC_Nakamoto",
     "path":"folders/Sounds/Sons_do_MC_Nakamoto.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_fun_credits.wav",
+  "soundFile":"snd_credits.wav",
   "volume":1.0,
 }

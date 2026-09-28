@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_efe_hit",
+  "%Name":"snd_hit",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":0.18632653,
   "exportDir":"",
-  "name":"snd_efe_hit",
+  "name":"snd_hit",
   "parent":{
     "name":"Sons_do_MC_Nakamoto",
     "path":"folders/Sounds/Sons_do_MC_Nakamoto.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_efe_hit.wav",
+  "soundFile":"snd_hit.wav",
   "volume":1.0,
 }

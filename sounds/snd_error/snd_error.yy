@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_efe_game_over",
+  "%Name":"snd_error",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.0,
+  "duration":0.65,
   "exportDir":"",
-  "name":"snd_efe_game_over",
+  "name":"snd_error",
   "parent":{
     "name":"Sons_do_MC_Nakamoto",
     "path":"folders/Sounds/Sons_do_MC_Nakamoto.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_efe_game_over.wav",
+  "soundFile":"snd_error.mp3",
   "volume":1.0,
 }

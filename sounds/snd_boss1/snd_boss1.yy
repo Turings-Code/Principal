@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_fun_boss_1",
+  "%Name":"snd_boss1",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":33.024014,
   "exportDir":"",
-  "name":"snd_fun_boss_1",
+  "name":"snd_boss1",
   "parent":{
     "name":"Sons_do_MC_Nakamoto",
     "path":"folders/Sounds/Sons_do_MC_Nakamoto.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_fun_boss_1.mp3",
+  "soundFile":"snd_boss1.mp3",
   "volume":1.0,
 }

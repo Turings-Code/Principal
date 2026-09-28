@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_efe_clique",
+  "%Name":"snd_clique",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":0.19201814,
   "exportDir":"",
-  "name":"snd_efe_clique",
+  "name":"snd_clique",
   "parent":{
     "name":"Sons_do_MC_Nakamoto",
     "path":"folders/Sounds/Sons_do_MC_Nakamoto.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_efe_clique.mp3",
+  "soundFile":"snd_clique.mp3",
   "volume":1.0,
 }

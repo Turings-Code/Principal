@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_efe_error",
+  "%Name":"snd_boss2",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.65,
+  "duration":30.94737,
   "exportDir":"",
-  "name":"snd_efe_error",
+  "name":"snd_boss2",
   "parent":{
     "name":"Sons_do_MC_Nakamoto",
     "path":"folders/Sounds/Sons_do_MC_Nakamoto.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_efe_error.mp3",
+  "soundFile":"snd_boss2.wav",
   "volume":1.0,
 }
