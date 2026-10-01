@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Sprites Créditos",
-    "path":"folders/Sprites/Sprites Créditos.yy",
+    "name":"Créditos",
+    "path":"folders/Sprites/Créditos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -13,8 +13,8 @@
   "name":"obj_titulosair",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos Palavras Rodrigo",
-    "path":"folders/Objetos/Objetos Palavras Rodrigo.yy",
+    "name":"Palavras Rodrigo",
+    "path":"folders/Objetos/Palavras Rodrigo.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -8,8 +8,8 @@
   "name":"obj_arbusto1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Bletchley Park",
+    "path":"folders/Objetos/Bletchley Park.yy",
   },
   "parentObjectId":null,
   "persistent":false,

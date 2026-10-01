@@ -7,6 +7,6 @@ if(room==rm_quarto){
 if(room==rm_creditos){
 	window_set_cursor(cr_default);
 }
-if(room==rm_turing){
+if(room==rm_mansao){
 	window_set_cursor(cr_default);
 }

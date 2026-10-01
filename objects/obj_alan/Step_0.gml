@@ -1,7 +1,7 @@
 var move_x = 0;
 var move_y = 0;
 
-if (room == rm_turing) {
+if (room == rm_mansao) {
 	vel = 9; }
 else if (room == rm_bletchley) {
 	vel = 7; }
@@ -13,7 +13,7 @@ else if (room == rm_hut6) {
 	vel = 9; }
 
 var vel_y = vel;
-if (room == rm_turing && x >= 100 && x <= 500 && y >= 1660 && y <= 2300) {
+if (room == rm_mansao && x >= 100 && x <= 500 && y >= 1660 && y <= 2300) {
     vel_y -= 2;
 }
 

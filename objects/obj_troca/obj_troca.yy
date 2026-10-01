@@ -28,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_base",
-    "path":"sprites/spr_base/spr_base.yy",
+    "name":"spr_base3",
+    "path":"sprites/spr_base3/spr_base3.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

@@ -8,8 +8,8 @@
   "name":"obj_paredeinv",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos Turing",
-    "path":"folders/Objetos/Objetos Turing.yy",
+    "name":"Mansão",
+    "path":"folders/Objetos/Mansão.yy",
   },
   "parentObjectId":null,
   "persistent":false,

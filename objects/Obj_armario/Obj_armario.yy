@@ -9,8 +9,8 @@
   "name":"Obj_armario",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sprites Fase 1 (hust 8)",
-    "path":"folders/Sprites/Sprites Fase 1 (hust 8).yy",
+    "name":"Hut 8",
+    "path":"folders/Sprites/Hut 8.yy",
   },
   "parentObjectId":null,
   "persistent":false,

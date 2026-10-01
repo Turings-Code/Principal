@@ -48,8 +48,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Sprites Turing",
-    "path":"folders/Sprites/Sprites Turing.yy",
+    "name":"Mansão",
+    "path":"folders/Sprites/Mansão.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

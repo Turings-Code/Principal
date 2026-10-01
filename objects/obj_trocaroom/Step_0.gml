@@ -7,7 +7,7 @@ if (room != room_anterior) {
     estado = "saindo";
     room_anterior = room;
 }
-if(room=rm_turing){
+if(room=rm_mansao){
 if (estado == "entrando") {
     alpha += 0.02;
     if (alpha >= 1) {
@@ -21,7 +21,7 @@ if (estado == "entrando") {
     alpha += 0.02;
     if (alpha >= 1) {
         alpha = 1;
-        room_goto(rm_turing);
+        room_goto(rm_mansao);
         
     }
 }}
@@ -39,7 +39,7 @@ if (estado == "entrando") {
     alpha += 0.02;
     if (alpha >= 1) {
         alpha = 1;
-        room_goto(rm_turing);
+        room_goto(rm_mansao);
         
     }
 }}

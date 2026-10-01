@@ -8,8 +8,8 @@
   "name":"obj_life3",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos Créditos",
-    "path":"folders/Objetos/Objetos Créditos.yy",
+    "name":"Créditos",
+    "path":"folders/Objetos/Créditos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
