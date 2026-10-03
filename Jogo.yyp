@@ -300,12 +300,12 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_inicio","path":"rooms/rm_inicio/rm_inicio.yy",},},
+    {"roomId":{"name":"rm_hut8","path":"rooms/rm_hut8/rm_hut8.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_quarto","path":"rooms/rm_quarto/rm_quarto.yy",},},
     {"roomId":{"name":"rm_bletchley","path":"rooms/rm_bletchley/rm_bletchley.yy",},},
     {"roomId":{"name":"rm_mansao","path":"rooms/rm_mansao/rm_mansao.yy",},},
     {"roomId":{"name":"rm_creditos","path":"rooms/rm_creditos/rm_creditos.yy",},},
-    {"roomId":{"name":"rm_hut8","path":"rooms/rm_hut8/rm_hut8.yy",},},
     {"roomId":{"name":"rm_hut6","path":"rooms/rm_hut6/rm_hut6.yy",},},
     {"roomId":{"name":"rm_bletchley2","path":"rooms/rm_bletchley2/rm_bletchley2.yy",},},
   ],
