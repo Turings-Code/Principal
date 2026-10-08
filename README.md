@@ -11,8 +11,3 @@
 - Maysa Vieira da Silva  
 - Rodrigo Makoto Gonçalves Kanezuka  
 - Thainá Bezerra Lima  
-
-Nossos sprites mais importantes:
-spr_bletchley
-spr_FundoTuring
-spr_hut8
