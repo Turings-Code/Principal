@@ -144,6 +144,7 @@
     {"id":{"name":"obj_viewport","path":"objects/obj_viewport/obj_viewport.yy",},},
     {"id":{"name":"obj_Voltamenu","path":"objects/obj_Voltamenu/obj_Voltamenu.yy",},},
     {"id":{"name":"obj_xeroxalto","path":"objects/obj_xeroxalto/obj_xeroxalto.yy",},},
+    {"id":{"name":"test","path":"objects/test/test.yy",},},
     {"id":{"name":"rm_bletchley","path":"rooms/rm_bletchley/rm_bletchley.yy",},},
     {"id":{"name":"rm_bletchley2","path":"rooms/rm_bletchley2/rm_bletchley2.yy",},},
     {"id":{"name":"rm_creditos","path":"rooms/rm_creditos/rm_creditos.yy",},},
