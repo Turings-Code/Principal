@@ -1,0 +1,2 @@
+caixadetexto = false;
+frase = "Nada";

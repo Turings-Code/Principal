@@ -1,0 +1,2 @@
+cria=false;
+criou=false

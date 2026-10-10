@@ -84,7 +84,7 @@ if (estado == "entrando") {
     }
 }}
 if (estado == "saindo") {
-	show_debug_message("foi")
+	
     alpha -= 0.02;
     if (alpha <= 0) {
         alpha = 0;
