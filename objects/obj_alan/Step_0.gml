@@ -1,3 +1,9 @@
+if (instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
+    || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)) {
+    scr_collision_move(0, 0);
+    exit;
+}
+
 var move_x = 0;
 var move_y = 0;
 
@@ -6,7 +12,7 @@ if (room == rm_mansao) {
 else if (room == rm_bletchley) {
 	vel = 7; }
 else if (room == rm_hut8) {
-	vel = 7; }
+	vel = 9; }
 else if (room == rm_quarto) {
 	vel = 7; }
 else if (room == rm_hut6) {
@@ -59,29 +65,29 @@ if (move_x == 0 && move_y == 0) {
 }
 
 // --- ÍCONES E / F (só um aparece por vez) ---
-var perto_folhas = (instance_exists(obj_folhas) && distance_to_object(obj_folhas) < 60);
-var perto_tempf = (instance_exists(obj_tempf) && distance_to_object(obj_tempf) < 60);
+var perto_e = (instance_exists(obj_aparecee) && distance_to_object(obj_aparecee) < 80);
+var perto_f = (instance_exists(obj_aparecef) && distance_to_object(obj_aparecef) < 80);
 
-var mostrar_e = perto_folhas;
-var mostrar_f = perto_tempf;
+var mostrar_e = perto_e;
+var mostrar_f = perto_f;
 
 // se estiver perto dos dois, vence o mais próximo
-if (perto_folhas && perto_tempf) {
-    var _folha = instance_nearest(x, y, obj_folhas);
-    var _tempf = instance_nearest(x, y, obj_tempf);
+if (perto_e && perto_f) {
+    var _ae = instance_nearest(x, y, obj_aparecee);
+    var _af = instance_nearest(x, y, obj_aparecef);
 
-    if (point_distance(x, y, _folha.x, _folha.y) <= point_distance(x, y, _tempf.x, _tempf.y)) {
+    if (point_distance(x, y, _ae.x, _ae.y) <= point_distance(x, y, _af.x, _af.y)) {
         mostrar_f = false;
     } else {
         mostrar_e = false;
     }
 }
 
-// --- letra E (folhas) ---
+// --- letra E ---
 if (mostrar_e) {
-    var _folha = instance_nearest(x, y, obj_folhas);
-    var _ex = _folha.x + offset_letrae_x;
-    var _ey = _folha.y + offset_letrae_y;
+    var _ae2 = instance_nearest(x, y, obj_aparecee);
+    var _ex = _ae2.x + offset_letrae_x;
+    var _ey = _ae2.y + offset_letrae_y;
 
     if (!instance_exists(obj_letrae)) {
         instance_create_layer(_ex, _ey, "Instances", obj_letrae);
@@ -94,11 +100,11 @@ if (mostrar_e) {
     obj_letrae.fading_out = true;
 }
 
-// --- letra F (tempf) ---
+// --- letra F ---
 if (mostrar_f) {
-    var _tempf = instance_nearest(x, y, obj_tempf);
-    var _fx = _tempf.x + offset_letraf_x;
-    var _fy = _tempf.y + offset_letraf_y;
+    var _af2 = instance_nearest(x, y, obj_aparecef);
+    var _fx = _af2.x + offset_letraf_x;
+    var _fy = _af2.y + offset_letraf_y;
 
     if (!instance_exists(obj_letraf)) {
         instance_create_layer(_fx, _fy, "Instances", obj_letraf);
@@ -111,5 +117,37 @@ if (mostrar_f) {
     obj_letraf.fading_out = true;
 }
 
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_quadroaparece)) {
+    if (distance_to_object(obj_quadroaparece) < 80 && !instance_exists(obj_quadro)) {
+        instance_create_depth(0, 0, -20000, obj_quadro);
+    }
+}
+
+// --- E perto de um obj_pianoaparece (ou filho): cria o piano ---
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_pianoaparece)) {
+    if (distance_to_object(obj_pianoaparece) < 80 && !instance_exists(obj_piano)) {
+        instance_create_depth(0, 0, -20000, obj_piano);
+    }
+}
+
+// --- E perto de um obj_cofreaparece (ou filho): cria o cofre ---
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_cofreaparece)) {
+    if (distance_to_object(obj_cofreaparece) < 80 && !instance_exists(obj_cofre)) {
+        instance_create_depth(0, 0, -20000, obj_cofre);
+    }
+}
+
+// --- E perto de um obj_enigmaXaparece (ou filho): cria o enigma correspondente ---
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae)) {
+    if (instance_exists(obj_enigma1aparece) && distance_to_object(obj_enigma1aparece) < 80 && !instance_exists(obj_enigma1)) {
+        instance_create_depth(0, 0, -20000, obj_enigma1);
+    }
+    else if (instance_exists(obj_enigma2aparece) && distance_to_object(obj_enigma2aparece) < 80 && !instance_exists(obj_enigma2)) {
+        instance_create_depth(0, 0, -20000, obj_enigma2);
+    }
+    else if (instance_exists(obj_enigma3aparece) && distance_to_object(obj_enigma3aparece) < 80 && !instance_exists(obj_enigma3)) {
+        instance_create_depth(0, 0, -20000, obj_enigma3);
+    }
+}
 scr_collision_move(move_x, move_y);
 depth = -y;

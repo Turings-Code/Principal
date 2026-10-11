@@ -1,5 +1,9 @@
+// algum popup aberto? (inventário não responde)
+var _popup = instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
+          || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3);
+
 // abrir/fechar clicando no ícone
-if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)) {
+if (!_popup && mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)) {
     aberto = !aberto;
 }
 

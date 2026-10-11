@@ -11,7 +11,10 @@
     "name":"Objetos",
     "path":"folders/Objetos.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_aparecef",
+    "path":"objects/obj_aparecef/obj_aparecef.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_base4",
-    "path":"sprites/spr_base4/spr_base4.yy",
+    "name":"spr_base5",
+    "path":"sprites/spr_base5/spr_base5.yy",
   },
   "spriteMaskId":null,
   "visible":true,
