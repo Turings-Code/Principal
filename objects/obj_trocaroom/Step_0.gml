@@ -92,3 +92,9 @@ if (estado == "saindo") {
     }
 }
 
+if (room == rm_bletchley2 && instance_exists(obj_alan)) {
+    show_debug_message("estado: " + string(estado)
+        + " | x: " + string(obj_alan.x) + " y: " + string(obj_alan.y)
+        + " | obj_troca existe: " + string(instance_exists(obj_troca))
+        + " | tocando: " + string(place_meeting(obj_alan.x, obj_alan.y, obj_troca)));
+}

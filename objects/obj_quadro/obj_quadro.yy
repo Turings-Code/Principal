@@ -11,8 +11,8 @@
   "name":"obj_quadro",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Hut 8",
+    "path":"folders/Objetos/Hut 8.yy",
   },
   "parentObjectId":null,
   "persistent":false,

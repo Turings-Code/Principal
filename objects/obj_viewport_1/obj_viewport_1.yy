@@ -9,8 +9,8 @@
   "name":"obj_viewport_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Comandos",
+    "path":"folders/Objetos/Comandos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

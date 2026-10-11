@@ -11,8 +11,8 @@
   "name":"obj_percepcao",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Interface",
+    "path":"folders/Objetos/Interface.yy",
   },
   "parentObjectId":null,
   "persistent":false,

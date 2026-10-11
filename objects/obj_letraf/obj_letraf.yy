@@ -9,8 +9,8 @@
   "name":"obj_letraf",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Interface",
+    "path":"folders/Objetos/Interface.yy",
   },
   "parentObjectId":null,
   "persistent":false,
