@@ -1,5 +1,6 @@
 if (instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
-    || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)) {
+    || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)
+    || instance_exists(obj_folha1)) {
     scr_collision_move(0, 0);
     exit;
 }
@@ -147,6 +148,17 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae)) {
     }
     else if (instance_exists(obj_enigma3aparece) && distance_to_object(obj_enigma3aparece) < 80 && !instance_exists(obj_enigma3)) {
         instance_create_depth(0, 0, -20000, obj_enigma3);
+    }
+}
+
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_folhas)) {
+    if (distance_to_object(obj_folhas) < 80 && !instance_exists(obj_folha1)) {
+        var _cam = view_camera[0];
+        var _fx = camera_get_view_x(_cam) + camera_get_view_width(_cam) / 2;
+        var _fy = camera_get_view_y(_cam) + camera_get_view_height(_cam) / 2;
+        instance_create_depth(_fx-200, _fy-70, -20000, obj_folha1);
+		instance_create_depth(_fx+120, _fy+30, -20000, obj_folha2);
+		instance_create_depth(0, 0, -19000, obj_escurece);
     }
 }
 scr_collision_move(move_x, move_y);
