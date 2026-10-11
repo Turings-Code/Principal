@@ -1,0 +1,11 @@
+margem_x = 40; // distância da borda esquerda
+margem_y = 270; // distância do topo (diminui pra ficar mais acima)
+depth=-30000;
+image_alpha=0.9;
+aberto = false;
+itens = [];          // sprites guardados, na ordem em que entram
+max_slots = 7;
+cell_w = 64;         // ajusta pro tamanho da sua grade
+cell_h = 64;
+global.chave = false;
+global.papel = false;

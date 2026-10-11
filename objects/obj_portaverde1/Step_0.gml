@@ -1,3 +1,4 @@
+if (!instance_exists(obj_alan)) exit;
 depth = -y;
 
 var _dist = point_distance(x, y, obj_alan.x, obj_alan.y);
