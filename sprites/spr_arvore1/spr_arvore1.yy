@@ -24,7 +24,7 @@
   ],
   "name":"spr_arvore1",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Bletchley Park",
     "path":"folders/Sprites/Bletchley Park.yy",
@@ -80,7 +80,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":24,
-    "yorigin":24,
+    "yorigin":34,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

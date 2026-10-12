@@ -17,7 +17,7 @@ if (file_exists("save.ini")) {
         room_goto(_r);
     }
 }
-if(room!=rm_inicio&&room!=rm_menu){
+if(room!=rm_inicio&&room!=rm_menu&&room!=rm_creditos){
 if(!instance_exists(obj_alan)){
 	instance_create_layer(500, 500, "Instances", obj_alan);
 }
