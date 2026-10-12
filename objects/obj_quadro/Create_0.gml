@@ -1,5 +1,5 @@
-image_xscale=5.6;
-image_yscale=5.6;
+image_xscale=7;
+image_yscale=7;
 image_alpha = 0;
 fade_speed = 0.1;
 fading_out = false;

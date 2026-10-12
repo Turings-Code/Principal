@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enigma",
-    "path":"sprites/spr_enigma/spr_enigma.yy",
+    "name":"spr_enigma1",
+    "path":"sprites/spr_enigma1/spr_enigma1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
