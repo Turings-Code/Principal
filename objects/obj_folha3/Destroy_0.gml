@@ -1,0 +1,1 @@
+if (global.folha_arrastada == id) global.folha_arrastada = noone;

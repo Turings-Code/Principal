@@ -158,6 +158,9 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
         var _fy = camera_get_view_y(_cam) + camera_get_view_height(_cam) / 2;
         instance_create_depth(_fx-200, _fy-70, -20000, obj_folha1);
 		instance_create_depth(_fx+120, _fy+30, -20000, obj_folha2);
+		instance_create_depth(_fx+100, _fy, -20000, obj_folha3);
+		instance_create_depth(_fx-50, _fy-30, -20000, obj_folha4);
+		instance_create_depth(_fx-50, _fy+100, -20000, obj_folha5);
 		instance_create_depth(0, 0, -19000, obj_escurece);
     }
 }
