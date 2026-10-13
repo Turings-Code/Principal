@@ -83,8 +83,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Interface",
+    "path":"folders/Sprites/Interface.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

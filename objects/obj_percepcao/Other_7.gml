@@ -7,10 +7,10 @@ if (estado == 0) {
         sprite_index = spr_exclamacao;
         image_index = 0;
         image_speed = 1;
-		if (!obj_dialogo.ja_falou) {
-    obj_dialogo.ja_falou = true;
+		if (!obj_diagolopercebeu.ja_falou) {
+    obj_diagolopercebeu.ja_falou = true;
 
-    with (obj_dialogo) {
+    with (obj_diagolopercebeu) {
         caixadetexto = true;
         nome = "Operário";
         frase = "Ei garoto, tá fazendo oque aqui?";

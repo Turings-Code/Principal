@@ -1,4 +1,4 @@
-if (instance_exists(obj_folha1) || instance_exists(obj_folha2)) {
+if (instance_exists(obj_folha1) || instance_exists(obj_folha2) || instance_exists(obj_codigo)) {
     var _alvo = 1;
     // some quando as duas estão sumindo
     var _f1 = instance_exists(obj_folha1) && !obj_folha1.fading_out;

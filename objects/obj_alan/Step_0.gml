@@ -156,11 +156,45 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
         var _cam = view_camera[0];
         var _fx = camera_get_view_x(_cam) + camera_get_view_width(_cam) / 2;
         var _fy = camera_get_view_y(_cam) + camera_get_view_height(_cam) / 2;
-        instance_create_depth(_fx-200, _fy-70, -20000, obj_folha1);
-		instance_create_depth(_fx+120, _fy+30, -20000, obj_folha2);
-		instance_create_depth(_fx+100, _fy, -20000, obj_folha3);
-		instance_create_depth(_fx-50, _fy-30, -20000, obj_folha4);
-		instance_create_depth(_fx-50, _fy+100, -20000, obj_folha5);
+        instance_create_depth(_fx-200, _fy-150, -20000, obj_folha1);
+		instance_create_depth(_fx+250, _fy-150, -20000, obj_folha2);
+		instance_create_depth(_fx+40, _fy-20, -20000, obj_folha3);
+		instance_create_depth(_fx-150, _fy+150, -20000, obj_folha2);
+		instance_create_depth(_fx+200, _fy+150, -20000, obj_folha4);
+		instance_create_depth(_fx-50, _fy, -20000, obj_folha5);
+		instance_create_depth(_fx+250, _fy, -20000, obj_folha1);
+		instance_create_depth(0, 0, -19000, obj_escurece);
+    }
+}
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_folhas2)) {
+    if (distance_to_object(obj_folhas2) < 80 && !instance_exists(obj_folha1)) {
+        var _cam = view_camera[0];
+        var _fx = camera_get_view_x(_cam) + camera_get_view_width(_cam) / 2;
+        var _fy = camera_get_view_y(_cam) + camera_get_view_height(_cam) / 2;
+        instance_create_depth(_fx-180, _fy-130, -20000, obj_folha1);
+		instance_create_depth(_fx+220, _fy-140, -20000, obj_folha2);
+		instance_create_depth(_fx+30,  _fy-30,  -20000, obj_folha3);
+		instance_create_depth(_fx-140, _fy+130, -20000, obj_folha2);
+		instance_create_depth(_fx+180, _fy+140, -20000, obj_folha4);
+		instance_create_depth(_fx-60,  _fy+10,  -20000, obj_folha5);
+		instance_create_depth(_fx+210, _fy+10,  -20000, obj_folha1);
+		instance_create_depth(0, 0, -19000, obj_escurece);
+    }
+}
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_folhas3)) {
+    if (distance_to_object(obj_folhas3) < 80 && !instance_exists(obj_folha1)) {
+        var _cam = view_camera[0];
+        var _fx = camera_get_view_x(_cam) + camera_get_view_width(_cam) / 2;
+        var _fy = camera_get_view_y(_cam) + camera_get_view_height(_cam) / 2;
+        instance_create_depth(_fx+170, _fy+70,  -20000, obj_folha1);
+		instance_create_depth(_fx-200, _fy-30,  -20000, obj_folha2);
+		instance_create_depth(_fx+10,  _fy+150, -20000, obj_folha3);
+		instance_create_depth(_fx+190, _fy-130,  -20000, obj_folha2);
+		instance_create_depth(_fx-120, _fy-190, -20000, obj_folha4);
+		instance_create_depth(_fx+40,  _fy-30,  -20000, obj_folha5);
+		instance_create_depth(_fx-150, _fy+90,  -20000, obj_folha1);
+		instance_create_depth(_fx+150,  _fy-30,  -20000, obj_folha4);
+		instance_create_depth(_fx,  _fy+100,  -19000, obj_codigo);
 		instance_create_depth(0, 0, -19000, obj_escurece);
     }
 }

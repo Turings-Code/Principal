@@ -5,6 +5,8 @@ global.folha_arrastada = noone;
 
 
 global.font_pixel = font_add_sprite_ext(spr_fonte, "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?.,", false, 7);
+global.chave = false;
+global.papel = false;
 if (file_exists("save.ini")) {
     ini_open("save.ini");
     global.chave = ini_read_real("jogo", "chave", 0);
@@ -16,11 +18,4 @@ if (file_exists("save.ini")) {
     if (_r != -1 && room_exists(_r) && _r != room) {
         room_goto(_r);
     }
-}
-if(room!=rm_inicio&&room!=rm_menu&&room!=rm_creditos){
-if(!instance_exists(obj_alan)){
-	instance_create_layer(500, 500, "Instances", obj_alan);
-}
-if(!instance_exists(obj_inventario)){
-	instance_create_layer(500, 500, "Instances", obj_inventario);}
 }
