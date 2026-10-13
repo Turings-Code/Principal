@@ -59,7 +59,7 @@ if (frase != "Nada" && mostrar_texto) {
 
     var _texto_x = (_view_w / 2) - 230;
     var _texto_y = (_view_h / 2) + 115;
-    var _texto_largura_max = 1160 - _texto_x;
+    var _texto_largura_max = 1200 - _texto_x;
 
     draw_set_color(make_color_rgb(137, 141, 155));
     draw_text_ext(_texto_x, _texto_y, _texto_visivel, -1, _texto_largura_max);

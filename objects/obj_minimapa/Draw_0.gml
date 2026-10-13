@@ -42,3 +42,12 @@ if (instance_exists(obj_alan)) {
     draw_sprite_ext(spr_pontomapa, 0, _px, _py, esc, esc, 0, c_white, 0.9);
 	draw_sprite_ext(spr_bordamapa, 0, _gx, _gy, esc, esc, 0, c_white, 1);
 }
+
+// texto embaixo do mapa, alinhado à direita
+draw_set_font(fnt_fonte3);
+draw_set_color(c_white);
+draw_set_alpha(0.9);
+draw_set_halign(fa_right);
+draw_set_valign(fa_top);
+draw_text_transformed(_gx + tam - 20, _gy + tam + 10, "Bletchley Park", 0.6, 0.6, 0);
+draw_set_halign(fa_left);

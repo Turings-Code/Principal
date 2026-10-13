@@ -1,3 +1,5 @@
+
+
 // algum popup aberto? (inventário não responde)
 var _popup = instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
           || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3);
@@ -23,4 +25,12 @@ if (global.papel && _p == -1 && array_length(itens) < max_slots) {
 }
 else if (!global.papel && _p != -1) {
     array_delete(itens, _p, 1);
+}
+
+var _sobre = position_meeting(mouse_x, mouse_y, id);
+
+if (_sobre && !_popup) {
+    window_set_cursor(cr_handpoint);
+} else {
+    window_set_cursor(cr_default);
 }

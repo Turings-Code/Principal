@@ -10,7 +10,7 @@ if(room==rm_creditos){
 if(room==rm_mansao){
 	window_set_cursor(cr_default);
 }
-if(room!=rm_inicio&&room!=rm_menu&&room!=rm_creditos){
+if(room!=rm_inicio&&room!=rm_menu&&room!=rm_creditos&&room!=rm_quarto){
 if(!instance_exists(obj_alan)){
 	instance_create_layer(500, 500, "Instances", obj_alan);
 }

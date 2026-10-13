@@ -1,5 +1,3 @@
-// Alarm 1
-// avança pro próximo diálogo do array
 dialogo_index += 1;
 
 if (dialogo_index < array_length(dialogos)) {
@@ -8,7 +6,16 @@ if (dialogo_index < array_length(dialogos)) {
     contador_texto = 0;
     mostrar_texto = true;
     texto_acelerado = false;
-} else {
+}   else {
     caixadetexto = false;
     mostrar_texto = false;
+
+    if (fase == 1) {
+        maesai = true;
+    } else {
+        // acabou o diálogo do theo: ele começa a andar
+        theo_alvo_y = obj_theocutscene.y + theo_desce;
+        theo_alvo_x = obj_theocutscene.x - theo_esq;
+        theoanda = 1;
+    }
 }

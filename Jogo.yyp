@@ -51,6 +51,7 @@
   "resources":[
     {"id":{"name":"fnt_fonte","path":"fonts/fnt_fonte/fnt_fonte.yy",},},
     {"id":{"name":"fnt_fonte2","path":"fonts/fnt_fonte2/fnt_fonte2.yy",},},
+    {"id":{"name":"fnt_fonte3","path":"fonts/fnt_fonte3/fnt_fonte3.yy",},},
     {"id":{"name":"obj_alan","path":"objects/obj_alan/obj_alan.yy",},},
     {"id":{"name":"obj_alancutscene","path":"objects/obj_alancutscene/obj_alancutscene.yy",},},
     {"id":{"name":"obj_aparecee","path":"objects/obj_aparecee/obj_aparecee.yy",},},
@@ -146,6 +147,7 @@
     {"id":{"name":"obj_minimapa","path":"objects/obj_minimapa/obj_minimapa.yy",},},
     {"id":{"name":"obj_mouse","path":"objects/obj_mouse/obj_mouse.yy",},},
     {"id":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},},
+    {"id":{"name":"obj_objetivos","path":"objects/obj_objetivos/obj_objetivos.yy",},},
     {"id":{"name":"obj_palavracreditos","path":"objects/obj_palavracreditos/obj_palavracreditos.yy",},},
     {"id":{"name":"obj_palavracreditoshover","path":"objects/obj_palavracreditoshover/obj_palavracreditoshover.yy",},},
     {"id":{"name":"obj_palavracreditoshoverfinal","path":"objects/obj_palavracreditoshoverfinal/obj_palavracreditoshoverfinal.yy",},},
@@ -177,6 +179,7 @@
     {"id":{"name":"obj_telapercebido","path":"objects/obj_telapercebido/obj_telapercebido.yy",},},
     {"id":{"name":"obj_tempf","path":"objects/obj_tempf/obj_tempf.yy",},},
     {"id":{"name":"obj_Textaofinal","path":"objects/obj_Textaofinal/obj_Textaofinal.yy",},},
+    {"id":{"name":"obj_theocutscene","path":"objects/obj_theocutscene/obj_theocutscene.yy",},},
     {"id":{"name":"obj_titulocreditos","path":"objects/obj_titulocreditos/obj_titulocreditos.yy",},},
     {"id":{"name":"obj_Titulodojogo","path":"objects/obj_Titulodojogo/obj_Titulodojogo.yy",},},
     {"id":{"name":"obj_titulosair","path":"objects/obj_titulosair/obj_titulosair.yy",},},
