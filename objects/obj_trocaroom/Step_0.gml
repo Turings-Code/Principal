@@ -21,7 +21,7 @@ if (estado == "entrando") {
     alpha += 0.02;
     if (alpha >= 1) {
         alpha = 1;
-        room_goto(rm_mansao);
+        room_goto(rm_bletchley2);
         
     }
 }}

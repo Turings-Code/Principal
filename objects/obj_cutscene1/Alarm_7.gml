@@ -1,0 +1,1 @@
+instance_create_depth(puxa_alvo.x, puxa_alvo.y, -1500, obj_troca);

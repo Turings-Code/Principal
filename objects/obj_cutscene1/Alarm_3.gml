@@ -6,3 +6,5 @@ if (!instance_exists(obj_alan)) {
 if (instance_exists(obj_alancutscene)) {
     with (obj_alancutscene) { instance_destroy(); }
 }
+if(!instance_exists(obj_enigmainicial)){
+	instance_create_layer(500, 280, "Instances", obj_enigmainicial);}

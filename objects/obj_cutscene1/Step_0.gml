@@ -1,4 +1,3 @@
-// Step Event
 if (maeentra) {
     obj_mainha.y += 5;
     if (obj_mainha.sprite_index != spr_maebaixo) {
@@ -15,31 +14,28 @@ if (maeentra) {
         caixadetexto = true;
     }
 }
-if (!acao1) {
+if (!acao1 && !maesai) {
     obj_mainha.sprite_index = spr_mae;
 }
-// mãe sobe até sair do mapa
+
 if (maesai) {
     obj_mainha.y -= 5;
-    obj_mainha.sprite_index = spr_alancima;   // troca pelo nome do seu sprite da mãe subindo
+    obj_mainha.sprite_index = spr_alancima;
 
-   if (obj_mainha.y < -120) {
-    maesai = false;
-    alarm[2] = 180;   // espera 3 segundos
-    fase = 2;
+    if (obj_mainha.y < -120) {
+        maesai = false;
+        alarm[2] = 180;
+        fase = 2;
+    }
 }
 
-        
-    }
-
-// theo entra igual a mãe
 if (theoentra) {
     obj_theocutscene.y += 5;
-    obj_theocutscene.sprite_index = spr_theobaixo;   // troca pelo nome do seu sprite
+    obj_theocutscene.sprite_index = spr_theobaixo;
 
     if (obj_theocutscene.y >= 240) {
         obj_theocutscene.y = 240;
-        obj_theocutscene.sprite_index = spr_theoparadobaixo;    // sprite parado, troca pelo seu
+        obj_theocutscene.sprite_index = spr_theoparadobaixo;
         theoentra = false;
 
         dialogos = dialogos_theo;
@@ -53,40 +49,26 @@ if (theoentra) {
     }
 }
 
-// theo anda: um pouco pra baixo, depois um pouco pra esquerda
 if (theoanda == 1) {
-    obj_theocutscene.sprite_index = spr_theobaixo;   // troca pelo seu sprite andando pra baixo
+    obj_theocutscene.sprite_index = spr_theobaixo;
     obj_theocutscene.y = min(obj_theocutscene.y + theo_vel, theo_alvo_y);
 
     if (obj_theocutscene.y >= theo_alvo_y) theoanda = 2;
 }
 else if (theoanda == 2) {
-    obj_theocutscene.sprite_index = spr_theoesquerda; // troca pelo seu sprite andando pra esquerda
+    obj_theocutscene.sprite_index = spr_theoesquerda;
     obj_theocutscene.x = max(obj_theocutscene.x - theo_vel, theo_alvo_x);
 
     if (obj_theocutscene.x <= theo_alvo_x) {
         theoanda = 0;
-        obj_theocutscene.sprite_index = spr_theoparadobaixo;     // sprite parado, troca pelo seu
+        obj_theocutscene.sprite_index = spr_theoparadobaixo;
+        alarm[3] = 60;
 
-        // terminou de andar: agora sim o Alan aparece
-        if (!instance_exists(obj_alan)) {
-            var _alan = instance_create_layer(1050, 500, "Instances", obj_alan);
-            _alan.direcao = "cima";
-            _alan.sprite_index = spr_alanparado;
+        if (!instance_exists(obj_objetivos)) {
+            instance_create_depth(0, 0, -100000, obj_objetivos);
         }
-        if (instance_exists(obj_alancutscene)) {
-            with (obj_alancutscene) { instance_destroy(); }
-        }
+        obj_objetivos.define_objetivo("OBJETIVO - Vá até o Theo");
     }
-	if (obj_theocutscene.x <= theo_alvo_x) {
-    theoanda = 0;
-    obj_theocutscene.sprite_index = spr_theoparadobaixo;   // sprite parado, troca pelo seu
-    alarm[3] = 60;   // espera 1 segundo
-	if (!instance_exists(obj_objetivos)) {
-    instance_create_depth(0, 0, -100000, obj_objetivos);
-}
-obj_objetivos.define_objetivo("OBJETIVO - Vá até o Theo");
-}
 }
 
 var _falando = (mostrar_texto && contador_texto < string_length(frase) && pausa_timer <= 0 && caixadetexto);
@@ -106,3 +88,109 @@ if (_falando) {
         audio_stop_sound(snd_textblip);
     }
 }
+
+if (!enigma_visto && instance_exists(obj_enigmaampl)) {
+    enigma_visto = true;
+    alarm[4] = 60;
+}
+
+if (quebrou_enigma) {
+    quebrou_enigma = false;
+    alarm[5] = 60;
+}
+
+if (puxando && instance_exists(puxa_alvo)) {
+    puxa_vel += puxa_acel;
+
+    var _px = puxa_alvo.x;
+    var _py = puxa_alvo.y;
+    var _chegou_alan = true;
+    var _chegou_theo = true;
+
+    if (instance_exists(obj_alan)) {
+        var _d = point_distance(obj_alan.x, obj_alan.y, _px, _py);
+        var _dir = point_direction(obj_alan.x, obj_alan.y, _px, _py);
+        var _passo = min(puxa_vel, _d);
+        obj_alan.x += lengthdir_x(_passo, _dir);
+        obj_alan.y += lengthdir_y(_passo, _dir);
+        _chegou_alan = (point_distance(obj_alan.x, obj_alan.y, _px, _py) < 1);
+    }
+
+    if (instance_exists(obj_theocutscene)) {
+        var _d2 = point_distance(obj_theocutscene.x, obj_theocutscene.y, _px, _py);
+        var _dir2 = point_direction(obj_theocutscene.x, obj_theocutscene.y, _px, _py);
+        var _passo2 = min(puxa_vel, _d2);
+        obj_theocutscene.x += lengthdir_x(_passo2, _dir2);
+        obj_theocutscene.y += lengthdir_y(_passo2, _dir2);
+        _chegou_theo = (point_distance(obj_theocutscene.x, obj_theocutscene.y, _px, _py) < 1);
+    }
+
+    if (_chegou_alan && _chegou_theo) {
+        puxando = false;
+        alarm[7] = 60;
+    }
+}
+
+if (fase == 4) {
+    if (dialogo_index >= 4) {
+        shake_ativo = true;
+        shake_forca = 2;
+    }
+    else if (dialogo_index >= 1) {
+        shake_ativo = true;
+        shake_forca = 0.7;
+    }
+}
+
+var _cam = view_camera[0];
+var _alvo = noone;
+var _fixo = (fase == 3 && caixadetexto);
+
+if (caixadetexto && !_fixo) {
+    if (nome == "Mãe" && instance_exists(obj_mainha)) {
+        _alvo = obj_mainha;
+    }
+    else if (nome == "Theo" && instance_exists(obj_theocutscene)) {
+        _alvo = obj_theocutscene;
+    }
+    else if (nome == "Alan") {
+        if (instance_exists(obj_alancutscene)) _alvo = obj_alancutscene;
+        else if (instance_exists(obj_alan)) _alvo = obj_alan;
+    }
+}
+
+var _w = camera_get_view_width(_cam);
+var _h = camera_get_view_height(_cam);
+
+// centro real da view, descontando o tremor do frame anterior
+var _centro_x = camera_get_view_x(_cam) + _w / 2 - shake_ox;
+var _centro_y = camera_get_view_y(_cam) + _h / 2 - shake_oy;
+
+var _w_alvo = (_alvo != noone) ? 1170 : 1365;
+var _h_alvo = (_alvo != noone) ? 660 : 770;
+
+_w = lerp(_w, _w_alvo, cam_zoom_vel);
+_h = lerp(_h, _h_alvo, cam_zoom_vel);
+
+if (abs(_w - _w_alvo) < 0.5) _w = _w_alvo;
+if (abs(_h - _h_alvo) < 0.5) _h = _h_alvo;
+
+if (_alvo != noone) {
+    _centro_x = lerp(_centro_x, _alvo.x, cam_vel);
+    _centro_y = lerp(_centro_y, _alvo.y, cam_vel);
+} else {
+    _centro_x = lerp(_centro_x, room_width / 2, cam_vel);
+    _centro_y = lerp(_centro_y, room_height / 2, cam_vel);
+}
+
+if (shake_ativo) {
+    shake_t += 1;
+    shake_ox = sin(shake_t * 0.9) * shake_forca;
+    shake_oy = cos(shake_t * 1.3) * shake_forca;
+} else {
+    shake_ox = 0;
+    shake_oy = 0;
+}
+
+camera_set_view_size(_cam, _w, _h);
+camera_set_view_pos(_cam, _centro_x - _w / 2 + shake_ox, _centro_y - _h / 2 + shake_oy);

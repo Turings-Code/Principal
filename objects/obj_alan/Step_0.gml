@@ -1,3 +1,10 @@
+if (variable_instance_exists(id, "travado") && travado) {
+    scr_collision_move(0, 0);
+    exit;
+}
+
+
+
 if (instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
     || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)
     || instance_exists(obj_folha1)) {

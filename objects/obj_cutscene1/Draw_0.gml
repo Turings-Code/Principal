@@ -1,10 +1,14 @@
-// Draw Event
+var _cam = view_camera[0];
+var _vx = camera_get_view_x(_cam);
+var _vy = camera_get_view_y(_cam);
+var _view_w = camera_get_view_width(_cam);
+var _view_h = camera_get_view_height(_cam);
+
+var _esc_caixa = 5.5;       // escala da caixa
+var _caixa_y = 55;       // quanto desce a caixa (aumenta pra descer mais)
+var _esc_texto = 0.8;     // escala do texto
+
 if (caixadetexto) {
-    var _cam = view_camera[0];
-
-    var _view_w = camera_get_view_width(_cam);
-    var _view_h = camera_get_view_height(_cam);
-
     if (fade_caixa < 1) {
         fade_caixa += 0.1;
         if (fade_caixa > 1) {
@@ -12,7 +16,7 @@ if (caixadetexto) {
         }
     }
 
-    draw_sprite_ext(spr_caixadefala, 0, _view_w / 2, _view_h / 2, 7, 7, 0, c_white, fade_caixa);
+    draw_sprite_ext(spr_caixadefala, 0, _vx + _view_w / 2, _vy + _view_h / 2 + _caixa_y, _esc_caixa, _esc_caixa, 0, c_white, fade_caixa);
 } else {
     fade_caixa = 0;
 }
@@ -57,13 +61,14 @@ if (frase != "Nada" && mostrar_texto) {
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
 
-    var _texto_x = (_view_w / 2) - 230;
-    var _texto_y = (_view_h / 2) + 115;
-    var _texto_largura_max = 1200 - _texto_x;
+    var _texto_x = _vx + (_view_w / 2) - 190;
+var _texto_y = _vy + (_view_h / 2) + _caixa_y + 85;
+var _texto_largura_max = 590 / _esc_texto;
 
-    draw_set_color(make_color_rgb(137, 141, 155));
-    draw_text_ext(_texto_x, _texto_y, _texto_visivel, -1, _texto_largura_max);
+draw_set_color(make_color_rgb(137, 141, 155));
+draw_set_font(fnt_fonte);
+draw_text_ext_transformed(_texto_x, _texto_y, _texto_visivel, -1, _texto_largura_max, _esc_texto, _esc_texto, 0);
 
-    draw_set_font(fnt_fonte2);
-    draw_text(_texto_x + 40, _texto_y - 95, nome);
+draw_set_font(fnt_fonte2);
+draw_text_transformed(_texto_x + 40, _texto_y - 69, nome, _esc_texto, _esc_texto, 0);
 }
