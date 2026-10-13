@@ -1,2 +1,0 @@
-mouseemcima=false;
-acabou=false;

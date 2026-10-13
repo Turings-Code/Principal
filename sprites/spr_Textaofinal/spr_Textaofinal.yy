@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"spr_Textaofinal",
   "bboxMode":0,
-  "bbox_bottom":822,
+  "bbox_bottom":824,
   "bbox_left":0,
   "bbox_right":89,
   "bbox_top":1,
