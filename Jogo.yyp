@@ -277,6 +277,7 @@
     {"id":{"name":"spr_enigma1","path":"sprites/spr_enigma1/spr_enigma1.yy",},},
     {"id":{"name":"spr_enigma2","path":"sprites/spr_enigma2/spr_enigma2.yy",},},
     {"id":{"name":"spr_enigma3","path":"sprites/spr_enigma3/spr_enigma3.yy",},},
+    {"id":{"name":"spr_enigmacutcene1","path":"sprites/spr_enigmacutcene1/spr_enigmacutcene1.yy",},},
     {"id":{"name":"spr_Error","path":"sprites/spr_Error/spr_Error.yy",},},
     {"id":{"name":"spr_Errorhoverok","path":"sprites/spr_Errorhoverok/spr_Errorhoverok.yy",},},
     {"id":{"name":"spr_ErrorhoverX","path":"sprites/spr_ErrorhoverX/spr_ErrorhoverX.yy",},},
