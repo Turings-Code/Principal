@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turing's Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">TURING'S CODE</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#sprites">Sprites</a>
+            <a href="#codigo">Código</a>
+        </nav>
+    </header>
+
+    <div class="carousel-container" id="sprites">
+        <div class="carousel">
+
+            <div class="slides" id="slides">
+                <div class="slide">
+                    <img src="img3.jpeg" alt="Tela inicial do jogo">
+                </div>
+
+                <div class="slide">
+                    <img src="img4.jpeg" alt="Cenário interno">
+                </div>
+
+                <div class="slide">
+                    <img src="img2.jpeg" alt="Corredor e sala">
+                </div>
+            </div>
+
+            <button class="botao anterior" onclick="mover(-1)" aria-label="Imagem anterior">‹</button>
+            <button class="botao proximo" onclick="mover(1)" aria-label="Próxima imagem">›</button>
+
+            <div class="indicadores">
+                <button class="bolinha ativa" onclick="irPara(0)" aria-label="Imagem 1"></button>
+                <button class="bolinha" onclick="irPara(1)" aria-label="Imagem 2"></button>
+                <button class="bolinha" onclick="irPara(2)" aria-label="Imagem 3"></button>
+                <button class="bolinha" onclick="irPara(3)" aria-label="Imagem 4"></button>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="titulo" id="home">
+        <h1>TURING'S CODE</h1>
+        <h3>Um mistério de lógica, aventura e códigos.</h3>
+    </section>
+
+    <section class="descricao" id="codigo">
+        <h2>Descrição do jogo:</h2>
+
+        <p>
+            Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo
+            são transportados para 1943 após ativarem uma antiga máquina Enigma.
+            Presos em Bletchley Park, eles precisam resolver enigmas e recuperar
+            peças da máquina Bombe para conseguir voltar para casa.
+        </p>
+    </section>
+
+<div class="botoes-descricao">
+
+    <a href="#" class="botao-descricao">
+        Prévia do jogo
+    </a>
+
+    <a href="#" class="botao-descricao">
+        Baixe o jogo
+    </a>
+
+</div>
+
+    <footer>
+        <h3>© 2026 Turing's Code</h3>
+    </footer>
+
+    <script>
+        let atual = 0;
+
+        const slides = document.getElementById("slides");
+        const bolinhas = document.querySelectorAll(".bolinha");
+        const total = bolinhas.length;
+
+        function atualizar() {
+            slides.style.transform = `translateX(-${atual * 100}%)`;
+
+            bolinhas.forEach((bolinha, i) => {
+                bolinha.classList.toggle("ativa", i === atual);
+            });
+        }
+
+        function mover(n) {
+            atual = (atual + n + total) % total;
+            atualizar();
+        }
+
+        function irPara(n) {
+            atual = n;
+            atualizar();
+        }
+
+        setInterval(() => mover(1), 5000);
+    </script>
+
+</body>
+</html>
