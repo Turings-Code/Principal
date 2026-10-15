@@ -1,403 +1,131 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turing's Code</title>
-    <style>
-        * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+<html lang="en">
 
-html {
- scroll-behavior: smooth;
-}
+    <!-- Custom PreHead code is injected here -->
+    
 
-body {
-    background-color: #2a170c;
-    background-image:
-        linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.1) 75%),
-        linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.1) 75%);
-    background-size: 60px 60px;
-    background-position: 0 0, 0 30px, 30px -30px, -30px 0;
-    color: #fff;
-    font-family: "OCR A Std", monospace;
-}
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta charset="utf-8"/>
 
-header {
-    padding: 20px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #133824;
-    border-bottom: 5px solid #d0d4d0;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
+        <!-- Builtin injector for disabling cache -->
+        <meta http-equiv="pragma" content="no-cache"/>
 
-.logo {
-    color: #3acc00fa;
-    font-size: 25px;
-    font-weight: bold;
-    text-shadow: 0 0 5px #133824, 0 0 15px #133824;
-}
+        <!-- Set the title bar of the page -->
+        <title>Turing's Code</title>
 
-nav {
-    display: flex;
-    gap: 12px;
-}
+        <!-- Custom PreStyle code is injected here -->
+        
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 18px;
-    border: 1px solid #3acc00fa;
-    border-radius: 6px;
-    transition: 0.3s;
-}
+        <!-- Set the background colour of the document -->
+        <style>
+            body {
+                background: #0;
+                color: #cccccc;
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
 
-nav a:hover {
-    background: #319e37;
-    color: #fff;
-    box-shadow: 0 0 15px #0e4220;
-}
+            canvas {
+                image-rendering: optimizeSpeed;
+                -webkit-interpolation-mode: nearest-neighbor;
+                -ms-touch-action: none;
+                touch-action: none;
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+            :-webkit-full-screen #canvas {
+                width: 100%;
+                height: 100%;
+            }
+            :-webkit-full-screen {
+                width: 100%;
+                height: 100%;
+            }
+            
+            /* Custom Runner Styles */
+            div.gm4html5_div_class {
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+            div.gm4html5_login {
+                padding: 20px;
+                position: absolute;
+                border: solid 2px #000000;
+                background-color: #404040;
+                color:#00ff00;
+                border-radius: 15px;
+                box-shadow: #101010 20px 20px 40px;
+            }
+            div.gm4html5_cancel_button {
+                float: right;
+            }
+            div.gm4html5_login_button {
+                float: left;
+            }
+            div.gm4html5_login_header {
+                text-align: center;
+            }
+            /* END - Custom Runner Styles */
+            
+        </style>
 
-.titulo {
-    text-align: center;
-    padding: 35px 20px 25px;
-}
+        <!-- Custom PostStyle code is injected here -->
+        
 
-h1 {
-    font-size: clamp(40px, 7vw, 80px);
-    color: #3acc00fa;
-    text-shadow: 0 0 3px #133824, 0 0 10px #083f01;
-}
+        <!-- Builtin injector for injecting flurry analytics code -->
+        
+    </head>
 
-.titulo h3 {
-    margin-top: 15px;
-}
+    <!-- Custom PostHead code is injected here -->
+    
 
-.carousel-container {
-    width: 100%;
-    max-width: none;
-    margin: 0 auto 20px;
-    position: relative;
-}
+    <!-- Custom PreBody code is injected here -->
+    
 
-.carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border: none;
-    border-radius: 0;
-    background: #020805;
-    box-shadow: 0 0 20px #00491a;
-}
+    <body>
+        <!-- Custom BodyStart code is injected here -->
+        
 
-.slides {
-    display: flex;
-    transition: transform 0.8s ease;
-}
+        <div class="gm4html5_div_class" id="gm4html5_div_id">
+            
+            <!-- Builtin injector for splash screen -->
+            <img src="html5game/splash.png" id="GM4HTML5_loadingscreen" alt="GameMaker:HTML5 loading screen" style="display:none;"/>
 
-.slide {
-    flex: 0 0 100%;
-    height: calc(100vh - 180px);
-    min-height: 350px;
-    background: #020805;
-}
+            <!-- Custom PreCanvas code is injected here -->
+            
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
-
-.botao {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 55px;
-    height: 55px;
-    border: 2px solid #3acc00;
-    border-radius: 50%;
-    background: #001e12cc;
-    color: #3acc00;
-    font-size: 36px;
-    cursor: pointer;
-    z-index: 2;
-    transition: 0.8s;
-}
-
-.botao:hover {
-    background: #319e37;
-    color: white;
-    box-shadow: 0 0 15px #3acc00;
-}
-
-.anterior {
-    left: 20px;
-}
-
-.proximo {
-    right: 20px;
-}
-
-.indicadores {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    padding: 18px;
-    background: linear-gradient(transparent, #001e12cc);
-}
-
-.bolinha {
-    width: 13px;
-    height: 13px;
-    border: 0;
-    border-radius: 50%;
-    background: #315c47;
-    cursor: pointer;
-}
-
-.bolinha.ativa {
-    background: #f7faf8;
-    box-shadow: 0 0 10px #3acc00fa;
-}
-
-.descricao {
-    width: 90%;
-    max-width: 1100px;
-    margin: 50px auto 40px;
-    padding: 35px;
-    background: #00491a;
-    border-left: 5px solid white;
-    border-radius: 0 15px 15px 0;
-}
-
-h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.descricao p {
-    font-family: Arial, sans-serif;
-    line-height: 1.8;
-    color: #c6dfd0;
-    font-size: 18px;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    color: #3acc00fa;
-    border-top: 5px solid #d0d4d0;
-    background: #133824;
-}
-
-@media (max-width: 700px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .titulo {
-        padding: 30px 15px 20px;
-    }
-
-    .carousel-container {
-        width: 96%;
-    }
-
-    .slide {
-        height: 45vh;
-        min-height: 250px;
-    }
-
-    .botao {
-        width: 40px;
-        height: 40px;
-        font-size: 27px;
-    }
-
-    .anterior {
-        left: 10px;
-    }
-
-    .proximo {
-        right: 10px;
-    }
-
-    .descricao {
-        padding: 25px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    .descricao p {
-        font-size: 16px;
-    }
-}
-
-.botoes-descricao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-top: 20px;
-    flex-wrap:wrap;
-    transform: translateY(-20px);
-}
-
-.botao-descricao {
-    display: inline-block;
-    padding: 14px 28px;
-    background-color: #3acc00;
-    color: #102010;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    border-radius: 8px;
-    border: 1px solid #3acc00;
-    transition: 0.3s;
-}
-
-.botao-descricao:hover {
-    background-color: #133824;
-    color: white;
-    box-shadow: 0 0 12px #3acc00;
-}
-
-
-    </style>
-</head>
-
-<body>
-
-    <header>
-        <div class="logo">TURING'S CODE</div>
-
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#sprites">Sprites</a>
-            <a href="#codigo">Código</a>
-        </nav>
-    </header>
-
-    <div class="carousel-container" id="sprites">
-        <div class="carousel">
-
-            <div class="slides" id="slides">
-                <div class="slide">
-                    <img src="img3.jpeg" alt="Tela inicial do jogo">
-                </div>
-
-                <div class="slide">
-                    <img src="img4.jpeg" alt="Cenário interno">
-                </div>
-
-                <div class="slide">
-                    <img src="img2.jpeg" alt="Corredor e sala">
-                </div>
-            </div>
-
-            <button class="botao anterior" onclick="mover(-1)" aria-label="Imagem anterior">‹</button>
-            <button class="botao proximo" onclick="mover(1)" aria-label="Próxima imagem">›</button>
-
-            <div class="indicadores">
-                <button class="bolinha ativa" onclick="irPara(0)" aria-label="Imagem 1"></button>
-                <button class="bolinha" onclick="irPara(1)" aria-label="Imagem 2"></button>
-                <button class="bolinha" onclick="irPara(2)" aria-label="Imagem 3"></button>
-                <button class="bolinha" onclick="irPara(3)" aria-label="Imagem 4"></button>
-            </div>
-
+            <!-- Create the canvas element the game draws to -->
+            <canvas id="canvas" width="1366" height="768" style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%);">
+                
+                <p>Your browser doesn't support HTML5 canvas.</p>
+            </canvas>
+            
+            <!-- Custom PostCanvas code is injected here -->
+            
         </div>
-    </div>
 
-    <section class="titulo" id="home">
-        <h1>TURING'S CODE</h1>
-        <h3>Um mistério de lógica, aventura e códigos.</h3>
-    </section>
+        <!-- Run the game code -->
+        <script type="text/javascript" src="html5game/Jogo.js?cachebust=231988505"></script>
 
-    <section class="descricao" id="codigo">
-        <h2>Descrição do jogo:</h2>
+        <!-- Builtin injector for injecting runner path -->
+        
 
-        <p>
-            Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo
-            são transportados para 1943 após ativarem uma antiga máquina Enigma.
-            Presos em Bletchley Park, eles precisam resolver enigmas e recuperar
-            peças da máquina Bombe para conseguir voltar para casa.
-        </p>
-    </section>
+        <script>window.onload = GameMaker_Init;</script>
 
-<div class="botoes-descricao">
+        <!-- Builtin injector for injecting google analytics code -->
+        
 
-    <a href="#" class="botao-descricao">
-        Prévia do jogo
-    </a>
+        <!-- Custom BodyEnd code is injected here -->
+        
+    </body>
 
-    <a href="#" class="botao-descricao">
-        Baixe o jogo
-    </a>
-
-</div>
-
-    <footer>
-        <h3>© 2026 Turing's Code</h3>
-    </footer>
-
-<iframe 
-        src="jogo%20html/index.html" 
-        width="1920" 
-        height="1080"
-        style="border: none; display: block; margin: 0 auto;">
-    </iframe>
-
-    <script>
-        let atual = 0;
-
-        const slides = document.getElementById("slides");
-        const bolinhas = document.querySelectorAll(".bolinha");
-        const total = bolinhas.length;
-
-        function atualizar() {
-            slides.style.transform = `translateX(-${atual * 100}%)`;
-
-            bolinhas.forEach((bolinha, i) => {
-                bolinha.classList.toggle("ativa", i === atual);
-            });
-        }
-
-        function mover(n) {
-            atual = (atual + n + total) % total;
-            atualizar();
-        }
-
-        function irPara(n) {
-            atual = n;
-            atualizar();
-        }
-
-        setInterval(() => mover(1), 5000);
-    </script>
-
-</body>
+    <!-- Custom PostBody code is injected here -->
+    
 </html>
-
