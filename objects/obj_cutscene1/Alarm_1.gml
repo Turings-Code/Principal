@@ -11,8 +11,16 @@ if (dialogo_index < array_length(dialogos)) {
     mostrar_texto = false;
 
     if (fase == 1) {
-        maesai = true;
-    } else if (fase == 2) {
+    if (intro_mae) {
+    intro_mae = false;
+    if (instance_exists(obj_alancutscene)) {
+        alan_alvo_x = obj_alancutscene.x - alan_desloca;
+    }
+    alan_anda = true;
+} else {
+    maesai = true;
+}
+} else if (fase == 2) {
         theo_alvo_y = obj_theocutscene.y + theo_desce;
         theo_alvo_x = obj_theocutscene.x - theo_esq;
         theoanda = 1;

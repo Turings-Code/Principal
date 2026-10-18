@@ -32,6 +32,19 @@ dialogos = [
     { nome: "Mãe", frase: "Nada disso! Sai desse computador agora! Seu primo acabou de chegar." }
 ];
 
+dialogos_mae = dialogos;
+dialogos = [
+    { nome: "Mãe", frase: "Alan!" }
+];
+intro_mae = true;
+alan_anda = false;
+alan_vel = 4;
+alan_desloca = 150;
+alan_alvo_x = 0;
+delay_antes = 0;
+delay_depois = 0;
+delay_tempo = 60;
+
 dialogos_theo = [
     { nome: "Theo", frase: "Alan, você não vai acreditar nisso aqui!" },
     { nome: "Alan", frase: "O que é dessa vez, Theo?" },
@@ -84,3 +97,4 @@ cam_x = 0;
 cam_y = 0;
 cam_ativa = false;
 cam_vel = 0.08;
+
