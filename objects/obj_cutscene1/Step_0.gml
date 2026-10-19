@@ -1,11 +1,13 @@
 if (maeentra) {
-    obj_mainha.y += 5;
+	if(!instance_exists(obj_mainha)){
+		instance_create_layer(1050, 1080, "Instances", obj_mainha);}
+    obj_mainha.y -= 5;
     if (obj_mainha.sprite_index != spr_maebaixo) {
         obj_mainha.sprite_index = spr_maebaixo;
     }
-    if (obj_mainha.y >= 240) {
+    if (obj_mainha.y <= 700) {
         acao1 = false;
-        obj_mainha.y = 240;
+        obj_mainha.y = 700;
         maeentra = false;
 
         dialogo_index = 0;
@@ -14,27 +16,60 @@ if (maeentra) {
         caixadetexto = true;
     }
 }
+if (delay_antes > 0) {
+    delay_antes -= 1;
+    if (delay_antes <= 0) {
+        alan_anda = true;
+    }
+}
+
+if (alan_anda){
+    if (instance_exists(obj_alancutscene)) {
+        obj_alancutscene.x = max(obj_alancutscene.x - alan_vel, alan_alvo_x);
+    }
+    if (!instance_exists(obj_alancutscene) || obj_alancutscene.x <= alan_alvo_x) {
+        alan_anda = false;
+        delay_depois = delay_tempo;
+    }
+}
+
+if (delay_depois > 0) {
+    delay_depois -= 1;
+    if (delay_depois <= 0) {
+        dialogos = dialogos_mae;
+        dialogo_index = 0;
+        nome = dialogos[dialogo_index].nome;
+        frase = dialogos[dialogo_index].frase;
+        contador_texto = 0;
+        mostrar_texto = true;
+        texto_acelerado = false;
+        caixadetexto = true;
+    }
+}
 if (!acao1 && !maesai) {
     obj_mainha.sprite_index = spr_mae;
 }
 
 if (maesai) {
-    obj_mainha.y -= 5;
+    obj_mainha.y += 5;
     obj_mainha.sprite_index = spr_alancima;
 
-    if (obj_mainha.y < -120) {
+    if (obj_mainha.y > 1120) {
         maesai = false;
         alarm[2] = 180;
         fase = 2;
+		if(!instance_exists(obj_mainha)){with(obj_mainha){instance_destroy();}}
     }
 }
 
 if (theoentra) {
-    obj_theocutscene.y += 5;
+	if(!instance_exists(obj_theocutscene)){
+		instance_create_layer(1050, 1080, "Instances", obj_theocutscene);}
+    obj_theocutscene.y -= 5;
     obj_theocutscene.sprite_index = spr_theobaixo;
 
-    if (obj_theocutscene.y >= 240) {
-        obj_theocutscene.y = 240;
+    if (obj_theocutscene.y >= 700) {
+        obj_theocutscene.y = 700;
         obj_theocutscene.sprite_index = spr_theoparadobaixo;
         theoentra = false;
 
@@ -162,7 +197,6 @@ if (caixadetexto && !_fixo) {
 var _w = camera_get_view_width(_cam);
 var _h = camera_get_view_height(_cam);
 
-// centro real da view, descontando o tremor do frame anterior
 var _centro_x = camera_get_view_x(_cam) + _w / 2 - shake_ox;
 var _centro_y = camera_get_view_y(_cam) + _h / 2 - shake_oy;
 
