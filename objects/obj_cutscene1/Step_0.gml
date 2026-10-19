@@ -68,7 +68,7 @@ if (theoentra) {
     obj_theocutscene.y -= 5;
     obj_theocutscene.sprite_index = spr_theobaixo;
 
-    if (obj_theocutscene.y >= 700) {
+    if (obj_theocutscene.y <= 700) {
         obj_theocutscene.y = 700;
         obj_theocutscene.sprite_index = spr_theoparadobaixo;
         theoentra = false;

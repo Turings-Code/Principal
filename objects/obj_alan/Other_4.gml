@@ -19,3 +19,4 @@ if(room==rm_bletchley2){
 	else{x=100; y=1050;
 	image_xscale=0.7; image_yscale=0.7; obj_trocaroom.bletchleycima=false;}
 }
+if(room!=rm_quarto){obj_alan.travado = false;}
