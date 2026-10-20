@@ -275,6 +275,7 @@
     {"id":{"name":"spr_Descricaoabrir","path":"sprites/spr_Descricaoabrir/spr_Descricaoabrir.yy",},},
     {"id":{"name":"spr_Descricaocopialink","path":"sprites/spr_Descricaocopialink/spr_Descricaocopialink.yy",},},
     {"id":{"name":"spr_Descricaocopiar","path":"sprites/spr_Descricaocopiar/spr_Descricaocopiar.yy",},},
+    {"id":{"name":"spr_enigma_cutscene","path":"sprites/spr_enigma_cutscene/spr_enigma_cutscene.yy",},},
     {"id":{"name":"spr_enigma1","path":"sprites/spr_enigma1/spr_enigma1.yy",},},
     {"id":{"name":"spr_enigma2","path":"sprites/spr_enigma2/spr_enigma2.yy",},},
     {"id":{"name":"spr_enigma3","path":"sprites/spr_enigma3/spr_enigma3.yy",},},

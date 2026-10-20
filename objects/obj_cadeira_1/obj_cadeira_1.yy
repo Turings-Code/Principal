@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Hut 8",
-    "path":"folders/Sprites/Hut 8.yy",
+    "path":"folders/Objetos/Hut 8.yy",
   },
   "parentObjectId":null,
   "persistent":false,
