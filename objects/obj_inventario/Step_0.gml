@@ -1,4 +1,5 @@
-
+if(instance_exists(obj_cutscene2)){if(!obj_cutscene2.cutscene) exit;}
+if(instance_exists(obj_cutscene3)){if(obj_cutscene3.cutscene) exit;}
 
 // algum popup aberto? (inventário não responde)
 var _popup = instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
@@ -7,6 +8,7 @@ var _popup = instance_exists(obj_quadro) || instance_exists(obj_piano) || instan
 // abrir/fechar clicando no ícone
 if (!_popup && mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)) {
     aberto = !aberto;
+    abriu_agora = true;
 }
 
 // chave
@@ -26,6 +28,34 @@ if (global.papel && _p == -1 && array_length(itens) < max_slots) {
 else if (!global.papel && _p != -1) {
     array_delete(itens, _p, 1);
 }
+
+var _f = array_get_index(itens, spr_iconefolhasenigma);
+if (global.folhasenigma && _f == -1 && array_length(itens) < max_slots) {
+    array_push(itens, spr_iconefolhasenigma);
+}
+else if (!global.folhasenigma && _f != -1) {
+    array_delete(itens, _f, 1);
+}
+
+if (aberto && !abriu_agora && !_popup && mouse_check_button_pressed(mb_left) && !instance_exists(obj_folhasenigma)) {
+    var _idx = array_get_index(itens, spr_iconefolhasenigma);
+    if (_idx != -1) {
+        var _col, _lin;
+        if (_idx < 4) {
+            _col = 0;
+            _lin = _idx + 1;
+        } else {
+            _col = 1;
+            _lin = _idx - 4;
+        }
+        var _x1 = x + _col * cell_w;
+        var _y1 = y + _lin * cell_h;
+        if (point_in_rectangle(mouse_x, mouse_y, _x1, _y1, _x1 + cell_w, _y1 + cell_h)) {
+            instance_create_depth(0, 0, -20000, obj_folhasenigma);
+        }
+    }
+}
+abriu_agora = false;
 
 var _sobre = position_meeting(mouse_x, mouse_y, id);
 

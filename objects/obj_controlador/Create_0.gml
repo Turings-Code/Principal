@@ -8,6 +8,7 @@ global.folha_arrastada = noone;
 global.font_pixel = font_add_sprite_ext(spr_fonte, "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?.,", false, 7);
 global.chave = false;
 global.papel = false;
+global.folhasenigma = false;
 if (file_exists("save.ini")) {
     ini_open("save.ini");
     global.chave = ini_read_real("jogo", "chave", 0);

@@ -19,7 +19,14 @@ if (dialogo_index < array_length(dialogos)) {
         if (instance_exists(obj_objetivos)) {
             obj_objetivos.define_objetivo("OBJETIVO - Siga o Turing");
         }
-
-        instance_destroy();
+		if (instance_exists(obj_turing)) {
+        with (obj_turing) {
+            alvo_y = y + 500;
+            andando = true;
+        }
+    }
+		obj_alan.travado=false;
+        cutscene=true;
+		obj_alan.theosegue=true;
     }
 }

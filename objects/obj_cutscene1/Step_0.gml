@@ -97,10 +97,9 @@ else if (theoanda == 2) {
         theoanda = 0;
         obj_theocutscene.sprite_index = spr_theoparadobaixo;
         alarm[3] = 60;
-
-        if (!instance_exists(obj_objetivos)) {
-            instance_create_depth(0, 0, -100000, obj_objetivos);
-        }
+		if(!instance_exists(obj_enigmacutscene)){
+	instance_create_layer(770, 655, "Instances", obj_enigmacutscene);}
+        
         obj_objetivos.define_objetivo("OBJETIVO - Vá até o Theo");
     }
 }

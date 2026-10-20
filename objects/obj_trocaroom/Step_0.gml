@@ -65,7 +65,7 @@ if (estado == "entrando") {
         
     }
 }}
-if(room==rm_bletchley2&&obj_alan.x<2500&&obj_alan.y<=1300){
+if(room==rm_bletchley2&&obj_alan.x<1000&&obj_alan.y<=1300){
 if (estado == "entrando") {
     alpha += 0.02;
     if (alpha >= 1) {
@@ -75,13 +75,23 @@ if (estado == "entrando") {
         
     }
 }}
-if(room==rm_bletchley2&&obj_alan.x<2500&&obj_alan.y>1300){
+if(room==rm_bletchley2&&obj_alan.x<1000&&obj_alan.y>1300){
 if (estado == "entrando") {
     alpha += 0.02;
     if (alpha >= 1) {
         alpha = 1;
 		bletchley2baixo=true;
         room_goto(rm_bletchley);
+        
+    }
+}}
+if(room==rm_bletchley2&&obj_alan.x>1800&&obj_alan.y>2000){
+if (estado == "entrando") {
+    alpha += 0.02;
+    if (alpha >= 1) {
+        alpha = 1;
+		bletchley2baixo=true;
+        room_goto(rm_hut8);
         
     }
 }}

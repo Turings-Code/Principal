@@ -7,3 +7,4 @@ contador_texto = 0;
 mostrar_texto = true;
 texto_acelerado = false;
 caixadetexto = true;
+obj_enigmacutscene.sprite_index=spr_enigma_cutscenalberto;
