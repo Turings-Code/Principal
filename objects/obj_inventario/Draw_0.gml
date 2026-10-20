@@ -1,3 +1,4 @@
+if (instance_exists(obj_cutscene2)) exit;
 var _esc = image_xscale;
 
 // tamanho da célula = tamanho do ícone da mochila na escala atual

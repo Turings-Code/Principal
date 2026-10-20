@@ -1,3 +1,4 @@
+
 if (variable_instance_exists(id, "travado") && travado) {
     scr_collision_move(0, 0);
     exit;

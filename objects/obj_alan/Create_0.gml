@@ -7,3 +7,4 @@ offset_letraf_x = 0;
 offset_letraf_y = -185;
 vel = 7;
 travado=false;
+

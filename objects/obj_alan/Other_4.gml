@@ -13,10 +13,24 @@ if(room==rm_hut8){
 if(room==rm_hut6){
 	x=1900; y=1500;
 	image_xscale=1; image_yscale=1}
-if(room==rm_bletchley2){
-	if(obj_trocaroom.bletchleybaixo){x=100; y=1670;
-	image_xscale=0.7; image_yscale=0.7; obj_trocaroom.bletchleybaixo=false;}
-	else{x=100; y=1050;
-	image_xscale=0.7; image_yscale=0.7; obj_trocaroom.bletchleycima=false;}
+if (room == rm_bletchley2) {
+    image_xscale = 0.7;
+    image_yscale = 0.7;
+    if (obj_trocaroom.quartopara2) {
+        x = 1170;
+        y = 400;
+		travado=true;
+        obj_trocaroom.quartopara2 = false;
+    }
+    else if (obj_trocaroom.bletchleybaixo) {
+        x = 100;
+        y = 1670;
+        obj_trocaroom.bletchleybaixo = false;
+    }
+    else {
+        x = 100;
+        y = 1050;
+        obj_trocaroom.bletchleycima = false;
+    }
 }
-if(room!=rm_quarto){obj_alan.travado = false;}
+

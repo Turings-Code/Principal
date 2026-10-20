@@ -54,7 +54,7 @@ if (maesai) {
     obj_mainha.y += 5;
     obj_mainha.sprite_index = spr_alancima;
 
-    if (obj_mainha.y > 1120) {
+    if (obj_mainha.y > 1250) {
         maesai = false;
         alarm[2] = 180;
         fase = 2;
@@ -66,7 +66,7 @@ if (theoentra) {
 	if(!instance_exists(obj_theocutscene)){
 		instance_create_layer(1050, 1080, "Instances", obj_theocutscene);}
     obj_theocutscene.y -= 5;
-    obj_theocutscene.sprite_index = spr_theobaixo;
+    obj_theocutscene.sprite_index = spr_theocima;
 
     if (obj_theocutscene.y <= 700) {
         obj_theocutscene.y = 700;

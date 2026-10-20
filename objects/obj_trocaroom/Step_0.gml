@@ -21,7 +21,9 @@ if (estado == "entrando") {
     alpha += 0.02;
     if (alpha >= 1) {
         alpha = 1;
+		obj_trocaroom.quartopara2 = true;
         room_goto(rm_bletchley2);
+		
         
     }
 }}
