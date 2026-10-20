@@ -9,4 +9,17 @@ if (dialogo_index < array_length(dialogos)) {
 } else {
     caixadetexto = false;
     mostrar_texto = false;
+
+    if (fase == 1) {
+        fase = 2;
+        turing_sobe = true;
+    }
+    else if (fase == 2) {
+
+        if (instance_exists(obj_objetivos)) {
+            obj_objetivos.define_objetivo("OBJETIVO - Siga o Turing");
+        }
+
+        instance_destroy();
+    }
 }

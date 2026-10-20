@@ -1,3 +1,22 @@
+if (turing_sobe && instance_exists(obj_turing)) {
+    obj_turing.y -= turing_vel;
+    obj_turing.sprite_index = spr_turingcima;
+
+    if (obj_turing.y <= turing_alvo_y) {
+        obj_turing.y = turing_alvo_y;
+        turing_sobe = false;
+		obj_turing.sprite_index = spr_turingparado;
+        dialogos = dialogos_turing;
+        dialogo_index = 0;
+        nome = dialogos[dialogo_index].nome;
+        frase = dialogos[dialogo_index].frase;
+        contador_texto = 0;
+        mostrar_texto = true;
+        texto_acelerado = false;
+        caixadetexto = true;
+    }
+}
+
 if (delay_inicio > 0) {
     delay_inicio -= 1;
     if (delay_inicio <= 0) {
@@ -28,16 +47,18 @@ if (_falando) {
     }
 }
 
+if (caixadetexto) {
 var _cam = view_camera[0];
 var _alvo = noone;
 
-if (caixadetexto) {
-    if (nome == "Theo" && instance_exists(obj_theocutscene)) {
-        _alvo = obj_theocutscene;
-    }
-    else if (nome == "Alan" && instance_exists(obj_alan)) {
-        _alvo = obj_alan;
-    }
+if (nome == "Theo" && instance_exists(obj_theo)) {
+    _alvo = obj_theo;
+}
+else if (nome == "Alan" && instance_exists(obj_alan)) {
+    _alvo = obj_alan;
+}
+else if ((nome == "Turing" || nome == "???") && instance_exists(obj_turing)) {
+    _alvo = obj_turing;
 }
 
 var _w = camera_get_view_width(_cam);
@@ -74,3 +95,4 @@ if (shake_ativo) {
 
 camera_set_view_size(_cam, _w, _h);
 camera_set_view_pos(_cam, _centro_x - _w / 2 + shake_ox, _centro_y - _h / 2 + shake_oy);
+}

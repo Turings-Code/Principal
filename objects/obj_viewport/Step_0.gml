@@ -1,16 +1,20 @@
-if (instance_exists(obj_alan)) {
-    var target_x = obj_alan.x - cam_width / 2;
-    var target_y = obj_alan.y - cam_height / 2;
+var _fala = instance_exists(obj_cutscene2) && obj_cutscene2.caixadetexto;
 
-    var cam_x = camera_get_view_x(cam);
-    var cam_y = camera_get_view_y(cam);
+if (!_fala) {
+    var _w = lerp(camera_get_view_width(cam), cam_width, 0.1);
+    var _h = lerp(camera_get_view_height(cam), cam_height, 0.1);
+    camera_set_view_size(cam, _w, _h);
 
-    var new_x = lerp(cam_x, target_x, 0.1);
-    var new_y = lerp(cam_y, target_y, 0.1);
+    if (instance_exists(obj_alan)) {
+        var target_x = obj_alan.x - _w / 2;
+        var target_y = obj_alan.y - _h / 2;
 
-    new_x = clamp(new_x, 0, room_width - cam_width);
-    new_y = clamp(new_y, 0, room_height - cam_height);
+        var new_x = lerp(camera_get_view_x(cam), target_x, 0.1);
+        var new_y = lerp(camera_get_view_y(cam), target_y, 0.1);
 
-    camera_set_view_pos(cam, new_x, new_y);
+        new_x = clamp(new_x, 0, room_width - _w);
+        new_y = clamp(new_y, 0, room_height - _h);
+
+        camera_set_view_pos(cam, new_x, new_y);
+    }
 }
-

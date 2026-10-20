@@ -1,12 +1,12 @@
 function scr_collision_move(move_x, move_y)
 {
-    // checa colisão com bloco OU com o turing
+    
     var _bate = function(_x, _y)
-    {
-        return place_meeting(_x, _y, obj_collisionblock) || place_meeting(_x, _y, obj_turing);
-    };
+{
+    return place_meeting(_x, _y, obj_collisionblock) || place_meeting(_x, _y, obj_turing) || place_meeting(_x, _y, obj_theo);
+};
 
-    // --- Move em sub-passos de 1 pixel no eixo X ---
+    
     var steps_x = abs(move_x);
     var dir_x = sign(move_x);
     repeat (steps_x)
@@ -20,7 +20,7 @@ function scr_collision_move(move_x, move_y)
             break;
         }
     }
-    // --- Move em sub-passos de 1 pixel no eixo Y ---
+    
     var steps_y = abs(move_y);
     var dir_y = sign(move_y);
     repeat (steps_y)
@@ -34,7 +34,7 @@ function scr_collision_move(move_x, move_y)
             break;
         }
     }
-    // --- Slide diagonal quando travado no eixo X ---
+    
     if (move_x != 0 && _bate(x + dir_x, y))
     {
         var range = 16;
@@ -54,7 +54,7 @@ function scr_collision_move(move_x, move_y)
             }
         }
     }
-    // --- Slide diagonal quando travado no eixo Y ---
+    
     if (move_y != 0 && _bate(x, y + dir_y))
     {
         var range = 16;

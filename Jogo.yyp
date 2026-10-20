@@ -179,6 +179,7 @@
     {"id":{"name":"obj_telapercebido","path":"objects/obj_telapercebido/obj_telapercebido.yy",},},
     {"id":{"name":"obj_tempf","path":"objects/obj_tempf/obj_tempf.yy",},},
     {"id":{"name":"obj_Textaofinal","path":"objects/obj_Textaofinal/obj_Textaofinal.yy",},},
+    {"id":{"name":"obj_theo","path":"objects/obj_theo/obj_theo.yy",},},
     {"id":{"name":"obj_theocutscene","path":"objects/obj_theocutscene/obj_theocutscene.yy",},},
     {"id":{"name":"obj_titulocreditos","path":"objects/obj_titulocreditos/obj_titulocreditos.yy",},},
     {"id":{"name":"obj_Titulodojogo","path":"objects/obj_Titulodojogo/obj_Titulodojogo.yy",},},

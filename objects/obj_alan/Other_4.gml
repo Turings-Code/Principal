@@ -21,6 +21,9 @@ if (room == rm_bletchley2) {
         y = 400;
 		travado=true;
         obj_trocaroom.quartopara2 = false;
+		direcao = "baixo";
+sprite_index = spr_alanparado;
+image_index = 0;
     }
     else if (obj_trocaroom.bletchleybaixo) {
         x = 100;

@@ -58,7 +58,7 @@ if (maesai) {
         maesai = false;
         alarm[2] = 180;
         fase = 2;
-		if(!instance_exists(obj_mainha)){with(obj_mainha){instance_destroy();}}
+		if(instance_exists(obj_mainha)){with(obj_mainha){instance_destroy();}}
     }
 }
 
