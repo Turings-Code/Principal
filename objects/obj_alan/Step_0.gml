@@ -1,4 +1,3 @@
-
 if (variable_instance_exists(id, "travado") && travado) {
     scr_collision_move(0, 0);
     exit;
@@ -20,6 +19,8 @@ if (room == rm_mansao) {
 	vel = 9; }
 else if (room == rm_bletchley) {
 	vel = 7; }
+else if (room == rm_bletchley2) {
+	vel = 25; }
 else if (room == rm_hut8) {
 	vel = 9; }
 else if (room == rm_quarto) {
