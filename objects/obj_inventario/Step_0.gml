@@ -76,10 +76,6 @@ if (aberto) {
     }
 }
 
-if (!instance_exists(obj_folhasenigma)) {
-    if ((_sobre || _sobre_item) && !_popup) {
-        window_set_cursor(cr_handpoint);
-    } else {
-        window_set_cursor(cr_default);
-    }
+if ((_sobre || _sobre_item) && !_popup) {
+    obj_cursormouse.mao = true;
 }

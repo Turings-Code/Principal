@@ -1,3 +1,5 @@
+//show_debug_message("mouse: " + string(mouse_x) + ", " + string(mouse_y));
+show_debug_message(instance_number(obj_enigma1));
 if (variable_instance_exists(id, "travado") && travado) {
     scr_collision_move(0, 0);
     exit;
@@ -22,7 +24,7 @@ else if (room == rm_bletchley) {
 else if (room == rm_bletchley2) {
 	vel = 25; }
 else if (room == rm_hut8) {
-	vel = 9; }
+	vel = 25; }
 else if (room == rm_quarto) {
 	vel = 7; }
 else if (room == rm_hut6) {
