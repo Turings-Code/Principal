@@ -71,3 +71,10 @@ if (!variable_global_exists("onze")) {
     global.zero = false;
     global.nove = false;
 }
+
+palavra_atual = 0;
+
+if (global.onze) palavra_atual = 1;
+if (global.cinco) palavra_atual = 2;
+if (global.zero) palavra_atual = 3;
+if (global.nove) palavra_atual = 4;

@@ -3,7 +3,16 @@ if (!variable_global_exists("onze")) {
     global.cinco = false;
     global.zero = false;
     global.nove = false;
+	global.seis = false;
+    global.sete = false;
+    global.dois = false;
+    global.quatro = false;
+	global.doze = false;
+    global.dois2 = false;
+    global.quinze = false;
+    global.um = false;
 }
+
 
 image_speed = 0;
 image_index = 0;

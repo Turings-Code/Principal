@@ -1,11 +1,27 @@
-//show_debug_message("mouse: " + string(mouse_x) + ", " + string(mouse_y));
-show_debug_message(instance_number(obj_enigma1));
+/*show_debug_message(
+    string(device_mouse_x_to_gui(0)) + "x" +
+    string(device_mouse_y_to_gui(0))
+);*/
+var _baixo = global.theojogando ? spr_theobaixo : spr_alanbaixo;
+var _cima = global.theojogando ? spr_theocima : spr_alancima;
+var _esquerda = global.theojogando ? spr_theoesquerda : spr_alanesquerda;
+var _direita = global.theojogando ? spr_theodireita : spr_alandireita;
+var _parado = global.theojogando ? spr_theoparado : spr_alanparado;
+var _parado_cima = global.theojogando ? spr_theoparadocima : spr_alanparadocima;
+var _parado_esquerda = global.theojogando ? spr_theoparadoesquerda : spr_alanparadoesquerda;
+var _parado_direita = global.theojogando ? spr_theoparadodireita : spr_alanparadodireita;
+
+if(global.theojogando){
+	image_xscale=7;
+	image_yscale=7;}
+else{
+	image_yscale=1;
+	image_xscale=1;}
+
 if (variable_instance_exists(id, "travado") && travado) {
     scr_collision_move(0, 0);
     exit;
 }
-
-
 
 if (instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
     || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)
@@ -14,45 +30,52 @@ if (instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists
     exit;
 }
 
+
+
 var move_x = 0;
 var move_y = 0;
 
 if (room == rm_mansao) {
-	vel = 9; }
-else if (room == rm_bletchley) {
-	vel = 7; }
-else if (room == rm_bletchley2) {
-	vel = 25; }
-else if (room == rm_hut8) {
-	vel = 25; }
-else if (room == rm_quarto) {
-	vel = 7; }
-else if (room == rm_hut6) {
-	vel = 9; }
+    vel = 9;
+} else if (room == rm_bletchley) {
+    vel = 7;
+} else if (room == rm_bletchley2) {
+    vel = 25;
+} else if (room == rm_hut8) {
+    vel = 25;
+} else if (room == rm_quarto) {
+    vel = 7;
+} else if (room == rm_hut6) {
+    vel = 9;
+}
 
 var vel_y = vel;
+
 if (room == rm_mansao && x >= 100 && x <= 500 && y >= 1660 && y <= 2300) {
     vel_y -= 2;
 }
 
 if (keyboard_check(ord("S"))) {
     move_y = vel_y;
-    sprite_index = spr_alanbaixo;
+    sprite_index = _baixo;
     direcao = "cima";
 }
+
 if (keyboard_check(ord("W"))) {
-    move_y = -(vel_y);
-    sprite_index = spr_alancima;
+    move_y = -vel_y;
+    sprite_index = _cima;
     direcao = "baixo";
 }
+
 if (keyboard_check(ord("A"))) {
-    move_x = -(vel);
-    sprite_index = spr_alanesquerda;
+    move_x = -vel;
+    sprite_index = _esquerda;
     direcao = "esquerda";
 }
+
 if (keyboard_check(ord("D"))) {
     move_x = vel;
-    sprite_index = spr_alandireita;
+    sprite_index = _direita;
     direcao = "direita";
 }
 
@@ -63,27 +86,22 @@ if (move_x != 0 && move_y != 0) {
 
 if (move_x == 0 && move_y == 0) {
     if (direcao == "cima") {
-        sprite_index = spr_alanparado;
-    }
-    else if (direcao == "baixo") {
-        sprite_index = spr_alanparadocima;
-    }
-    else if (direcao == "esquerda") {
-        sprite_index = spr_alanparadoesquerda;
-    }
-    else if (direcao == "direita") {
-        sprite_index = spr_alanparadodireita;
+        sprite_index = _parado;
+    } else if (direcao == "baixo") {
+        sprite_index = _parado_cima;
+    } else if (direcao == "esquerda") {
+        sprite_index = _parado_esquerda;
+    } else if (direcao == "direita") {
+        sprite_index = _parado_direita;
     }
 }
 
-// --- ÍCONES E / F (só um aparece por vez) ---
-var perto_e = (instance_exists(obj_aparecee) && distance_to_object(obj_aparecee) < 80);
-var perto_f = (instance_exists(obj_aparecef) && distance_to_object(obj_aparecef) < 80);
+var perto_e = instance_exists(obj_aparecee) && distance_to_object(obj_aparecee) < 80;
+var perto_f = instance_exists(obj_aparecef) && distance_to_object(obj_aparecef) < 80;
 
 var mostrar_e = perto_e;
 var mostrar_f = perto_f;
 
-// se estiver perto dos dois, vence o mais próximo
 if (perto_e && perto_f) {
     var _ae = instance_nearest(x, y, obj_aparecee);
     var _af = instance_nearest(x, y, obj_aparecef);
@@ -95,7 +113,6 @@ if (perto_e && perto_f) {
     }
 }
 
-// --- letra E ---
 if (mostrar_e) {
     var _ae2 = instance_nearest(x, y, obj_aparecee);
     var _ex = _ae2.x + offset_letrae_x;
@@ -112,7 +129,6 @@ if (mostrar_e) {
     obj_letrae.fading_out = true;
 }
 
-// --- letra F ---
 if (mostrar_f) {
     var _af2 = instance_nearest(x, y, obj_aparecef);
     var _fx = _af2.x + offset_letraf_x;
@@ -135,29 +151,24 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
     }
 }
 
-// --- E perto de um obj_pianoaparece (ou filho): cria o piano ---
 if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_pianoaparece)) {
     if (distance_to_object(obj_pianoaparece) < 80 && !instance_exists(obj_piano)) {
         instance_create_depth(0, 0, -20000, obj_piano);
     }
 }
 
-// --- E perto de um obj_cofreaparece (ou filho): cria o cofre ---
 if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_cofreaparece)) {
     if (distance_to_object(obj_cofreaparece) < 80 && !instance_exists(obj_cofre)) {
         instance_create_depth(0, 0, -20000, obj_cofre);
     }
 }
 
-// --- E perto de um obj_enigmaXaparece (ou filho): cria o enigma correspondente ---
 if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae)) {
     if (instance_exists(obj_enigma1aparece) && distance_to_object(obj_enigma1aparece) < 80 && !instance_exists(obj_enigma1)) {
         instance_create_depth(0, 0, -20000, obj_enigma1);
-    }
-    else if (instance_exists(obj_enigma2aparece) && distance_to_object(obj_enigma2aparece) < 80 && !instance_exists(obj_enigma2)) {
+    } else if (instance_exists(obj_enigma2aparece) && distance_to_object(obj_enigma2aparece) < 80 && !instance_exists(obj_enigma2) && obj_controladorenigmas.enigma1) {
         instance_create_depth(0, 0, -20000, obj_enigma2);
-    }
-    else if (instance_exists(obj_enigma3aparece) && distance_to_object(obj_enigma3aparece) < 80 && !instance_exists(obj_enigma3)) {
+    } else if (instance_exists(obj_enigma3aparece) && distance_to_object(obj_enigma3aparece) < 80 && !instance_exists(obj_enigma3) && obj_controladorenigmas.enigma2) {
         instance_create_depth(0, 0, -20000, obj_enigma3);
     }
 }
@@ -167,47 +178,50 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
         var _cam = view_camera[0];
         var _fx = camera_get_view_x(_cam) + camera_get_view_width(_cam) / 2;
         var _fy = camera_get_view_y(_cam) + camera_get_view_height(_cam) / 2;
-        instance_create_depth(_fx-200, _fy-150, -20000, obj_folha1);
-		instance_create_depth(_fx+250, _fy-150, -20000, obj_folha2);
-		instance_create_depth(_fx+40, _fy-20, -20000, obj_folha3);
-		instance_create_depth(_fx-150, _fy+150, -20000, obj_folha2);
-		instance_create_depth(_fx+200, _fy+150, -20000, obj_folha4);
-		instance_create_depth(_fx-50, _fy, -20000, obj_folha5);
-		instance_create_depth(_fx+250, _fy, -20000, obj_folha1);
-		instance_create_depth(0, 0, -19000, obj_escurece);
+        instance_create_depth(_fx - 200, _fy - 150, -20000, obj_folha1);
+        instance_create_depth(_fx + 250, _fy - 150, -20000, obj_folha2);
+        instance_create_depth(_fx + 40, _fy - 20, -20000, obj_folha3);
+        instance_create_depth(_fx - 150, _fy + 150, -20000, obj_folha2);
+        instance_create_depth(_fx + 200, _fy + 150, -20000, obj_folha4);
+        instance_create_depth(_fx - 50, _fy, -20000, obj_folha5);
+        instance_create_depth(_fx + 250, _fy, -20000, obj_folha1);
+        instance_create_depth(0, 0, -19000, obj_escurece);
     }
 }
+
 if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_folhas2)) {
     if (distance_to_object(obj_folhas2) < 80 && !instance_exists(obj_folha1)) {
         var _cam = view_camera[0];
         var _fx = camera_get_view_x(_cam) + camera_get_view_width(_cam) / 2;
         var _fy = camera_get_view_y(_cam) + camera_get_view_height(_cam) / 2;
-        instance_create_depth(_fx-180, _fy-130, -20000, obj_folha1);
-		instance_create_depth(_fx+220, _fy-140, -20000, obj_folha2);
-		instance_create_depth(_fx+30,  _fy-30,  -20000, obj_folha3);
-		instance_create_depth(_fx-140, _fy+130, -20000, obj_folha2);
-		instance_create_depth(_fx+180, _fy+140, -20000, obj_folha4);
-		instance_create_depth(_fx-60,  _fy+10,  -20000, obj_folha5);
-		instance_create_depth(_fx+210, _fy+10,  -20000, obj_folha1);
-		instance_create_depth(0, 0, -19000, obj_escurece);
+        instance_create_depth(_fx - 180, _fy - 130, -20000, obj_folha1);
+        instance_create_depth(_fx + 220, _fy - 140, -20000, obj_folha2);
+        instance_create_depth(_fx + 30, _fy - 30, -20000, obj_folha3);
+        instance_create_depth(_fx - 140, _fy + 130, -20000, obj_folha2);
+        instance_create_depth(_fx + 180, _fy + 140, -20000, obj_folha4);
+        instance_create_depth(_fx - 60, _fy + 10, -20000, obj_folha5);
+        instance_create_depth(_fx + 210, _fy + 10, -20000, obj_folha1);
+        instance_create_depth(0, 0, -19000, obj_escurece);
     }
 }
+
 if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_folhas3)) {
     if (distance_to_object(obj_folhas3) < 80 && !instance_exists(obj_folha1)) {
         var _cam = view_camera[0];
         var _fx = camera_get_view_x(_cam) + camera_get_view_width(_cam) / 2;
         var _fy = camera_get_view_y(_cam) + camera_get_view_height(_cam) / 2;
-        instance_create_depth(_fx+170, _fy+70,  -20000, obj_folha1);
-		instance_create_depth(_fx-200, _fy-30,  -20000, obj_folha2);
-		instance_create_depth(_fx+10,  _fy+150, -20000, obj_folha3);
-		instance_create_depth(_fx+190, _fy-130,  -20000, obj_folha2);
-		instance_create_depth(_fx-120, _fy-190, -20000, obj_folha4);
-		instance_create_depth(_fx+40,  _fy-30,  -20000, obj_folha5);
-		instance_create_depth(_fx-150, _fy+90,  -20000, obj_folha1);
-		instance_create_depth(_fx+150,  _fy-30,  -20000, obj_folha4);
-		instance_create_depth(_fx,  _fy+100,  -19000, obj_codigo);
-		instance_create_depth(0, 0, -19000, obj_escurece);
+        instance_create_depth(_fx + 170, _fy + 70, -20000, obj_folha1);
+        instance_create_depth(_fx - 200, _fy - 30, -20000, obj_folha2);
+        instance_create_depth(_fx + 10, _fy + 150, -20000, obj_folha3);
+        instance_create_depth(_fx + 190, _fy - 130, -20000, obj_folha2);
+        instance_create_depth(_fx - 120, _fy - 190, -20000, obj_folha4);
+        instance_create_depth(_fx + 40, _fy - 30, -20000, obj_folha5);
+        instance_create_depth(_fx - 150, _fy + 90, -20000, obj_folha1);
+        instance_create_depth(_fx + 150, _fy - 30, -20000, obj_folha4);
+        instance_create_depth(_fx, _fy + 100, -19000, obj_codigo);
+        instance_create_depth(0, 0, -19000, obj_escurece);
     }
 }
+
 scr_collision_move(move_x, move_y);
 depth = -y;

@@ -1,0 +1,11 @@
+image_xscale=5.6;
+image_yscale=5.6;
+image_alpha=0;
+image_speed = 0;
+image_index = 0;
+solto = false;
+queda_vel = 0;
+queda_grav = 0.6;
+giro_alvo = -25;
+giro_vel = 0.15;
+parado = false;

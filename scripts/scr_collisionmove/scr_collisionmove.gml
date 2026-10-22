@@ -3,7 +3,7 @@ function scr_collision_move(move_x, move_y)
     
     var _bate = function(_x, _y)
 {
-    return place_meeting(_x, _y, obj_collisionblock) || place_meeting(_x, _y, obj_turing) || place_meeting(_x, _y, obj_theo);
+    return place_meeting(_x, _y, obj_collisionblock) || place_meeting(_x, _y, obj_turing) || place_meeting(_x, _y, obj_theocutscene2) || place_meeting(_x, _y, obj_alancutscene);
 };
 
     

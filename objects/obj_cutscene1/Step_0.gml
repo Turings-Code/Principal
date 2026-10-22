@@ -69,7 +69,7 @@ if (theoentra) {
 
     if (obj_theocutscene.y <= 700) {
         obj_theocutscene.y = 700;
-        obj_theocutscene.sprite_index = spr_theoparadobaixo;
+        obj_theocutscene.sprite_index = spr_theoparado;
         theoentra = false;
 
         dialogos = dialogos_theo;
@@ -95,7 +95,7 @@ else if (theoanda == 2) {
 
     if (obj_theocutscene.x <= theo_alvo_x) {
         theoanda = 0;
-        obj_theocutscene.sprite_index = spr_theoparadobaixo;
+        obj_theocutscene.sprite_index = spr_theoparado;
         alarm[3] = 60;
 		if(!instance_exists(obj_enigmacutscene)){
 	instance_create_layer(770, 655, "Instances", obj_enigmacutscene);}

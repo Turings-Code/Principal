@@ -107,16 +107,14 @@ if (acerto_timer > 0) {
 if (fase != 1 && acerto_timer <= 0) {
     for (var i = 0; i < 26; i++) {
         if (keyboard_check_pressed(ord("A") + i)) {
-            if (ultima_tecla != i) {
-                ultima_tecla = i;
-                image_index = i + 1;
-                timer_tecla = tempo_tecla;
+    ultima_tecla = i;
+    image_index = i + 1;
+    timer_tecla = tempo_tecla;
 
-                if (texto_x1 + texto_desloca + string_length(digitado) * (letra_larg + fonte_espaco) + letra_larg <= texto_x2) {
-                    digitado += string_char_at(cifra, i + 1);
-                }
-            }
-        }
+    if (texto_x1 + texto_desloca + string_length(digitado) * (letra_larg + fonte_espaco) + letra_larg <= texto_x2) {
+        digitado += string_char_at(cifra, i + 1);
+    }
+}
     }
 
     if (keyboard_check_pressed(vk_backspace)) {

@@ -9,6 +9,24 @@ if (iniciar_dialogo) {
     caixadetexto = true;
 }
 
+if (dialogo_turing_valvula && !caixadetexto && !cutscene) {
+    dialogo_turing_valvula = false;
+    dialogos = [
+        { nome: "Turing", frase: "Já conseguiu pegar a Válvula Alfa?" }
+    ];
+    iniciar_dialogo = true;
+    cutscene = true;
+}
+
+if (dialogo_alan_valvula && !caixadetexto && !cutscene) {
+    dialogo_alan_valvula = false;
+    dialogos = [
+        { nome: "Alan", frase: "Eai Theo já conseguiu achar a válvula?" }
+    ];
+    iniciar_dialogo = true;
+    cutscene = true;
+}
+
 var _falando = (mostrar_texto && contador_texto < string_length(frase) && pausa_timer <= 0 && caixadetexto);
 
 if (_falando) {
@@ -30,8 +48,8 @@ if (caixadetexto) {
     var _cam = view_camera[0];
     var _alvo = noone;
 
-    if (nome == "Theo" && instance_exists(obj_theo)) {
-        _alvo = obj_theo;
+    if (nome == "Theo" && instance_exists(obj_theocutscene2)) {
+        _alvo = obj_theocutscene2;
     }
     else if (nome == "Alan" && instance_exists(obj_alan)) {
         _alvo = obj_alan;

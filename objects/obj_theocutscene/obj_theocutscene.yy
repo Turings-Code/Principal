@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_theoparadobaixo",
-    "path":"sprites/spr_theoparadobaixo/spr_theoparadobaixo.yy",
+    "name":"spr_theoparado",
+    "path":"sprites/spr_theoparado/spr_theoparado.yy",
   },
   "spriteMaskId":null,
   "visible":true,

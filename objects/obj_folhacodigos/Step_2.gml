@@ -1,3 +1,7 @@
+if(!obj_cutscene3.parte1){ visible=false;}
+else{visible=true;}
+if (obj_cutscene3.caixadetexto) exit;
+
 var _cam = view_camera[0];
 var _vx = camera_get_view_x(_cam);
 var _vy = camera_get_view_y(_cam);
@@ -27,7 +31,23 @@ y = _vy + y_atual;
 
 image_speed = 0;
 
-if (global.nove) {
+if (global.um) {
+    image_index = 12;
+} else if (global.quinze) {
+    image_index = 11;
+} else if (global.dois2) {
+    image_index = 10;
+} else if (global.doze) {
+    image_index = 9;
+} else if (global.quatro) {
+    image_index = 8;
+} else if (global.dois) {
+    image_index = 7;
+} else if (global.sete) {
+    image_index = 6;
+} else if (global.seis) {
+    image_index = 5;
+} else if (global.nove) {
     image_index = 4;
 } else if (global.zero) {
     image_index = 3;

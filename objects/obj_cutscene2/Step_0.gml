@@ -51,8 +51,8 @@ if (caixadetexto) {
 var _cam = view_camera[0];
 var _alvo = noone;
 
-if (nome == "Theo" && instance_exists(obj_theo)) {
-    _alvo = obj_theo;
+if (nome == "Theo" && instance_exists(obj_theocutscene2)) {
+    _alvo = obj_theocutscene2;
 }
 else if (nome == "Alan" && instance_exists(obj_alan)) {
     _alvo = obj_alan;

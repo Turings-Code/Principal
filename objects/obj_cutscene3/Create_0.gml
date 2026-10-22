@@ -20,6 +20,10 @@ caixadetexto = false;
 frase = "Nada";
 nome = "Nada";
 som_blip_id = -1;
+parte1=false;
+
+dialogo_turing_valvula = false;
+dialogo_alan_valvula = false;
 
 shake_ativo = false;
 shake_forca = 0;
