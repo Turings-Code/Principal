@@ -1,4 +1,4 @@
-show_debug_message(string(cadeado1)+string(cadeado2)+string(cadeado3));
+
 
 if (delay > 0) {
     delay -= 1;
@@ -63,4 +63,25 @@ if (cadeado3) cadeado3_ok = true;
 
 if (_area_mouse != -1) {
     obj_cursormouse.mao = true;
+}
+
+if (!aberto_cofre && cadeado1_ok && cadeado2_ok && cadeado3_ok) {
+    aberto_cofre = true;
+    sprite_index = spr_cofreabrindo;
+    image_index = 0;
+    image_speed = 1;
+
+    var _cam2 = view_camera[0];
+valvula_inst = instance_create_depth(
+    camera_get_view_x(_cam2) + camera_get_view_width(_cam2) / 2,
+    camera_get_view_y(_cam2) + camera_get_view_height(_cam2) / 2,
+    depth + 1,
+    obj_valvulaalfa
+);
+valvula_inst.visible = false;
+}
+
+if (aberto_cofre && image_index >= image_number - 1) {
+    image_speed = 0;
+    image_index = image_number - 1;
 }

@@ -26,9 +26,9 @@ delay_inicio = 120;
 dialogo_index = -1;
 dialogos = [
     { nome: "Alan", frase: "O que aconteceu? Onde estamos?" },
-    /*{ nome: "Theo", frase: "Que lugar é esse? Porque que você foi quebrar o enigma, Alan?" },
+    { nome: "Theo", frase: "Que lugar é esse? Porque que você foi quebrar o enigma, Alan?" },
 	{ nome: "Alan", frase: "O que que vamos fazer agora, Theo?" },
-	{ nome: "Theo", frase: "Como que vamos voltar pra casa agora?" }*/
+	{ nome: "Theo", frase: "Como que vamos voltar pra casa agora?" }
 ];
 
 fase = 1;
@@ -37,7 +37,7 @@ turing_alvo_y = 600;
 turing_vel = 3;
 dialogos_turing = [
     { nome: "???", frase: "Hello World!" },
-	/*{ nome: "???", frase: "Quem são vocês? O que estão fazendo aqui?" },
+	{ nome: "???", frase: "Quem são vocês? O que estão fazendo aqui?" },
 	{ nome: "Theo", frase: "Desculpa senhor! É que uma caixa misteriosa trouxe a gente aqui..." },
 	{ nome: "???", frase: "Vocês se perderam?" },
 	{ nome: "Alan", frase: "Isso mesmo! Pode me dizer em que bairro estamos?" },
@@ -70,6 +70,6 @@ dialogos_turing = [
 	{ nome: "Turing", frase: "A Hut 8 é minha unidade de decifrar mensagens." },
 	{ nome: "Turing", frase: "Nossa equipe não descobriu a criptografia e não abrimos o baú ainda." },
 	{ nome: "Theo", frase: "E como chegamos a essa Hut?" },
-	{ nome: "Turing", frase: "Me sigam, e tentem não chamar atenção, pois não deveriam estar aqui." },*/
+	{ nome: "Turing", frase: "Me sigam, e tentem não chamar atenção, pois não deveriam estar aqui." },
 	{ nome: "Turing", frase: "Fiquem com esse mapa também, e tentem não se perder." },
 ];

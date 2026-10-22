@@ -16,7 +16,7 @@ if (!variable_global_exists("onze")) {
 
 image_speed = 0;
 image_index = 0;
-depth=-40000;
+depth=-51000;
 margem_x = 90;
 aba_altura = 60;
 aberto = false;

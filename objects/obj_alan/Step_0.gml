@@ -2,6 +2,7 @@
     string(device_mouse_x_to_gui(0)) + "x" +
     string(device_mouse_y_to_gui(0))
 );*/
+//show_debug_message(distance_to_object(obj_turinghut8));
 var _baixo = global.theojogando ? spr_theobaixo : spr_alanbaixo;
 var _cima = global.theojogando ? spr_theocima : spr_alancima;
 var _esquerda = global.theojogando ? spr_theoesquerda : spr_alanesquerda;
@@ -40,9 +41,9 @@ if (room == rm_mansao) {
 } else if (room == rm_bletchley) {
     vel = 7;
 } else if (room == rm_bletchley2) {
-    vel = 25;
+    vel = 7;
 } else if (room == rm_hut8) {
-    vel = 25;
+    vel = 9;
 } else if (room == rm_quarto) {
     vel = 7;
 } else if (room == rm_hut6) {

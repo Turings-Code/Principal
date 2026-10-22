@@ -1,6 +1,9 @@
 if(room=rm_quarto){
 image_xscale=5.6;
 image_yscale=5.6;}
+if(room=rm_hut8){
+image_xscale=8;
+image_yscale=8;}
 velocidade = 5;
 atraso_passos = 25;
 distancia_minima = 140;

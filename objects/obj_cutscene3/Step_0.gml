@@ -9,23 +9,72 @@ if (iniciar_dialogo) {
     caixadetexto = true;
 }
 
-if (dialogo_turing_valvula && !caixadetexto && !cutscene) {
+if (global.valvulaalfa) {
     dialogo_turing_valvula = false;
-    dialogos = [
-        { nome: "Turing", frase: "Já conseguiu pegar a Válvula Alfa?" }
-    ];
+    dialogo_alan_valvula = false;
+
+    if (instance_exists(obj_alancutscenehut8)) {
+        with (obj_alancutscenehut8) instance_destroy();
+    }
+
+if (!dialogo_final_feito && !caixadetexto && !cutscene
+&& instance_exists(obj_alan) && instance_exists(obj_turinghut8)
+&& instance_exists(obj_alancutscene)
+&& point_distance(obj_alan.x, obj_alan.y, obj_turinghut8.x, obj_turinghut8.y) < 170
+&& keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae)) {
+
+    global.theojogando = false;
+	obj_alan.travado=true;
+	obj_alan.direcao = "cima";
+    obj_alan.sprite_index = spr_alanparado;
+    tempx = obj_alan.x;
+    tempy = obj_alan.y;
+
+    var _x_theo = obj_alancutscene.x;
+    var _y_theo = obj_alancutscene.y;
+
+    obj_alan.x = _x_theo;
+    obj_alan.y = _y_theo;
+
+    with (obj_alancutscene) {
+        instance_destroy();
+    }
+
+    if (instance_exists(obj_theocutscene2)) {
+        with (obj_theocutscene2) {
+            x = other.tempx;
+            y = other.tempy;
+        }
+    } else {
+        instance_create_layer(tempx, tempy, "Instances", obj_theocutscene2);
+    }
+
+    dialogo_final_feito = true;
+    dialogos = dialogos_final;
     iniciar_dialogo = true;
     cutscene = true;
+}
+} else {
+    if (dialogo_turing_valvula && !caixadetexto && !cutscene) {
+        dialogo_turing_valvula = false;
+        dialogos = [
+            { nome: "Turing", frase: "Já conseguiu pegar a Válvula Alfa?" }
+        ];
+        iniciar_dialogo = true;
+        cutscene = true;
+    }
+
+    if (dialogo_alan_valvula && !caixadetexto && !cutscene) {
+        dialogo_alan_valvula = false;
+        dialogos = [
+            { nome: "Alan", frase: "Eai Theo já conseguiu achar a válvula?" }
+        ];
+        iniciar_dialogo = true;
+        cutscene = true;
+    }
 }
 
-if (dialogo_alan_valvula && !caixadetexto && !cutscene) {
-    dialogo_alan_valvula = false;
-    dialogos = [
-        { nome: "Alan", frase: "Eai Theo já conseguiu achar a válvula?" }
-    ];
-    iniciar_dialogo = true;
-    cutscene = true;
-}
+
 
 var _falando = (mostrar_texto && contador_texto < string_length(frase) && pausa_timer <= 0 && caixadetexto);
 
@@ -92,4 +141,26 @@ if (caixadetexto) {
 
     camera_set_view_size(_cam, _w, _h);
     camera_set_view_pos(_cam, _centro_x - _w / 2 + shake_ox, _centro_y - _h / 2 + shake_oy);
+}
+
+if (dialogo_final_feito && cutscene && !caixadetexto && !iniciar_dialogo) {
+    if (instance_exists(obj_alan)) {
+        obj_alan.travado = false;
+    }
+
+    if (instance_exists(obj_turinghut8)) {
+        with (obj_turinghut8) {
+            instance_destroy();
+        }
+    }
+
+    var _bloco = instance_position(1068, 1777, obj_collisionblock);
+
+    if (_bloco != noone) {
+        with (_bloco) {
+            instance_destroy();
+        }
+    }
+
+    cutscene = false;
 }

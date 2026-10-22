@@ -10,4 +10,10 @@ draw_rectangle(_cx - 1, _cy - 1, _cx + _w + 1, _cy + _h + 1, false);
 draw_set_alpha(1);
 draw_set_color(c_white);
 
+if (instance_exists(valvula_inst)) {
+    with (valvula_inst) {
+        draw_self();
+    }
+}
+
 draw_self();

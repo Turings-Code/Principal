@@ -91,3 +91,8 @@ var _cym = camera_get_view_y(_cam0) + camera_get_view_height(_cam0) / 2;
 cadeado1_inst = instance_create_depth(_cxm, _cym, depth - 1, obj_cadeado1);
 cadeado2_inst = instance_create_depth(_cxm, _cym, depth - 1, obj_cadeado2);
 cadeado3_inst = instance_create_depth(_cxm, _cym, depth - 1, obj_cadeado3);
+folhahex_inst = instance_create_depth(_cxm, _cym, depth - 2, obj_folhahexadecimal);
+
+aberto_cofre = false;
+
+valvula_inst = noone;

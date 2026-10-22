@@ -1,0 +1,14 @@
+image_xscale=10;
+image_yscale=11;
+escala_base = image_xscale;
+escala_max = escala_base * 1.6;
+escala_clique = escala_base * 2.4;
+dist_max = 500;
+dist_min = 80;
+lerp_vel = 0.1;
+zoom_clique = false;
+escala_alvo = escala_base;
+destruir_timer = -1;
+destruir_tempo = 120;
+fade_final = false;
+fade_final_vel = 0.03;

@@ -1,0 +1,11 @@
+image_xscale=7;
+image_yscale=7;
+margem_x = 90;
+aba_altura = 60;
+aberto = false;
+lerp_vel = 0.12;
+y_atual = 0;
+primeiro = true;
+image_speed = 0;
+image_index = 0;
+image_alpha = 0;
