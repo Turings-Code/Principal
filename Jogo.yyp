@@ -373,6 +373,8 @@
     {"id":{"name":"spr_quartoalan","path":"sprites/spr_quartoalan/spr_quartoalan.yy",},},
     {"id":{"name":"Spr_Saida","path":"sprites/Spr_Saida/Spr_Saida.yy",},},
     {"id":{"name":"spr_salafinal","path":"sprites/spr_salafinal/spr_salafinal.yy",},},
+    {"id":{"name":"spr_salafinalmovimento","path":"sprites/spr_salafinalmovimento/spr_salafinalmovimento.yy",},},
+    {"id":{"name":"spr_salafintestes","path":"sprites/spr_salafintestes/spr_salafintestes.yy",},},
     {"id":{"name":"spr_telafinalobg","path":"sprites/spr_telafinalobg/spr_telafinalobg.yy",},},
     {"id":{"name":"spr_Textaofinal","path":"sprites/spr_Textaofinal/spr_Textaofinal.yy",},},
     {"id":{"name":"spr_theobaixo","path":"sprites/spr_theobaixo/spr_theobaixo.yy",},},
