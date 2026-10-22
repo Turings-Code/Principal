@@ -257,6 +257,8 @@
     {"id":{"name":"spr_base5","path":"sprites/spr_base5/spr_base5.yy",},},
     {"id":{"name":"spr_bletchley1","path":"sprites/spr_bletchley1/spr_bletchley1.yy",},},
     {"id":{"name":"spr_bletchley2","path":"sprites/spr_bletchley2/spr_bletchley2.yy",},},
+    {"id":{"name":"spr_Bombe_final","path":"sprites/spr_Bombe_final/spr_Bombe_final.yy",},},
+    {"id":{"name":"spr_Bombe","path":"sprites/spr_Bombe/spr_Bombe.yy",},},
     {"id":{"name":"spr_bordamapa","path":"sprites/spr_bordamapa/spr_bordamapa.yy",},},
     {"id":{"name":"spr_Bossdoscreditos","path":"sprites/spr_Bossdoscreditos/spr_Bossdoscreditos.yy",},},
     {"id":{"name":"spr_Bossdoscreditosmovimentacao","path":"sprites/spr_Bossdoscreditosmovimentacao/spr_Bossdoscreditosmovimentacao.yy",},},
