@@ -67,7 +67,7 @@ if (_area_mouse != -1) {
 
 if (!aberto_cofre && cadeado1_ok && cadeado2_ok && cadeado3_ok) {
     aberto_cofre = true;
-    sprite_index = spr_cofreabrindo;
+    sprite_index = spr_cofrefrente;
     image_index = 0;
     image_speed = 1;
 
