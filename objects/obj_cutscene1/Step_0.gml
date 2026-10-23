@@ -24,6 +24,8 @@ if (delay_antes > 0) {
 }
 
 if (alan_anda){
+	if(audio_is_playing(snd_Jogando)){
+		audio_stop_sound(snd_Jogando);}
     if (instance_exists(obj_alancutscene)) {
         obj_alancutscene.x = max(obj_alancutscene.x - alan_vel, alan_alvo_x);
     }

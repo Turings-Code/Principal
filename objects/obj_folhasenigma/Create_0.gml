@@ -8,3 +8,4 @@ depth=-50000;
 escuridao = 0.7;
 image_speed = 0;
 image_index = 0;
+image_index_anterior = -1;

@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_cliqu",
+  "%Name":"snd_clique",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.65,
+  "duration":0.19201814,
   "exportDir":"",
-  "name":"snd_cliqu",
+  "name":"snd_clique",
   "parent":{
     "name":"Menu",
     "path":"folders/Sounds/Efeitos sonoros/Menu.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_cliqu.mp3",
+  "soundFile":"snd_clique.mp3",
   "volume":1.0,
 }

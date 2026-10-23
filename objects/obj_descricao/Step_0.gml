@@ -19,3 +19,7 @@ if (colide1) {
 } else {
     sprite_index = spr_Descricao;
 }
+if(sprite_index!=spritepassado){
+	audio_play_sound(snd_options, 1, false);
+}
+spritepassado=sprite_index;

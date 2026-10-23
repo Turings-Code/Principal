@@ -10,4 +10,15 @@ if(place_meeting(x, y, obj_areapai)||place_meeting(x, y, obj_area6)||place_meeti
 	sprite_index=spr_cursorhover;} else{sprite_index=spr_cursor;
 }
 
+if(clicou){
+	if(audio_is_playing(snd_PCmeio)){
+	audio_stop_sound(snd_PCmeio);}
+	if(audio_is_playing(snd_PCini)){
+	audio_stop_sound(snd_PCini);}
+}
+
+if(clicou && !audio_is_playing(snd_PCfinal)){
+	
+	room_goto(rm_quarto);}
+
 

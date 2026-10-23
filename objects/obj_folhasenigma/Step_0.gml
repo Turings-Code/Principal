@@ -42,3 +42,10 @@ var _dir = point_in_rectangle(_mx, _my, 1446, 310, 1614, 653);
         }
     }
 }
+
+if (image_index != image_index_anterior) {
+    if (image_index_anterior != -1) {
+        audio_play_sound(snd_folha1, 1, false);
+    }
+    image_index_anterior = image_index;
+}

@@ -18,3 +18,6 @@ var _parado = global.theojogando ? spr_theoparado : spr_alanparado;
 var _parado_cima = global.theojogando ? spr_theoparadocima : spr_alanparadocima;
 var _parado_esquerda = global.theojogando ? spr_theoparadoesquerda : spr_alanparadoesquerda;
 var _parado_direita = global.theojogando ? spr_theoparadodireita : spr_alanparadodireita;
+
+som_passos_id = -1;
+som_pedra_id = -1;

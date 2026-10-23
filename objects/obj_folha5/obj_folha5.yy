@@ -12,8 +12,8 @@
   "name":"obj_folha5",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Hut 6",
+    "path":"folders/Objetos/Hut 6.yy",
   },
   "parentObjectId":null,
   "persistent":false,

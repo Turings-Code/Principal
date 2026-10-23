@@ -62,3 +62,10 @@ if (global.um) {
 if (_sobre_aba) {
     obj_cursormouse.mao = true;
 }
+
+if (image_index != image_index_anterior) {
+    if (image_index_anterior != -1) {
+        audio_play_sound(snd_acertou, 1, false);
+    }
+    image_index_anterior = image_index;
+}

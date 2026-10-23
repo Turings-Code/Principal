@@ -3,6 +3,10 @@
     string(device_mouse_y_to_gui(0))
 );*/
 //show_debug_message(distance_to_object(obj_turinghut8));
+show_debug_message(x);
+show_debug_message("obj_alan: " + string(instance_number(obj_alan)));
+show_debug_message("obj_alancutscene: " + string(instance_number(obj_alancutscene)));
+show_debug_message("obj_theocutscene2: " + string(instance_number(obj_theocutscene2)));
 var _baixo = global.theojogando ? spr_theobaixo : spr_alanbaixo;
 var _cima = global.theojogando ? spr_theocima : spr_alancima;
 var _esquerda = global.theojogando ? spr_theoesquerda : spr_alanesquerda;
@@ -21,6 +25,8 @@ else{
 
 if (variable_instance_exists(id, "travado") && travado) {
     scr_collision_move(0, 0);
+	if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
+if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
     exit;
 }
 
@@ -28,6 +34,8 @@ if (instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists
     || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)
     || instance_exists(obj_folha1)) {
     scr_collision_move(0, 0);
+	if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
+if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
     exit;
 }
 
@@ -41,9 +49,9 @@ if (room == rm_mansao) {
 } else if (room == rm_bletchley) {
     vel = 7;
 } else if (room == rm_bletchley2) {
-    vel = 7;
+    vel = 35;
 } else if (room == rm_hut8) {
-    vel = 9;
+    vel = 35;
 } else if (room == rm_quarto) {
     vel = 7;
 } else if (room == rm_hut6) {
@@ -226,3 +234,54 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
 
 scr_collision_move(move_x, move_y);
 depth = -y;
+
+var _andando = move_x != 0 || move_y != 0;
+var _na_grama = place_meeting(x, y, obj_passosgrama);
+
+if (_andando) {
+    if (place_meeting(x, y, obj_passosmadeira)) {
+        if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
+        if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
+        if (audio_is_playing(snd_passostapete)) audio_stop_sound(snd_passostapete);
+
+        if (!audio_is_playing(snd_passosmadeira)) {
+            audio_play_sound(snd_passosmadeira, 1, true);
+        }
+    }
+    else if (place_meeting(x, y, obj_passostapete)) {
+        if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
+        if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
+        if (audio_is_playing(snd_passosmadeira)) audio_stop_sound(snd_passosmadeira);
+
+        if (!audio_is_playing(snd_passostapete)) {
+            audio_play_sound(snd_passostapete, 1, true);
+        }
+    }
+    else if (_na_grama) {
+        if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
+        if (audio_is_playing(snd_passosmadeira)) audio_stop_sound(snd_passosmadeira);
+        if (audio_is_playing(snd_passostapete)) audio_stop_sound(snd_passostapete);
+
+        if (!audio_is_playing(snd_passosgrama)) {
+            audio_play_sound(snd_passosgrama, 1, true);
+            audio_sound_pitch(snd_passosgrama, 1.5);
+            audio_sound_gain(snd_passosgrama, 0.5, 0);
+        }
+    }
+    else {
+        if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
+        if (audio_is_playing(snd_passosmadeira)) audio_stop_sound(snd_passosmadeira);
+        if (audio_is_playing(snd_passostapete)) audio_stop_sound(snd_passostapete);
+
+        if (!audio_is_playing(snd_passospedra)) {
+            audio_play_sound(snd_passospedra, 1, true);
+            audio_sound_gain(snd_passospedra, 0.3, 0);
+        }
+    }
+}
+else {
+    if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
+    if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
+    if (audio_is_playing(snd_passosmadeira)) audio_stop_sound(snd_passosmadeira);
+    if (audio_is_playing(snd_passostapete)) audio_stop_sound(snd_passostapete);
+}

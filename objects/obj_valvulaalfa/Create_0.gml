@@ -1,5 +1,5 @@
-image_xscale=10;
-image_yscale=11;
+image_xscale=3;
+image_yscale=3;
 escala_base = image_xscale;
 escala_max = escala_base * 1.6;
 escala_clique = escala_base * 2.4;

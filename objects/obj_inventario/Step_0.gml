@@ -8,6 +8,7 @@ var _popup = instance_exists(obj_quadro) || instance_exists(obj_piano) || instan
 if (!_popup && mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)) {
     aberto = !aberto;
     abriu_agora = true;
+    audio_play_sound(snd_inventario, 1, false);
 }
 
 var _i = array_get_index(itens, spr_iconechave);

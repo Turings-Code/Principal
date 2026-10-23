@@ -18,6 +18,8 @@ theoentra = false;
 enigma_visto = false;
 fase = 1;
 
+audio_play_sound(snd_Jogando, 0.7, true);
+
 som_falando_id = -1;
 frase = "Nada";
 nome = "Nada";

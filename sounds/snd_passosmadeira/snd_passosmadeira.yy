@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_pasosmadeira",
+  "%Name":"snd_passosmadeira",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":0.35,
   "exportDir":"",
-  "name":"snd_pasosmadeira",
+  "name":"snd_passosmadeira",
   "parent":{
     "name":"Quarto",
     "path":"folders/Sounds/Efeitos sonoros/Quarto.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_pasosmadeira.mp3",
+  "soundFile":"snd_passosmadeira.mp3",
   "volume":1.0,
 }

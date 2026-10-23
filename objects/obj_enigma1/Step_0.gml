@@ -10,6 +10,8 @@ texto_x1 = _cx + texto_offset_x;
 texto_x2 = _cx + texto_limite_offset_x;
 texto_y = _cy + texto_offset_y;
 
+var _image_anterior = image_index;
+
 for (var i = 0; i < array_length(areas_offset); i++) {
     areas[i] = [
         _cx + areas_offset[i][0],
@@ -59,9 +61,10 @@ if (fase == 1 && delay <= 0 && !fading_out && mouse_check_button_pressed(mb_left
             image_index = 5;
         }
         else {
-            image_index = 0;
-            erro_timer = erro_tempo;
-        }
+		image_index = 0;
+		erro_timer = erro_tempo;
+		audio_play_sound(snd_errorenig, 1, false);
+	}
 
         if (image_index == 5) {
             fase = 2;
@@ -70,6 +73,10 @@ if (fase == 1 && delay <= 0 && !fading_out && mouse_check_button_pressed(mb_left
             image_speed = 0;
         }
     }
+}
+
+if (fase == 1 && image_index != _image_anterior) {
+    audio_play_sound(snd_plugboard, 1, false);
 }
 
 if (fading_out) {
@@ -107,6 +114,7 @@ if (acerto_timer > 0) {
 if (fase != 1 && acerto_timer <= 0) {
     for (var i = 0; i < 26; i++) {
         if (keyboard_check_pressed(ord("A") + i)) {
+			audio_play_sound(snd_tecla1, 1, false);
     ultima_tecla = i;
     image_index = i + 1;
     timer_tecla = tempo_tecla;
@@ -118,6 +126,7 @@ if (fase != 1 && acerto_timer <= 0) {
     }
 
     if (keyboard_check_pressed(vk_backspace)) {
+		audio_play_sound(snd_tecla1, 1, false);
         ultima_tecla = 26;
         image_index = 27;
         timer_tecla = tempo_tecla;

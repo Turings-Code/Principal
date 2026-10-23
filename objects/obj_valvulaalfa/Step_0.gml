@@ -46,6 +46,7 @@ if (fade_final) {
     obj_inventario.nome_item = "Válvula Alfa";
     obj_inventario.ganhouitem = true;
 }
+audio_play_sound(snd_itemnovo, 1, false);
 global.valvulaalfa = true;
     instance_destroy();
     exit;

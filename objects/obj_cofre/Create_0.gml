@@ -92,6 +92,7 @@ cadeado1_inst = instance_create_depth(_cxm, _cym, depth - 1, obj_cadeado1);
 cadeado2_inst = instance_create_depth(_cxm, _cym, depth - 1, obj_cadeado2);
 cadeado3_inst = instance_create_depth(_cxm, _cym, depth - 1, obj_cadeado3);
 folhahex_inst = instance_create_depth(_cxm, _cym, depth - 2, obj_folhahexadecimal);
+cofretras_inst = instance_create_depth(_cxm, _cym, depth + 5, obj_cofretras);
 
 aberto_cofre = false;
 

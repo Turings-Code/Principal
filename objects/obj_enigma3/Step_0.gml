@@ -10,6 +10,8 @@ texto_x1 = _cx + texto_offset_x;
 texto_x2 = _cx + texto_limite_offset_x;
 texto_y = _cy + texto_offset_y;
 
+var _image_anterior = image_index;
+
 for (var i = 0; i < array_length(areas_offset); i++) {
     areas[i] = [
         _cx + areas_offset[i][0],
@@ -59,9 +61,11 @@ else if (image_index == 2 && _area_mouse == 2) {
     image_index = 5;
 }
         else {
-            image_index = 0;
-            erro_timer = erro_tempo;
-        }
+		image_index = 0;
+		erro_timer = erro_tempo;
+		audio_play_sound(snd_errorenig, 1, false);
+	}
+
 
         if (image_index == 5) {
             fase = 2;
@@ -71,6 +75,11 @@ else if (image_index == 2 && _area_mouse == 2) {
         }
     }
 }
+
+if (fase == 1 && image_index != _image_anterior) {
+    audio_play_sound(snd_plugboard, 1, false);
+}
+
 
 if (fading_out) {
     image_alpha -= fade_speed;

@@ -4,7 +4,7 @@ depth=-200000;
 quartopara2 = false;
 global.folha_arrastada = noone;
 global.theojogando=false;
-
+global.turing_saida_hut8 = false;
 global.font_pixel = font_add_sprite_ext(spr_fonte, "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?.,", false, 7);
 global.chave = false;
 global.papel = false;

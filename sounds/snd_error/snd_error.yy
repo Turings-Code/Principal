@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.19201814,
+  "duration":0.65,
   "exportDir":"",
   "name":"snd_error",
   "parent":{

@@ -1,4 +1,4 @@
-
+audio_play_sound(snd_intenigma, 1, false);
 image_xscale = 5.6;
 image_yscale = 5.6;
 image_alpha = 0;

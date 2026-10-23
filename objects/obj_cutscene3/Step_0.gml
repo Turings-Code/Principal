@@ -22,37 +22,38 @@ if (!dialogo_final_feito && !caixadetexto && !cutscene
 && instance_exists(obj_alancutscene)
 && point_distance(obj_alan.x, obj_alan.y, obj_turinghut8.x, obj_turinghut8.y) < 170
 && keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae)) {
-
     global.theojogando = false;
-	obj_alan.travado=true;
-	obj_alan.direcao = "cima";
+
+    var _ax = obj_alan.x;
+    var _ay = obj_alan.y;
+    var _bx = obj_alancutscene.x;
+    var _by = obj_alancutscene.y;
+
+    with (obj_alancutscene) instance_destroy();
+
+    obj_alan.travado = true;
+    obj_alan.direcao = "cima";
     obj_alan.sprite_index = spr_alanparado;
-    tempx = obj_alan.x;
-    tempy = obj_alan.y;
+    obj_alan.image_xscale = 1;
+    obj_alan.image_yscale = 1;
+    obj_alan.x = _bx;
+    obj_alan.y = _by;
 
-    var _x_theo = obj_alancutscene.x;
-    var _y_theo = obj_alancutscene.y;
-
-    obj_alan.x = _x_theo;
-    obj_alan.y = _y_theo;
-
-    with (obj_alancutscene) {
-        instance_destroy();
+    if (!instance_exists(obj_theocutscene2)) {
+        instance_create_layer(_ax, _ay, "Instances", obj_theocutscene2);
     }
 
-    if (instance_exists(obj_theocutscene2)) {
-        with (obj_theocutscene2) {
-            x = other.tempx;
-            y = other.tempy;
-        }
-    } else {
-        instance_create_layer(tempx, tempy, "Instances", obj_theocutscene2);
+    with (obj_theocutscene2) {
+        x = _ax;
+        y = _ay;
+        visible = true;
     }
 
     dialogo_final_feito = true;
     dialogos = dialogos_final;
     iniciar_dialogo = true;
     cutscene = true;
+	
 }
 } else {
     if (dialogo_turing_valvula && !caixadetexto && !cutscene) {
@@ -143,23 +144,40 @@ if (caixadetexto) {
     camera_set_view_pos(_cam, _centro_x - _w / 2 + shake_ox, _centro_y - _h / 2 + shake_oy);
 }
 
-if (dialogo_final_feito && cutscene && !caixadetexto && !iniciar_dialogo) {
+
+if (dialogo_final_feito && !caixadetexto && !iniciar_dialogo && !troca_final_feita) {
+    troca_final_feita = true;
+
+    global.theojogando = false;
+
     if (instance_exists(obj_alan)) {
+        var _ax = obj_alan.x;
+        var _ay = obj_alan.y;
+
+        if (instance_exists(obj_alancutscene)) {
+            obj_alan.x = obj_alancutscene.x;
+            obj_alan.y = obj_alancutscene.y;
+            with (obj_alancutscene) instance_destroy();
+        }
+
+        obj_alan.direcao = "cima";
+        obj_alan.sprite_index = spr_alanparado;
         obj_alan.travado = false;
+		obj_alan.theosegue=true;
+
+        instance_create_layer(_ax, _ay, "Instances", obj_theocutscene2);
     }
 
     if (instance_exists(obj_turinghut8)) {
-        with (obj_turinghut8) {
-            instance_destroy();
-        }
+        with (obj_turinghut8) instance_destroy();
     }
 
-    var _bloco = instance_position(1068, 1777, obj_collisionblock);
+    global.turing_saida_hut8 = true;
+
+    var _bloco = collision_point(1068, 1798, obj_collisionblock, false, true);
 
     if (_bloco != noone) {
-        with (_bloco) {
-            instance_destroy();
-        }
+        with (_bloco) instance_destroy();
     }
 
     cutscene = false;

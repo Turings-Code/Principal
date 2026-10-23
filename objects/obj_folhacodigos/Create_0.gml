@@ -13,7 +13,7 @@ if (!variable_global_exists("onze")) {
     global.um = false;
 }
 
-
+image_index_anterior = -1;
 image_speed = 0;
 image_index = 0;
 depth=-51000;

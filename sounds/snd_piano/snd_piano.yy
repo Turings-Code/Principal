@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_piano",
   "parent":{
-    "name":"Hust8",
-    "path":"folders/Sounds/Efeitos sonoros/Hust8.yy",
+    "name":"Hut8",
+    "path":"folders/Sounds/Efeitos sonoros/Hut8.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
