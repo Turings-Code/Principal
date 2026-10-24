@@ -22,3 +22,4 @@ if (file_exists("save.ini")) {
         room_goto(_r);
     }
 }
+cutscene4foi=false

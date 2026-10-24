@@ -39,11 +39,11 @@ if (!dialogo_final_feito && !caixadetexto && !cutscene
     obj_alan.x = _bx;
     obj_alan.y = _by;
 
-    if (!instance_exists(obj_theocutscene2)) {
-        instance_create_layer(_ax, _ay, "Instances", obj_theocutscene2);
+    if (!instance_exists(obj_theo)) {
+        instance_create_layer(_ax, _ay, "Instances", obj_theo);
     }
 
-    with (obj_theocutscene2) {
+    with (obj_theo) {
         x = _ax;
         y = _ay;
         visible = true;
@@ -98,8 +98,8 @@ if (caixadetexto) {
     var _cam = view_camera[0];
     var _alvo = noone;
 
-    if (nome == "Theo" && instance_exists(obj_theocutscene2)) {
-        _alvo = obj_theocutscene2;
+    if (nome == "Theo" && instance_exists(obj_theo)) {
+        _alvo = obj_theo;
     }
     else if (nome == "Alan" && instance_exists(obj_alan)) {
         _alvo = obj_alan;
@@ -165,7 +165,7 @@ if (dialogo_final_feito && !caixadetexto && !iniciar_dialogo && !troca_final_fei
         obj_alan.travado = false;
 		obj_alan.theosegue=true;
 
-        instance_create_layer(_ax, _ay, "Instances", obj_theocutscene2);
+        instance_create_layer(_ax, _ay, "Instances", obj_theo);
     }
 
     if (instance_exists(obj_turinghut8)) {

@@ -1,4 +1,4 @@
-//audio_play_sound(snd_background, 1, true, 0.05, 0);
+
 som_piano = -1;
 pos_piano = 0;
 depth=-100000;

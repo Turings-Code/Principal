@@ -17,3 +17,21 @@ if(!instance_exists(obj_alan)){
 if(!instance_exists(obj_inventario)){
 	instance_create_layer(500, 500, "Instances", obj_inventario);}
 }
+if(instance_exists(obj_cutscene4)){cutscene4foi=true;}
+if(room==rm_hut8&&cutscene4foi&&global.valvulaalfa){
+	if(instance_exists(obj_turing)){with(obj_turing){instance_destroy();}}
+	var _bloco = collision_point(1068, 1798, obj_collisionblock, false, true);
+
+    if (_bloco != noone) {
+        with (_bloco) instance_destroy();
+    }
+	if(instance_exists(obj_cofreaparece)){with(obj_cofreaparece){instance_destroy();}}
+	if(instance_exists(obj_turinghut8)){with(obj_turinghut8){instance_destroy();}}
+	if(instance_exists(obj_falahut8)){with(obj_falahut8){instance_destroy();}}
+	if(!instance_exists(obj_troca)){var _troca = instance_create_layer(716, 2230, "Instances", obj_troca);
+            _troca.image_xscale = 23;
+            _troca.image_yscale = 9;}
+	obj_controladorenigmas.enigma1=true;
+	obj_controladorenigmas.enigma2=true;
+	obj_controladorenigmas.enigma3=true;
+}

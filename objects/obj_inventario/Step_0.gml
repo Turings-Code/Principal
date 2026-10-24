@@ -78,5 +78,6 @@ if (aberto) {
 }
 
 if ((_sobre || _sobre_item) && !_popup) {
-    obj_cursormouse.mao = true;
+	if(instance_exists(obj_cursormouse)){
+    obj_cursormouse.mao = true;}
 }

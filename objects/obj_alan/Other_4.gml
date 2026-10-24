@@ -49,3 +49,7 @@ if (room == rm_bletchley2) {
 if (room != rm_quarto && !(room == rm_bletchley2 && travado)) {
     travado = false;
 }
+
+if(room==rm_bletchley2&&global.valvulaalfa){
+	if(!instance_exists(obj_cutscene4)){
+	instance_create_layer(10, 10, "Instances", obj_cutscene4);}}

@@ -1,12 +1,14 @@
 var _t1 = false;
 var _t2 = false;
 var _t3 = false;
+var _t4 = false;
 
 if (instance_exists(obj_alan)) {
     with (obj_alan) {
         _t1 = place_meeting(x, y, obj_troca);
         _t2 = place_meeting(x, y, obj_troca2);
         _t3 = place_meeting(x, y, obj_troca3);
+        _t4 = place_meeting(x, y, obj_troca4);
     }
 }
 
@@ -35,6 +37,11 @@ if (estado == "nenhum" && instance_exists(obj_alan)) {
         spawn_x = 2220;
         spawn_y = 2660;
         usar_spawn = true;
+        estado = "entrando";
+    }
+    else if (room == rm_hut6 && _t4) {
+        dest_room = rm_bletchley2;
+        usar_spawn = false;
         estado = "entrando";
     }
     else if (room == rm_hut6 && _t1) {
@@ -74,7 +81,12 @@ if (estado == "nenhum" && instance_exists(obj_alan)) {
         }
     }
     else if (room == rm_bletchley2) {
-        if (_t3) {
+        if (_t4) {
+            dest_room = rm_hut6;
+            usar_spawn = false;
+            estado = "entrando";
+        }
+        else if (_t3) {
             dest_room = rm_hut8;
             usar_spawn = false;
             estado = "entrando";

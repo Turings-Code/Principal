@@ -25,3 +25,10 @@ if (room == rm_quarto) {
 else if (escurecendo) {
     alpha_escuro = min(alpha_escuro + 0.02, 1);
 }
+
+if (room != rm_quarto && audio_is_playing(snd_backgroundquarto)) {
+    audio_sound_gain(snd_backgroundquarto, max(0, audio_sound_get_gain(snd_backgroundquarto) - 0.05), 0);
+    if (audio_sound_get_gain(snd_backgroundquarto) <= 0.05) {
+        audio_stop_sound(snd_backgroundquarto);
+    }
+}

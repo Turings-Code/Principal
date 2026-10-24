@@ -115,6 +115,7 @@ if (acerto_timer > 0) {
 if (fase != 1 && acerto_timer <= 0) {
     for (var i = 0; i < 26; i++) {
         if (keyboard_check_pressed(ord("A") + i)) {
+			audio_play_sound(snd_tecla1, 1, false);
     ultima_tecla = i;
     image_index = i + 1;
     timer_tecla = tempo_tecla;
@@ -126,6 +127,7 @@ if (fase != 1 && acerto_timer <= 0) {
     }
 
     if (keyboard_check_pressed(vk_backspace)) {
+		audio_play_sound(snd_tecla1, 1, false);
         ultima_tecla = 26;
         image_index = 27;
         timer_tecla = tempo_tecla;

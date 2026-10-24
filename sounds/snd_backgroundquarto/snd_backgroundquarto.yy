@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_background",
+  "%Name":"snd_backgroundquarto",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":170.736,
+  "duration":50.064014,
   "exportDir":"",
-  "name":"snd_background",
+  "name":"snd_backgroundquarto",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_background.mp3",
-  "volume":1.0,
+  "soundFile":"snd_backgroundquarto.mp3",
+  "volume":0.6,
 }

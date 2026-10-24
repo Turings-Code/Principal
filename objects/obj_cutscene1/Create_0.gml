@@ -56,7 +56,7 @@ dialogos_theo = [
 dialogos_enigma = [
     { nome: "Theo", frase: "Você não tem noção do que é isso, Alan!" },
 	{ nome: "Theo", frase: "Meu pai achou essa relíquia no sótão da casa do nosso avô." },
-    { nome: "Alan", frase: "Um Caixote de madeira com botões?" },
+    { nome: "Alan", frase: "Um Caixote de madeira escrito Enigma?" },
     { nome: "Theo", frase: "Alan, isso aqui é uma máquina de criptografia!" },
 	{ nome: "Theo", frase: "É um Enigma alemão, Alan! Usado na Segunda Guerra Mundial!" },
 	{ nome: "Alan", frase: "Máquina de criptografia? Isso daí nem tem cabos ou uma tela, Theo." },

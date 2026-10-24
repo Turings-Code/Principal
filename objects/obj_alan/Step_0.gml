@@ -3,10 +3,7 @@
     string(device_mouse_y_to_gui(0))
 );*/
 //show_debug_message(distance_to_object(obj_turinghut8));
-show_debug_message(x);
-show_debug_message("obj_alan: " + string(instance_number(obj_alan)));
-show_debug_message("obj_alancutscene: " + string(instance_number(obj_alancutscene)));
-show_debug_message("obj_theocutscene2: " + string(instance_number(obj_theocutscene2)));
+
 var _baixo = global.theojogando ? spr_theobaixo : spr_alanbaixo;
 var _cima = global.theojogando ? spr_theocima : spr_alancima;
 var _esquerda = global.theojogando ? spr_theoesquerda : spr_alanesquerda;
@@ -49,9 +46,9 @@ if (room == rm_mansao) {
 } else if (room == rm_bletchley) {
     vel = 7;
 } else if (room == rm_bletchley2) {
-    vel = 35;
+    vel = 7;
 } else if (room == rm_hut8) {
-    vel = 35;
+    vel = 9;
 } else if (room == rm_quarto) {
     vel = 7;
 } else if (room == rm_hut6) {
