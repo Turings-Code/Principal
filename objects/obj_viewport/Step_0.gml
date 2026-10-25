@@ -1,4 +1,6 @@
-var _fala = (instance_exists(obj_cutscene2) && obj_cutscene2.caixadetexto) || (instance_exists(obj_cutscene3) && obj_cutscene3.caixadetexto);
+var _fala = (instance_exists(obj_cutscene2) && obj_cutscene2.caixadetexto)
+         || (instance_exists(obj_cutscene3) && obj_cutscene3.caixadetexto)
+         || (instance_exists(obj_cutscene4) && obj_cutscene4.caixadetexto);
 
 if (!_fala) {
     var _w = lerp(camera_get_view_width(cam), cam_width, 0.1);

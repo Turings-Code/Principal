@@ -1,5 +1,6 @@
 if (room != rm_bletchley2) exit;
 if(instance_exists(obj_cutscene2)){if(!obj_cutscene2.cutscene) exit;}
+if(instance_exists(obj_cutscene4)){if(obj_cutscene4.cutscene) exit;}
 
 var _cam = view_camera[0];
 var _gx = camera_get_view_x(_cam) + camera_get_view_width(_cam) - tam - margem;

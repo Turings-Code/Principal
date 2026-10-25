@@ -1,3 +1,5 @@
+if(instance_exists(obj_cutscene4)){if(obj_cutscene4.cutscene) exit;}
+
 if (ganhouitem) {
     ganhouitem = false;
     aviso_ativo = true;

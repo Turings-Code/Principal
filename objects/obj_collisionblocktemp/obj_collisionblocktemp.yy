@@ -38,5 +38,5 @@
     "name":"spr_base7",
     "path":"sprites/spr_base7/spr_base7.yy",
   },
-  "visible":false,
+  "visible":true,
 }

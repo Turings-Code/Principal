@@ -25,8 +25,13 @@ if (room == rm_bletchley2 && !global.valvulaalfa) {
             sprite_index = spr_turingparado;
         } else {
             var _direcao = point_direction(x, y, alvo_x, alvo_y);
-            x += lengthdir_x(velocidade_andar, _direcao);
-            y += lengthdir_y(velocidade_andar, _direcao);
+            var _mx = lengthdir_x(velocidade_andar, _direcao);
+var _my = lengthdir_y(velocidade_andar, _direcao);
+
+if (!place_meeting(x + _mx, y + _my, obj_alan)) {
+    x += _mx;
+    y += _my;
+}
         }
     } else {
         if (instance_exists(obj_alan)) {
@@ -65,17 +70,27 @@ if (room == rm_bletchley2 && !global.valvulaalfa) {
             y = alvo2_y;
 
             if (ponto2_atual >= array_length(pontos2_x) - 1) {
-				instance_create_layer(4065, 1752, "Instances", obj_troca4)
-                instance_destroy();
-                exit;
-            }
+			x = alvo2_x;
+			y = alvo2_y;
+			andando2 = false;
+			sprite_index = spr_turingparado;
+			turingparoucutscene4 = true;
+			//instance_create_layer(4065, 1752, "Instances", obj_troca4)
+                //instance_destroy();
+    exit;
+}
 
             andando2 = false;
             sprite_index = spr_turingparado;
         } else {
             var _dir2 = point_direction(x, y, alvo2_x, alvo2_y);
-            x += lengthdir_x(velocidade_andar, _dir2);
-            y += lengthdir_y(velocidade_andar, _dir2);
+            var _mx2 = lengthdir_x(velocidade_andar, _dir2);
+var _my2 = lengthdir_y(velocidade_andar, _dir2);
+
+if (!place_meeting(x + _mx2, y + _my2, obj_alan)) {
+    x += _mx2;
+    y += _my2;
+}
         }
     } else if (instance_exists(obj_alan)) {
         if (distance_to_object(obj_alan) <= distancia_alan) {
@@ -91,8 +106,13 @@ if (room == rm_bletchley2 && !global.valvulaalfa) {
     if (global.turing_saida_hut8) {
         sprite_index = spr_turingbaixo;
         obj_objetivos.define_objetivo("OBJETIVO - Siga o Turing");
-        y = min(y + 3, 2330);
-        x -= 2;
+        var _mx3 = -2;
+var _my3 = min(y + 3, 2330) - y;
+
+if (!place_meeting(x + _mx3, y + _my3, obj_alan)) {
+    x += _mx3;
+    y += _my3;
+}
 
         if (y >= 2330) {
             y = 2330;

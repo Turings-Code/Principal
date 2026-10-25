@@ -38,5 +38,5 @@
     "name":"spr_base4",
     "path":"sprites/spr_base4/spr_base4.yy",
   },
-  "visible":true,
+  "visible":false,
 }

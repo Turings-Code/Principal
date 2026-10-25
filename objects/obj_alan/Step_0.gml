@@ -46,13 +46,13 @@ if (room == rm_mansao) {
 } else if (room == rm_bletchley) {
     vel = 7;
 } else if (room == rm_bletchley2) {
-    vel = 7;
+    vel = 35;
 } else if (room == rm_hut8) {
-    vel = 9;
+    vel = 35;
 } else if (room == rm_quarto) {
     vel = 7;
 } else if (room == rm_hut6) {
-    vel = 9;
+    vel = 35;
 }
 
 var vel_y = vel;
