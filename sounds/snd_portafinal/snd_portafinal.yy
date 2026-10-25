@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":4.026009,
+  "duration":1.54,
   "exportDir":"",
   "name":"snd_portafinal",
   "parent":{

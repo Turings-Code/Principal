@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":10.893062,
+  "duration":4.6080046,
   "exportDir":"",
   "name":"snd_futuro",
   "parent":{
@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_futuro.mp3",
-  "volume":0.09,
+  "volume":1.0,
 }

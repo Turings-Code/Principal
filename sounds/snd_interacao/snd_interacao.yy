@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.9853061,
+  "duration":0.8,
   "exportDir":"",
   "name":"snd_interacao",
   "parent":{

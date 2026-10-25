@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_radio",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":46.99202,
+  "exportDir":"",
+  "name":"snd_radio",
+  "parent":{
+    "name":"Hust 6",
+    "path":"folders/Sounds/Efeitos sonoros/Hust 6.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_radio.mp3",
+  "volume":1.0,
+}

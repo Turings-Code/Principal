@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.9069388,
+  "duration":0.79,
   "exportDir":"",
   "name":"snd_folha1",
   "parent":{

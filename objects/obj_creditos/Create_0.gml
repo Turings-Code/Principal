@@ -93,8 +93,9 @@ creditos = [
     {texto: "", titulo: false},
 
     {texto: "Objetos:", titulo: false},
-    {texto: "Cada objeto do cenário foi feito", titulo: false},
-    {texto: "pela pessoa que fez o cenário", titulo: false},
+    {texto: "Cada objeto do cenário", titulo: false},
+    {texto: "foi feito pela pessoa", titulo: false},
+	{texto: "que fez o cenário", titulo: false},
     {texto: "em que se encontra.", titulo: false},
     {texto: "", titulo: false},
 
@@ -149,18 +150,22 @@ creditos = [
     {texto: "", titulo: false},
 
     {texto: "Agradecimentos", titulo: true},
-    {texto: "Agradecemos especialmente aos", titulo: false},
-    {texto: "professores que lecionam as", titulo: false},
-    {texto: "matérias para nós, dando-nos", titulo: false},
-    {texto: "capacidade para realizar tal jogo.", titulo: false},
+    {texto: "Agradecemos especialmente", titulo: false},
+	{texto: "aos professores", titulo: false},
+    {texto: "que lecionam as matérias", titulo: false},
+    {texto: "para nós, dando-nos", titulo: false},
+    {texto: "capacidade para", titulo: false},
+	{texto: "realizar tal jogo.", titulo: false},
     {texto: "", titulo: false},
 
     {texto: "Agradecemos de forma especial:", titulo: false},
-    {texto: "Ao Alan Turing, por ser pai de toda", titulo: false},
-    {texto: "a computação moderna, junto com", titulo: false},
-    {texto: "outros grandes nomes da computação.", titulo: false},
+    {texto: "Ao Alan Turing, por ser", titulo: false},
+	{texto: "pai de toda a computação", titulo: false},
+    {texto: "moderna, junto com outros", titulo: false},
+    {texto: "grandes nomes da computação.", titulo: false},
 	{texto: "", titulo: false},
-    {texto: "Ao GameMaker, por aguentar o tranco.", titulo: false},
+    {texto: "Ao GameMaker,", titulo: false},
+	{texto: "por aguentar o tranco.", titulo: false},
 	{texto: "", titulo: false},
     {texto: "À professora Cláudia Miyuki.", titulo: false},
 	{texto: "", titulo: false},
@@ -168,12 +173,12 @@ creditos = [
 	{texto: "", titulo: false},
     {texto: "Ao professor Luk Cho Man.", titulo: false},
 	{texto: "", titulo: false},
-    {texto: "E a vocês que jogaram nosso jogo", titulo: false},
-    {texto: "até aqui.", titulo: false}
+    {texto: "E a vocês que jogaram", titulo: false},
+    {texto: "nosso jogo até aqui.", titulo: false}
 ];
 
 creditos_y = 0;
-creditos_velocidade = 1;
+creditos_velocidade = 5;
 creditos_x = 80;
 creditos_altura_total = 0;
 

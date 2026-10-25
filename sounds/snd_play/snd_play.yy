@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.89,
+  "duration":0.97,
   "exportDir":"",
   "name":"snd_play",
   "parent":{
