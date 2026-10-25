@@ -16,21 +16,7 @@ if (iniciar_dialogo) {
     caixadetexto = true;
 }
 
-if (
-    nome == "Turing"
-    && frase == "Tenho um mapa da Hut 6 pra te ajudar."
-    && !mapa_hut6_entregue
-) {
-    mapa_hut6_entregue = true;
 
-    if (instance_exists(obj_inventario)) {
-        obj_inventario.nome_item = "Mapa Hut 6";
-        obj_inventario.ganhouitem = true;
-		global.mapahut6=true;
-    }
-
-    audio_play_sound(snd_itemnovo, 1, false);
-}
 
 var _falando = (mostrar_texto && contador_texto < string_length(frase) && pausa_timer <= 0 && caixadetexto);
 

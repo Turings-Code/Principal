@@ -27,20 +27,21 @@ if (!fading_out && delay <= 0) {
 var _esq = point_in_rectangle(_mx, _my, 9, 317, 182, 644);
 var _dir = point_in_rectangle(_mx, _my, 1446, 310, 1614, 653);
 
-    window_set_cursor((_fechar || _esq || _dir) ? cr_handpoint : cr_default);
+    if (_fechar || _esq || _dir) {
+    obj_cursormouse.mao = true;
+}
 
-    if (mouse_check_button_pressed(mb_left)) {
-        if (_fechar) {
-            window_set_cursor(cr_default);
-            instance_destroy();
-        }
-        else if (_dir && image_index < _total - 1) {
-            image_index += 1;
-        }
-        else if (_esq && image_index > 0) {
-            image_index -= 1;
-        }
+if (mouse_check_button_pressed(mb_left)) {
+    if (_fechar) {
+        instance_destroy();
     }
+    else if (_dir && image_index < _total - 1) {
+        image_index += 1;
+    }
+    else if (_esq && image_index > 0) {
+        image_index -= 1;
+    }
+}
 }
 
 if (image_index != image_index_anterior) {

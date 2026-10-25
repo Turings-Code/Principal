@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"spr_bordamapa",
   "bboxMode":0,
-  "bbox_bottom":47,
+  "bbox_bottom":49,
   "bbox_left":0,
-  "bbox_right":47,
+  "bbox_right":49,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":48,
+  "height":50,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"5bc293c1-fdf3-4e3c-b685-ad559e8c1823","blendMode":0,"displayName":"default","isLocked":false,"name":"5bc293c1-fdf3-4e3c-b685-ad559e8c1823","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":48,
+  "width":50,
 }

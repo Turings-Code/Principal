@@ -37,7 +37,7 @@ iniciar_dialogo = false;
 dialogo_index = -1;
 dialogos = [
     { nome: "Turing", frase: "Bom, esqueci de contar uma parte..." },
-    { nome: "Alan", frase: "Qual é o problema, senhor Turing?" },
+    /*{ nome: "Alan", frase: "Qual é o problema, senhor Turing?" },
 	{ nome: "Turing", frase: "Bom, eu não tenho acesso a essa Hut." },
 	{ nome: "Turing", frase: "A Hut 6 se trata de decifrar códigos alemães, e por isso tem um acesso restrito." },
 	{ nome: "Theo", frase: "Como assim? E como pegamos a próxima válvula?" },
@@ -52,11 +52,11 @@ dialogos = [
 	{ nome: "Turing", frase: "Junto com ele, tem um código, que você vai precisar achar também." },
 	{ nome: "Alan", frase: "Como eu vou achar o código e o rádio?" },
 	{ nome: "Turing", frase: "Tenho um mapa da Hut 6 pra te ajudar." },
-	{ nome: "Turing", frase: "O código deve estar na Resgistration Room, entre diversas pilhas de papéis." },
+	{ nome: "Turing", frase: "O código deve estar na Registration Room, entre diversas pilhas de papéis." },
 	{ nome: "Turing", frase: "Leve o código ao rádio, que deve estar na Machine Room, do outro lado da hut." },
 	{ nome: "Turing", frase: "Destranque a porta de cima para eu poder entrar se precisar." },
 	{ nome: "Turing", frase: "Tente não ser visto, boa sorte garoto." },
-	{ nome: "Theo", frase: "(Alan Turing então... Acho que já ouvi esse nome...)" },
+	{ nome: "Theo", frase: "(Alan Turing então. Acho que já ouvi esse nome.)" },*/
 	
 ];
 

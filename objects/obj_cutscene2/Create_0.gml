@@ -37,7 +37,7 @@ turing_alvo_y = 600;
 turing_vel = 3;
 dialogos_turing = [
 	{ nome: "???", frase: "Quem são vocês? O que estão fazendo aqui?" },
-	{ nome: "Theo", frase: "Desculpa senhor! É que uma caixa misteriosa trouxe a gente aqui..." },
+	/*{ nome: "Theo", frase: "Desculpa senhor! É que uma caixa misteriosa trouxe a gente aqui..." },
 	{ nome: "???", frase: "Vocês se perderam?" },
 	{ nome: "Alan", frase: "Isso mesmo! Pode me dizer em que bairro estamos?" },
 	{ nome: "???", frase: "Estamos em Bletchley. Como entraram aqui? Passaram pelos guardas?" },
@@ -70,5 +70,5 @@ dialogos_turing = [
 	{ nome: "Turing", frase: "Nossa equipe não descobriu a criptografia e não abrimos o baú ainda." },
 	{ nome: "Theo", frase: "E como chegamos a essa Hut?" },
 	{ nome: "Turing", frase: "Me sigam, e tentem não chamar atenção, pois não deveriam estar aqui." },
-	{ nome: "Turing", frase: "Fiquem com esse mapa também, e tentem não se perder." },
+	{ nome: "Turing", frase: "Fiquem com esse mapa também, e tentem não se perder." },*/
 ];

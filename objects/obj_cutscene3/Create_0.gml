@@ -40,10 +40,10 @@ dialogos = [
 	{ nome: "Turing", frase: "Vocês precisam usar cada enigma e colecar os 3 códigos para abrir o baú." },
     { nome: "Alan", frase: "Acho que não me dou bem nisso. Não quero quebrar outro enigma." },
 	{ nome: "Theo", frase: "Pode deixar comigo! Vou pegar a Válvula Alfa!" },
-	{ nome: "Alan", frase: "Você tem certeza, Theo? Boa sorte então!" },
+	{ nome: "Alan", frase: "Você tem certeza, Theo? Boa sorte então!" },*/
 	{ nome: "Turing", frase: "Fique com estes papéis para saber como os Enigmas Funcionam." },
-	{ nome: "Turing", frase: "Volte aqui quando pegar a válvula." },
-	{ nome: "Theo", frase: "Entendido!" },*/
+	//{ nome: "Turing", frase: "Volte aqui quando pegar a válvula." },
+	//{ nome: "Theo", frase: "Entendido!" },
 	
 ];
 

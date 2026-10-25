@@ -12,4 +12,16 @@ if (dialogo_index < array_length(dialogos)) {
     cutscene = false;
     if (instance_exists(obj_alan)) obj_alan.travado = false;
     turing_saindo = true;
+
+    if (!mapa_hut6_entregue) {
+        mapa_hut6_entregue = true;
+        global.mapahut6 = true;
+
+        if (instance_exists(obj_inventario)) {
+            obj_inventario.nome_item = "Mapa Hut 6";
+            obj_inventario.ganhouitem = true;
+        }
+
+        audio_play_sound(snd_itemnovo, 1, false);
+    }
 }

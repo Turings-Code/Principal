@@ -4,7 +4,7 @@ if(instance_exists(obj_cutscene4)){if(obj_cutscene4.cutscene) exit;}
 
 var _popup = instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
           || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)
-          || instance_exists(obj_folhasenigma);
+          || instance_exists(obj_folhasenigma) || instance_exists(obj_mapahut6);
 
 if (!_popup && mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)) {
     aberto = !aberto;
@@ -36,21 +36,35 @@ else if (!global.folhasenigma && _f != -1) {
     array_delete(itens, _f, 1);
 }
 
-if (aberto && !abriu_agora && !_popup && mouse_check_button_pressed(mb_left) && !instance_exists(obj_folhasenigma)) {
-    var _idx = array_get_index(itens, spr_iconefolhasenigma);
-    if (_idx != -1) {
+var _m = array_get_index(itens, spr_iconemapahut6);
+if (global.mapahut6 && _m == -1 && array_length(itens) < max_slots) {
+    array_push(itens, spr_iconemapahut6);
+}
+else if (!global.mapahut6 && _m != -1) {
+    array_delete(itens, _m, 1);
+}
+
+if (aberto && !abriu_agora && !_popup && mouse_check_button_pressed(mb_left)
+&& !instance_exists(obj_folhasenigma) && !instance_exists(obj_mapahut6)) {
+    for (var _n = 0; _n < array_length(itens); _n++) {
         var _col, _lin;
-        if (_idx < 4) {
+        if (_n < 4) {
             _col = 0;
-            _lin = _idx + 1;
+            _lin = _n + 1;
         } else {
             _col = 1;
-            _lin = _idx - 4;
+            _lin = _n - 4;
         }
         var _x1 = x + _col * cell_w;
         var _y1 = y + _lin * cell_h;
         if (point_in_rectangle(mouse_x, mouse_y, _x1, _y1, _x1 + cell_w, _y1 + cell_h)) {
-            instance_create_depth(0, 0, -20000, obj_folhasenigma);
+            if (itens[_n] == spr_iconefolhasenigma) {
+                instance_create_depth(0, 0, -20000, obj_folhasenigma);
+            }
+            else if (itens[_n] == spr_iconemapahut6) {
+                instance_create_depth(0, 0, -20000, obj_mapahut6);
+            }
+            break;
         }
     }
 }
