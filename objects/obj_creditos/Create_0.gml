@@ -159,10 +159,15 @@ creditos = [
     {texto: "Ao Alan Turing, por ser pai de toda", titulo: false},
     {texto: "a computação moderna, junto com", titulo: false},
     {texto: "outros grandes nomes da computação.", titulo: false},
+	{texto: "", titulo: false},
     {texto: "Ao GameMaker, por aguentar o tranco.", titulo: false},
+	{texto: "", titulo: false},
     {texto: "À professora Cláudia Miyuki.", titulo: false},
+	{texto: "", titulo: false},
     {texto: "À professora Ana Mamede.", titulo: false},
+	{texto: "", titulo: false},
     {texto: "Ao professor Luk Cho Man.", titulo: false},
+	{texto: "", titulo: false},
     {texto: "E a vocês que jogaram nosso jogo", titulo: false},
     {texto: "até aqui.", titulo: false}
 ];

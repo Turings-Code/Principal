@@ -10,8 +10,8 @@
   "name":"obj_creditos",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Créditos",
+    "path":"folders/Objetos/Créditos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
