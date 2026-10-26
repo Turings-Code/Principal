@@ -108,6 +108,7 @@
   "height":100,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"c5261879-2d57-4804-af4f-c2e8850baf48","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"c5261879-2d57-4804-af4f-c2e8850baf48","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"2a5cdc60-659d-4c15-b041-caefc6df8625","blendMode":0,"displayName":"default","isLocked":false,"name":"2a5cdc60-659d-4c15-b041-caefc6df8625","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_gato",
