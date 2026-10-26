@@ -18,3 +18,11 @@ var _cy = camera_get_view_y(_cam) + camera_get_view_height(_cam) / 2;
 
 view_off_x = x - _cx;
 view_off_y = y - _cy;
+
+fade_final = false;
+fade_final_vel = 0.04;
+
+if (!variable_global_exists("codigohut6")) {
+    global.codigohut6 = false;
+}
+zoom_maximo = false;

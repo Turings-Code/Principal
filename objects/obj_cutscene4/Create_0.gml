@@ -35,6 +35,7 @@ cutscene = false;
 iniciou_dialogo = false;
 iniciar_dialogo = false;
 dialogo_index = -1;
+
 dialogos = [
     { nome: "Turing", frase: "Bom, esqueci de contar uma parte..." },
     /*{ nome: "Alan", frase: "Qual é o problema, senhor Turing?" },

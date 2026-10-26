@@ -85,25 +85,3 @@ if (caixadetexto) {
     camera_set_view_pos(_cam, _centro_x - _w / 2 + shake_ox, _centro_y - _h / 2 + shake_oy);
 }
 
-if (turing_saindo && instance_exists(obj_turing)) {
-    var _dx = turing_dest_x - obj_turing.x;
-    var _dy = turing_dest_y - obj_turing.y;
-
-    if (abs(_dx) > abs(_dy)) {
-        obj_turing.sprite_index = (_dx > 0) ? spr_turingdireita : spr_turingesquerda;
-    } else {
-        obj_turing.sprite_index = (_dy > 0) ? spr_turingbaixo : spr_turingcima;
-    }
-
-    var _dist = point_distance(obj_turing.x, obj_turing.y, turing_dest_x, turing_dest_y);
-
-    if (_dist <= turing_vel_saida) {
-        turing_saindo = false;
-        with (obj_turing) instance_destroy();
-        instance_create_layer(4065, 1752, "Instances", obj_troca4);
-    } else {
-        var _dir = point_direction(obj_turing.x, obj_turing.y, turing_dest_x, turing_dest_y);
-        obj_turing.x += lengthdir_x(turing_vel_saida, _dir);
-        obj_turing.y += lengthdir_y(turing_vel_saida, _dir);
-    }
-}

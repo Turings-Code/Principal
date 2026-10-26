@@ -1,17 +1,13 @@
 function scr_collisiontheo(move_x, move_y)
 {
-    var _bate = function(_x, _y)
-    {
-        return place_meeting(_x, _y, obj_collisionblock)
-            || place_meeting(_x, _y, obj_alan);
-    };
-
     var _steps_x = ceil(abs(move_x));
     var _dir_x = sign(move_x);
 
     repeat (_steps_x)
     {
-        if (!_bate(x + _dir_x, y)) {
+        if (!place_meeting(x + _dir_x, y, obj_collisionblock)
+        && !place_meeting(x + _dir_x, y, obj_alan)
+        && !place_meeting(x + _dir_x, y, obj_turing)) {
             x += _dir_x;
         } else {
             break;
@@ -23,7 +19,9 @@ function scr_collisiontheo(move_x, move_y)
 
     repeat (_steps_y)
     {
-        if (!_bate(x, y + _dir_y)) {
+        if (!place_meeting(x, y + _dir_y, obj_collisionblock)
+        && !place_meeting(x, y + _dir_y, obj_alan)
+        && !place_meeting(x, y + _dir_y, obj_turing)) {
             y += _dir_y;
         } else {
             break;

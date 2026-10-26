@@ -20,7 +20,9 @@ if (room == rm_bletchley) {
 if (room == rm_hut8) {
     x = 888;
     y = 2124;
-    theosegue = false;
+	if(!global.valvulaalfa){
+    theosegue = false;} else{
+		theosegue=true;}
     image_xscale = 1;
     image_yscale = 1;
 }

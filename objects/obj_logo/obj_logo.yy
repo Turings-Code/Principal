@@ -28,6 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":null,
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_logo",
+    "path":"sprites/spr_logo/spr_logo.yy",
+  },
   "visible":true,
 }

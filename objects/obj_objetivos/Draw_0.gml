@@ -1,5 +1,5 @@
 if (texto == "") exit;
-if(instance_exists(obj_cutscene3)){if (obj_cutscene3.caixadetexto){ exit;}}
+if (instance_exists(obj_cutscene3)) { if (obj_cutscene3.caixadetexto) { exit; } }
 
 var _cam = view_camera[0];
 var _x = camera_get_view_x(_cam) + margem_x;
@@ -20,13 +20,13 @@ var _ey = _y + _linha;
 
 for (var i = 0; i < array_length(etapas); i++) {
     var _etapa_y = _ey + i * _linha_etapa;
+    var _t = etapas[i].texto;
 
-    draw_text_transformed(_x + 5, _etapa_y, etapas[i], _escala_etapa, _escala_etapa, 0);
+    draw_text_transformed(_x + 5, _etapa_y, _t, _escala_etapa, _escala_etapa, 0);
 
-    if (i == 0 && global.codigos_descriptografados) {
-        var _largura = string_width(etapas[i]) * _escala_etapa;
-        var _meio_y = _etapa_y + string_height(etapas[i]) * _escala_etapa * 0.5;
-
+    if (etapas[i].feita) {
+        var _largura = string_width(_t) * _escala_etapa;
+        var _meio_y = _etapa_y + string_height(_t) * _escala_etapa * 0.5;
         draw_line_width(_x + 5, _meio_y, _x + 5 + _largura, _meio_y, 2);
     }
 }

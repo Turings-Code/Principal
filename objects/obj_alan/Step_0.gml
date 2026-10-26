@@ -42,9 +42,9 @@ var move_x = 0;
 var move_y = 0;
 
 if (room == rm_mansao) {
-    vel = 9;
+    vel = 35;
 } else if (room == rm_bletchley) {
-    vel = 7;
+    vel = 35;
 } else if (room == rm_bletchley2) {
     vel = 35;
 } else if (room == rm_hut8) {
@@ -125,12 +125,16 @@ if (mostrar_e) {
     var _ey = _ae2.y + offset_letrae_y;
 
     if (!instance_exists(obj_letrae)) {
-        instance_create_layer(_ex, _ey, "Instances", obj_letrae);
-    } else {
-        obj_letrae.fading_out = false;
-        obj_letrae.x = _ex;
-        obj_letrae.y = _ey;
+    instance_create_layer(_ex, _ey, "Instances", obj_letrae);
+    audio_play_sound(snd_interacao, 0.5, false);
+} else {
+    if (obj_letrae.x != _ex || obj_letrae.y != _ey) {
+        audio_play_sound(snd_interacao, 0.5, false);
     }
+    obj_letrae.fading_out = false;
+    obj_letrae.x = _ex;
+    obj_letrae.y = _ey;
+}
 } else if (instance_exists(obj_letrae)) {
     obj_letrae.fading_out = true;
 }
@@ -224,7 +228,8 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
         instance_create_depth(_fx + 40, _fy - 30, -20000, obj_folha5);
         instance_create_depth(_fx - 150, _fy + 90, -20000, obj_folha1);
         instance_create_depth(_fx + 150, _fy - 30, -20000, obj_folha4);
-        instance_create_depth(_fx, _fy + 100, -19000, obj_codigo);
+		if(!global.codigohut6){
+        instance_create_depth(_fx, _fy + 100, -19000, obj_codigo);}
         instance_create_depth(0, 0, -19000, obj_escurece);
     }
 }

@@ -1,3 +1,4 @@
+depth = -y;
 if (!instance_exists(obj_alan)) exit;
 
 // Se Theo não deve seguir, limpa o histórico
@@ -81,4 +82,3 @@ if (_dist > velocidade) {
     sprite_index = spr_theoparado;
 }
 
-depth = -y;

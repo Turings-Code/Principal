@@ -1,7 +1,13 @@
 function scr_salvar() {
-    ini_open("save.ini");
-    ini_write_string("jogo", "room", room_get_name(room));
-    ini_write_real("jogo", "chave", global.chave);
-    ini_write_real("jogo", "papel", global.papel);
-    ini_close();
+    var _dados = {
+        room: room_get_name(room),
+        chave: global.chave,
+        papel: global.papel
+    };
+
+    var _texto = json_stringify(_dados);
+    var _buffer = buffer_create(string_byte_length(_texto) + 1, buffer_fixed, 1);
+    buffer_write(_buffer, buffer_string, _texto);
+    buffer_save(_buffer, "save.json");
+    buffer_delete(_buffer);
 }

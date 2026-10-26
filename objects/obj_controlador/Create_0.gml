@@ -11,7 +11,8 @@ global.papel = false;
 global.folhasenigma = false;
 global.valvulaalfa = false;
 global.mapahut6=false;
-if (file_exists("save.ini")) {
+global.codigohut6=false;
+/*if (file_exists("save.ini")) {
     ini_open("save.ini");
     global.chave = ini_read_real("jogo", "chave", 0);
     global.papel = ini_read_real("jogo", "papel", 0);
@@ -22,5 +23,6 @@ if (file_exists("save.ini")) {
     if (_r != -1 && room_exists(_r) && _r != room) {
         room_goto(_r);
     }
-}
+}*/
+scr_carregar();
 cutscene4foi=false

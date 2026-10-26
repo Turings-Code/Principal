@@ -18,9 +18,20 @@ limpa_objetivo = function() {
 };
 
 define_etapas = function(_lista) {
-    etapas = _lista;
+    etapas = [];
+    for (var i = 0; i < array_length(_lista); i++) {
+        if (is_string(_lista[i])) {
+            array_push(etapas, { texto: _lista[i], feita: false });
+        } else {
+            array_push(etapas, _lista[i]);
+        }
+    }
 };
 
 muda_etapa = function(_i, _texto) {
-    if (_i < array_length(etapas)) etapas[_i] = _texto;
+    if (_i < array_length(etapas)) etapas[_i].texto = _texto;
+};
+
+marca_etapa = function(_i, _feita = true) {
+    if (_i < array_length(etapas)) etapas[_i].feita = _feita;
 };

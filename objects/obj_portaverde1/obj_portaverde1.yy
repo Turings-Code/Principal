@@ -34,6 +34,9 @@
     "name":"spr_portaverde",
     "path":"sprites/spr_portaverde/spr_portaverde.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_portaverde",
+    "path":"sprites/spr_portaverde/spr_portaverde.yy",
+  },
   "visible":true,
 }

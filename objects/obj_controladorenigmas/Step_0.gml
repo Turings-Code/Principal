@@ -12,11 +12,10 @@ if(obj_folhacodigos.image_index==8){
     "- Coloque os códigos no baú"
 ]);
 	}
-if(obj_folhacodigos.image_index==12){
-	enigma3=true;
-	global.codigos_descriptografados = true;
-	obj_objetivos.define_etapas([
-    "- Descriptografe os códigos (3/3)",
-    "- Coloque os códigos no baú"
-]);
-	}
+if (obj_folhacodigos.image_index == 12) {
+    enigma3 = true;
+    obj_objetivos.define_etapas([
+        { texto: "- Descriptografe os códigos (3/3)", feita: true },
+        "- Coloque os códigos no baú"
+    ]);
+}
