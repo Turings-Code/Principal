@@ -178,7 +178,7 @@ creditos = [
 ];
 
 creditos_y = 0;
-creditos_velocidade = 5;
+creditos_velocidade = 1;
 creditos_x = 80;
 creditos_altura_total = 0;
 
