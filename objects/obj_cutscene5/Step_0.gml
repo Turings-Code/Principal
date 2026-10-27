@@ -10,6 +10,35 @@ if (!global.codigohut6) {
 }
 
 if (turingentrahut6) {
+	
+	if (fase_alan_hut6 == 0 && instance_exists(obj_alan)) {
+    obj_alan.travado = true;
+
+    var _dx = 500 - obj_alan.x;
+    var _dy = 564 - obj_alan.y;
+    var _dist = point_distance(obj_alan.x, obj_alan.y, 500, 564);
+    var _vel = 4;
+
+    if (_dist > _vel) {
+        obj_alan.x += (_dx / _dist) * _vel;
+        obj_alan.y += (_dy / _dist) * _vel;
+		obj_alan.depth = -obj_alan.y;
+
+        if (abs(_dx) > abs(_dy)) {
+            obj_alan.sprite_index = spr_alandireita;
+        } else {
+            obj_alan.sprite_index = spr_alanbaixo;
+        }
+    } else {
+        obj_alan.x = 500;
+        obj_alan.y = 564;
+        obj_alan.direcao = "baixo";
+        obj_alan.sprite_index = spr_alanparado;
+        obj_alan.image_index = 0;
+        fase_alan_hut6 = 2;
+    }
+}
+	
     if (fase_entrada_hut6 == 0) {
         if (!instance_exists(obj_turing)) {
             instance_create_layer(338, -130, "Instances", obj_turing);
@@ -27,8 +56,8 @@ if (turingentrahut6) {
             obj_turing.sprite_index = spr_turingbaixo;
             obj_turing.y += vel_entrada_hut6;
 
-            if (obj_turing.y > 400) {
-                obj_turing.y = 400;
+            if (obj_turing.y > 370) {
+                obj_turing.y = 370;
                 fase_entrada_hut6 = 2;
             }
         }
@@ -50,17 +79,41 @@ if (turingentrahut6) {
     obj_theo.sprite_index = spr_theobaixo;
     obj_theo.y += vel_entrada_hut6;
 
-    if (obj_theo.y >= 400) {
-        obj_theo.y = 400;
+    if (obj_theo.y >= 370) {
+        obj_theo.y = 370;
         obj_theo.sprite_index = spr_theoparado;
         fase_entrada_hut6 = 4;
+		dialogos = dialogos1;
+        iniciar_dialogo = true;
     }
 }
+}
+
+if (fase_saida_turing == 1 && instance_exists(obj_turing)) {
+    obj_turing.sprite_index = spr_turingbaixo;
+    obj_turing.y = min(obj_turing.y + vel_entrada_hut6, alvo_y_turing);
+
+    if (obj_turing.y >= alvo_y_turing) {
+        alvo_x_turing = obj_turing.x + 600;
+        fase_saida_turing = 2;
+    }
+}
+
+if (fase_saida_turing == 2 && instance_exists(obj_turing)) {
+    obj_turing.sprite_index = spr_turingdireita;
+    obj_turing.x = min(obj_turing.x + vel_entrada_hut6, alvo_x_turing);
+
+    if (obj_turing.x >= alvo_x_turing) {
+        obj_turing.sprite_index = spr_turingparado;
+        obj_turing.image_index = 0;
+        fase_saida_turing = 3;
+    }
 }
 
 if (instance_exists(obj_radio) && !radio_dialogo_feito) {
     radio_dialogo_feito = true;
     radio_timer = 60;
+	obj_objetivos.define_objetivo("");
 }
 
 if (radio_timer > 0) {

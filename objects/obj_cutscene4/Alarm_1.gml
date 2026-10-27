@@ -23,6 +23,8 @@ obj_objetivos.define_etapas([
 ]);
     if (!mapa_hut6_entregue) {
         mapa_hut6_entregue = true;
+		obj_inventario.nome_item = "Mapa Hut 6";
+            obj_inventario.ganhouitem = true;
         global.mapahut6 = true;
 
         if (instance_exists(obj_inventario)) {

@@ -19,12 +19,27 @@ shake_forca = 0;
 shake_t = 1;
 shake_ox = 0;
 shake_oy = 0;
+obj_alan.theosegue=false;
 
 cutscene = false;
 iniciar_dialogo = false;
 dialogo_index = -1;
 dialogos = [
     { nome: "Alan", frase: "Fala de teste." }
+];
+
+dialogos1 = [
+    { nome: "Turing", frase: "Conseguiu pegar a válvula?" },
+	/*{ nome: "Alan", frase: "Não! Como vou mexer nesse rádio, eu não sei alemão!" },
+	{ nome: "Turing", frase: "Você precisa colocar uma frequência de quatro dígitos no rotator." },
+	{ nome: "Theo", frase: "Então o código é a frequência?" },
+	{ nome: "Alan", frase: "Esse código é muito grande, e com certeza está criptografado." },
+	{ nome: "Alan", frase: "Acho que tenho uma ideia de como resolver, mas demorará um pouco." },
+	{ nome: "Theo", frase: "Vamos levar o rádio até a Hut 8 então!" },
+	{ nome: "Turing", frase: "De maneira alguma! Não podem perceber que o rádio sumiu!" },
+	{ nome: "Turing", frase: "Não tem como ser mais rápido?" },
+	{ nome: "Alan", frase: "Até teria, com um pouco de código..." },
+	{ nome: "Turing", frase: "Vou trancar a porta, e tente descobrir logo como resolver isso!" },*/
 ];
 
 bloco_fase1 = noone;
@@ -39,4 +54,8 @@ dialogos_radio = [
 ];
 
 fase_entrada_hut6 = 0;
-vel_entrada_hut6 = 2;
+vel_entrada_hut6 = 4;
+fase_alan_hut6 = 0;
+fase_saida_turing = 0;
+alvo_y_turing = 0;
+alvo_x_turing = 0;

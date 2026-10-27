@@ -5,8 +5,8 @@ if (!instance_exists(obj_alan)) exit;
 if (!obj_alan.theosegue) {
     historico_x = [obj_alan.x];
     historico_y = [obj_alan.y];
-
-    sprite_index = spr_theoparado;
+	if(!instance_exists(obj_cutscene5)){
+    sprite_index = spr_theoparado;}
     depth = -y;
     exit;
 }

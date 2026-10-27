@@ -7,6 +7,12 @@ if (!iniciou_dialogo && instance_exists(obj_turing) && obj_turing.turingparoucut
 
 if (iniciar_dialogo) {
     iniciar_dialogo = false;
+	obj_objetivos.define_objetivo("");
+	if (instance_exists(obj_alan)) {
+    obj_alan.direcao = "baixo";
+    obj_alan.sprite_index = spr_alanparado;
+    obj_alan.image_index = 0;
+}
     dialogo_index = 0;
     nome = dialogos[dialogo_index].nome;
     frase = dialogos[dialogo_index].frase;

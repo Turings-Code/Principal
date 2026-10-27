@@ -1,6 +1,7 @@
 depth = -y;
-
-velocidade_andar = 4;
+image_xscale=8;
+image_yscale=8;
+velocidade_andar = 20; //4
 andando = true;
 
 pontos_x = [1226, 1223, 1226, 1950, 2234];

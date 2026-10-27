@@ -4,4 +4,4 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
 		obj_portahut6.image_speed=3;
 		instance_destroy();
     }
-}
+}	

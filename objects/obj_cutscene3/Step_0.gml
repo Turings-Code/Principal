@@ -174,7 +174,7 @@ if (dialogo_final_feito && !caixadetexto && !iniciar_dialogo && !troca_final_fei
 
     global.turing_saida_hut8 = true;
 
-    var _bloco = collision_point(1068, 1798, obj_collisionblock, false, true);
+    var _bloco = collision_point(1084, 1798, obj_collisionblock, false, true);
 
     if (_bloco != noone) {
         with (_bloco) instance_destroy();

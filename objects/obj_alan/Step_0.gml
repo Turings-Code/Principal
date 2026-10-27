@@ -11,7 +11,7 @@ show_debug_message("turing:" + string(obj_turing.image_xscale));}
 if(instance_exists(obj_alancutscene)){
 show_debug_message("turing:" + string(obj_alancutscene.image_xscale));}*/
 
-
+depth = -y;
 
 var _baixo = global.theojogando ? spr_theobaixo : spr_alanbaixo;
 var _cima = global.theojogando ? spr_theocima : spr_alancima;
@@ -183,6 +183,12 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
     }
 }
 
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_xeroxaltoaparece)) {
+    if (distance_to_object(obj_xeroxaltoaparece) < 80 && !instance_exists(obj_xeroxaltoamp)) {
+        instance_create_depth(0, 0, -20000, obj_xeroxaltoamp);
+    }
+}
+
 if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae)) {
     if (instance_exists(obj_enigma1aparece) && distance_to_object(obj_enigma1aparece) < 80 && !instance_exists(obj_enigma1)) {
         instance_create_depth(0, 0, -20000, obj_enigma1);
@@ -245,7 +251,7 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
 }
 
 scr_collision_move(move_x, move_y);
-depth = -y;
+
 
 var _andando = move_x != 0 || move_y != 0;
 var _na_grama = place_meeting(x, y, obj_passosgrama);

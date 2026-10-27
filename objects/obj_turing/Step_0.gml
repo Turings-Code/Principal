@@ -1,3 +1,4 @@
+depth = -y;
 if (room == rm_bletchley2 && !global.valvulaalfa) {
     if (instance_exists(obj_cutscene2)) {
         if (!obj_cutscene2.cutscene) exit;
@@ -127,5 +128,3 @@ if (!place_meeting(x + _mx3, y + _my3, obj_alan)) {
         }
     }
 }
-
-depth = -y;
