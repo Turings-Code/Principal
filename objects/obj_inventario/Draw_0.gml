@@ -1,4 +1,5 @@
 if(instance_exists(obj_cutscene4)){if(obj_cutscene4.cutscene) exit;}
+if(instance_exists(obj_cutscene5)){if(obj_cutscene5.cutscene) exit;}
 
 if (ganhouitem) {
     ganhouitem = false;

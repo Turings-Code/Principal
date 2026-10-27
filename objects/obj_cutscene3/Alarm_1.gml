@@ -28,9 +28,9 @@ if (dialogo_index < array_length(dialogos)) {
 	if(!instance_exists(obj_turinghut8)){instance_create_layer(1173, 1842, "Instances", obj_turinghut8);}
 	parte1=true;
 	obj_objetivos.define_objetivo("OBJETIVO - Pegue a Válvula Alfa");
-obj_objetivos.define_etapas([
+	obj_objetivos.define_etapas([
     "- Descriptografe os códigos (0/3)",
     "- Coloque os códigos no baú"
-]);
+	]);
 
 }

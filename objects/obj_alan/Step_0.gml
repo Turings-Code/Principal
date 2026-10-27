@@ -1,7 +1,7 @@
-/*show_debug_message(
+show_debug_message(
     string(device_mouse_x_to_gui(0)) + "x" +
     string(device_mouse_y_to_gui(0))
-);*/
+);
 //show_debug_message(distance_to_object(obj_turinghut8));
 /*show_debug_message("alan:" + string(image_xscale));
 if(instance_exists(obj_theo)){
@@ -33,7 +33,7 @@ if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
 
 if (instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
     || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)
-    || instance_exists(obj_folha1) || instance_exists(obj_radio)) {
+    || instance_exists(obj_folha1) || instance_exists(obj_radio)) || instance_exists(obj_xeroxaltoamp) {
     scr_collision_move(0, 0);
 	if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
 if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
@@ -185,7 +185,14 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
 
 if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_xeroxaltoaparece)) {
     if (distance_to_object(obj_xeroxaltoaparece) < 80 && !instance_exists(obj_xeroxaltoamp)) {
-        instance_create_depth(0, 0, -20000, obj_xeroxaltoamp);
+		if(obj_cutscene5.xeroxaltocriado){ instance_create_depth(0, 0, -20000, obj_xeroxaltoamp);}
+		if (instance_exists(obj_cutscene5) && !obj_cutscene5.dialogo2_iniciado) {
+			obj_objetivos.define_objetivo("");
+            obj_cutscene5.dialogo2_iniciado = true;
+            obj_cutscene5.dialogo2_ativo = true;
+            obj_cutscene5.dialogos = obj_cutscene5.dialogos2;
+            obj_cutscene5.iniciar_dialogo = true;
+        }
     }
 }
 

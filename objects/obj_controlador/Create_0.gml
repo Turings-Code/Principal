@@ -12,6 +12,7 @@ global.folhasenigma = false;
 global.valvulaalfa = false;
 global.mapahut6=false;
 global.codigohut6=false;
+global.quizxerox = false;
 /*if (file_exists("save.ini")) {
     ini_open("save.ini");
     global.chave = ini_read_real("jogo", "chave", 0);

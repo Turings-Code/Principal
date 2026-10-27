@@ -182,3 +182,4 @@ if (dialogo_final_feito && !caixadetexto && !iniciar_dialogo && !troca_final_fei
 
     cutscene = false;
 }
+

@@ -6,3 +6,8 @@ fading_out = false;
 delay = 10;
 depth = -50000;
 escuridao = 0.7;
+image_speed=0;
+
+
+menuquiz_timer = 70;
+menuquiz_inst = noone;

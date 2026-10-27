@@ -1,6 +1,6 @@
 if (!global.codigohut6) {
     if (!instance_exists(bloco_fase1)) {
-        bloco_fase1 = instance_create_layer(1233, 274, "Instances", obj_collisionblocktemp);
+        bloco_fase1 = instance_create_layer(1800, 650, "Instances", obj_collisionblocktemp);
         bloco_fase1.image_xscale = 2;
         bloco_fase1.image_yscale = 6;
     }
@@ -14,15 +14,15 @@ if (turingentrahut6) {
 	if (fase_alan_hut6 == 0 && instance_exists(obj_alan)) {
     obj_alan.travado = true;
 
-    var _dx = 500 - obj_alan.x;
-    var _dy = 564 - obj_alan.y;
-    var _dist = point_distance(obj_alan.x, obj_alan.y, 500, 564);
-    var _vel = 4;
+    var _dx = 1020 - obj_alan.x;
+    var _dy = 845 - obj_alan.y;
+    var _dist = point_distance(obj_alan.x, obj_alan.y, 1020, 845);
+    var _vel = 5;
 
     if (_dist > _vel) {
         obj_alan.x += (_dx / _dist) * _vel;
         obj_alan.y += (_dy / _dist) * _vel;
-		obj_alan.depth = -obj_alan.y;
+        obj_alan.depth = -obj_alan.y;
 
         if (abs(_dx) > abs(_dy)) {
             obj_alan.sprite_index = spr_alandireita;
@@ -30,8 +30,8 @@ if (turingentrahut6) {
             obj_alan.sprite_index = spr_alanbaixo;
         }
     } else {
-        obj_alan.x = 500;
-        obj_alan.y = 564;
+        obj_alan.x = 1020;
+        obj_alan.y = 845;
         obj_alan.direcao = "baixo";
         obj_alan.sprite_index = spr_alanparado;
         obj_alan.image_index = 0;
@@ -40,52 +40,59 @@ if (turingentrahut6) {
 }
 	
     if (fase_entrada_hut6 == 0) {
-        if (!instance_exists(obj_turing)) {
-            instance_create_layer(338, -130, "Instances", obj_turing);
-        }
-
-        if (!instance_exists(obj_theo)) {
-            instance_create_layer(338, -150, "Instances", obj_theo);
-        }
-
-        fase_entrada_hut6 = 1;
+    if (!instance_exists(obj_turing)) {
+        instance_create_layer(910, 190, "Instances", obj_turing);
+    } else {
+        obj_turing.x = 210;
+        obj_turing.y = 190;
     }
 
-    if (instance_exists(obj_turing)) {
-        if (fase_entrada_hut6 == 1) {
-            obj_turing.sprite_index = spr_turingbaixo;
-            obj_turing.y += vel_entrada_hut6;
+    if (!instance_exists(obj_theo)) {
+        instance_create_layer(910, 190, "Instances", obj_theo);
+    } else {
+        obj_theo.x = 910;
+        obj_theo.y = 190;
+    }
 
-            if (obj_turing.y > 370) {
-                obj_turing.y = 370;
-                fase_entrada_hut6 = 2;
-            }
-        }
+    fase_entrada_hut6 = 1;
+}
 
-        if (fase_entrada_hut6 == 2) {
-            obj_turing.sprite_index = spr_turingdireita;
-            obj_turing.x += vel_entrada_hut6;
+if (instance_exists(obj_turing)) {
+    if (fase_entrada_hut6 == 1) {
+        obj_turing.sprite_index = spr_turingbaixo;
+        obj_turing.y = min(obj_turing.y + vel_entrada_hut6, 765);
 
-            if (obj_turing.x >= 588) {
-                obj_turing.x = 588;
-                obj_turing.sprite_index = spr_turingparado;
-                fase_entrada_hut6 = 3;
-            }
+        if (obj_turing.y >= 665) {
+            obj_turing.y = 665;
+            fase_entrada_hut6 = 2;
         }
     }
 
-    if (instance_exists(obj_theo) && fase_entrada_hut6 == 3) {
-    obj_theo.x = 338;
+    if (fase_entrada_hut6 == 2) {
+        obj_turing.sprite_index = spr_turingdireita;
+        obj_turing.x += vel_entrada_hut6;
+
+        if (obj_turing.x >= 1130) {
+            obj_turing.x = 1130;
+            obj_turing.sprite_index = spr_turingparado;
+            fase_entrada_hut6 = 3;
+        }
+    }
+}
+
+if (instance_exists(obj_theo) && fase_entrada_hut6 == 3) {
+    obj_theo.x = 880;
     obj_theo.sprite_index = spr_theobaixo;
-    obj_theo.y += vel_entrada_hut6;
+    obj_theo.y = min(obj_theo.y + vel_entrada_hut6, 665);
 
-    if (obj_theo.y >= 370) {
-        obj_theo.y = 370;
+    if (obj_theo.y >= 665) {
+        obj_theo.y = 665;
         obj_theo.sprite_index = spr_theoparado;
         fase_entrada_hut6 = 4;
-		dialogos = dialogos1;
+        dialogos = dialogos1;
         iniciar_dialogo = true;
     }
+
 }
 }
 
@@ -141,6 +148,8 @@ if (iniciar_dialogo) {
 
 var _falando = (mostrar_texto && contador_texto < string_length(frase) && pausa_timer <= 0 && caixadetexto);
 
+
+
 if (_falando) {
     if (!audio_is_playing(snd_textblip)) {
         som_blip_id = audio_play_sound(snd_textblip, 10, true);
@@ -188,7 +197,7 @@ if (caixadetexto) {
     if (_alvo != noone) {
         _centro_x = lerp(_centro_x, (_alvo.bbox_left + _alvo.bbox_right) / 2, cam_vel);
         _centro_y = lerp(_centro_y, (_alvo.bbox_top + _alvo.bbox_bottom) / 2, cam_vel);
-    } else if (instance_exists(obj_alan)) {
+    } else if (instance_exists(obj_alan)) { 
         _centro_x = lerp(_centro_x, obj_alan.x, cam_vel);
         _centro_y = lerp(_centro_y, obj_alan.y, cam_vel);
     }

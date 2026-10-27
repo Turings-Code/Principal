@@ -1,6 +1,7 @@
 if(instance_exists(obj_cutscene2)){if(!obj_cutscene2.cutscene) exit;}
 if(instance_exists(obj_cutscene3)){if(obj_cutscene3.cutscene) exit;}
 if(instance_exists(obj_cutscene4)){if(obj_cutscene4.cutscene) exit;}
+if(instance_exists(obj_cutscene5)){if(obj_cutscene5.cutscene) exit;}
 
 var _popup = instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
           || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)

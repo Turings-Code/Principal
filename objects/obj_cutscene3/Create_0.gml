@@ -1,9 +1,14 @@
 if (!instance_exists(obj_objetivos)) {
     instance_create_depth(0, 0, -100000, obj_objetivos);
 }
+if(!global.valvulaalfa){
 obj_objetivos.define_objetivo("OBJETIVO - Fale com o Turing");
+obj_objetivos.define_etapas([]);
 
-instance_create_layer(1170, 1855, "Instances", obj_falahut8);
+var _bloco = instance_create_layer(1084, 1798, "Instances", obj_collisionblock);
+_bloco.image_xscale = 2.7;
+_bloco.image_yscale = 2.5;
+instance_create_layer(1170, 1855, "Instances", obj_falahut8);}
 
 depth = -20000;
 cam_zoom_vel = 0.03;
