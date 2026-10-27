@@ -79,15 +79,9 @@ if (zoom_ativo) {
 
     image_xscale = lerp(image_xscale, _escala_final, 0.03);
     image_yscale = image_xscale;
-
-    if (abs(image_xscale - _escala_final) < 0.01) {
-        image_xscale = _escala_final;
-        image_yscale = _escala_final;
-        zoom_maximo = true;
-    }
 }
 
-if (zoom_maximo && !fade_final && mouse_check_button_pressed(mb_left)) {
+if (image_xscale > 13 && !fade_final && mouse_check_button_pressed(mb_left)) {
     fade_final = true;
     global.codigohut6 = true;
 }

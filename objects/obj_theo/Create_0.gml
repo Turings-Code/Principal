@@ -1,10 +1,13 @@
 if(room=rm_quarto){
-image_xscale=5.6;
-image_yscale=5.6;}
+image_xscale=7;
+image_yscale=7;}
 if(room=rm_hut8){
 image_xscale=8;
 image_yscale=8;}
 if(room=rm_bletchley2){
+image_xscale=7;
+image_yscale=7;}
+if(room=rm_hut8){
 image_xscale=8;
 image_yscale=8;}
 velocidade = 5;

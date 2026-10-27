@@ -8,7 +8,10 @@ if (aviso_ativo) {
     draw_set_valign(fa_middle);
     draw_set_color(c_white);
     draw_set_alpha(aviso_alpha);
-    draw_text_transformed(_cx, _cy, "Conclua seu Objetivo Primeiro!", aviso_escala, aviso_escala, 0);
+	if(room==rm_hut6){
+    draw_text_transformed(_cx, _cy, "Pegue o Código Primeiro!", aviso_escala, aviso_escala, 0);}
+	else {
+	draw_text_transformed(_cx, _cy, "Conclua seu Objetivo Primeiro!", aviso_escala, aviso_escala, 0);}
 
     draw_set_alpha(1);
     draw_set_halign(fa_left);

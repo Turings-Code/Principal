@@ -7,14 +7,18 @@ if (_spawn) {
 
 if (room == rm_mansao) {
     if (!_spawn) { x = 1100; y = 2200; }
-    image_xscale = 1;
-    image_yscale = 1;
+    image_xscale = 8;
+    image_yscale = 8;
 }
 
 if (room == rm_bletchley) {
     if (!_spawn) { x = 1320; y = 760; }
-    image_xscale = 0.7;
-    image_yscale = 0.7;
+    image_xscale = 7;
+    image_yscale = 7;
+}
+if (room == rm_quarto) {
+    image_xscale = 8;
+    image_yscale = 8;
 }
 
 if (room == rm_hut8) {
@@ -23,20 +27,20 @@ if (room == rm_hut8) {
 	if(!global.valvulaalfa){
     theosegue = false;} else{
 		theosegue=true;}
-    image_xscale = 1;
-    image_yscale = 1;
+    image_xscale = 8;
+    image_yscale = 8;
 }
 
 if (room == rm_hut6) {
     x = 1900;
     y = 1500;
-    image_xscale = 1;
-    image_yscale = 1;
+    image_xscale = 8;
+    image_yscale =8;
 }
 
 if (room == rm_bletchley2) {
-    image_xscale = 0.7;
-    image_yscale = 0.7;
+    image_xscale = 7;
+    image_yscale = 7;
     if (obj_trocaroom.quartopara2) {
         x = 1170;
         y = 400;

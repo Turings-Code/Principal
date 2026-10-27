@@ -1,0 +1,1 @@
+if (instance_exists(bloco_fase1)) instance_destroy(bloco_fase1);

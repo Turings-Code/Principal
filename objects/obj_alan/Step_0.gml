@@ -3,6 +3,15 @@
     string(device_mouse_y_to_gui(0))
 );*/
 //show_debug_message(distance_to_object(obj_turinghut8));
+/*show_debug_message("alan:" + string(image_xscale));
+if(instance_exists(obj_theo)){
+show_debug_message("theo:" + string(obj_theo.image_xscale));}
+if(instance_exists(obj_turing)){
+show_debug_message("turing:" + string(obj_turing.image_xscale));}
+if(instance_exists(obj_alancutscene)){
+show_debug_message("turing:" + string(obj_alancutscene.image_xscale));}*/
+
+
 
 var _baixo = global.theojogando ? spr_theobaixo : spr_alanbaixo;
 var _cima = global.theojogando ? spr_theocima : spr_alancima;
@@ -13,12 +22,7 @@ var _parado_cima = global.theojogando ? spr_theoparadocima : spr_alanparadocima;
 var _parado_esquerda = global.theojogando ? spr_theoparadoesquerda : spr_alanparadoesquerda;
 var _parado_direita = global.theojogando ? spr_theoparadodireita : spr_alanparadodireita;
 
-if(global.theojogando){
-	image_xscale=7;
-	image_yscale=7;}
-else{
-	image_yscale=1;
-	image_xscale=1;}
+
 
 if (variable_instance_exists(id, "travado") && travado) {
     scr_collision_move(0, 0);
@@ -29,7 +33,7 @@ if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
 
 if (instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
     || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)
-    || instance_exists(obj_folha1)) {
+    || instance_exists(obj_folha1) || instance_exists(obj_radio)) {
     scr_collision_move(0, 0);
 	if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
 if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
@@ -170,6 +174,12 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
 if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_cofreaparece)) {
     if (distance_to_object(obj_cofreaparece) < 80 && !instance_exists(obj_cofre)) {
         instance_create_depth(0, 0, -20000, obj_cofre);
+    }
+}
+
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_radioaparece)) {
+    if (distance_to_object(obj_radioaparece) < 80 && !instance_exists(obj_radio)) {
+        instance_create_depth(0, 0, -20000, obj_radio);
     }
 }
 

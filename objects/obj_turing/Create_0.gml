@@ -1,6 +1,5 @@
 depth = -y;
-image_xscale=8;
-image_yscale=8;
+
 velocidade_andar = 4;
 andando = true;
 

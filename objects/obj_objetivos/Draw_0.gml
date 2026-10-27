@@ -1,10 +1,11 @@
 if (texto == "") exit;
 if (instance_exists(obj_cutscene3)) { if (obj_cutscene3.caixadetexto) { exit; } }
+if (instance_exists(obj_cutscene4)) { if (obj_cutscene4.caixadetexto) { exit; } }
 
 var _cam = view_camera[0];
 var _x = camera_get_view_x(_cam) + margem_x;
 var _y = camera_get_view_y(_cam) + margem_y;
-var _escala = (room == rm_bletchley2 || room == rm_hut8) ? 1 : 0.7;
+var _escala = (room == rm_bletchley2 || room == rm_hut8 || room == rm_hut6) ? 1 : 0.7;
 var _escala_etapa = _escala * 0.7;
 
 draw_set_font(fnt_fonte);

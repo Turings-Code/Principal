@@ -34,8 +34,8 @@ if (!dialogo_final_feito && !caixadetexto && !cutscene
     obj_alan.travado = true;
     obj_alan.direcao = "cima";
     obj_alan.sprite_index = spr_alanparado;
-    obj_alan.image_xscale = 1;
-    obj_alan.image_yscale = 1;
+    obj_alan.image_xscale = 8;
+    obj_alan.image_yscale = 8;
     obj_alan.x = _bx;
     obj_alan.y = _by;
 
