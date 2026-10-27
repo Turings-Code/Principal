@@ -490,6 +490,7 @@
     {"id":{"name":"spr_turingparadoesquerda","path":"sprites/spr_turingparadoesquerda/spr_turingparadoesquerda.yy",},},
     {"id":{"name":"spr_valvulaalfa","path":"sprites/spr_valvulaalfa/spr_valvulaalfa.yy",},},
     {"id":{"name":"spr_valvuladelta","path":"sprites/spr_valvuladelta/spr_valvuladelta.yy",},},
+    {"id":{"name":"spr_valvulamestra","path":"sprites/spr_valvulamestra/spr_valvulamestra.yy",},},
     {"id":{"name":"spr_vaso","path":"sprites/spr_vaso/spr_vaso.yy",},},
     {"id":{"name":"spr_vidroparedeinv","path":"sprites/spr_vidroparedeinv/spr_vidroparedeinv.yy",},},
     {"id":{"name":"spr_Voltamenu","path":"sprites/spr_Voltamenu/spr_Voltamenu.yy",},},
