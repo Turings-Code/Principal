@@ -19,8 +19,13 @@ if (!_fala) {
         var new_x = lerp(camera_get_view_x(cam), target_x, 0.1);
         var new_y = lerp(camera_get_view_y(cam), target_y, 0.1);
 
-        new_x = clamp(new_x, 0, room_width - _w);
-        new_y = clamp(new_y, 0, room_height - _h);
+        if (room == rm_hut6) {
+            new_x = clamp(new_x, 530, 4382 - _w);
+            new_y = clamp(new_y, 290, 2176 - _h);
+        } else {
+            new_x = clamp(new_x, 0, room_width - _w);
+            new_y = clamp(new_y, 0, room_height - _h);
+        }
 
         camera_set_view_pos(cam, new_x, new_y);
     }

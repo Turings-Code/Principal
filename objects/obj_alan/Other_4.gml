@@ -32,8 +32,8 @@ if (room == rm_hut8) {
 }
 
 if (room == rm_hut6) {
-    x = 1900;
-    y = 1500;
+    x = 2450;
+    y = 1900;
     image_xscale = 8;
     image_yscale =8;
 }

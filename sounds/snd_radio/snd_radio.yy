@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_radio",
   "parent":{
-    "name":"Hust 6",
-    "path":"folders/Sounds/Efeitos sonoros/Hust 6.yy",
+    "name":"Hut 6",
+    "path":"folders/Sounds/Efeitos sonoros/Hut 6.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

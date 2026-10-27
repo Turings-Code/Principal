@@ -54,8 +54,18 @@ dialogos_radio = [
 ];
 
 fase_entrada_hut6 = 0;
-vel_entrada_hut6 = 4;
+vel_entrada_hut6 = 5;
 fase_alan_hut6 = 0;
 fase_saida_turing = 0;
 alvo_y_turing = 0;
 alvo_x_turing = 0;
+xeroxaltocriado=false;
+dialogo2_iniciado = false;
+dialogo2_ativo = false;
+
+dialogos2 = [
+    { nome: "Theo", frase: "O quê acha que vai fazer com uma lata velha dessas?" },
+    { nome: "Alan", frase: "Achei! Esse editor de código pode ajudar a descobrir a frequência!" },
+    { nome: "Alan", frase: "Preciso descobrir o que significa." }
+];
+
