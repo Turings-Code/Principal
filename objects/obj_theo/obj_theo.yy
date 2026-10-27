@@ -9,8 +9,8 @@
   "name":"obj_theo",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interface",
-    "path":"folders/Objetos/Interface.yy",
+    "name":"Objetos",
+    "path":"folders/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

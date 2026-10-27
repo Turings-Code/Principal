@@ -1,4 +1,5 @@
 if (!instance_exists(obj_alan)) exit;
+if (obj_cutscene5.fase_entrada_hut6 == 4 && !obj_cutscene5.caixadetexto && !obj_cutscene5.dialogo_radio) exit;
 
 depth = -y;
 

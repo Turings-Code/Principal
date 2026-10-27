@@ -10,7 +10,7 @@ depth = -50000;
 escuridao = 0.7;
 image_speed = 0;
 image_index = 0;
-
+flagsla=false;
 ultima_tecla = -1;
 timer_tecla = 0;
 tempo_tecla = 6;
