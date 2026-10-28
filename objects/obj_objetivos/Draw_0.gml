@@ -1,6 +1,7 @@
 if (texto == "") exit;
 if (instance_exists(obj_cutscene3)) { if (obj_cutscene3.caixadetexto) { exit; } }
 if (instance_exists(obj_cutscene4)) { if (obj_cutscene4.caixadetexto) { exit; } }
+if (instance_exists(obj_cutscene5)) { if (obj_cutscene5.caixadetexto) { exit; } }
 
 var _cam = view_camera[0];
 var _x = camera_get_view_x(_cam) + margem_x;

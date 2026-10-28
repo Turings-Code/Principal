@@ -4,9 +4,9 @@ fading_out = false;
 image_xscale=5.6;
 image_yscale=5.6;
 
-area_instrucao = [108, 132, 512, 506];
-texto_instrucao = "Para formar o novo número, digite cada número do código e clique Enter, faça isso até obter outro código de 12 números";
-texto_escala = 1;
+area_instrucao = [108, 132, 425, 506];
+texto_instrucao = "Para formar o novo número, rode o programa, digite cada número do código individualmente e clique Enter. Faça isso até obter outro código de 12 números";
+texto_escala = 0.8;
 
 desenha_texto_area = function(_txt, _x1, _y1, _x2, _y2, _escmax) {
     var _w = _x2 - _x1;

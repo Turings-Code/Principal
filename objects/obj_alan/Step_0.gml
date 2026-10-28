@@ -1,7 +1,7 @@
-show_debug_message(
+/*show_debug_message(
     string(device_mouse_x_to_gui(0)) + "x" +
     string(device_mouse_y_to_gui(0))
-);
+);*/
 //show_debug_message(distance_to_object(obj_turinghut8));
 /*show_debug_message("alan:" + string(image_xscale));
 if(instance_exists(obj_theo)){
@@ -33,7 +33,7 @@ if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
 
 if (instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
     || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)
-    || instance_exists(obj_folha1) || instance_exists(obj_radio)) || instance_exists(obj_xeroxaltoamp) {
+    || instance_exists(obj_folha1) || instance_exists(obj_radio)) || instance_exists(obj_xeroxaltoamp) || instance_exists(obj_rotatorbase) || instance_exists(obj_radiofundo){
     scr_collision_move(0, 0);
 	if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
 if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
@@ -180,6 +180,27 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
 if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_radioaparece)) {
     if (distance_to_object(obj_radioaparece) < 80 && !instance_exists(obj_radio)) {
         instance_create_depth(0, 0, -20000, obj_radio);
+    }
+}
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_folhabinarioaparece)) {
+    if (distance_to_object(obj_folhabinarioaparece) < 80 && !instance_exists(obj_folhabinarios)) {
+        var _cam = view_camera[0];
+        var _vx = camera_get_view_x(_cam);
+        var _vy = camera_get_view_y(_cam);
+
+        instance_create_depth(_vx + 500, _vy + 450, -20000, obj_folhabinarios);
+        instance_create_depth(_vx + 1200, _vy + 200, -21000, obj_codigofinalhut6);
+
+        if (instance_exists(obj_codigo2hut6)) {
+            obj_codigo2hut6.x = _vx + 750;
+            obj_codigo2hut6.y = _vy + 350;
+            obj_codigo2hut6.fading_out = false;
+            obj_codigo2hut6.depth = -20000;
+        } else {
+            instance_create_depth(_vx + 1200, _vy + 650, -21000, obj_codigo2hut6);
+        }
+
+        instance_create_depth(0, 0, -19000, obj_escurece);
     }
 }
 

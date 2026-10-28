@@ -20,6 +20,13 @@ else if (estado == 2) {
         if (rodada_atual >= array_length(rodadas)) {
     estado = 4;
     global.quizxerox = true;
+	obj_objetivos.define_objetivo("OBJETIVO - Descubra a Frequência");
+obj_objetivos.define_etapas([
+    { texto: "- Faça o programa para identificar se é par ou ímpar", feita: true },
+    "- Digite cada dígito no programa para formar o novo código",
+    "- Transcreva os grupos de 4 bits para decimal",
+    "- Coloque a frequência no rádio"
+]);
 	var _base = instance_exists(obj_xeroxaltoamp) ? obj_xeroxaltoamp.depth : -50000;
 var _cam = view_camera[0];
 var _ex = camera_get_view_width(_cam) / display_get_gui_width();
@@ -110,12 +117,36 @@ if (estado == 5) {
             if (entrada_tut == _esperado) {
     historico_tut += entrada_tut + "\nOutput: " + string(real(_esperado) mod 2) + "\n";
     etapa_tut++;
+	if (etapa_tut == 5) {
+    historico_tut = "";
+}
     audio_play_sound(snd_output, 1, false);
 
     if (instance_exists(obj_codigo2hut6)) {
         with (obj_codigo2hut6) {
             image_index = min(image_index + 1, image_number - 1);
         }
+		if(obj_codigo2hut6.image_index==12){
+			obj_objetivos.define_objetivo("OBJETIVO - Descubra a Frequência");
+obj_objetivos.define_etapas([
+    { texto: "- Faça o programa para identificar se é par ou ímpar", feita: true },
+    { texto: "- Digite cada dígito no programa para formar o novo código", feita: true },
+    "- Transcreva os grupos de 4 bits para decimal",
+    "- Coloque a frequência no rádio"
+]);
+			if(instance_exists(obj_xeroxaltoamp)){
+				obj_xeroxaltoamp.fading_out=true;}
+			if(instance_exists(obj_codigo2hut6)){
+				obj_codigo2hut6.fading_out=true;}
+			if(instance_exists(obj_tutorialprograma)){
+				obj_tutorialprograma.fading_out=true;}
+			if(instance_exists(obj_xeroxaltoaparece)){
+				with(obj_xeroxaltoaparece){instance_destroy();}}
+			if(!instance_exists(obj_folhabinarioaparece)){
+				instance_create_layer(1568, 1046, "Instances", obj_folhabinarioaparece)}
+				obj_cutscene5.dialogo3_ativo = true;
+				instance_destroy();
+		}
     }
 
     if (etapa_tut >= string_length(codigo_alvo)) {
@@ -131,3 +162,17 @@ if (estado == 5) {
         }
     }
 }
+
+var _frame_menu = 0;
+
+if (estado == 0 && menu_vis >= 1) {
+    for (var j = 0; j < array_length(areas); j++) {
+        var _rr = areas[j];
+        if (point_in_rectangle(_gx, _gy, _rr[0], _rr[1], _rr[2], _rr[3])) {
+            _frame_menu = j + 1;
+            break;
+        }
+    }
+}
+
+image_index = _frame_menu;

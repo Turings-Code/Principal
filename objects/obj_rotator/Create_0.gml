@@ -1,0 +1,10 @@
+image_xscale = 5.6;
+image_yscale = 5.6;
+image_alpha = 0;
+fade_speed = 0.1;
+fading_out = false;
+arrastando = false;
+offset_ang = 0;
+hold_timer = 0;
+hold_tempo = 120;
+margem = 10;

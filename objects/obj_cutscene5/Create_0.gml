@@ -69,3 +69,24 @@ dialogos2 = [
     { nome: "Alan", frase: "Preciso descobrir o que significa." }
 ];
 
+
+
+
+dialogo3_ativo = false;
+dialogos3 = [
+    { nome: "Turing", frase: "Você transformou o código em binário?" },
+    { nome: "Alan", frase: "Sim! Agora preciso passar do binário para decimal." },
+	{ nome: "Alan", frase: "Tem alguma folha pra eu fazer isso?" },
+	{ nome: "Turing", frase: "Use essas folhas nessa mesa ai embaixo!" },
+	{ nome: "Theo", frase: "Melhor você se apressar, Alan! Tem gente passando aqui perto!" },
+];
+
+
+dialogo4_ativo = false;
+dialogo4_feito = false;
+dialogos4 = [
+    { nome: "Theo", frase: "Espera, o que o rádio disse?" },
+	{ nome: "Turing", frase: "Alguma coisa sobre decifrar. Meu alemão não é tão bom assim." },
+	{ nome: "Turing", frase: "Muito bem garoto, agora só falta uma válvula!" },
+	{ nome: "Turing", frase: "Agora precisamos sair daqui!" }
+];

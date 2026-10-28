@@ -81,7 +81,7 @@ if (instance_exists(obj_turing)) {
 }
 
 if (instance_exists(obj_theo) && fase_entrada_hut6 == 3) {
-    obj_theo.x = 880;
+    obj_theo.x = 910;
     obj_theo.sprite_index = spr_theobaixo;
     obj_theo.y = min(obj_theo.y + vel_entrada_hut6, 665);
 
@@ -111,10 +111,11 @@ if (fase_saida_turing == 2 && instance_exists(obj_turing)) {
     obj_turing.x = min(obj_turing.x + vel_entrada_hut6, alvo_x_turing);
 
     if (obj_turing.x >= alvo_x_turing) {
-        obj_turing.sprite_index = spr_turingparado;
-        obj_turing.image_index = 0;
-        fase_saida_turing = 3;
-    }
+    obj_turing.sprite_index = spr_turingparado;
+    obj_turing.image_index = 0;
+    fase_saida_turing = 3;
+    if (instance_exists(obj_alan)) obj_alan.travado = false;
+}
 }
 
 if (instance_exists(obj_radio) && !radio_dialogo_feito) {
@@ -131,6 +132,18 @@ if (radio_timer > 0) {
         dialogo_radio = true;
         iniciar_dialogo = true;
     }
+}
+
+if (dialogo3_ativo) {
+    dialogo3_ativo = false;
+    dialogos = dialogos3;
+    iniciar_dialogo = true;
+}
+
+if (global.valvulabeta && !dialogo4_feito && !caixadetexto && !iniciar_dialogo) {
+    dialogos = dialogos4;
+    iniciar_dialogo = true;
+    dialogo4_ativo = true;
 }
 
 if (iniciar_dialogo) {

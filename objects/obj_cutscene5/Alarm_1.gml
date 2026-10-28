@@ -10,7 +10,14 @@ if (dialogo_index < array_length(dialogos)) {
     caixadetexto = false;
     mostrar_texto = false;
     cutscene = false;
-
+	
+	if (dialogo4_ativo) {
+    dialogo4_ativo = false;
+    dialogo4_feito = true;
+	audio_play_sound(snd_itemnovo, 1, false);
+}
+	
+	
     if (dialogo2_ativo) {
         
         obj_objetivos.define_objetivo("OBJETIVO - Descubra a Frequência");
@@ -28,13 +35,15 @@ if (dialogo_index < array_length(dialogos)) {
         obj_objetivos.define_objetivo("OBJETIVO - Vá até o computador");
         fase_saida_turing = 1;
         alvo_y_turing = obj_turing.y + 120;
-
+		show_debug_message("nicolas")
         var _xerox = instance_create_layer(1470, 700, "Instances", obj_xeroxaltoaparece);
         _xerox.image_xscale = 11;
         _xerox.image_yscale = 13;
     }
 
+    if (!(fase_saida_turing >= 1 && fase_saida_turing < 3)) {
     if (instance_exists(obj_alan)) obj_alan.travado = false;
+}
 
     if (dialogo_radio) {
         dialogo_radio = false;
