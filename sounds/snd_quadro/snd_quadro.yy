@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.5040136,
+  "duration":1.3322449,
   "exportDir":"",
   "name":"snd_quadro",
   "parent":{

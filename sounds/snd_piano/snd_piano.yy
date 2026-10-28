@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":280.05878,
+  "duration":395.49387,
   "exportDir":"",
   "name":"snd_piano",
   "parent":{
