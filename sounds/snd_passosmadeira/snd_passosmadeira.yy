@@ -8,9 +8,9 @@
   "bitDepth":1,
   "channelFormat":0,
   "compression":0,
-  "compressionQuality":4,
+  "compressionQuality":1,
   "conversionMode":0,
-  "duration":0.4,
+  "duration":0.35,
   "exportDir":"",
   "name":"snd_passosmadeira",
   "parent":{

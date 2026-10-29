@@ -546,6 +546,7 @@
     {"id":{"name":"spr_Voltamenu","path":"sprites/spr_Voltamenu/spr_Voltamenu.yy",},},
     {"id":{"name":"spr_xeroxalto","path":"sprites/spr_xeroxalto/spr_xeroxalto.yy",},},
     {"id":{"name":"spr_xeroxaltoamp","path":"sprites/spr_xeroxaltoamp/spr_xeroxaltoamp.yy",},},
+    {"id":{"name":"Sprite224","path":"sprites/Sprite224/Sprite224.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
