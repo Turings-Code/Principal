@@ -323,17 +323,7 @@ footer {
     font-size: 16px;
     line-height: 1.6;
 }
-
-@media (max-width: 700px) {
-    .lista-cenarios {
-        flex-wrap: wrap;
-    }
-
-    .cenario {
-        flex: 1 1 100%;
-    }
-
-    .bolinha {
+.bolinha {
     width: 150px;  
     height: 150px; 
     border-radius: 50%; 
@@ -346,6 +336,189 @@ footer {
     height: 100%;
     object-fit: cover; 
 }
+.div-grande {
+    width: 90%;
+    max-width: 900px; 
+    margin: 50px auto; 
+    padding: 40px;     
+    background: rgba(19, 56, 36, 0.9); 
+    border: 3px solid #3acc00;          
+    border-radius: 15px;              
+    box-shadow: 0 0 20px rgba(58, 204, 0, 0.2); 
+    text-align: center;
+}
+
+.div-grande h2 {
+    color: #3acc00;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.div-grande p {
+    color: #c6dfd0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.div-galeria-estilo {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(19, 56, 36, 0.95); 
+    border: 3px solid #3acc00;          
+    border-radius: 20px;                
+    box-shadow: 0 0 25px rgba(58, 204, 0, 0.3);
+    text-align: center;
+}
+
+.div-galeria-estilo h2 {
+    color: #3acc00;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.div-galeria-estilo p {
+    color: #c6dfd0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Organiza as imagens lado a lado de forma moderna */
+.grade-imagens {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item-imagem {
+    flex: 1;
+    min-width: 250px;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #c6dfd0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+
+.item-imagem:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 15px #3acc00;
+    border-color: #3acc00;
+}
+
+.item-imagem:hover img {
+    transform: scale(1.1);
+}
+.card-horizontal {
+  display: flex;
+  flex-direction: row;
+  background-color: #008000; 
+  color: #ffffff;
+  max-width: 900px;
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin-bottom: 25px;
+}
+
+.imagem-projeto {
+  width: 40%;
+  object-fit: cover;
+}
+
+.texto-projeto {
+  width: 60%;
+  padding: 30px;
+}
+
+.texto-projeto h2 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.texto-projeto p {
+  margin: 0;
+  line-height: 1.6;
+}
+/* Contentor principal que organiza as imagens em grelha */
+.galeria-imagens {
+  display: grid;
+  /* Cria exatamente 2 colunas do mesmo tamanho (50% cada) */
+  grid-template-columns: repeat(2, 1fr); 
+  /* Espaço (gap) entre as imagens na horizontal e vertical */
+  gap: 20px; 
+  width: 100%;
+  max-width: 1000px; /* Largura máxima da sua galeria no ecrã */
+  margin: 0 auto;    /* Centraliza a galeria na tela */
+  padding: 20px;
+}
+
+
+.item-imagem {
+  width: 100%;
+  height: 350px; 
+  border-radius: 6px;
+  overflow: hidden; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+
+.item-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .galeria-imagens {
+    grid-template-columns: 1fr; 
+  }
+}
+@media (max-width: 768px) {
+  .card-horizontal {
+    flex-direction: column;
+  }
+  .imagem-projeto, .texto-projeto {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .card-horizontal {
+    flex-direction: column;
+  }
+  .imagem-projeto, .texto-projeto {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+    .lista-cenarios {
+        flex-wrap: wrap;
+    }
+
+    .cenario {
+        flex: 1 1 100%;
+    }
+
+    
 }
 
  </style>
@@ -359,7 +532,7 @@ footer {
             <a href="#história">História</a>
             <a href="#StoryBord">StoryBord</a>
             <a href="#cenarios">Cenários</a>
-            <a href="#sprites">Sprites</a>
+            <a href="#personagens">Personagens</a>
             <a href="#curiosidades">Curiosidades</a>
             <a href="#codigos">Códigos</a> 
             <a href="#documentação">Documentação</a>
@@ -377,7 +550,7 @@ footer {
 
     
     <section class="descricao" id="codigo">
-        <h2>Descrição do jogo:</h2>
+        <h2>Sobre o projeto:</h2>
 
         <p>
             Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo
@@ -387,18 +560,33 @@ footer {
         </p>
     </section>
 
+    <section>
+    <div class="div-grande" id="história">
+    <h2>História</h2>
+    <p></p>
+    </div>
+    </section>
 
-<div class="botoes-descricao">
 
-    <a href="#" class="botao-descricao">
-        Prévia do jogo
-    </a>
+    <section>
+    <div class="div-galeria-estilo" id="StoryBord">
 
-    <a href="#" class="botao-descricao">
-        Baixe o jogo
-    </a>
-
+    <h2>Galeria em Destaque</h2>
+    <p>Um novo formato de painel para apresentar várias imagens em grande estilo.</p>
+    
+    <div class="grade-imagens">
+        <div class="item-imagem">
+            <img src="cen1.jpeg" alt="Imagem 1">
+        </div>
+        <div class="item-imagem">
+            <img src="cen2.jpeg" alt="Imagem 2">
+        </div>
+        <div class="item-imagem">
+            <img src="cen3.jpeg" alt="Imagem 3">
+        </div>
+    </div>
 </div>
+</section>
 
 <section class="cenarios" id="cenarios">
     <h2>Cenários do jogo</h2>
@@ -430,7 +618,7 @@ footer {
 </section>
 
     
-<section class="sprites" id="sprites">
+<section class="sprites" id="personagens">
     <h2>Personagens do jogo</h2>
 
     <div class="personagens">
@@ -459,6 +647,126 @@ footer {
 
     </div>
 </section>
+
+<section class="sprites">
+    <div class="personagens">
+
+        <div class="personagem">
+            <img src="sprite1.jpeg" alt="Alan">
+            <h3>Alan</h3>
+            <p>Um jovem curioso que precisa resolver
+            enigmas para conseguir voltar para casa.</p>
+        </div>
+
+        <div class="personagem">
+            <img src="sprite2.jpeg" alt="Theo">
+            <h3>Theo</h3>
+            <p>Parceiro de Alan na aventura, ajudando
+            a descobrir os mistérios da máquina Enigma.</p>
+        </div>
+
+        <div class="personagem">
+            <img src="site/sprite3.jpg" alt="Outro personagem">
+            <h3>Nosso Líder!</h3>
+            <p>Este é o maravilhoso líder do nosso grupo, que mostrou ser capaz
+                de administrar bem o grupo e trazer grande cooperação entre os membros.
+            </p>
+        </div>
+
+    </div>
+</section>
+<section  id="curiosidades">
+    <center><h2>Curiosidades</h2></center>
+<center>
+<section>
+    <div class="card-horizontal">
+  <img src="sua-imagem.jpg" alt="Imagem do Projeto" class="imagem-projeto">
+  <div class="texto-projeto">
+    <h2>Sobre o projeto:</h2>
+    <p>Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo são transportados para 1943...</p>
+  </div>
+</div>
+</section>
+</center>
+<center>
+<section>
+    <div class="card-horizontal">
+  <img src="sua-imagem.jpg" alt="Imagem do Projeto" class="imagem-projeto">
+  <div class="texto-projeto">
+    <h2>Sobre o projeto:</h2>
+    <p>Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo são transportados para 1943...</p>
+  </div>
+</div>
+</section>
+</center>
+<center>
+<section>
+    <div class="card-horizontal">
+  <img src="sua-imagem.jpg" alt="Imagem do Projeto" class="imagem-projeto">
+  <div class="texto-projeto">
+    <h2>Sobre o projeto:</h2>
+    <p>Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo são transportados para 1943...</p>
+  </div>
+</div>
+</section>
+</center>
+<center>
+<section>
+    <div class="card-horizontal">
+  <img src="sua-imagem.jpg" alt="Imagem do Projeto" class="imagem-projeto">
+  <div class="texto-projeto">
+    <h2>Sobre o projeto:</h2>
+    <p>Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo são transportados para 1943...</p>
+  </div>
+</div>
+</section>
+</center>
+</section>
+
+<section id="codigos">
+        <center><h2>Codígos</h2></center>
+        
+    <section class="descricao" >
+        <h2>Sobre o projeto:</h2>
+
+        <p>
+            Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo
+            são transportados para 1943 após ativarem uma antiga máquina Enigma.
+            Presos em Bletchley Park, eles precisam resolver enigmas e recuperar
+            peças da máquina Bombe para conseguir voltar para casa.
+        </p>
+    </section>
+
+
+<div class="galeria-imagens">
+  
+  <div class="item-imagem">
+    <img src="sua-imagem-1.jpg" alt="Imagem 1">
+  </div>
+  <div class="item-imagem">
+    <img src="sua-imagem-2.jpg" alt="Imagem 2">
+  </div>
+
+ 
+  <div class="item-imagem">
+    <img src="sua-imagem-3.jpg" alt="Imagem 3">
+  </div>
+  <div class="item-imagem">
+    <img src="sua-imagem-4.jpg" alt="Imagem 4">
+  </div>
+</div>
+</section>
+<div class="botoes-descricao">
+
+    <a href="#" class="botao-descricao">
+        Prévia do jogo
+    </a>
+
+    <a href="#" class="botao-descricao">
+        Baixe o jogo
+    </a>
+
+</div>
 
 <section class="bolinha" id="bolinha">
     <h2>Desenvolvedores</h2>
