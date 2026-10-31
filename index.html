@@ -450,20 +450,20 @@ footer {
   display: block;
 }
 
-/* Contentor pai que organiza as divs lado a lado */
+
 .container-tres-colunas {
   display: flex;
-  justify-content: space-between; /* Distribui o espaço uniformemente entre elas */
-  gap: 20px;                      /* Espaço automático entre as três divs */
+  justify-content: space-between; 
+  gap: 20px;                      
   width: 100%;
   max-width: 1100px;
-  margin: 0 auto;                 /* Centraliza o bloco na tela */
+  margin: 0 auto;                 
   padding: 20px;
 }
 
-/* Estilo individual de cada div/card */
+
 .card-tutorial {
-  flex: 1;                        /* Faz com que todas ocupem exatamente o mesmo tamanho */
+  flex: 1;                        
   background-color: #4F4E32;
   border: 2px solid #7F7F7F;
   
@@ -486,54 +486,54 @@ footer {
   font-size: 15px;
 }
 
-/* Container geral da seção de equipe */
+
 .equipe-container {
   display: flex;
   flex-direction: column;
-  gap: 40px; /* Espaço entre a primeira e a segunda linha */
+  gap: 40px; 
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
 }
 
-/* Linhas que agrupam os cards de desenvolvedores */
+
 .linha-desenvolvedores {
   display: flex;
-  justify-content: center; /* Centraliza as divs na linha */
-  gap: 30px;               /* Espaço entre os cards lado a lado */
+  justify-content: center; 
+  gap: 30px;               
   flex-wrap: wrap;
 }
 
-/* Card individual de cada desenvolvedor (MAIOR) */
+
 .card-dev {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 280px; /* Aumentado de 220px para 280px */
+  width: 280px; 
   background-color: #4F4E32;
   border: 5px solid #7F7F7F;
   
-  padding: 30px 20px; /* Mais espaço interno */
+  padding: 30px 20px; 
   color: #ffffff;
  
 }
 
-/* Foto em formato de bolinha maior */
+
 .foto-bolinha {
-  width: 140px;  /* Aumentado de 120px para 140px */
-  height: 140px; /* Aumentado de 120px para 140px */
+  width: 140px;  
+  height: 140px;
   border-radius: 50%;       
   object-fit: cover;        
   border: 3px solid #fdf570; 
   margin-bottom: 15px;
 }
 
-/* Nome e cargo */
+
 .card-dev h3 {
   margin: 10px 0 5px 0;
-  font-size: 20px; /* Letra ligeiramente maior */
+  font-size: 20px; 
   color: #ffffff;
 }
 
@@ -546,22 +546,22 @@ footer {
   letter-spacing: 0.5px;
 }
 
-/* Descrição */
+
 .card-dev p {
-  font-size: 15px; /* Texto mais legível */
+  font-size: 15px; 
   color: #d1d5db;
   margin: 0;
   line-height: 1.5;
 }
 
-/* Responsividade para telemóveis */
+
 @media (max-width: 768px) {
   .card-dev {
     width: 100%;
     max-width: 320px;
   }
 }
-/* Responsividade: Se o ecrã for pequeno (telemóvel), empilha as divs uma em cima da outra */
+
 @media (max-width: 768px) {
   .container-tres-colunas {
     flex-direction: column;
@@ -637,17 +637,30 @@ footer {
         <h2>Sobre o projeto:</h2>
 
         <p>
-            Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo
-            são transportados para 1943 após ativarem uma antiga máquina Enigma.
-            Presos em Bletchley Park, eles precisam resolver enigmas e recuperar
-            peças da máquina Bombe para conseguir voltar para casa.
+            O jogo que esse site apresenta faz parte do projeto de jogos realizados pelos os alunos do 1° de Desenvolvimento de Sistemas,
+            que tem como objetivo conectar a educação ao universo gamer. Tronando os alunos não apenas com usuários, mas com agentes ativos 
+            no aprendizado das matérias aprendidas ao longo do ano.
         </p>
     </section>
 
     <section>
     <div class="div-grande" id="história">
     <h2>História</h2>
-    <p></p>
+    <p> Alan Torres é interrompido novamente de sua longa partida de video game por sua mãe que avisa ele que vão recebe a visita do 
+        seu primo Theo, que traz uma misteriosa caixa de madeira antiga chamada Enigma, antes usada para criptografrar códigos.
+        Assim ao investigarem e seguirem um padrão num bilhete no interior da caixa e Alan tenta resolver o misterioso bilhete digitado as palavras 
+        na caixa, o objeto começa a girar suas engrenagens levando-os para a época da Segunda Guerra Mundial. </p>
+    <p>
+        Alan e Theo são teletransportados inexplicavelmente para um galpão escuro em 1943, durante a Segunda Guerra Mundial.
+        Eles encontram-se com Alan Turing em Bletchley Park, que lhes explica que para voltarem para casa 
+        precisam de o ajuda-ló a recolher as Válvulas de Comutação Mestra, que são as válvulas que faltam para colocar a máquina Bombe e faze-lá 
+        funcionar.
+    </p>
+    <p>
+        Após superarem várias missões complexas pelos huts, os primos entregam a última válvula a Alan Turing. 
+        A máquina Bombe ativa-se com um brilho intenso e os dois voltam para casa, no quarto de Alan Torres. 
+        Embora para eles tenha tido uma grande aventura temporal, para a mãe Ada parece apenas que passaram a tarde inteira jogando, mas eles sabem que não foi bem isso...
+    </p>
     </div>
     </section>
 
@@ -655,8 +668,10 @@ footer {
     <section>
     <div class="div-galeria-estilo" id="StoryBord">
 
-    <h2>Galeria em Destaque</h2>
-    <p>Um novo formato de painel para apresentar várias imagens em grande estilo.</p>
+    <h2>StoryBord</h2>
+    <p>Para dar vida a essa história, iniciaimente colocamos a imaginação no papel, fazendo um StoryBord para ficar mais claro como
+        iamos realizar o projeto visualmente.
+    </p>
     
     <div class="grade-imagens">
         <div class="item-imagem">
@@ -679,23 +694,31 @@ footer {
 
         <div class="cenario">
             <img src="site/IMG-20261025-WA0005.jpg" alt="Interior da área de investigação">
-            <h3>Sala de investigação</h3>
-            <p>Um ambiente cheio de documentos,
-            máquinas e pistas para descobrir.</p>
+            <h3>Hut 6</h3>
+            <p>O laboratório de criptoanálise.
+                Um galpão de madeira escuro e abafado, onde o silêncio é cortado apenas pelo constante raspar de giz nos quadros-negros.
+                É aqui, entre fios elétricos expostos e papéis perfurados, que cada linha de código inimigo
+                representa uma corrida contra o tempo. Sob a tensão constante de 1943, 
+                este é um dos postos-chave que os primos terão de desbravar para recuperar as preciosas válvulas e escapar de volta para época presente.</p>
         </div>
 
         <div class="cenario">
             <img src="site/IMG-20261030-WA0022.jpg" alt="Rua da cidade">
-            <h3>Cidade</h3>
-            <p>Uma área externa com construções
-            e caminhos para explorar.</p>
+            <h3>Bletchley Park</h3>
+            <p>Um oásis de alta tensão e segredos de guerra.
+                Aqui, esconde-se os mais diversos mistérios, mas especialmente as Válvulas de Comutação Mestra, cercada por huts cheios de papeis furados, 
+                quadros-negros e fios expostos, mentes brilhantes lutam contra o relógio para quebrar o indifícil código Enigma.
+                Cada pista conta para encontrar as válvulas perdidas e conseguir o caminho de volta a casa.</p>
         </div>
 
         <div class="cenario">
             <img src="site/IMG-20261025-WA0007.jpg" alt="Interior do edifício">
-            <h3>Interior do edifício</h3>
-            <p>Um local com salas e objetos
-            que fazem parte da aventura.</p>
+            <h3>Interior da Mansão</h3>
+            <p>Ninguém sabe o que se passa lá dentro.
+                Dentro da mistériosa mansão cheia de chaves e esconderijos, as portas ficam feichadas afim de guardar aquilo que pode mudar
+                a história da humanidade.
+                Ou longo dos corredores e escadas cada passo deixa o caminho de casa mais próximo.
+            </p>
         </div>
 
     </div>
@@ -710,23 +733,25 @@ footer {
 
         <div class="personagem">
             <img src="site/5_20261031_125120_0004.png" alt="Alan">
-            <h3>Alan</h3>
-            <p>Um jovem curioso que precisa resolver
-            enigmas para conseguir voltar para casa.</p>
+            <h3>Alan Torres</h3>
+            <p>Protagonista e mente lógica do jogo. 
+            É o personagem principal controlado pelo jogador nas mecânicas de lógica e programação.  
+            </p>
         </div>
 
         <div class="personagem">
             <img src="site/1_20261031_125120_0000.png" alt="Theo">
-            <h3>Theo</h3>
-            <p>Parceiro de Alan na aventura, ajudando
-            a descobrir os mistérios da máquina Enigma.</p>
+            <h3>Theo Torres</h3>
+            <p>Personagem secundário. Atua como a ponte entre o presente e o passado,
+                traduzindo conceitos modernos de TI para a linguagem de máquinas mecânicas.
+            </p>
         </div>
 
         <div class="personagem">
             <img src="site/2_20261031_125120_0001.png" alt="Outro personagem">
-            <h3>Nosso Líder!</h3>
-            <p>Este é o maravilhoso líder do nosso grupo, que mostrou ser capaz
-                de administrar bem o grupo e trazer grande cooperação entre os membros.
+            <h3>Alan Turing</h3>
+            <p>O famoso pai da computação, deve dá orientações diretas  e dicas para Ala e Theo das
+                missões e concede itens-chave (como a chave-mestre da Mansão). 
             </p>
         </div>
 
@@ -738,16 +763,17 @@ footer {
 
         <div class="personagem">
             <img src="site/3_20261031_125120_0002.png" alt="Alan">
-            <h3>Alan</h3>
-            <p>Um jovem curioso que precisa resolver
-            enigmas para conseguir voltar para casa.</p>
+            <h3>Ada Torres</h3>
+            <p>Estabelece o conflito inicial entre o mundo virtual de Alan e suas responsabilidades, 
+            servindo de gancho para a chegada de Theo e o início do mistério da caixa Enigma. 
+            (Nota: O nome "Ada" faz uma homenagem histórica a Ada Lovelace, a primeira programadora da história). </p>
         </div>
 
         <div class="personagem">
             <img src="site/4_20261031_125120_0003.png" alt="Theo">
-            <h3>Theo</h3>
-            <p>Parceiro de Alan na aventura, ajudando
-            a descobrir os mistérios da máquina Enigma.</p>
+            <h3>Operários</h3>
+            <p>NPCs (Personagens Não-Jogáveis) responsáveis por 
+            dificultar a entrada dos jogadores nos huts (galpões) e áreas restritas.</p>
         </div>
 
         
@@ -759,8 +785,10 @@ footer {
     <div class="card-horizontal">
   <img src="site/IMG-20261016-WA0076.jpg" alt="Imagem do Projeto" class="imagem-projeto">
   <div class="texto-projeto">
-    <h2>Sobre o projeto:</h2>
-    <p>Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo são transportados para 1943...</p>
+    <h2>Rei Jorge VI do Reino Unido</h2>
+    <p>Trata-se de uma representação do retrado pintado do Jorge VI que foi pai da Rainha Elizabeth II, feito em 1937
+    para celebrar a coroação do monarca.
+    </p>
   </div>
 </div>
 </section>
@@ -770,8 +798,10 @@ footer {
     <div class="card-horizontal">
   <img src="site/IMG-20261016-WA0078.jpg" alt="Imagem do Projeto" class="imagem-projeto">
   <div class="texto-projeto">
-    <h2>Sobre o projeto:</h2>
-    <p>Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo são transportados para 1943...</p>
+    <h2>Máquina Typex</h2>
+    <p>Principal máquina de criptografia eletromecânica utilizada palas Forças Armadas Britânicas e por orgãos governamentais
+        do Reino Unido.
+    </p>
   </div>
 </div>
 </section>
@@ -781,8 +811,10 @@ footer {
     <div class="card-horizontal">
   <img src="site/IMG-20261016-WA0080.jpg" alt="Imagem do Projeto" class="imagem-projeto">
   <div class="texto-projeto">
-    <h2>Sobre o projeto:</h2>
-    <p>Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo são transportados para 1943...</p>
+    <h2>SwitchBoard</h2>
+    <p>Em meados do século XX, foi uma mesa operadora ou painel de comutação telefônica importante para 
+    a telecomunicação e tecnologia da época.
+    </p>
   </div>
 </div>
 </section>
@@ -792,8 +824,9 @@ footer {
     <div class="card-horizontal">
   <img src="site/IMG-20261016-WA0084.jpg" alt="Imagem do Projeto" class="imagem-projeto">
   <div class="texto-projeto">
-    <h2>Sobre o projeto:</h2>
-    <p>Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo são transportados para 1943...</p>
+    <h2>Mapa</h2>
+    <p>Foram muito utilizados na Segunda Guerra Mundial, passando por uma grande revolução tecnológica entre 1939 e 1945,
+    sendo dividida em categorias fundamentais de acordo com sua função.</p>
   </div>
 </div>
 </section>
@@ -801,16 +834,16 @@ footer {
 </section>
 <br><br>
 <section id="codigos">
-        <center><h2>Codígos</h2></center>
+        <center><h2>Códigos</h2></center>
 
     <section class="descricao" >
-        <h2>Sobre o projeto:</h2>
+        <h2>Arquitetura dos códigos:</h2>
 
         <p>
-            Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo
-            são transportados para 1943 após ativarem uma antiga máquina Enigma.
-            Presos em Bletchley Park, eles precisam resolver enigmas e recuperar
-            peças da máquina Bombe para conseguir voltar para casa.
+            A arquitetura de software de Turing 's Code foi projetada sob uma abordagem modular 
+            para garantir que o jogo tenha um bom funcionamento, jogabilidade e um código simples e funcional. 
+            O sistema é estruturado utilizando o motor GameMaker e a linguagem de script GameMaker Language (GML), onde criamos 
+            o jogo integralmente pelo a plataforma. Trazendo a seguir, imagens dos principais códigos:
         </p>
     </section>
 
@@ -861,7 +894,16 @@ footer {
     <div class="div-grande" id="documentação">
 
     <h2>Documentação</h2>
-    <p></p>
+    <p>O documento de projeto do jogo Turing's Code, 
+        funciona formalmente como um Game Design Document (GDD), utilizando normas ABNT para o seu desenvolvimento.
+        Ele foi estruturado de maneira acadêmica e modular com o propósito de guiar a criação de um jogo educativo do gênero Puzzle Adventure,
+        fundamentado na abordagem de Game-Based Learning para o público de jovens do ensino médio e  adultos.
+        A introdução do material estabelece a motivação de integrar a tecnologia dos jogos eletrônicos à educação, 
+        transformando os discentes em agentes ativos no desenvolvimento de ferramentas didáticas que dialogam com conteúdos escolares.</p>
+        <p>O documento do projeto do site do jogo Lógica de Turing, funciona formalmente como uma especificação técnica e estrutural 
+            em normas ANBT, voltada para a criação da apresentação do jogo. Ele foi estruturado de
+            maneira organizada para guiar todo o planeamento, desenvolvimento e suporte da página web 
+            oficial associada ao projeto.</p>
     </div>
     </section>
 
@@ -883,53 +925,55 @@ footer {
     <div class="container-tres-colunas">
   <div class="card-tutorial">
     <h3>Passo 1</h3>
-    <p>Utilize as teclas WASD para se movimentar pelo mapa.</p>
+    <p>Entre no nosso perfil do GitHub e baixe o jogo via gameMaker.</p>
   </div>
 
   <div class="card-tutorial">
     <h3>Passo 2</h3>
-    <p>Pressione a tecla Espaço para interagir com objetos.</p>
+    <p>No menu do jogo clique em começar</p>
   </div>
 
   <div class="card-tutorial">
     <h3>Passo 3</h3>
-    <p>Resolva os enigmas da máquina Enigma para avançar.</p>
+    <p>Observe a história introdutória para assim entender o contexto e os objetivos do jogo</p>
   </div>
 </div>
 </section>
 <section>
      <div class="container-tres-colunas">
   <div class="card-tutorial">
-    <h3>Passo 1</h3>
-    <p>Utilize as teclas WASD para se movimentar pelo mapa.</p>
+    <h3>Passo 4</h3>
+    <p>Após ser teletransportado para a Segunda Guerra Mundial, converse com o Alan Turing para entender uma forma
+    de voltar para a casa.
+    </p>
   </div>
 
   <div class="card-tutorial">
-    <h3>Passo 2</h3>
-    <p>Pressione a tecla Espaço para interagir com objetos.</p>
+    <h3>Passo 5</h3>
+    <p>Passe por todas as fases coletando os itens e especialmente as válvulas. Não se esqueça de sempre escutar o Turing </p>
   </div>
 
   <div class="card-tutorial">
-    <h3>Passo 3</h3>
-    <p>Resolva os enigmas da máquina Enigma para avançar.</p>
+    <h3>Passo 6</h3>
+    <p>Fase 1: Seu objetivo e encontrar a Válvula Beta. Usando o Theo como jogador. </p>
   </div>
 </div>
 </section>
 <section>
      <div class="container-tres-colunas">
   <div class="card-tutorial">
-    <h3>Passo 1</h3>
-    <p>Utilize as teclas WASD para se movimentar pelo mapa.</p>
+    <h3>Passo 7</h3>
+    <p>Fase 2: Seu objetivo e encontrar a Válvula Alfa. Usando o Alan com jogador.</p>
   </div>
 
   <div class="card-tutorial">
-    <h3>Passo 2</h3>
-    <p>Pressione a tecla Espaço para interagir com objetos.</p>
+    <h3>Passo 8</h3>
+    <p>Fase 3: Seu objetivo e encontrar a Válvula Mestra. Usando agora Alan e Theo para desvendar o desafio.</p>
   </div>
 
   <div class="card-tutorial">
-    <h3>Passo 3</h3>
-    <p>Resolva os enigmas da máquina Enigma para avançar.</p>
+    <h3>Passo 9</h3>
+    <p>Entregue as válvulas para o Turing e volte para a casa.</p>
   </div>
 </div>
 </section>
@@ -950,47 +994,47 @@ footer {
 <section id="desenvolvedores">
 <div class="equipe-container">
   <h2><center>Desenvolvedores</center></h2>
-  <!-- Linha 1: 3 Desenvolvedores -->
+
   <div class="linha-desenvolvedores">
     
     <div class="card-dev">
       <img src="site/IMG-20261031-WA0006.jpg" alt="Desenvolvedor 1" class="foto-bolinha">
-      <h3>Nome Dev 1</h3>
-      <span class="cargo">Game Designer</span>
-      <p>Responsável pelo design de níveis e lógica dos enigmas.</p>
+      <h3>Rodrido Makoto</h3>
+      <span class="cargo">Líder</span>
+      <p>Responsável pelo o monitoramento do grupo e do jogo, além de organizar o decorrer do projeto ao longo do ano.</p>
     </div>
 
     <div class="card-dev">
       <img src="site/IMG_20260405_163012_511.jpg" alt="Desenvolvedor 2" class="foto-bolinha">
-      <h3>Nome Dev 2</h3>
-      <span class="cargo">Programador Lead</span>
-      <p>Desenvolveu a mecânica principal e os sistemas do jogo.</p>
+      <h3>Thainá B.Lima</h3>
+      <span class="cargo">Roterista e documentalista</span>
+      <p>Desenvolveu a história do jogo e documentou todo o decorrer do projeto.</p>
     </div>
 
     <div class="card-dev">
       <img src="site/IMG-20251215-WA0005.jpg" alt="Desenvolvedor 3" class="foto-bolinha">
-      <h3>Nome Dev 3</h3>
-      <span class="cargo">Artista 2D/3D</span>
-      <p>Criou a arte visual, cenários e efeitos de iluminação.</p>
+      <h3>Daniel Shoji</h3>
+      <span class="cargo">Programador e Artista</span>
+      <p>Programou o jogo através do GameMaker e criou a arte visual, cenários e efeitos de iluminação a mão.</p>
     </div>
 
   </div>
 
-  <!-- Linha 2: 2 Desenvolvedores -->
+
   <div class="linha-desenvolvedores">
 
     <div class="card-dev">
       <img src="foto4.jpg" alt="Desenvolvedor 4" class="foto-bolinha">
-      <h3>Nome Dev 4</h3>
-      <span class="cargo">Sound Designer</span>
-      <p>Compositor das trilhas sonoras e efeitos de áudio.</p>
+      <h3>Maysa Vieira</h3>
+      <span class="cargo">Artista</span>
+      <p>Criou a arte visual dos personagens e as suas caracteristicas.</p>
     </div>
 
     <div class="card-dev">
       <img src="site/IMG-20261031-WA0021.jpg" alt="Desenvolvedor 5" class="foto-bolinha">
-      <h3>Nome Dev 5</h3>
-      <span class="cargo">Roteirista</span>
-      <p>Escreveu a história, diálogos e a lore dos personagens.</p>
+      <h3>Maria Eduarda</h3>
+      <span class="cargo">Web designer</span>
+      <p>Desenvolveu o site, sua estrutura e design visual para a apresentação do jogo.</p>
     </div>
 
   </div>
@@ -998,16 +1042,17 @@ footer {
 </div>
 </section>
 <section>
-    <center><h2>Agradecimentos</h2></center>
+
 
     <section class="descricao" >
-        <h2>Sobre o projeto:</h2>
+        <h2>Agradecimentos</h2>
 
         <p>
-            Lógica de Turing é um jogo de puzzle e aventura em que Alan e Theo
-            são transportados para 1943 após ativarem uma antiga máquina Enigma.
-            Presos em Bletchley Park, eles precisam resolver enigmas e recuperar
-            peças da máquina Bombe para conseguir voltar para casa.
+            Agradecemos a todos os professores que ajudaram no desenvolever do jogo mas especialmente a professora Miyuki que fez tornar
+            esse projeto real e direciona-ló ao longo do curso, a Ana Mamede por nos ajudar a tornar a apresentação real
+            e ao Luk que já aposentado quando ainda estava dando aula tirou da gente muitas rizadas e aprendizados. 
+            Agradecemos também a presença de todos que assistiram a nosa apresentação! E lembressem:" Ás vezes, são as pessoas que ninguém
+            espera nada, que fazem as coisas que ninguém conseue imaginar".
         </p>
     </section>
 </section>
