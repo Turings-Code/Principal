@@ -10,8 +10,8 @@
   "name":"obj_enigmainicial",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Interface",
+    "path":"folders/Objetos/Interface.yy",
   },
   "parentObjectId":{
     "name":"obj_aparecee",

@@ -23,6 +23,16 @@ if (delay_antes > 0) {
     }
 }
 
+if(audio_is_playing(snd_Jogando)){
+	if(instance_exists(obj_alancutscene)){
+		obj_alancutscene.sprite_index=spr_alansentadocima;}}
+	else if (!audio_is_playing(snd_Jogando)&&alan_anda){
+		if(instance_exists(obj_alancutscene)){
+		obj_alancutscene.sprite_index=spr_alanesquerda;}}
+	else{
+		if(instance_exists(obj_alancutscene)){
+		obj_alancutscene.sprite_index=spr_alanparado;}}
+
 if (alan_anda){
 	if(audio_is_playing(snd_Jogando)){
 		audio_stop_sound(snd_Jogando);}

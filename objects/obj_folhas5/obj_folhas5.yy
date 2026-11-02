@@ -6,8 +6,8 @@
   "name":"obj_folhas5",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Mansão",
+    "path":"folders/Objetos/Mansão.yy",
   },
   "parentObjectId":{
     "name":"obj_aparecee",
