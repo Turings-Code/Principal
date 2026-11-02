@@ -6,12 +6,8 @@ if (instance_exists(obj_letrae)) {
 			obj_inventario.nome_item = "Fragmento do Código 1";
     obj_inventario.ganhouitem = true;
 	audio_play_sound(snd_itemnovo, 1, false);
-		obj_objetivos.define_objetivo("OBJETIVO - Abra a Sala da Bombe");
-    obj_objetivos.define_etapas([
-        "Religue a Energia da Porta",
-        "Encontre a Válvula Mestra",
-        "Encontre os Fragmentos do Código (1/3)"
-    ]);
+	obj_organizaobjetivos.atualizar();
+	
 		instance_destroy();
 	}
 }

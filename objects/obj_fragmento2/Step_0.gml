@@ -82,14 +82,5 @@ if (image_xscale > 13 && !fade_final && delay <= 0 && mouse_check_button_pressed
     fade_final = true;
     global.fragmento2 = true;
 
-    if (!instance_exists(obj_objetivos)) {
-        instance_create_depth(0, 0, -100000, obj_objetivos);
-    }
-
-    obj_objetivos.define_objetivo("OBJETIVO - Abra a Sala da Bombe");
-    obj_objetivos.define_etapas([
-        "Religue a Energia da Porta",
-        "Encontre a Válvula Mestra",
-        "Encontre os Fragmentos do Código (2/3)"
-    ]);
+    obj_organizaobjetivos.atualizar();
 }

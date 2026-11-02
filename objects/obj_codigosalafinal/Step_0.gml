@@ -25,12 +25,20 @@ if (_sobre_area && !fading_out && instance_exists(obj_cursormouse)) {
 
 image_speed = 0;
 
-if (global.fragmento3) {
-    image_index = 2;
-} else if (global.fragmento2) {
-    image_index = 1;
-} else if (global.fragmento1) {
+if (global.fragmento1 && global.fragmento2 && global.fragmento3) {
+    image_index = 6;
+} else if (global.fragmento1 && global.fragmento2 && !global.fragmento3) {
+    image_index = 3;
+} else if (global.fragmento1 && global.fragmento3 && !global.fragmento2) {
+    image_index = 4;
+} else if (global.fragmento2 && global.fragmento3 && !global.fragmento1) {
+    image_index = 5;
+} else if (global.fragmento1 && !global.fragmento2 && !global.fragmento3) {
     image_index = 0;
+} else if (global.fragmento2 && !global.fragmento1 && !global.fragmento3) {
+    image_index = 1;
+} else if (global.fragmento3 && !global.fragmento1 && !global.fragmento2) {
+    image_index = 2;
 } else {
     image_index = 0;
 }

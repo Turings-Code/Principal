@@ -9,8 +9,8 @@
   "name":"obj_chavecinza",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Mansão",
+    "path":"folders/Objetos/Mansão.yy",
   },
   "parentObjectId":{
     "name":"obj_aparecee",

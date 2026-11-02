@@ -13,9 +13,9 @@ if (dialogo_index < array_length(dialogos)) {
 
     obj_objetivos.define_objetivo("OBJETIVO - Abra a Sala da Bombe");
     obj_objetivos.define_etapas([
-        "Religue a Energia da Porta",
-        "Encontre a Válvula Mestra",
-        "Encontre os Fragmentos do Código (0/3)"
+        "- Religue a Energia da Porta",
+        "- Encontre a Válvula Mestra",
+        "- Encontre os Fragmentos do Código (0/3)"
     ]);
 
     if (instance_exists(obj_alan)) {

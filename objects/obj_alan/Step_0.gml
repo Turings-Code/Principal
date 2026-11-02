@@ -182,6 +182,11 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
         instance_create_depth(0, 0, -20000, obj_radio);
     }
 }
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_caixadeenergiaaparece)) {
+    if (distance_to_object(obj_caixadeenergiaaparece) < 80 && !instance_exists(obj_caixadeenergia)) {
+        instance_create_depth(0, 0, -20000, obj_caixadeenergia);
+    }
+}
 if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_folhabinarioaparece)) {
     if (distance_to_object(obj_folhabinarioaparece) < 80 && !instance_exists(obj_folhabinarios)) {
         var _cam = view_camera[0];

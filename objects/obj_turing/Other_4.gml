@@ -10,3 +10,6 @@ image_yscale=8;}
 if(room=rm_bletchley2){
 image_xscale=7;
 image_yscale=7;}
+if(room=rm_bletchley){
+image_xscale=7;
+image_yscale=7;}
