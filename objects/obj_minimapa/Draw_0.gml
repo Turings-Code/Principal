@@ -1,6 +1,8 @@
 if (room != rm_bletchley2 && room != rm_bletchley) exit;
 if (instance_exists(obj_cutscene2)) { if (!obj_cutscene2.cutscene) exit; }
 if (instance_exists(obj_cutscene4)) { if (obj_cutscene4.cutscene) exit; }
+if(instance_exists(obj_cutscene6)){if(obj_cutscene6.cutscene) exit;}
+if(instance_exists(obj_cutscene7)){if(obj_cutscene7.cutscene) exit;}
 if (instance_exists(obj_mapahut6)) exit; 
 if (instance_exists(obj_folhasenigma)) exit; 
 

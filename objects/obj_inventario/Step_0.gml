@@ -2,6 +2,8 @@ if(instance_exists(obj_cutscene2)){if(!obj_cutscene2.cutscene) exit;}
 if(instance_exists(obj_cutscene3)){if(obj_cutscene3.cutscene) exit;}
 if(instance_exists(obj_cutscene4)){if(obj_cutscene4.cutscene) exit;}
 if(instance_exists(obj_cutscene5)){if(obj_cutscene5.cutscene) exit;}
+if(instance_exists(obj_cutscene6)){if(obj_cutscene6.cutscene) exit;}
+if(instance_exists(obj_cutscene7)){if(obj_cutscene7.cutscene) exit;}
 
 var _popup = instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
           || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)
@@ -13,12 +15,12 @@ if (!_popup && mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, 
     audio_play_sound(snd_inventario, 1, false);
 }
 
-var _i = array_get_index(itens, spr_iconechave);
-if (global.chave && _i == -1 && array_length(itens) < max_slots) {
-    array_push(itens, spr_iconechave);
+var _cc = array_get_index(itens, spr_iconechavecinza);
+if (global.chavecinza && _cc == -1 && array_length(itens) < max_slots) {
+    array_push(itens, spr_iconechavecinza);
 }
-else if (!global.chave && _i != -1) {
-    array_delete(itens, _i, 1);
+else if (!global.chavecinza && _cc != -1) {
+    array_delete(itens, _cc, 1);
 }
 
 var _p = array_get_index(itens, spr_iconepapel);
@@ -51,6 +53,14 @@ if (global.codigohut6 && _ch == -1 && array_length(itens) < max_slots) {
 }
 else if (!global.codigohut6 && _ch != -1) {
     array_delete(itens, _ch, 1);
+}
+
+var _fr = array_get_index(itens, spr_iconefragmentos);
+if (global.fragmento1 && _fr == -1 && array_length(itens) < max_slots) {
+    array_push(itens, spr_iconefragmentos);
+}
+else if (!global.fragmento1 && _fr != -1) {
+    array_delete(itens, _fr, 1);
 }
 
 var _va = array_get_index(itens, spr_iconevalalfa);

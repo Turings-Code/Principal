@@ -15,6 +15,8 @@ global.mapahut6=false;
 global.codigohut6=false;
 global.quizxerox = false;
 global.codigofinalhut6 = false;
+global.fragmento1=false;
+global.chavecinza=false;
 /*if (file_exists("save.ini")) {
     ini_open("save.ini");
     global.chave = ini_read_real("jogo", "chave", 0);
@@ -28,4 +30,5 @@ global.codigofinalhut6 = false;
     }
 }*/
 scr_carregar();
-cutscene4foi=false
+cutscene4foi=false;
+cutscene6foi=false;

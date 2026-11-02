@@ -18,6 +18,7 @@ if(!instance_exists(obj_inventario)){
 	instance_create_layer(500, 500, "Instances", obj_inventario);}
 }
 if(instance_exists(obj_cutscene4)){cutscene4foi=true;}
+
 if(room==rm_hut8&&cutscene4foi&&global.valvulaalfa){
 	if(instance_exists(obj_turing)){with(obj_turing){instance_destroy();}}
 	var _bloco = collision_point(1068, 1798, obj_collisionblock, false, true);
@@ -35,3 +36,20 @@ if(room==rm_hut8&&cutscene4foi&&global.valvulaalfa){
 	obj_controladorenigmas.enigma2=true;
 	obj_controladorenigmas.enigma3=true;
 }
+
+if(room==rm_hut6&&cutscene6foi&&global.valvulabeta){
+	show_debug_message("room start controlador");
+	if(instance_exists(obj_cutscene5)){
+		with(obj_cutscene5){instance_destroy();}}
+	if(instance_exists(obj_radioaparece)){
+		with(obj_radioaparece){instance_destroy();}}
+		if(!instance_exists(obj_troca2)){
+			var _t = instance_create_layer(802, 512, "Instances", obj_troca2);
+_t.image_xscale = 11;
+_t.image_yscale = 8;}
+
+			var _t = instance_create_layer(2328, 2121, "Instances", obj_troca3);
+_t.image_xscale = 15;
+_t.image_yscale = 9;
+}
+		

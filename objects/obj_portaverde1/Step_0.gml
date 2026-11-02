@@ -14,10 +14,10 @@ else if (aberta && _dist > 230) {
 if (!aberta && image_index == 0) {
     if (obj_alan.x > x) {
         image_xscale = -7;
-        x = 1568;
+        x = 1818;
     } else {
         image_xscale = 7;
-        x = 1500;
+        x = 1750;
     }
 }
 

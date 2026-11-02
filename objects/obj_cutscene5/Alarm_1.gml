@@ -15,6 +15,13 @@ if (dialogo_index < array_length(dialogos)) {
     dialogo4_ativo = false;
     dialogo4_feito = true;
 	audio_play_sound(snd_itemnovo, 1, false);
+	if (dialogo4_feito&&!caixadetexto){
+		obj_portahut6.image_speed=3;
+		if(!instance_exists(obj_troca2)){
+			var _t = instance_create_layer(802, 512, "Instances", obj_troca2);
+_t.image_xscale = 11;
+_t.image_yscale = 8;}
+		}
 }
 	
 	
@@ -35,7 +42,6 @@ if (dialogo_index < array_length(dialogos)) {
         obj_objetivos.define_objetivo("OBJETIVO - Vá até o computador");
         fase_saida_turing = 1;
         alvo_y_turing = obj_turing.y + 120;
-		show_debug_message("nicolas")
         var _xerox = instance_create_layer(1470, 700, "Instances", obj_xeroxaltoaparece);
         _xerox.image_xscale = 11;
         _xerox.image_yscale = 13;

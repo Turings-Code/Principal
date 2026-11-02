@@ -77,3 +77,57 @@ if (room == rm_bletchley2) {
         blocos_inst4 = [];
     }
 }
+
+if (room == rm_bletchley2) {
+    if (instance_exists(obj_cutscene6)) {
+        if (!blocos_criados6) {
+            blocos_criados6 = true;
+            blocos_inst6 = [];
+
+            for (var i = 0; i < array_length(blocos_def6); i++) {
+                var _d6 = blocos_def6[i];
+                var _b6 = instance_create_layer(_d6[0], _d6[1], "Instances", obj_collisionblocktemp);
+                _b6.image_xscale = _d6[2];
+                _b6.image_yscale = _d6[3];
+                array_push(blocos_inst6, _b6);
+            }
+        }
+    } else if (blocos_criados6) {
+        blocos_criados6 = false;
+
+        for (var i = 0; i < array_length(blocos_inst6); i++) {
+            if (instance_exists(blocos_inst6[i])) {
+                instance_destroy(blocos_inst6[i]);
+            }
+        }
+
+        blocos_inst6 = [];
+    }
+}
+
+if (room == rm_bletchley) {
+    if (instance_exists(obj_cutscene7)) {
+        if (!blocos_criados7) {
+            blocos_criados7 = true;
+            blocos_inst7 = [];
+
+            for (var i = 0; i < array_length(blocos_def7); i++) {
+                var _d7 = blocos_def7[i];
+                var _b7 = instance_create_layer(_d7[0], _d7[1], "Instances", obj_collisionblocktemp);
+                _b7.image_xscale = _d7[2];
+                _b7.image_yscale = _d7[3];
+                array_push(blocos_inst7, _b7);
+            }
+        }
+    } else if (blocos_criados7) {
+        blocos_criados7 = false;
+
+        for (var i = 0; i < array_length(blocos_inst7); i++) {
+            if (instance_exists(blocos_inst7[i])) {
+                instance_destroy(blocos_inst7[i]);
+            }
+        }
+
+        blocos_inst7 = [];
+    }
+}

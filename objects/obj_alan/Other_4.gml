@@ -6,7 +6,7 @@ if (_spawn) {
 }
 
 if (room == rm_mansao) {
-    if (!_spawn) { x = 1100; y = 2200; }
+    if (!_spawn) { x = 1360; y = 5434; }
     image_xscale = 8;
     image_yscale = 8;
 }
@@ -52,10 +52,19 @@ if (room == rm_bletchley2) {
     }
 }
 
-if (room != rm_quarto && !(room == rm_bletchley2 && travado)) {
+if (room != rm_quarto && room != rm_mansao && !(room == rm_bletchley2 && travado)) {
     travado = false;
 }
 
 if(room==rm_bletchley2&&global.valvulaalfa){
 	if(!instance_exists(obj_cutscene4)){
 	instance_create_layer(10, 10, "Instances", obj_cutscene4);}}
+	
+if(room==rm_bletchley2&&global.valvulabeta){
+	if(!instance_exists(obj_cutscene6)){
+	instance_create_layer(10, 10, "Instances", obj_cutscene6);}
+	if(instance_exists(obj_cutscene4)){
+	with(obj_cutscene4){instance_destroy();}}
+	if(instance_exists(obj_cutscene2)){
+	with(obj_cutscene2){instance_destroy();}}
+	}

@@ -4,7 +4,7 @@ fading_out = false;
 image_xscale=5.6;
 image_yscale=5.6;
 
-area_instrucao = [108, 132, 425, 506];
+area_instrucao = [108, 126, 425, 506];
 texto_instrucao = "Para formar o novo número, rode o programa, digite cada número do código individualmente e clique Enter. Faça isso até obter outro código de 12 números";
 texto_escala = 0.8;
 

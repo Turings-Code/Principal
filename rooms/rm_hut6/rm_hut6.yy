@@ -82,6 +82,7 @@
     {"name":"inst_59FACADC","path":"rooms/rm_hut6/rm_hut6.yy",},
     {"name":"inst_6E03115C","path":"rooms/rm_hut6/rm_hut6.yy",},
     {"name":"inst_3163810E","path":"rooms/rm_hut6/rm_hut6.yy",},
+    {"name":"inst_66568D58","path":"rooms/rm_hut6/rm_hut6.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -162,6 +163,7 @@
         {"$GMRInstance":"v4","%Name":"inst_59FACADC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_59FACADC","objectId":{"name":"obj_collisionblock","path":"objects/obj_collisionblock/obj_collisionblock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.343502,"scaleY":6.453125,"x":639.01587,"y":847.0,},
         {"$GMRInstance":"v4","%Name":"inst_6E03115C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6E03115C","objectId":{"name":"obj_radioaparece","path":"objects/obj_radioaparece/obj_radioaparece.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":8.875057,"scaleY":8.8125,"x":785.0005,"y":901.5,},
         {"$GMRInstance":"v4","%Name":"inst_3163810E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3163810E","objectId":{"name":"obj_portahut6","path":"objects/obj_portahut6/obj_portahut6.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.0,"scaleY":7.0,"x":805.0,"y":392.0,},
+        {"$GMRInstance":"v4","%Name":"inst_66568D58","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_66568D58","objectId":{"name":"obj_collisionblock","path":"objects/obj_collisionblock/obj_collisionblock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":28.015625,"scaleY":1.875,"x":2202.0,"y":2149.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_hut6","path":"sprites/spr_hut6/spr_hut6.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

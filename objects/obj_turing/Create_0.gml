@@ -26,3 +26,23 @@ turingparoucutscene4 = false;
 //pontos2_x = [2500, 3736, 3758, 4184, 4170];
 //pontos2_y = [2700, 2651, 2113, 1967, 1827];
 
+pontos6_x = [2092, 1254, 564, -15];
+pontos6_y = [1147, 1257, 1163, 1029];
+
+ponto6_atual = 0;
+andando6 = false;
+caminho6_ativo = false;
+iniciar_caminho6 = false;
+
+iniciar_caminho7 = false;
+caminho7_ativo = false;
+andando7 = false;
+ponto7_atual = 0;
+
+pontos7_x = [1847, 1319];
+pontos7_y = [898, 876];
+
+dialogo7_iniciado = false;
+
+saida7_ativa = false;
+saida7_alvo_y = 0;

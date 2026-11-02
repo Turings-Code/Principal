@@ -56,7 +56,7 @@ if (frase != "Nada" && mostrar_texto) {
 	
 	if (_frase_percebido && !tela_agendada && contador_texto >= string_length(frase)) {
     tela_agendada = true;
-    alarm[2] = room_speed * 3;
+    alarm[2] = 60 * 3;
 }
     var _texto_visivel = string_copy(frase, 1, contador_texto);
 

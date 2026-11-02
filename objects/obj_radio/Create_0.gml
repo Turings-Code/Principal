@@ -9,3 +9,12 @@ escuridao = 0.7;
 
 area_rotator = [841, 317, 1032, 493];
 rotator_criado = false;
+aviso_texto = "";
+aviso_ativo = false;
+aviso_y = 0;
+aviso_alpha = 0;
+aviso_vel = 0.15;
+aviso_fade = 0.002;
+aviso_escala = 0.7;
+aviso_cor = c_white;
+aviso_dado = false;

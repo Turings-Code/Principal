@@ -39,11 +39,25 @@ if (estado == "nenhum" && instance_exists(obj_alan)) {
         usar_spawn = true;
         estado = "entrando";
     }
+	else if (room == rm_hut6 && _t2) {
+        dest_room = rm_bletchley2;
+        spawn_x = 3550;
+        spawn_y = 1230;
+        usar_spawn = true;
+        estado = "entrando";
+    }
     else if (room == rm_hut6 && _t4) {
         dest_room = rm_bletchley2;
         usar_spawn = false;
         estado = "entrando";
     }
+	else if (room == rm_hut6 && _t3) {
+    dest_room = rm_bletchley2;
+    spawn_x = 4180;
+    spawn_y = 2000;
+    usar_spawn = true;
+    estado = "entrando";
+}
     else if (room == rm_hut6 && _t1) {
         dest_room = rm_bletchley;
         usar_spawn = false;
@@ -98,6 +112,7 @@ if (estado == "nenhum" && instance_exists(obj_alan)) {
             usar_spawn = true;
             estado = "entrando";
         }
+		
         else if (_t1) {
             dest_room = rm_bletchley;
             spawn_x = 2900;

@@ -33,7 +33,7 @@ if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
 
 if (instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
     || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)
-    || instance_exists(obj_folha1) || instance_exists(obj_radio)) || instance_exists(obj_xeroxaltoamp) || instance_exists(obj_rotatorbase) || instance_exists(obj_radiofundo){
+    || instance_exists(obj_folha1) || instance_exists(obj_radio)) || instance_exists(obj_xeroxaltoamp) || instance_exists(obj_rotatorbase) || instance_exists(obj_radiofundo) || instance_exists(obj_codigofinalhut6){
     scr_collision_move(0, 0);
 	if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
 if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);

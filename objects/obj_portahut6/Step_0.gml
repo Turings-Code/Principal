@@ -1,3 +1,4 @@
+if (!instance_exists(obj_cutscene5)) exit;
 if(image_index=4){
 	image_speed=0;
 	image_index=4;}

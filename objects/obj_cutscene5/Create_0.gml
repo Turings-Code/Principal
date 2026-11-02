@@ -86,7 +86,7 @@ dialogo4_ativo = false;
 dialogo4_feito = false;
 dialogos4 = [
     { nome: "Theo", frase: "Espera, o que o rádio disse?" },
-	{ nome: "Turing", frase: "Alguma coisa sobre decifrar. Meu alemão não é tão bom assim." },
+	/*{ nome: "Turing", frase: "Alguma coisa sobre decifrar. Meu alemão não é tão bom assim." },
 	{ nome: "Turing", frase: "Muito bem garoto, agora só falta uma válvula!" },
-	{ nome: "Turing", frase: "Agora precisamos sair daqui!" }
+	{ nome: "Turing", frase: "Agora precisamos sair daqui!" }*/
 ];

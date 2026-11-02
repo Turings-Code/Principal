@@ -33,3 +33,25 @@ blocos_def4 = [
 
 blocos_inst4 = [];
 blocos_criados4 = false;
+
+blocos_def6 = [
+    [-115, 22, 3, 14],
+    [-115, 1171, 3, 39],
+    [959, 3556, 74, 5],
+    [5570, -96, 8, 57],
+    [-127, 6, 89, 2]
+];
+
+blocos_inst6 = [];
+blocos_criados6 = false;
+
+blocos_def7 = [
+    [-18, 671, 2, 18],
+    [94, 1670, 46, 5],
+    [2997, -133, 2, 36],
+    [2304, -1, 11, 2],
+    [438, 87, 4, 1]
+];
+
+blocos_inst7 = [];
+blocos_criados7 = false;

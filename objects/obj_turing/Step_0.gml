@@ -1,5 +1,114 @@
 depth = -y;
-if (room == rm_bletchley2 && !global.valvulaalfa) {
+
+if (saida7_ativa) {
+    sprite_index = spr_turingcima;
+    y = max(y - velocidade_andar, saida7_alvo_y);
+    depth = -y;
+
+    if (y <= saida7_alvo_y) {
+        instance_destroy();
+    }
+    exit;
+}
+
+if (room == rm_bletchley && iniciar_caminho7) {
+    iniciar_caminho7 = false;
+    caminho7_ativo = true;
+    andando7 = true;
+    ponto7_atual = 0;
+}
+
+if (room == rm_bletchley && caminho7_ativo) {
+    if (andando7) {
+        var _dx7 = pontos7_x[ponto7_atual] - x;
+        var _dy7 = pontos7_y[ponto7_atual] - y;
+        var _dist7 = point_distance(x, y, pontos7_x[ponto7_atual], pontos7_y[ponto7_atual]);
+
+        if (abs(_dx7) > abs(_dy7)) {
+            sprite_index = (_dx7 > 0) ? spr_turingdireita : spr_turingesquerda;
+        } else {
+            sprite_index = (_dy7 > 0) ? spr_turingbaixo : spr_turingcima;
+        }
+
+        if (_dist7 <= velocidade_andar) {
+            x = pontos7_x[ponto7_atual];
+            y = pontos7_y[ponto7_atual];
+            andando7 = false;
+            sprite_index = spr_turingparado;
+
+            if (ponto7_atual == array_length(pontos7_x) - 1) {
+    caminho7_ativo = false;
+
+    if (instance_exists(obj_cutscene7)) {
+        obj_cutscene7.dialogo1 = true;
+    }
+
+    obj_objetivos.define_objetivo(" ");
+    obj_objetivos.define_etapas([]);
+
+    exit;
+}
+        } else {
+            var _dir7 = point_direction(x, y, pontos7_x[ponto7_atual], pontos7_y[ponto7_atual]);
+            x += lengthdir_x(velocidade_andar, _dir7);
+            y += lengthdir_y(velocidade_andar, _dir7);
+        }
+    } else if (instance_exists(obj_alan)) {
+        if (distance_to_object(obj_alan) <= distancia_alan) {
+            ponto7_atual++;
+            andando7 = true;
+        }
+    }
+
+    depth = -y;
+    exit;
+}
+
+if (iniciar_caminho6) {
+    iniciar_caminho6 = false;
+    caminho6_ativo = true;
+    ponto6_atual = 0;
+    andando6 = true;
+}
+
+if (caminho6_ativo) {
+    if (andando6) {
+        var _dx = pontos6_x[ponto6_atual] - x;
+        var _dy = pontos6_y[ponto6_atual] - y;
+        var _dist = point_distance(x, y, pontos6_x[ponto6_atual], pontos6_y[ponto6_atual]);
+
+        if (abs(_dx) > abs(_dy)) {
+            sprite_index = (_dx > 0) ? spr_turingdireita : spr_turingesquerda;
+        } else {
+            sprite_index = (_dy > 0) ? spr_turingbaixo : spr_turingcima;
+        }
+
+        if (_dist <= velocidade_andar) {
+            x = pontos6_x[ponto6_atual];
+            y = pontos6_y[ponto6_atual];
+            andando6 = false;
+            sprite_index = spr_turingparado;
+
+            if (ponto6_atual == array_length(pontos6_x) - 1) {
+                instance_destroy();
+                exit;
+            }
+        } else {
+            var _dir = point_direction(x, y, pontos6_x[ponto6_atual], pontos6_y[ponto6_atual]);
+            x += lengthdir_x(velocidade_andar, _dir);
+            y += lengthdir_y(velocidade_andar, _dir);
+        }
+    } else if (instance_exists(obj_alan)) {
+        if (distance_to_object(obj_alan) <= distancia_alan) {
+            ponto6_atual++;
+            andando6 = true;
+        }
+    }
+
+    depth = -y;
+    exit;
+}
+if (room == rm_bletchley2 && !global.valvulaalfa && !global.valvulabeta) {
     if (instance_exists(obj_cutscene2)) {
         if (!obj_cutscene2.cutscene) exit;
     }
@@ -46,7 +155,7 @@ if (!place_meeting(x + _mx, y + _my, obj_alan)) {
             }
         }
     }
-} else if (room == rm_bletchley2 && global.valvulaalfa) {
+} else if (room == rm_bletchley2 && global.valvulaalfa && !global.valvulabeta) {
     if (!iniciou2) {
     iniciou2 = true;
     x = 2500;
