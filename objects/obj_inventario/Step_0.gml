@@ -80,7 +80,7 @@ else if (!global.valvulabeta && _vb != -1) {
 }
 
 if (aberto && !abriu_agora && !_popup && mouse_check_button_pressed(mb_left)
-&& !instance_exists(obj_folhasenigma) && !instance_exists(obj_mapahut6)) {
+&& !instance_exists(obj_folhasenigma) && !instance_exists(obj_mapahut6) && !instance_exists(obj_codigosalafinal)) {
     for (var _n = 0; _n < array_length(itens); _n++) {
         var _col, _lin;
         if (_n < 4) {
@@ -99,6 +99,9 @@ if (aberto && !abriu_agora && !_popup && mouse_check_button_pressed(mb_left)
             else if (itens[_n] == spr_iconemapahut6) {
                 instance_create_depth(0, 0, -20000, obj_mapahut6);
             }
+			else if (itens[_n] == spr_iconefragmentos) {
+    instance_create_depth(0, 0, -20000, obj_codigosalafinal);
+}
             break;
         }
     }

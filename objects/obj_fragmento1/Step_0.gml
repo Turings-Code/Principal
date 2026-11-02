@@ -1,3 +1,5 @@
+depth=-obj_mesa2mansao.y;
+
 if (instance_exists(obj_letrae)) {
     if (point_distance(x, y, obj_alan.x, obj_alan.y) <= alcance && keyboard_check_pressed(ord("E"))){
 		global.fragmento1=true;

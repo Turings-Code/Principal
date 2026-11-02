@@ -1,7 +1,7 @@
-/*show_debug_message(
+show_debug_message(
     string(device_mouse_x_to_gui(0)) + "x" +
     string(device_mouse_y_to_gui(0))
-);*/
+);
 //show_debug_message(distance_to_object(obj_turinghut8));
 /*show_debug_message("alan:" + string(image_xscale));
 if(instance_exists(obj_theo)){
@@ -275,6 +275,41 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
 		if(!global.codigohut6){
         instance_create_depth(_fx, _fy + 100, -19000, obj_codigo);}
         instance_create_depth(0, 0, -19000, obj_escurece);
+    }
+}
+
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_folhas4)) {
+    if (distance_to_object(obj_folhas4) < 80 && !instance_exists(obj_folha1)) {
+        var _cam = view_camera[0];
+        var _fx = camera_get_view_x(_cam) + camera_get_view_width(_cam) / 2;
+        var _fy = camera_get_view_y(_cam) + camera_get_view_height(_cam) / 2;
+
+        instance_create_depth(_fx - 140, _fy - 110, -20000, obj_folha1);
+        instance_create_depth(_fx + 150, _fy - 100, -20000, obj_folha2);
+        instance_create_depth(_fx + 40, _fy + 100, -20000, obj_folha3);
+        instance_create_depth(_fx - 110, _fy + 90, -20000, obj_folha2);
+        instance_create_depth(_fx + 120, _fy + 40, -20000, obj_folha4);
+        instance_create_depth(_fx - 20, _fy - 20, -20000, obj_folha5);
+		if(!global.fragmento2){
+        instance_create_depth(_fx, _fy, -20000, obj_fragmento2);}
+        instance_create_depth(0, 0, -19000, obj_escurece);
+    }
+}
+
+if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_folhas5)) {
+    if (distance_to_object(obj_folhas5) < 80 && !instance_exists(obj_folha1)) {
+        var _cam = view_camera[0];
+        var _fx = camera_get_view_x(_cam) + camera_get_view_width(_cam) / 2;
+        var _fy = camera_get_view_y(_cam) + camera_get_view_height(_cam) / 2;
+
+        instance_create_depth(_fx - 100, _fy - 100, -20000, obj_folha1);
+instance_create_depth(_fx + 100, _fy - 100, -20000, obj_folha2);
+instance_create_depth(_fx + 100, _fy + 100, -20000, obj_folha3);
+instance_create_depth(_fx - 100, _fy + 100, -20000, obj_folha2);
+instance_create_depth(_fx + 30, _fy - 130, -20000, obj_folha4);
+instance_create_depth(_fx - 30, _fy + 130, -20000, obj_folha5);
+if(!global.fragmento3){
+instance_create_depth(_fx, _fy, -20000, obj_fragmento3);}
     }
 }
 

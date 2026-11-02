@@ -16,7 +16,7 @@ else if (aberta && _dist > 230) {
 if (!aberta && image_index == 0) {
     if (obj_alan.x > x) {
         image_xscale = -7;
-        x = 2756;//+68
+        x = 2784;//+68
     } else {
         image_xscale = 7;
         x = 2716;

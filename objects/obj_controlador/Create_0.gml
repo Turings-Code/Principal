@@ -16,6 +16,8 @@ global.codigohut6=false;
 global.quizxerox = false;
 global.codigofinalhut6 = false;
 global.fragmento1=false;
+global.fragmento2=false;
+global.fragmento3=false;
 global.chavecinza=false;
 /*if (file_exists("save.ini")) {
     ini_open("save.ini");
