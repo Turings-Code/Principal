@@ -6,11 +6,11 @@
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "channelFormat":0,
+  "channelFormat":2,
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":395.49387,
+  "duration":363.62,
   "exportDir":"",
   "name":"snd_piano",
   "parent":{
