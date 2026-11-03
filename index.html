@@ -23,6 +23,31 @@ html {
 }
 
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .coluna {
+    width: 100%; 
+  }
+}
+
 header {
     padding: 20px 7%;
     display: flex;
@@ -68,7 +93,7 @@ nav a:hover {
 }
 
 .descricao {
-    width: 90%;
+    width: 100%;
     max-width: 1100px;
     margin: 50px auto 40px;
     padding: 35px;
@@ -78,7 +103,7 @@ nav a:hover {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 30rem;
     margin-bottom: 20px;
     color: white;
 }
@@ -87,7 +112,7 @@ h2 {
     font-family: Arial, sans-serif;
     line-height: 1.8;
     color: #c6dfd0;
-    font-size: 18px;
+    font-size: 18rem;
 }
 
 footer {
@@ -118,11 +143,11 @@ footer {
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 24rem;
     }
 
     .descricao p {
-        font-size: 16px;
+        font-size: 16rem;
     }
 }
 
@@ -156,8 +181,9 @@ footer {
 }
 
 .sprites {
-    width: 90%;
-    max-width: 1100px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     margin: 50px auto;
     padding: 30px;
     scroll-margin-top: 120px;
@@ -183,7 +209,8 @@ footer {
 .personagem {
     flex: 1;
     min-width: 0;
-    max-width: 450px;
+    max-width: 100%;
+    height: auto;
     padding: 25px;
     background: #4F4E32;
     border: 3px solid #7F7F7F;
@@ -195,7 +222,7 @@ footer {
 .personagem img {
     display: block;
     width: 100%;
-    height: 350px;
+    height: auto;
     object-fit: contain;
     background: #020805;
     border-radius: 8px;
@@ -203,7 +230,7 @@ footer {
 
 .personagem img {
     width: 100%;
-    height: 350px;
+    height: auto;
     object-fit: cover;
     background: #020805;
     border-radius: 8px;
@@ -211,14 +238,14 @@ footer {
 
 .personagem h3 {
     color: #fff;
-    font-size: 26px;
+    font-size: 26rem;
     margin: 20px 0 15px;
 }
 
 .personagem p {
     color: #c6dfd0;
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 18rem;
     line-height: 1.7;
 }
 
@@ -226,23 +253,23 @@ footer {
 
 @media (max-width: 700px) {
     .imagem-jogo {
-        height: 300px;
+        height: auto;
     }
 
     .sprites {
-        width: 95%;
+        width: 100%;
         padding: 15px;
     }
 
     .personagem {
         width: 100%;
-        max-width: 300px;
+        max-width: 100%;
     }
 }
 
 .cenarios {
-    width: 95%;
-    max-width: 1400px;
+    width: 100%;
+    max-width: 100%;
     margin: 50px auto;
     padding: 30px 0;
     scroll-margin-top: 120px;
@@ -281,7 +308,8 @@ footer {
 .cenario img {
     display: block;
     width: 100%;
-    height: 300px;
+    max-whidth:100%;
+    height: auto;
     object-fit: cover;
     background: #020805;
     border-radius: 8px;
@@ -289,20 +317,20 @@ footer {
 
 .cenario h3 {
     color: #fff;
-    font-size: 22px;
+    font-size: 22rem;
     margin: 20px 0 12px;
 }
 
 .cenario p {
     color: #c6dfd0;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 16rem;
     line-height: 1.6;
 }
 
 .div-grande {
-    width: 90%;
-    max-width: 900px; 
+    width: 100%;
+    max-width: 100%; 
     margin: 50px auto; 
     padding: 40px;     
     background: #4F4E32; 
@@ -314,20 +342,20 @@ footer {
 
 .div-grande h2 {
     color: #fff;
-    font-size: 32px;
+    font-size: 32rem;
     margin-bottom: 20px;
 }
 
 .div-grande p {
     color: #c6dfd0;
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 18rem;
     line-height: 1.8;
 }
 
 .div-galeria-estilo {
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 100%;
     margin: 50px auto;
     padding: 40px;
     background: #4F4E32; 
@@ -339,14 +367,14 @@ footer {
 
 .div-galeria-estilo h2 {
     color: #fff;
-    font-size: 32px;
+    font-size: 32rem;
     margin-bottom: 15px;
 }
 
 .div-galeria-estilo p {
     color: #c6dfd0;
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 18rem;
     margin-bottom: 30px;
 }
 
@@ -361,7 +389,7 @@ footer {
 .item-imagem {
     flex: 1;
     min-width: 250px;
-    height: 220px;
+    height: auto;
     border-radius: 12px;
     overflow: hidden;
     border: 2px solid #c6dfd0;
@@ -370,7 +398,7 @@ footer {
 
 .item-imagem img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
@@ -399,18 +427,18 @@ footer {
 }
 
 .imagem-projeto {
-  width: 40%;
+  width: 100%;
   object-fit: cover;
 }
 
 .texto-projeto {
-  width: 60%;
+  width: 100%;
   padding: 30px;
 }
 
 .texto-projeto h2 {
   margin-top: 0;
-  font-size: 24px;
+  font-size: 24rem;
   margin-bottom: 15px;
 }
 
@@ -426,7 +454,7 @@ footer {
  
   gap: 20px; 
   width: 100%;
-  max-width: 1000px; 
+  max-width: 100%; 
   margin: 0 auto;   
   padding: 20px;
 }
@@ -435,7 +463,7 @@ footer {
 
 .item-imagem {
   width: 100%;
-  height: 350px; 
+  height: auto; 
   border-radius: 6px;
   overflow: hidden; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
@@ -444,7 +472,7 @@ footer {
 
 .item-imagem img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover; 
   display: block;
 }
@@ -455,7 +483,7 @@ footer {
   justify-content: space-between; 
   gap: 20px;                      
   width: 100%;
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;                 
   padding: 20px;
 }
@@ -474,7 +502,7 @@ footer {
 .card-tutorial h3 {
   margin-top: 0;
   color: #fff;
-  font-size: 20px;
+  font-size: 20rem;
   margin-bottom: 12px;
 }
 
@@ -482,7 +510,7 @@ footer {
   margin: 0;
   color: #d1d5db;
   line-height: 1.5;
-  font-size: 15px;
+  font-size: 15rem;
 }
 
 
@@ -490,7 +518,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 40px; 
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
@@ -510,7 +538,7 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 280px; 
+  width: 100%; 
   background-color: #4F4E32;
   border: 5px solid #7F7F7F;
   
@@ -521,8 +549,8 @@ footer {
 
 
 .foto-bolinha {
-  width: 140px;  
-  height: 140px;
+  width: 100%;  
+  height: auto;
   border-radius: 50%;       
   object-fit: cover;        
   border: 3px solid #fdf570; 
@@ -532,12 +560,12 @@ footer {
 
 .card-dev h3 {
   margin: 10px 0 5px 0;
-  font-size: 20px; 
+  font-size: 20rem; 
   color: #ffffff;
 }
 
 .card-dev .cargo {
-  font-size: 14px;
+  font-size: 14rem;
   color: #fdf570;
   font-weight: bold;
   margin-bottom: 12px;
@@ -547,7 +575,7 @@ footer {
 
 
 .card-dev p {
-  font-size: 15px; 
+  font-size: 15rem; 
   color: #d1d5db;
   margin: 0;
   line-height: 1.5;
@@ -725,6 +753,43 @@ footer {
     </div>
     
 </section>
+<br>
+    <section>
+        <div class="lista-cenarios">
+
+        <div class="cenario">
+            <img src="site/IMG-20261025-WA0005.jpg" alt="Interior da área de investigação">
+            <h3>Hut 8</h3>
+            <p>O laboratório de criptoanálise.
+                Um galpão de madeira escuro e abafado, onde o silêncio é cortado apenas pelo constante raspar de giz nos quadros-negros.
+                É aqui, entre fios elétricos expostos e papéis perfurados, que cada linha de código inimigo
+                representa uma corrida contra o tempo. Sob a tensão constante de 1943, 
+                este é um dos postos-chave que os primos terão de desbravar para recuperar as preciosas válvulas e escapar de volta para época presente.</p>
+        </div>
+
+        <div class="cenario">
+            <img src="site/IMG-20261030-WA0022.jpg" alt="Rua da cidade">
+            <h3>Interior da mansão</h3>
+            <p>Um oásis de alta tensão e segredos de guerra.
+                Aqui, esconde-se os mais diversos mistérios, mas especialmente as Válvulas de Comutação Mestra, cercada por huts cheios de papeis furados, 
+                quadros-negros e fios expostos, mentes brilhantes lutam contra o relógio para quebrar o indifícil código Enigma.
+                Cada pista conta para encontrar as válvulas perdidas e conseguir o caminho de volta a casa.</p>
+        </div>
+
+        <div class="cenario">
+            <img src="site/IMG-20261025-WA0007.jpg" alt="Interior do edifício">
+            <h3>Quarto do Alan</h3>
+            <p>Ninguém sabe o que se passa lá dentro.
+                A mistériosa mansão cheia de chaves e esconderijos, as portas ficam fechadas afim de guardar aquilo que pode mudar
+                a história da humanidade. A trazer novas esperanças para o mundo que passa por um tempo difícil de muita desunião
+                Ou longo dos corredores e escadas cada passo deixa o caminho de casa mais próximo. Essa sala pode te trazer novas descobretas
+                no meio dessa mansão.
+            </p>
+        </div>
+
+    </div>
+    
+</section>
 
     
 <section class="sprites" id="personagens">
@@ -777,6 +842,12 @@ footer {
             dificultar a entrada dos jogadores nos huts (galpões) e áreas restritas.</p>
         </div>
 
+        <div class="personagem">
+            <img src="site/4_20261031_125120_0003.png" alt="Theo">
+            <h3>Gatinho final </h3>
+            <p>NPCs (Personagens Não-Jogáveis) responsáveis por 
+            dificultar a entrada dos jogadores nos huts (galpões) e áreas restritas.</p>
+        </div>
         
 </section>
 <section  id="curiosidades">
@@ -827,6 +898,32 @@ footer {
   <img src="site/IMG-20261016-WA0084.jpg" alt="Imagem do Projeto" class="imagem-projeto">
   <div class="texto-projeto">
     <h2>Mapa</h2>
+    <p>Foram muito utilizados na Segunda Guerra Mundial, passando por uma grande revolução tecnológica entre 1939 e 1945,
+    sendo dividida em categorias fundamentais de acordo com sua função.</p>
+  </div>
+</div>
+</section>
+</center>
+</center>
+<center>
+<section>
+    <div class="card-horizontal">
+  <img src="site/IMG-20261016-WA0084.jpg" alt="Imagem do Projeto" class="imagem-projeto">
+  <div class="texto-projeto">
+    <h2>Enigma</h2>
+    <p>Foram muito utilizados na Segunda Guerra Mundial, passando por uma grande revolução tecnológica entre 1939 e 1945,
+    sendo dividida em categorias fundamentais de acordo com sua função.</p>
+  </div>
+</div>
+</section>
+</center>
+</center>
+<center>
+<section>
+    <div class="card-horizontal">
+  <img src="site/IMG-20261016-WA0084.jpg" alt="Imagem do Projeto" class="imagem-projeto">
+  <div class="texto-projeto">
+    <h2>Bombe</h2>
     <p>Foram muito utilizados na Segunda Guerra Mundial, passando por uma grande revolução tecnológica entre 1939 e 1945,
     sendo dividida em categorias fundamentais de acordo com sua função.</p>
   </div>
