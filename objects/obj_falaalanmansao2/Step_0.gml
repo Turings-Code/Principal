@@ -11,6 +11,9 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
 		
 		if(instance_exists(obj_alancutscene)){
 			with(obj_alancutscene){instance_destroy();}}
+			if(instance_exists(obj_falaalanmansao)){
+			with(obj_falaalanmansao){instance_destroy();}}
 			obj_cutscene8.dialogo_mansao2 = true;
+			instance_destroy();
     }
 }

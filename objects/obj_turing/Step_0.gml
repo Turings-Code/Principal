@@ -248,3 +248,46 @@ _troca.image_xscale = 13;
 _troca.image_yscale = 6;
 		instance_destroy();}
 }
+
+if (salafinal) {
+    if (andandof) {
+        var _dxf = pontosf_x[pontof_atual] - x;
+        var _dyf = pontosf_y[pontof_atual] - y;
+
+        if (abs(_dxf) > abs(_dyf)) {
+            sprite_index = (_dxf > 0) ? spr_turingdireita : spr_turingesquerda;
+        } else {
+            sprite_index = (_dyf > 0) ? spr_turingbaixo : spr_turingcima;
+        }
+
+        if (point_distance(x, y, pontosf_x[pontof_atual], pontosf_y[pontof_atual]) <= velocidade_andar) {
+    x = pontosf_x[pontof_atual];
+    y = pontosf_y[pontof_atual];
+    andandof = false;
+    sprite_index = spr_turingparado;
+
+    if (pontof_atual >= array_length(pontosf_x) - 1) {
+        if (!instance_exists(obj_falaturingfinal)) {
+            instance_create_layer(x, y, "Instances", obj_falaturingfinal);
+        }
+    }
+} else {
+            var _dirf = point_direction(x, y, pontosf_x[pontof_atual], pontosf_y[pontof_atual]);
+            var _mxf = lengthdir_x(velocidade_andar, _dirf);
+            var _myf = lengthdir_y(velocidade_andar, _dirf);
+
+            if (!place_meeting(x + _mxf, y + _myf, obj_alan)) {
+                x += _mxf;
+                y += _myf;
+            }
+        }
+    } else if (instance_exists(obj_alan)) {
+        if (pontof_atual < array_length(pontosf_x) - 1 && (pontof_atual < 0 || distance_to_object(obj_alan) <= distancia_alan)) {
+            pontof_atual++;
+            andandof = true;
+        }
+    }
+
+    depth = -y;
+    exit;
+}

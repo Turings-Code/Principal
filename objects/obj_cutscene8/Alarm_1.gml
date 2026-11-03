@@ -22,6 +22,7 @@ if(tipo_dialogo==7){
         obj_objetivos.define_etapas([]);
 		if(!instance_exists(obj_falaturingmansao3)){
 			instance_create_layer(obj_turing.x, obj_turing.y, "Instances", obj_falaturingmansao3);}
+			obj_alan.theosegue=true;
 		}
 		
 	if (tipo_dialogo == 5) {
@@ -36,7 +37,7 @@ if(tipo_dialogo==7){
 			instance_create_layer(obj_alancutscene.x, obj_alancutscene.y, "Instances", obj_falaalanmansao2);}
 		}
 		
-    if (!dialogo_atual2) {
+    if (tipo_dialogo==1) {
         obj_objetivos.define_objetivo("OBJETIVO - Abra a Sala da Bombe");
         obj_objetivos.define_etapas([
             "- Religue a Energia da Porta",

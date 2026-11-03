@@ -10,8 +10,7 @@ if(instance_exists(obj_turing)){
 show_debug_message("turing:" + string(obj_turing.image_xscale));}
 if(instance_exists(obj_alancutscene)){
 show_debug_message("turing:" + string(obj_alancutscene.image_xscale));}*/
-if(instance_exists(obj_objetivos)){
-show_debug_message(instance_number(obj_objetivos));}
+
 
 depth = -y;
 

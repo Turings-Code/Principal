@@ -3,6 +3,7 @@ if(instance_exists(obj_cutscene5)){if(obj_cutscene5.cutscene) exit;}
 if(instance_exists(obj_cutscene6)){if(obj_cutscene6.cutscene) exit;}
 if(instance_exists(obj_cutscene7)){if(obj_cutscene7.cutscene) exit;}
 if(instance_exists(obj_cutscene8)){if(obj_cutscene8.cutscene) exit;}
+if(instance_exists(obj_cutscene9)){if(obj_cutscene9.cutscene) exit;}
 
 if (ganhouitem) {
     ganhouitem = false;

@@ -30,12 +30,29 @@ if (estado == "nenhum" && instance_exists(obj_alan)) {
         usar_spawn = false;
         estado = "entrando";
     }
+	else if (room == rm_salafinal && _t1) {
+    dest_room = rm_transicao2;
+    usar_spawn = false;
+    estado = "entrando";
+}
+else if (room == rm_transicao2 && _t1) {
+    dest_room = rm_quarto2;
+    usar_spawn = false;
+    estado = "entrando";
+}
     else if (room == rm_quarto && _t1) {
+        quartopara2 = true;
+        dest_room = rm_transicao1;
+        usar_spawn = false;
+        estado = "entrando";
+        audio_play_sound(snd_futuro, 0.5, false);
+    }
+	    else if (room == rm_transicao1 && _t1) {
         quartopara2 = true;
         dest_room = rm_bletchley2;
         usar_spawn = false;
         estado = "entrando";
-        audio_play_sound(snd_futuro, 0.5, false);
+        
     }
     else if (room == rm_hut8 && _t1) {
         dest_room = rm_bletchley2;

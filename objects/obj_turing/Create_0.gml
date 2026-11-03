@@ -6,7 +6,7 @@ andando = true;
 saidamansao=false;
 pontos_x = [1226, 1223, 1226, 1950, 2234];
 pontos_y = [850, 1660, 2250, 2660, 2473];
-
+salafinal=false;
 ponto_atual = 0;
 
 distancia_alan = 170;
@@ -46,3 +46,8 @@ dialogo7_iniciado = false;
 
 saida7_ativa = false;
 saida7_alvo_y = 0;
+
+pontosf_x = [1355, 947, 871, 2254, 2550];
+pontosf_y = [2274, 2245, 1416, 1466, 1136];
+pontof_atual = -1;
+andandof = false;
