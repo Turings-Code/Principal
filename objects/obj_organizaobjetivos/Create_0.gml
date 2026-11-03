@@ -7,17 +7,29 @@ atualizar = function() {
 
     var _energia = !instance_exists(obj_caixadeenergiaaparece);
 
-    obj_objetivos.define_objetivo("OBJETIVO - Abra a Sala da Bombe");
+    if (_energia && global.valvulamestra && _quantidade == 3) {
+        obj_objetivos.define_objetivo("OBJETIVO - Volte para o Turing");
+        obj_objetivos.define_etapas([]);
+		if(instance_exists(obj_falaturingmansao)){
+			with(obj_falaturingmansao){instance_destroy();}}
+		if(!instance_exists(obj_falaturingmansao2)){
+			instance_create_layer(obj_turing.x, obj_turing.y, "Instances", obj_falaturingmansao2);}
+    } else {
+        obj_objetivos.define_objetivo("OBJETIVO - Abra a Sala da Bombe");
 
-    obj_objetivos.define_etapas([
-        {
-            texto: "- Religue a Energia da Porta",
-            feita: _energia
-        },
-        "- Encontre a Válvula Mestra",
-        {
-            texto: "- Encontre os Fragmentos do Código (" + string(_quantidade) + "/3)",
-            feita: _quantidade == 3
-        }
-    ]);
+        obj_objetivos.define_etapas([
+            {
+                texto: "- Religue a Energia da Porta",
+                feita: _energia
+            },
+            {
+                texto: "- Encontre a Válvula Mestra",
+                feita: global.valvulamestra
+            },
+            {
+                texto: "- Encontre os Fragmentos do Código (" + string(_quantidade) + "/3)",
+                feita: _quantidade == 3
+            }
+        ]);
+    }
 };

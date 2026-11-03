@@ -3,7 +3,7 @@ image_xscale=8;
 image_yscale=8;
 velocidade_andar = 20; //4
 andando = true;
-
+saidamansao=false;
 pontos_x = [1226, 1223, 1226, 1950, 2234];
 pontos_y = [850, 1660, 2250, 2660, 2473];
 

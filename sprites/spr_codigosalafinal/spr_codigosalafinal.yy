@@ -31,8 +31,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Mansão",
+    "path":"folders/Sprites/Mansão.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

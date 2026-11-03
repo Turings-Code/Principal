@@ -11,6 +11,7 @@ global.papel = false;
 global.folhasenigma = false;
 global.valvulaalfa = false;
 global.valvulabeta = false;
+global.valvulamestra=false;
 global.mapahut6=false;
 global.codigohut6=false;
 global.quizxerox = false;

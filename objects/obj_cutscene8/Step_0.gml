@@ -2,10 +2,60 @@ if (espera8 > 0) {
     espera8--;
     if (espera8 <= 0) {
         iniciar_dialogo = true;
+		tipo_dialogo = 1;
+		obj_alan.sprite_index = spr_alanparado;
+    obj_turing.sprite_index = spr_turingparado;
+    obj_theo.sprite_index = spr_theoparado;
     }
 }
 
+if (dialogo2_ativo) {
+    dialogo2_ativo = false;
+    dialogos = dialogos2;
+    dialogo_atual2 = true;
+    iniciar_dialogo = true;
+	tipo_dialogo = 2;
+}
+
+if (dialogo_mansao) {
+    dialogo_mansao = false;
+    dialogos = dialogos_mansao;
+    dialogo_atual_mansao = true;
+    iniciar_dialogo = true;
+	tipo_dialogo = 3;
+}
+if (dialogo_mansao2) {
+    dialogo_mansao2 = false;
+    dialogos = dialogos_mansao2;
+    dialogo_atual_mansao2 = true;
+    iniciar_dialogo = true;
+	tipo_dialogo = 6;
+}
+
+if (dialogo_mansaoturing) {
+    dialogo_mansaoturing = false;
+    dialogos = dialogos_mansaoturing;
+    dialogo_atual_mansaoturing = true;
+    iniciar_dialogo = true;
+	tipo_dialogo = 4;
+}
+if (dialogo_mansaoturing2) {
+    dialogo_mansaoturing2 = false;
+    dialogos = dialogos_mansaoturing2;
+    dialogo_atual_mansaoturing2 = true;
+    iniciar_dialogo = true;
+	tipo_dialogo = 5;
+}
+if (dialogo_mansaoturing3) {
+    dialogo_mansaoturing3 = false;
+    dialogos = dialogos_mansaoturing3;
+    dialogo_atual_mansaoturing3 = true;
+    iniciar_dialogo = true;
+	tipo_dialogo = 7;
+}
 if (iniciar_dialogo) {
+	if (instance_exists(obj_alan)) obj_alan.travado = true;
+	
     iniciar_dialogo = false;
     dialogo_index = 0;
     nome = dialogos[dialogo_index].nome;

@@ -4,3 +4,6 @@ if(room==rm_hut8){
 if(room==rm_quarto){
 	image_xscale=8;
 	image_yscale=8;}
+if(room==rm_mansao){
+	image_xscale=8;
+	image_yscale=8;}

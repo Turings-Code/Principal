@@ -50,8 +50,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Hut 8",
+    "path":"folders/Sprites/Hut 8.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

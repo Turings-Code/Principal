@@ -25,6 +25,11 @@ if (estado == "nenhum" && instance_exists(obj_alan)) {
         usar_spawn = false;
         estado = "entrando";
     }
+	    else if (room == rm_mansao && _t2) {
+        dest_room = rm_salafinal;
+        usar_spawn = false;
+        estado = "entrando";
+    }
     else if (room == rm_quarto && _t1) {
         quartopara2 = true;
         dest_room = rm_bletchley2;

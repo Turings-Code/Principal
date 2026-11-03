@@ -3,6 +3,7 @@
   "%Name":"obj_valvulamestra",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_valvulamestra",
@@ -11,7 +12,10 @@
     "name":"Objetos",
     "path":"folders/Objetos.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_aparecee",
+    "path":"objects/obj_aparecee/obj_aparecee.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,9 +34,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_iconemestra",
-    "path":"sprites/spr_iconemestra/spr_iconemestra.yy",
+    "name":"spr_iconevalvulamestra",
+    "path":"sprites/spr_iconevalvulamestra/spr_iconevalvulamestra.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_iconevalvulamestra",
+    "path":"sprites/spr_iconevalvulamestra/spr_iconevalvulamestra.yy",
+  },
   "visible":true,
 }

@@ -1,7 +1,7 @@
-show_debug_message(
+/*show_debug_message(
     string(device_mouse_x_to_gui(0)) + "x" +
     string(device_mouse_y_to_gui(0))
-);
+);*/
 //show_debug_message(distance_to_object(obj_turinghut8));
 /*show_debug_message("alan:" + string(image_xscale));
 if(instance_exists(obj_theo)){
@@ -10,6 +10,8 @@ if(instance_exists(obj_turing)){
 show_debug_message("turing:" + string(obj_turing.image_xscale));}
 if(instance_exists(obj_alancutscene)){
 show_debug_message("turing:" + string(obj_alancutscene.image_xscale));}*/
+if(instance_exists(obj_objetivos)){
+show_debug_message(instance_number(obj_objetivos));}
 
 depth = -y;
 
@@ -184,6 +186,8 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
 }
 if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_exists(obj_caixadeenergiaaparece)) {
     if (distance_to_object(obj_caixadeenergiaaparece) < 80 && !instance_exists(obj_caixadeenergia)) {
+		
+		obj_theo.x=593;obj_theo.y=2351;
         instance_create_depth(0, 0, -20000, obj_caixadeenergia);
     }
 }
@@ -295,7 +299,7 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
         instance_create_depth(_fx - 110, _fy + 90, -20000, obj_folha2);
         instance_create_depth(_fx + 120, _fy + 40, -20000, obj_folha4);
         instance_create_depth(_fx - 20, _fy - 20, -20000, obj_folha5);
-		if(!global.fragmento2){
+		if(!global.fragmento2&&obj_cutscene8.tipo_dialogo<5){
         instance_create_depth(_fx, _fy, -20000, obj_fragmento2);}
         instance_create_depth(0, 0, -19000, obj_escurece);
     }
@@ -313,7 +317,7 @@ instance_create_depth(_fx + 100, _fy + 100, -20000, obj_folha3);
 instance_create_depth(_fx - 100, _fy + 100, -20000, obj_folha2);
 instance_create_depth(_fx + 30, _fy - 130, -20000, obj_folha4);
 instance_create_depth(_fx - 30, _fy + 130, -20000, obj_folha5);
-if(!global.fragmento3){
+if(!global.fragmento3&&obj_cutscene8.tipo_dialogo<5){
 instance_create_depth(_fx, _fy, -20000, obj_fragmento3);}
     }
 }

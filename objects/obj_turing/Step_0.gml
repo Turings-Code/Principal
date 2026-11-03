@@ -237,3 +237,14 @@ if (!place_meeting(x + _mx3, y + _my3, obj_alan)) {
         }
     }
 }
+
+if(saidamansao){
+	sprite_index=spr_turingcima;
+	y--;
+	if(y<4700){
+		saidamansao=false
+		var _troca = instance_create_layer(1380, 4769, "Instances", obj_troca2);
+_troca.image_xscale = 13;
+_troca.image_yscale = 6;
+		instance_destroy();}
+}

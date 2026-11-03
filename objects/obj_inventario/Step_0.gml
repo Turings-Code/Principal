@@ -4,10 +4,11 @@ if(instance_exists(obj_cutscene4)){if(obj_cutscene4.cutscene) exit;}
 if(instance_exists(obj_cutscene5)){if(obj_cutscene5.cutscene) exit;}
 if(instance_exists(obj_cutscene6)){if(obj_cutscene6.cutscene) exit;}
 if(instance_exists(obj_cutscene7)){if(obj_cutscene7.cutscene) exit;}
+if(instance_exists(obj_cutscene8)){if(obj_cutscene8.cutscene) exit;}
 
 var _popup = instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
           || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)
-          || instance_exists(obj_folhasenigma) || instance_exists(obj_mapahut6) || instance_exists(obj_radio) || instance_exists(obj_radiofundo);
+          || instance_exists(obj_folhasenigma) || instance_exists(obj_mapahut6) || instance_exists(obj_radio) || instance_exists(obj_radiofundo) || instance_exists(obj_caixadeenergia);
 
 if (!_popup && mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)) {
     aberto = !aberto;
@@ -77,6 +78,15 @@ if (global.valvulabeta && _vb == -1 && array_length(itens) < max_slots) {
 }
 else if (!global.valvulabeta && _vb != -1) {
     array_delete(itens, _vb, 1);
+}
+
+var _vm = array_get_index(itens, spr_iconevalvulamestra);
+
+if (global.valvulamestra && _vm == -1 && array_length(itens) < max_slots) {
+    array_push(itens, spr_iconevalvulamestra);
+}
+else if (!global.valvulamestra && _vm != -1) {
+    array_delete(itens, _vm, 1);
 }
 
 if (aberto && !abriu_agora && !_popup && mouse_check_button_pressed(mb_left)

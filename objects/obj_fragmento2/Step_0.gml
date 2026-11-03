@@ -81,6 +81,6 @@ if (zoom_ativo) {
 if (image_xscale > 13 && !fade_final && delay <= 0 && mouse_check_button_pressed(mb_left)) {
     fade_final = true;
     global.fragmento2 = true;
-
+	
     obj_organizaobjetivos.atualizar();
 }

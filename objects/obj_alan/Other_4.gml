@@ -10,6 +10,11 @@ if (room == rm_mansao) {
     image_xscale = 8;
     image_yscale = 8;
 }
+if (room == rm_salafinal) {
+    if (!_spawn) { x = 1155; y =2098; }
+    image_xscale = 8;
+    image_yscale = 8;
+}
 
 if (room == rm_bletchley) {
     if (!_spawn) { x = 1320; y = 760; }

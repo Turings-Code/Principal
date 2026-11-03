@@ -3,7 +3,12 @@ function scr_collision_move(move_x, move_y)
     
     var _bate = function(_x, _y)
 {
-    return place_meeting(_x, _y, obj_collisionblock) || place_meeting(_x, _y, obj_turing) || place_meeting(_x, _y, obj_theo) || place_meeting(_x, _y, obj_alancutscene) || place_meeting(_x, _y, obj_collisionblocktemp);
+    return place_meeting(_x, _y, obj_collisionblock)
+    || place_meeting(_x, _y, obj_turing)
+    || (!obj_alan.theosegue && place_meeting(_x, _y, obj_theo))
+    || place_meeting(_x, _y, obj_alancutscene)
+    || place_meeting(_x, _y, obj_collisionblocktemp)
+    || place_meeting(_x, _y, obj_collisionblockalan);
 };
 
     

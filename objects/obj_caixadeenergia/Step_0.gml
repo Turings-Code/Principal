@@ -80,7 +80,11 @@ if (_todos_conectados && !conclusao_ativada) {
     with (obj_portaazul2) {
         destrancada = true;
     }
-
+	if (instance_exists(obj_cutscene8)) {
+		
+		
+    obj_cutscene8.dialogo2_ativo = true;
+}
     var _colisao = instance_position(2057, 1247, obj_collisionblocktemp);
 
     if (_colisao != noone) {
@@ -96,5 +100,6 @@ if (_todos_conectados && !conclusao_ativada) {
     with (obj_caixadeenergiaaparece) {
         instance_destroy();
     }
+	
 	obj_organizaobjetivos.atualizar();
 }
