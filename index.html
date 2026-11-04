@@ -941,8 +941,8 @@ footer p {
 }
 
 .area-jogo {
-    width: 90%;
-    max-width: 1000px;
+    width: 95%;
+    max-width: 1400px;
     margin: 50px auto;
     padding: 30px;
     background: #4F4E32;
@@ -957,8 +957,9 @@ footer p {
 }
 
 .jogo-moldura {
+    position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: var(--ratio, 16 / 9);
     margin-bottom: 25px;
     background: #020805;
     border: 3px solid #3e3c26;
@@ -1103,10 +1104,11 @@ footer p {
 
     <div class="jogo-moldura" id="jogo-moldura">
         <iframe id="jogo-frame"
-                src="jogo/index.html"
-                title="Turing's Code"
-                allowfullscreen
-                allow="autoplay; fullscreen; gamepad"></iframe>
+    src="jogo html/index.html"
+    title="Turing's Code"
+    allowfullscreen
+    allow="autoplay; fullscreen; gamepad"
+    scrolling="no"></iframe>
 
         <button type="button" class="btn-sair-tela-cheia" id="btn-sair-tela-cheia">
             Diminuir tela
@@ -1835,6 +1837,29 @@ footer p {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') fecharPainelDocs();
     });
+    const JOGO_LARGURA = 1366;  // ajuste para a resolução do seu jogo
+const JOGO_ALTURA  = 768;
+
+const jogoFrame = document.getElementById('jogo-frame');
+
+function ajustarMoldura(w, h) {
+    moldura.style.setProperty('--ratio', w + ' / ' + h);
+}
+
+// valor padrão, caso não consiga ler o canvas
+ajustarMoldura(JOGO_LARGURA, JOGO_ALTURA);
+
+// tenta pegar o tamanho real do canvas do GameMaker
+jogoFrame.addEventListener('load', () => {
+    try {
+        const canvas = jogoFrame.contentDocument.querySelector('canvas');
+        if (canvas && canvas.width && canvas.height) {
+            ajustarMoldura(canvas.width, canvas.height);
+        }
+    } catch (e) {
+        // se não for possível ler (ex.: abrindo via file://), usa o padrão acima
+    }
+});
 </script>
 </body>
 </html>
