@@ -1051,6 +1051,19 @@ footer p {
     border-radius: 0;
     margin: 0;
 }
+
+.link-contato {
+    color: #fdf570;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.link-contato:hover {
+    color: #fff;
+}
+
 </style>
 </head>
 <body>
@@ -1497,12 +1510,14 @@ footer p {
     <div class="container-tres-colunas">
   <div class="card-tutorial">
     <h3>Passo 1</h3>
-    <p>Entre no nosso perfil do GitHub e baixe o jogo via gameMaker.</p>
+    <p>Entre no nosso perfil do GitHub e baixe o zip do arquivo. Ou jogue por aqui mesmo.</p>
+    <br>
+    <p><a href="https://github.com/Turings-Code/Principal" target="_blank" rel="noopener" style="color:#fff;">https://github.com/Turings-Code/Principal</a></p>
   </div>
 
   <div class="card-tutorial">
     <h3>Passo 2</h3>
-    <p>No menu do jogo clique em começar</p>
+    <p>Extraia o zip, abra o aquivo jogo.yyp com o Game Maker</p>
   </div>
 
   <div class="card-tutorial">
@@ -1550,11 +1565,33 @@ footer p {
 </div>
 </section>
 <section>
+    <div class="container-tres-colunas">
+        <div class="card-tutorial">
+            <h3>Dicas</h3>
+            <p>Para melhor compreensão do jogo, leia a história, veja nossas documentações e informações presentes aqui no site.</p>
+            <br>
+            <p>Para contato direto conosco envie um email para:
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=turingscodecontato@gmail.com&su=Contato%20-%20Turing's%20Code"
+                   target="_blank" rel="noopener" class="link-contato">turingscodecontato@gmail.com</a>
+            </p>
+        </div>
+    </div>
+</section>
+<section>
+
 </section>
 <div class="botoes-descricao">
 
     <a href="#jogo" class="botao-descricao">
         Jogo
+    </a>
+
+    <a href="https://github.com/Turings-Code/Principal" target="_blank" class="botao-descricao">
+        Repositório
+    </a>
+
+    <a href="#" target="_blank" class="botao-descricao">
+        Vídeo
     </a>
 
 </div>
@@ -1634,9 +1671,13 @@ footer p {
     </section>
 </section>
 
-        <footer>
+   <footer>
     <h3>© 2026 Turing's Code</h3>
     <p>Todos os direitos reservados. Projeto desenvolvido por estudantes do IFSP, Campus São Paulo.</p>
+    <p>Contato:
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=turingscodecontato@gmail.com&su=Contato%20-%20Turing's%20Code"
+           target="_blank" rel="noopener" class="link-contato">turingscodecontato@gmail.com</a>
+    </p>
 </footer>
 
     <div id="lightbox" class="lightbox">
@@ -1837,7 +1878,7 @@ footer p {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') fecharPainelDocs();
     });
-    const JOGO_LARGURA = 1366;  // ajuste para a resolução do seu jogo
+    const JOGO_LARGURA = 1366;  
 const JOGO_ALTURA  = 768;
 
 const jogoFrame = document.getElementById('jogo-frame');
@@ -1846,10 +1887,10 @@ function ajustarMoldura(w, h) {
     moldura.style.setProperty('--ratio', w + ' / ' + h);
 }
 
-// valor padrão, caso não consiga ler o canvas
+
 ajustarMoldura(JOGO_LARGURA, JOGO_ALTURA);
 
-// tenta pegar o tamanho real do canvas do GameMaker
+
 jogoFrame.addEventListener('load', () => {
     try {
         const canvas = jogoFrame.contentDocument.querySelector('canvas');
@@ -1857,7 +1898,7 @@ jogoFrame.addEventListener('load', () => {
             ajustarMoldura(canvas.width, canvas.height);
         }
     } catch (e) {
-        // se não for possível ler (ex.: abrindo via file://), usa o padrão acima
+        
     }
 });
 </script>
