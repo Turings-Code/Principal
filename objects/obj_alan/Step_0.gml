@@ -1,3 +1,4 @@
+
 /*show_debug_message(
     string(device_mouse_x_to_gui(0)) + "x" +
     string(device_mouse_y_to_gui(0))
@@ -47,17 +48,21 @@ var move_x = 0;
 var move_y = 0;
 
 if (room == rm_mansao) {
-    vel = 35;
+    vel = 9;
 } else if (room == rm_bletchley) {
-    vel = 35;
+    vel = 9;
 } else if (room == rm_bletchley2) {
-    vel = 35;
+    vel = 9;
 } else if (room == rm_hut8) {
-    vel = 35;
+    vel = 9;
 } else if (room == rm_quarto) {
     vel = 7;
 } else if (room == rm_hut6) {
-    vel = 35;
+    vel = 9;
+} else if (room == rm_salafinal) {
+    vel = 9;
+} else if (room == rm_quarto2) {
+    vel = 7;
 }
 
 var vel_y = vel;

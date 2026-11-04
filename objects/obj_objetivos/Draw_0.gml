@@ -4,11 +4,12 @@ if (instance_exists(obj_cutscene4)) { if (obj_cutscene4.caixadetexto) { exit; } 
 if (instance_exists(obj_cutscene5)) { if (obj_cutscene5.caixadetexto) { exit; } }
 if (instance_exists(obj_cutscene8)) { if (obj_cutscene8.caixadetexto) { exit; } }
 if (instance_exists(obj_cutscene9)) {if(obj_cutscene9.cutscene) exit;}
+if (instance_exists(obj_cutscene10)) {if(obj_cutscene10.cutscene) exit;}
 
 var _cam = view_camera[0];
 var _x = camera_get_view_x(_cam) + margem_x;
 var _y = camera_get_view_y(_cam) + margem_y;
-var _escala = (room == rm_bletchley2 || room == rm_hut8 || room == rm_hut6 || room == rm_mansao) ? 1 : 0.7;
+var _escala = (room == rm_bletchley2 || room == rm_hut8 || room == rm_hut6 || room == rm_mansao || room == rm_salafinal) ? 1 : 0.7;
 var _escala_etapa = _escala * 0.7;
 
 draw_set_font(fnt_fonte);

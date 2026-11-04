@@ -1,7 +1,7 @@
 depth = -y;
 image_xscale=8;
 image_yscale=8;
-velocidade_andar = 20; //4
+velocidade_andar = 4; //4
 andando = true;
 saidamansao=false;
 pontos_x = [1226, 1223, 1226, 1950, 2234];
@@ -46,8 +46,8 @@ dialogo7_iniciado = false;
 
 saida7_ativa = false;
 saida7_alvo_y = 0;
-
-pontosf_x = [1355, 947, 871, 2254, 2550];
-pontosf_y = [2274, 2245, 1416, 1466, 1136];
+bloco_criado = false;
+pontosf_x = [1355, 947, 871, 1894];
+pontosf_y = [2274, 2245, 1416, 1243];
 pontof_atual = -1;
 andandof = false;

@@ -1,3 +1,5 @@
+if(instance_exists(obj_alan)){
+	with(obj_alan){instance_destroy();}}
 creditos = [
     {texto: "Créditos", titulo: true},
     {texto: "", titulo: false},

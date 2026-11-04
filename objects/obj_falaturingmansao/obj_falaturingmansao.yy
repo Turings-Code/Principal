@@ -9,8 +9,8 @@
   "name":"obj_falaturingmansao",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Mansão",
+    "path":"folders/Objetos/Mansão.yy",
   },
   "parentObjectId":{
     "name":"obj_aparecee",
@@ -38,5 +38,5 @@
     "path":"sprites/spr_base4/spr_base4.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

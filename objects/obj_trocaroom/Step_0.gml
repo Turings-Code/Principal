@@ -40,6 +40,11 @@ else if (room == rm_transicao2 && _t1) {
     usar_spawn = false;
     estado = "entrando";
 }
+    else if (room == rm_quarto2 && _t1) {
+        dest_room = rm_creditos2;
+        usar_spawn = false;
+        estado = "entrando";
+    }
     else if (room == rm_quarto && _t1) {
         quartopara2 = true;
         dest_room = rm_transicao1;
@@ -160,3 +165,4 @@ if (estado == "saindo") {
         estado = "nenhum";
     }
 }
+

@@ -11,8 +11,8 @@
   "name":"obj_caixadeenergia",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Mansão",
+    "path":"folders/Objetos/Mansão.yy",
   },
   "parentObjectId":null,
   "persistent":false,

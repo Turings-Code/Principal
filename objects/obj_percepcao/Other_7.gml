@@ -7,9 +7,9 @@ if (estado == 0) {
         sprite_index = spr_exclamacao;
         image_index = 0;
         image_speed = 1;
-		if (!obj_diagolopercebeu.ja_falou) {
+        if (instance_exists(obj_diagolopercebeu) && !obj_diagolopercebeu.ja_falou) {
     obj_diagolopercebeu.ja_falou = true;
-
+	if (instance_exists(npc_alvo)) obj_diagolopercebeu.numero_npc = npc_alvo.numero;
     with (obj_diagolopercebeu) {
         caixadetexto = true;
         nome = "Operário";
@@ -22,4 +22,7 @@ if (estado == 0) {
 }
 percebeu=true;
     }
+}
+if (instance_exists(npc_alvo)) {
+    npc_alvo.criou = false;
 }

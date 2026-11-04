@@ -1,3 +1,4 @@
+
 if (iniciar_dialogo) {
     iniciar_dialogo = false;
     dialogo_index = 0;

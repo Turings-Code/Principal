@@ -1,4 +1,10 @@
-if (distance_to_object(obj_alan) <= 250 && !criou) {
+depth=-y;
+var _travado = false;
+with (obj_percepcao) {
+    if (percebeu) _travado = true;
+}
+
+if (distance_to_object(obj_alan) <= 250 && !criou && !_travado) {
     cria = true;
 }
 
@@ -9,3 +15,4 @@ if (cria) {
     cria = false;
     criou = true;
 }
+

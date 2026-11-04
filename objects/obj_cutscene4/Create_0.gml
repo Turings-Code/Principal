@@ -8,11 +8,11 @@ if(!instance_exists(obj_turing)){
 	instance_create_layer(2500, 2700, "Instances", obj_turing)
 } else{
 	obj_turing.x = 2500; obj_turing.y=2700;}
-	
+	obj_alan.theosegue=true;
 depth = -20000;
 cam_zoom_vel = 0.03;
 cam_vel = 0.08;
-
+global.cutscene4criada=true;
 contador_texto = 0;
 letras_por_frame = 0.3;
 vel = 0.5;
@@ -38,7 +38,7 @@ dialogo_index = -1;
 
 dialogos = [
     { nome: "Turing", frase: "Bom, esqueci de contar uma parte..." },
-    /*{ nome: "Alan", frase: "Qual é o problema, senhor Turing?" },
+    { nome: "Alan", frase: "Qual é o problema, senhor Turing?" },
 	{ nome: "Turing", frase: "Bom, eu não tenho acesso a essa Hut." },
 	{ nome: "Turing", frase: "A Hut 6 se trata de decifrar códigos alemães, e por isso tem um acesso restrito." },
 	{ nome: "Theo", frase: "Como assim? E como pegamos a próxima válvula?" },
@@ -57,7 +57,7 @@ dialogos = [
 	{ nome: "Turing", frase: "Leve o código ao rádio, que deve estar na Machine Room, do outro lado da hut." },
 	{ nome: "Turing", frase: "Destranque a porta de cima para eu poder entrar se precisar." },
 	{ nome: "Turing", frase: "Tente não ser visto, boa sorte garoto." },
-	{ nome: "Theo", frase: "(Alan Turing então. Acho que já ouvi esse nome.)" },*/
+	{ nome: "Theo", frase: "(Alan Turing então. Acho que já ouvi esse nome.)" }
 	
 ];
 

@@ -12,3 +12,4 @@ destruir_timer = -1;
 destruir_tempo = 120;
 fade_final = false;
 fade_final_vel = 0.03;
+tocou=false

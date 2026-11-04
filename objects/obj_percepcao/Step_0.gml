@@ -1,7 +1,7 @@
 var distancia = distance_to_object(obj_alan);
 
 if (estado == 0) {
-	if (distancia <= 200) {
+    if (distancia <= 200) {
         image_speed = 3;
     }
     else if (distancia <= 370) {

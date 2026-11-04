@@ -1,3 +1,6 @@
+if(!instance_exists(obj_alan)){
+	instance_create_layer(500, 500, "Instances", obj_alan);
+}
 obj_alan.travado = true;
 obj_alan.theosegue = false;
 
@@ -28,7 +31,7 @@ iniciar_dialogo = false;
 dialogo_index = -1;
 dialogos = [
     { nome: "Turing", frase: "Era pra essa porta aqui abrir." },
-    /*{ nome: "Theo", frase: "Essa é a sala da Bombe?" },
+    { nome: "Theo", frase: "Essa é a sala da Bombe?" },
 	{ nome: "Turing", frase: "Isso mesmo. Acho que teremos que mudar o plano." },
 	{ nome: "Turing", frase: "Instalaram uma fechadura por senha nessa porta." },
 	{ nome: "Turing", frase: "E aparentemente a energia da fechadura também está sem energia." },
@@ -36,7 +39,7 @@ dialogos = [
 	{ nome: "Turing", frase: "Bom, agora vão ter alguns passos a mais." },
 	{ nome: "Turing", frase: "Vocês precisam religar a energia, e achar o código da fechadura." },
 	{ nome: "Turing", frase: "E também achar a última válvula. Vou ficar esperando aqui." },
-	{ nome: "Turing", frase: "Voltem quando tiverem conseguido tudo." },*/
+	{ nome: "Turing", frase: "Voltem quando tiverem conseguido tudo." },
 ];
 
 andando8 = true;
@@ -48,12 +51,12 @@ espera8_tempo = 120;
 dialogo2_ativo = false;
 dialogos2 = [
     { nome: "Alan", frase: "Consegui ligar a energia!" },
-    /*{ nome: "Theo", frase: "Boa Alan, agora devemos ter acesso a mais salas!" },
+    { nome: "Theo", frase: "Boa Alan, agora devemos ter acesso a mais salas!" },
 	{ nome: "Alan", frase: "Espera Theo! Esses cabos estão soltando!" },
 	{ nome: "Alan", frase: "Se eu não segurar a energia vai desligar outra vez!" },
 	{ nome: "Theo", frase: "Droga! E agora como fazemos?" },
 	{ nome: "Alan", frase: "Vou ficar aqui, enquanto isso busque a válvula e o código e abra a porta." },
-	{ nome: "Alan", frase: "Quando tiver aberto a porta, me chame de volta!" },*/
+	{ nome: "Alan", frase: "Quando tiver aberto a porta, me chame de volta!" },
 ];
 dialogo_atual2 = false;
 

@@ -240,7 +240,7 @@ if (!place_meeting(x + _mx3, y + _my3, obj_alan)) {
 
 if(saidamansao){
 	sprite_index=spr_turingcima;
-	y--;
+	y-=4;
 	if(y<4700){
 		saidamansao=false
 		var _troca = instance_create_layer(1380, 4769, "Instances", obj_troca2);
@@ -270,6 +270,12 @@ if (salafinal) {
         if (!instance_exists(obj_falaturingfinal)) {
             instance_create_layer(x, y, "Instances", obj_falaturingfinal);
         }
+		if(!bloco_criado){
+		var _b = instance_create_layer(x-100, y-65, "Instances", obj_collisionblock);
+_b.image_xscale = 3;
+_b.image_yscale = 3;
+bloco_criado=true;
+}
     }
 } else {
             var _dirf = point_direction(x, y, pontosf_x[pontof_atual], pontosf_y[pontof_atual]);

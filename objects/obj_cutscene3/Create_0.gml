@@ -40,15 +40,15 @@ iniciar_dialogo = false;
 dialogo_index = -1;
 dialogos = [
     { nome: "Turing", frase: "Durante um conflito com os alemães, conseguimos 3 Enigmas e um Baú." },
-	/*{ nome: "Turing", frase: "A Válvula Alfa está trancada nesse baú por 3 cadeados." },
+	{ nome: "Turing", frase: "A Válvula Alfa está trancada nesse baú por 3 cadeados." },
 	{ nome: "Turing", frase: "Cada Enigma pode ser usado para descriptografar o código pra cada cadeado." },
 	{ nome: "Turing", frase: "Vocês precisam usar cada enigma e colecar os 3 códigos para abrir o baú." },
     { nome: "Alan", frase: "Acho que não me dou bem nisso. Não quero quebrar outro enigma." },
 	{ nome: "Theo", frase: "Pode deixar comigo! Vou pegar a Válvula Alfa!" },
-	{ nome: "Alan", frase: "Você tem certeza, Theo? Boa sorte então!" },*/
+	{ nome: "Alan", frase: "Você tem certeza, Theo? Boa sorte então!" },
 	{ nome: "Turing", frase: "Fique com estes papéis para saber como os Enigmas Funcionam." },
-	//{ nome: "Turing", frase: "Volte aqui quando pegar a válvula." },
-	//{ nome: "Theo", frase: "Entendido!" },
+	{ nome: "Turing", frase: "Volte aqui quando pegar a válvula." },
+	{ nome: "Theo", frase: "Entendido!" },
 	
 ];
 
@@ -62,13 +62,14 @@ if (!variable_global_exists("valvulaalfa")) {
 
 dialogos_final = [
     { nome: "Turing", frase: "Eai garoto, Conseguiu pegar a Válvula Alfa?" },
-    /*{ nome: "Theo", frase: "Consegui sim! Essa válvula aqui?" },
+    { nome: "Theo", frase: "Consegui sim! Essa válvula aqui?" },
     { nome: "Turing", frase: "Caramba, Você realmente conseguiu!" },
 	{ nome: "Turing", frase: "Talvez as crianças tenham ficado muito inteligentes no futuro." },
 	{ nome: "Alan", frase: "Mandou bem em Theo!" },
 	{ nome: "Turing", frase: "Bom, acho que se continuar assim vocês conseguem voltar pra casa ainda hoje." },
 	{ nome: "Theo", frase: "E como pegamos a próxima válvula?" },
-	{ nome: "Turing", frase: "Sigam me até a Hut 6." },*/
+	{ nome: "Turing", frase: "Sigam me até a Hut 6." },
 ];
 
 troca_final_feita = false;
+

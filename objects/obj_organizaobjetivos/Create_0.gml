@@ -8,6 +8,7 @@ atualizar = function() {
     var _energia = !instance_exists(obj_caixadeenergiaaparece);
 
     if (_energia && global.valvulamestra && _quantidade == 3) {
+		audio_play_sound(snd_objetivoconcluido, 1, false);
         obj_objetivos.define_objetivo("OBJETIVO - Volte para o Turing");
         obj_objetivos.define_etapas([]);
 		if(instance_exists(obj_falaturingmansao)){
@@ -15,6 +16,7 @@ atualizar = function() {
 		if(!instance_exists(obj_falaturingmansao2)){
 			instance_create_layer(obj_turing.x, obj_turing.y, "Instances", obj_falaturingmansao2);}
     } else {
+		audio_play_sound(snd_objetivo, 1, false);
         obj_objetivos.define_objetivo("OBJETIVO - Abra a Sala da Bombe");
 
         obj_objetivos.define_etapas([

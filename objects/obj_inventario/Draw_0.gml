@@ -4,7 +4,7 @@ if(instance_exists(obj_cutscene6)){if(obj_cutscene6.cutscene) exit;}
 if(instance_exists(obj_cutscene7)){if(obj_cutscene7.cutscene) exit;}
 if(instance_exists(obj_cutscene8)){if(obj_cutscene8.cutscene) exit;}
 if(instance_exists(obj_cutscene9)){if(obj_cutscene9.cutscene) exit;}
-
+if(room==rm_transicao1||room==rm_transicao2||room==rm_quarto2) exit;
 if (ganhouitem) {
     ganhouitem = false;
     aviso_ativo = true;

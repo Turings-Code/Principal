@@ -23,6 +23,7 @@ if (dialogo_index < array_length(dialogos)) {
     }
 
     if (instance_exists(obj_objetivos)) {
+		audio_play_sound(snd_objetivo, 1, false);
         obj_objetivos.define_objetivo("OBJETIVO - Pegue a Válvula Beta");
         obj_objetivos.define_etapas([
             "- Ache o código na Registration Room",

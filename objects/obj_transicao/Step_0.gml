@@ -8,6 +8,29 @@ if (instance_exists(obj_theo)) {
     obj_theo.sprite_index = spr_theoparado;
 }
 
+if (!iniciado) {
+    if (espera < 3) {
+        espera++;
+        exit;
+    }
+    iniciado = true;
+    if (instance_exists(obj_alan)) array_push(alvos, obj_alan);
+    if (instance_exists(obj_theo)) array_push(alvos, obj_theo);
+
+    for (var i = 0; i < array_length(alvos); i++) {
+        var _o = alvos[i];
+        array_push(dados, {
+            r: point_distance(cx, cy, _o.x, _o.y),
+            r0: max(point_distance(cx, cy, _o.x, _o.y), 1),
+            ang: point_direction(cx, cy, _o.x, _o.y),
+            fase: i * 90,
+            escala0: _o.image_xscale,
+            chegou: false
+        });
+    }
+    exit;
+}
+
 if (!concluido) {
     var _todos = true;
 

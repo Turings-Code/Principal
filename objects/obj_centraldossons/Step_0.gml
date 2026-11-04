@@ -14,16 +14,20 @@ else {
     }
 }
 
-if (instance_exists(obj_cursor) && obj_cursor.clicou) {
+if (instance_exists(obj_cursor) && (obj_cursor.clicou || obj_cursor.clicou2)) {
     escurecendo = true;
 }
 
-if (room == rm_quarto) {
+if (room == rm_quarto || room != room_anterior_fade) {
     escurecendo = false;
-    alpha_escuro = max(alpha_escuro - 0.02, 0);
 }
-else if (escurecendo) {
+
+room_anterior_fade = room;
+
+if (escurecendo) {
     alpha_escuro = min(alpha_escuro + 0.02, 1);
+} else {
+    alpha_escuro = max(alpha_escuro - 0.02, 0);
 }
 
 if (room != rm_quarto && audio_is_playing(snd_backgroundquarto)) {

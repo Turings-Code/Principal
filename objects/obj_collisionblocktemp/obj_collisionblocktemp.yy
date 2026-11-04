@@ -9,8 +9,8 @@
   "name":"obj_collisionblocktemp",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Comandos",
+    "path":"folders/Objetos/Comandos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -38,5 +38,5 @@
     "name":"spr_base7",
     "path":"sprites/spr_base7/spr_base7.yy",
   },
-  "visible":true,
+  "visible":false,
 }

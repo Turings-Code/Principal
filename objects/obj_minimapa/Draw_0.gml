@@ -5,6 +5,7 @@ if(instance_exists(obj_cutscene6)){if(obj_cutscene6.cutscene) exit;}
 if(instance_exists(obj_cutscene7)){if(obj_cutscene7.cutscene) exit;}
 if (instance_exists(obj_mapahut6)) exit; 
 if (instance_exists(obj_folhasenigma)) exit; 
+if (instance_exists(obj_menupause)) exit; 
 
 var _spr = (room == rm_bletchley) ? spr_minimapabletchley1 : spr_minimapa;
 

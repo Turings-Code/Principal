@@ -7,12 +7,20 @@ if (place_meeting(x, y, obj_area2)) {
 } else if (place_meeting(x, y, obj_area5)) {
     with (obj_error) { instance_destroy(); }
 } else if (place_meeting(x, y, obj_area6)&&!place_meeting(x, y, obj_descricao)&&!place_meeting(x, y, obj_areapai)) {
-	room_goto(rm_creditos2);} else if (place_meeting(x, y, obj_area7)&&!place_meeting(x, y, obj_descricao)&&!place_meeting(x, y, obj_areapai)) { 
+if (os_browser == browser_not_a_browser) {
+    game_end();
+}} else if (place_meeting(x, y, obj_area7)&&!place_meeting(x, y, obj_descricao)) { 
 		audio_play_sound(snd_play, 1, false);
 	if(!audio_is_playing(snd_PCfinal)){
 	audio_play_sound(snd_PCfinal, 0.02, false)	;
 	}
 	clicou=true;
+	} if (file_exists("save.json")&&place_meeting(x, y, obj_area8)&&!place_meeting(x, y, obj_descricao)&&place_meeting(x, y, obj_areapai)) { 
+		audio_play_sound(snd_play, 1, false);
+	if(!audio_is_playing(snd_PCfinal)){
+	audio_play_sound(snd_PCfinal, 0.02, false)	;
+	}
+	clicou2=true;
 	}
 
 if (instance_exists(obj_descricao)) {

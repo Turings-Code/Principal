@@ -22,7 +22,7 @@ obj_alan.theosegue=true;
 depth = -60000;
 cam_zoom_vel = 0.03;
 cam_vel = 0.08;
-
+global.cutscene6criada=true;
 contador_texto = 0;
 letras_por_frame = 0.3;
 vel = 0.5;
@@ -51,13 +51,13 @@ dialogos = [
 dialogo1 = false;
 dialogos1 = [
     { nome: "Alan", frase: "E agora onde achamos a última válvula?" },
-    /*{ nome: "Turing", frase: "A Válvula Mestra, esta em algum lugar dentro da Mansão de Bletchley Park" },
+    { nome: "Turing", frase: "A Válvula Mestra, esta em algum lugar dentro da Mansão de Bletchley Park" },
 	{ nome: "Turing", frase: "Esta vai ser provavelmente a mais difícil de encontrar." },
 	{ nome: "Theo", frase: "Mansão? Não é lá que a máquina que vai nos levar para o presente está?" },
 	{ nome: "Turing", frase: "Exatamente. A mansão está repleta de operários, então isso deve ser bem difícil." },
 	{ nome: "Turing", frase: "Vamos entrar lá, achar a ultima válvula e já consertar a Bombe." },
 	{ nome: "Turing", frase: "Se tudo ocorrer bem, depois disso vocês já voltaram pra onde vieram." },
 	{ nome: "Alan", frase: "Vamo lá, Theo! Só falta mais uma!" },
-	{ nome: "Turing", frase: "Podem me seguir." }*/
+	{ nome: "Turing", frase: "Podem me seguir." }
 ];
 dialogo1_ativo = false;

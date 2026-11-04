@@ -26,7 +26,7 @@ _t.image_yscale = 8;}
 	
 	
     if (dialogo2_ativo) {
-        
+        audio_play_sound(snd_objetivo, 1, false);
         obj_objetivos.define_objetivo("OBJETIVO - Descubra a Frequência");
         obj_objetivos.define_etapas([
             "- Faça o programa para identificar se é par ou ímpar",
@@ -39,6 +39,7 @@ _t.image_yscale = 8;}
     }
 
     if (fase_entrada_hut6 == 4 && !dialogo_radio && fase_saida_turing == 0) {
+		audio_play_sound(snd_objetivo, 1, false);
         obj_objetivos.define_objetivo("OBJETIVO - Vá até o computador");
         fase_saida_turing = 1;
         alvo_y_turing = obj_turing.y + 120;
@@ -53,6 +54,7 @@ _t.image_yscale = 8;}
 
     if (dialogo_radio) {
         dialogo_radio = false;
+		audio_play_sound(snd_objetivo, 1, false);
         obj_objetivos.define_objetivo("OBJETIVO - Abra a porta para Turing");
         obj_objetivos.define_etapas([]);
 

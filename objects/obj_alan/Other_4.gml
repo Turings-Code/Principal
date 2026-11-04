@@ -1,6 +1,6 @@
-
+global.t_room = current_time;
 var _spawn = obj_trocaroom.usar_spawn;
-show_debug_message("room=" + room_get_name(room) + " spawn=" + string(_spawn) + " x=" + string(x) + " y=" + string(y));
+
 if (_spawn) {
     x = obj_trocaroom.spawn_x;
     y = obj_trocaroom.spawn_y;
@@ -18,17 +18,21 @@ if (room == rm_salafinal) {
     image_yscale = 8;
 }
 if (room == rm_transicao1) {
-    if (!_spawn) { x = 522; y =390; }
+    if (!_spawn) { x = 422; y =390; }
     image_xscale = 8;
     image_yscale = 8;
 }
 if (room == rm_transicao2) {
-    if (!_spawn) { x = 522; y =390; }
+    if (!_spawn) { x = 422; y =390; }
     image_xscale = 8;
     image_yscale = 8;
 }
 if (room == rm_quarto2) {
-    if (!_spawn) { x = 1955; y =642; }
+	theosegue=false;
+	travado = true;
+	direcao = "cima";
+	sprite_index=spr_alanparado;
+    if (!_spawn) { x = 980; y =642; }
     image_xscale = 8;
     image_yscale = 8;
 }
@@ -90,4 +94,3 @@ if(room==rm_bletchley2&&global.valvulabeta){
 	with(obj_cutscene2){instance_destroy();}}
 	}
 	
-show_debug_message("final room=" + room_get_name(room) + " x=" + string(x) + " y=" + string(y));

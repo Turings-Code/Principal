@@ -30,13 +30,13 @@ dialogo1_ativo = false;
 
 dialogos1 = [
     { nome: "Alan", frase: "Então, qual o plano?" },
-    /*{ nome: "Turing", frase: "Vamos todos entrar, e eu fico esperando vocês na Sala da Bombe." },
+    { nome: "Turing", frase: "Vamos todos entrar, e eu fico esperando vocês na Sala da Bombe." },
 	{ nome: "Turing", frase: "Enquanto eu espero, vocês devem achar a Válvula Mestra e trazer pra mim." },
     { nome: "Theo", frase: "E onde está a válvula?" },
 	{ nome: "Turing", frase: "Vocês teram que procurá-la no segundo andar da Mansão" },
 	{ nome: "Turing", frase: "Aqui é o centro de Bletchley Park, então deve ter vários operários." },
 	{ nome: "Turing", frase: "Tentem passar longe deles e não demorem muito!" },
-	{ nome: "Alan", frase: "OK!" }*/
+	{ nome: "Alan", frase: "OK!" }
 ];
 
 if (instance_exists(obj_alan)) {

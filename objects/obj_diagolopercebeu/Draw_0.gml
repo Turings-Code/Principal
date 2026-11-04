@@ -14,13 +14,18 @@ if (caixadetexto) {
         }
     }
 
-    draw_sprite_ext(spr_caixadefala, 0, _cx + _view_w / 2, _cy + _view_h / 2 + desce, 7, 7, 0, c_white, fade_caixa);
+    var _spr_caixa = spr_caixadefala;
+if (numero_npc == 1) _spr_caixa = spr_caixadefalaoperario1;
+if (numero_npc == 2) _spr_caixa = spr_caixadefalaoperario2;
+if (numero_npc == 3) _spr_caixa = spr_caixadefalaoperario3;
+if (numero_npc == 4) _spr_caixa = spr_caixadefalaoperario4;
+draw_sprite_ext(_spr_caixa, 0, _cx + _view_w / 2, _cy + _view_h / 2 + desce, 7, 7, 0, c_white, fade_caixa);
 } else {
     fade_caixa = 0;
 }
 
 if (frase != "Nada" && mostrar_texto) {
-	var _frase_percebido = (frase == "Ei garoto, tá fazendo oque aqui?");
+    var _frase_percebido = (frase == "Ei garoto, tá fazendo oque aqui?");
 
     if (!_frase_percebido && mouse_check_button_pressed(mb_left)) {
         if (contador_texto >= string_length(frase)) {
@@ -53,8 +58,8 @@ if (frase != "Nada" && mostrar_texto) {
             }
         }
     }
-	
-	if (_frase_percebido && !tela_agendada && contador_texto >= string_length(frase)) {
+
+    if (_frase_percebido && !tela_agendada && contador_texto >= string_length(frase)) {
     tela_agendada = true;
     alarm[2] = 60 * 3;
 }

@@ -20,6 +20,9 @@ global.fragmento1=false;
 global.fragmento2=false;
 global.fragmento3=false;
 global.chavecinza=false;
+global.foifalaturing=false;
+global.cutscene4criada=false;
+global.cutscene6criada=false;
 /*if (file_exists("save.ini")) {
     ini_open("save.ini");
     global.chave = ini_read_real("jogo", "chave", 0);
@@ -32,6 +35,6 @@ global.chavecinza=false;
         room_goto(_r);
     }
 }*/
-scr_carregar();
+
 cutscene4foi=false;
 cutscene6foi=false;

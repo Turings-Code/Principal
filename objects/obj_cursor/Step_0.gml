@@ -16,9 +16,23 @@ if(clicou){
 	if(audio_is_playing(snd_PCini)){
 	audio_stop_sound(snd_PCini);}
 }
+if(clicou2){
+	if(audio_is_playing(snd_PCmeio)){
+	audio_stop_sound(snd_PCmeio);}
+	if(audio_is_playing(snd_PCini)){
+	audio_stop_sound(snd_PCini);}
+}
 
 if(clicou && !audio_is_playing(snd_PCfinal)){
-	
-	room_goto(rm_quarto);}
+	if (file_exists("save.json")) {
+	scr_carregar();
+	} else{
+		room_goto(rm_quarto);}
+	}
+
+if(clicou2 && !audio_is_playing(snd_PCfinal)){
+	if (file_exists("save.json")) file_delete("save.json");
+		room_goto(rm_quarto);
+	}
 
 

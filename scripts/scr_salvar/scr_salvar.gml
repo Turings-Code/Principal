@@ -1,8 +1,8 @@
 function scr_salvar() {
     var _dados = {
         room: room_get_name(room),
-        chave: global.chave,
-        papel: global.papel
+        cutscene4criada: global.cutscene4criada,
+        cutscene6criada: global.cutscene6criada
     };
 
     var _texto = json_stringify(_dados);

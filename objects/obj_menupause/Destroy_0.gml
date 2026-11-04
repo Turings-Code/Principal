@@ -1,0 +1,1 @@
+obj_alan.travado=false;

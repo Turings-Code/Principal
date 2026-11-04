@@ -1,3 +1,11 @@
+obj_objetivos.define_objetivo("OBJETIVO - Pegue a Válvula Beta");
+        obj_objetivos.define_etapas([
+            "- Ache o código na Registration Room",
+            "- Vá até o rádio na Machine Room"
+        ]);
+if(!instance_exists(obj_alan)){
+	instance_create_layer(500, 500, "Instances", obj_alan);
+}
 depth = -60000;
 cam_zoom_vel = 0.03;
 cam_vel = 0.08;
@@ -30,7 +38,7 @@ dialogos = [
 
 dialogos1 = [
     { nome: "Turing", frase: "Conseguiu pegar a válvula?" },
-	/*{ nome: "Alan", frase: "Não! Como vou mexer nesse rádio, eu não sei alemão!" },
+	{ nome: "Alan", frase: "Não! Como vou mexer nesse rádio, eu não sei alemão!" },
 	{ nome: "Turing", frase: "Você precisa colocar uma frequência de quatro dígitos no rotator." },
 	{ nome: "Theo", frase: "Então o código é a frequência?" },
 	{ nome: "Alan", frase: "Esse código é muito grande, e com certeza está criptografado." },
@@ -39,7 +47,7 @@ dialogos1 = [
 	{ nome: "Turing", frase: "De maneira alguma! Não podem perceber que o rádio sumiu!" },
 	{ nome: "Turing", frase: "Não tem como ser mais rápido?" },
 	{ nome: "Alan", frase: "Até teria, com um pouco de código..." },
-	{ nome: "Turing", frase: "Vou trancar a porta, e tente descobrir logo como resolver isso!" },*/
+	{ nome: "Turing", frase: "Vou trancar a porta, e tente descobrir logo como resolver isso!" }
 ];
 
 bloco_fase1 = noone;
@@ -86,7 +94,7 @@ dialogo4_ativo = false;
 dialogo4_feito = false;
 dialogos4 = [
     { nome: "Theo", frase: "Espera, o que o rádio disse?" },
-	/*{ nome: "Turing", frase: "Alguma coisa sobre decifrar. Meu alemão não é tão bom assim." },
+	{ nome: "Turing", frase: "Alguma coisa sobre decifrar. Meu alemão não é tão bom assim." },
 	{ nome: "Turing", frase: "Muito bem garoto, agora só falta uma válvula!" },
-	{ nome: "Turing", frase: "Agora precisamos sair daqui!" }*/
+	{ nome: "Turing", frase: "Agora precisamos sair daqui!" }
 ];

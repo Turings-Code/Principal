@@ -17,7 +17,46 @@ if (espera_final2_timer > 0) {
     }
 }
 
+if (turing_indo && instance_exists(obj_turing)) {
+    if (instance_exists(obj_alan)) obj_alan.travado = true;
+    var _dist = point_distance(obj_turing.x, obj_turing.y, turing_destino_x, turing_destino_y);
+    if (_dist > turing_vel) {
+        var _dir = point_direction(obj_turing.x, obj_turing.y, turing_destino_x, turing_destino_y);
+        obj_turing.x += lengthdir_x(turing_vel, _dir);
+        obj_turing.y += lengthdir_y(turing_vel, _dir);
+        obj_turing.sprite_index = spr_turingcima;
+    } else {
+        obj_turing.x = turing_destino_x;
+        obj_turing.y = turing_destino_y;
+        obj_turing.sprite_index = spr_turingparadocima;
+        turing_indo = false;
+        espera_final3_timer = espera_final3;
+    }
+}
+
+if (espera_final3_timer > 0) {
+    espera_final3_timer--;
+    if (instance_exists(obj_turing)) obj_turing.sprite_index = spr_turingparadocima;
+    if (instance_exists(obj_alan)) obj_alan.travado = true;
+    if (espera_final3_timer <= 0) {
+        dialogo_final3 = true;
+    }
+}
+
+if (dialogo_final3) {
+    dialogo_final3 = false;
+    dialogos = dialogos_final3;
+    dialogo_atual_final3 = true;
+    iniciar_dialogo = true;
+    escurecer = true;
+    
+    
+}
+
 if (dialogo_final2) {
+	if(instance_exists(obj_falaturingfinal2)){
+		with(obj_falaturingfinal2){instance_destroy();}
+	}
     dialogo_final2 = false;
     dialogos = dialogos_final2;
     dialogo_atual_final2 = true;
@@ -116,10 +155,31 @@ if (caixadetexto) {
     camera_set_view_pos(_cam, _centro_x - _w / 2 + shake_ox, _centro_y - _h / 2 + shake_oy);
 }
 
-if (dialogo_atual_final2 && dialogo_index >= 6) {
-    escurecer = true;
-}
+
 
 if (escurecer) {
     escurecer_alpha = min(escurecer_alpha + escurecer_vel, 1);
+}
+
+if(!global.valvulaalfa){
+	if(!instance_exists(obj_valvulaalfabombe)){
+		instance_create_layer(2598, 953, "Instances", obj_valvulaalfabombe)
+	}
+}
+if(!global.valvulabeta){
+	if(!instance_exists(obj_valvulabetabombe)){
+		instance_create_layer(2790, 878, "Instances", obj_valvulabetabombe)
+	}
+}
+if(!global.valvulamestra){
+	if(!instance_exists(obj_valvulamestrabombe)){
+		instance_create_layer(2391, 1025, "Instances", obj_valvulamestrabombe)
+	}
+}
+if(instance_exists(obj_valvulaalfabombe)&&instance_exists(obj_valvulabetabombe)&&instance_exists(obj_valvulamestrabombe)){
+	obj_objetivos.define_objetivo("OBJETIVO - Volte até o Turing");
+    obj_objetivos.define_etapas([]);
+	audio_play_sound(snd_objetivo, 1, false);
+	if(!instance_exists(obj_falaturingfinal2)&&!global.foifalaturing){
+		instance_create_layer(obj_turing.x, obj_turing.y, "Instances", obj_falaturingfinal2);}
 }

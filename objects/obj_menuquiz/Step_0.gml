@@ -20,6 +20,7 @@ else if (estado == 2) {
         if (rodada_atual >= array_length(rodadas)) {
     estado = 4;
     global.quizxerox = true;
+	audio_play_sound(snd_objetivo, 1, false);
 	obj_objetivos.define_objetivo("OBJETIVO - Descubra a Frequência");
 obj_objetivos.define_etapas([
     { texto: "- Faça o programa para identificar se é par ou ímpar", feita: true },
