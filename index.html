@@ -1,628 +1,1078 @@
-
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turing's Code</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+
  <style>
-    *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
 
-html {
- scroll-behavior: smooth;
-}
+    html {
+    scroll-behavior: smooth;
+    }
 
-    body {
-    background-image: url('site/fundobody.jpg');
-    background-repeat: repeat-y;
-    background-position: center top;
+        body {
+        background-color: #1a1a1a;
+        background-image: url('site/fundobody.jpg');
+        background-repeat: repeat-y;   
+        background-position: center top;
+        background-size: 100% auto;
+    }
+    img {
+    max-width: 100%;
 }
-
 
 header {
-    padding: 20px 7%;
+    padding: 22px 3%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     background: #4F4E32;
-    border-bottom: 5px solid #7F7F7F;
+    border-bottom: 5px solid #3e3c26;
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
+.logo-header {
+    flex-shrink: 0;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-header img {
+    height: 85px;
+    width: auto;
+    max-width: none;
+    display: block;
+    image-rendering: pixelated;
+}
 
 nav {
     display: flex;
-    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 18px;
-    border: 3px solid #7F7F7F;
-   
+    padding: 14px 20px;
+    font-size: 17px;
+    border: 3px solid #3e3c26;
     transition: 0.3s;
 }
 
 nav a:hover {
     background: #fdf570;
     color: #4F4E32;
-    
 }
 
-.titulo {
-    text-align: center;
-    padding: 35px 20px 25px;
+#menu-toggle,
+.menu-icone {
+    display: none;
 }
-
-
-
-.titulo h3 {
-    margin-top: 15px;
-}
-
-.descricao {
-    width: 90%;
-    max-width: 1100px;
-    margin: 50px auto 40px;
-    padding: 35px;
-    background: #4F4E32;
-    border-left: 5px solid #7F7F7F;
-    border-radius: 0 15px 15px 0;
-}
-
-h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.descricao p {
-    font-family: Arial, sans-serif;
-    line-height: 1.8;
-    color: #c6dfd0;
-    font-size: 18px;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    color: #fff;
-    border-top: 5px solid #7F7F7F;
-    background: #4F4E32;
-}
-
-@media (max-width: 700px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 
     .titulo {
-        padding: 30px 15px 20px;
+        text-align: center;
+        padding: 35px 20px 25px;
+    }
+
+
+
+    .titulo h3 {
+        margin-top: 15px;
     }
 
     .descricao {
-        padding: 25px;
+        width: 90%;
+        max-width: 1100px;
+        margin: 50px auto 40px;
+        padding: 35px;
+        background: #4F4E32;
+        border-left: 5px solid #3e3c26;
+        border-radius: 0 15px 15px 0;
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: white;
     }
 
     .descricao p {
-        font-size: 16px;
+        font-family: Arial, sans-serif;
+        line-height: 1.8;
+        color: #c6dfd0;
+        font-size: 18px;
     }
-}
 
-.botoes-descricao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-top: 20px;
-    flex-wrap:wrap;
-    transform: translateY(-20px);
-}
+    footer {
+        text-align: center;
+        padding: 25px;
+        color: #fff;
+        border-top: 5px solid #3e3c26;
+        background: #4F4E32;
+    }
 
-.botao-descricao {
-    display: inline-block;
-    padding: 14px 28px;
-    background-color: #4F4E32;
-    color: #fdf570;
-    text-decoration: none;
+footer p {
+    margin-top: 8px;
     font-family: Arial, sans-serif;
-    font-weight: bold;
-    border-radius: 8px;
-    border: 3px solid #7F7F7F;
-    transition: 0.3s;
-}
-
-.botao-descricao:hover {
-    background-color: #7F7F7F;
-    color: white;
-    box-shadow: 0 0 12px #fdf570;
-}
-
-.sprites {
-    width: 90%;
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 30px;
-    scroll-margin-top: 120px;
-}
-
-.sprites h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: white;
-}
-
-
-.personagens {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 35px;
-    width: 100%;
-    flex-wrap: nowrap;
-}
-
-
-.personagem {
-    flex: 1;
-    min-width: 0;
-    max-width: 450px;
-    padding: 25px;
-    background: #4F4E32;
-    border: 3px solid #7F7F7F;
-    
-    text-align: center;
-    transition: 0.3s;
-}
-
-.personagem img {
-    display: block;
-    width: 100%;
-    height: 350px;
-    object-fit: contain;
-    background: #020805;
-    border-radius: 8px;
-}
-
-.personagem img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    background: #020805;
-    border-radius: 8px;
-}
-
-.personagem h3 {
-    color: #fff;
-    font-size: 26px;
-    margin: 20px 0 15px;
-}
-
-.personagem p {
+    font-size: 15px;
     color: #c6dfd0;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.7;
 }
+    @media (max-width: 700px) {
+        .titulo {
+            padding: 30px 15px 20px;
+        }
+    .descricao {
+            padding: 25px;
+        }
+        h2 {
+            font-size: 24px;
+        }
 
+        .descricao p {
+            font-size: 16px;
+        }
+    }
 
+    .botoes-descricao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-top: 20px;
+        flex-wrap:wrap;
+        transform: translateY(-20px);
+    }
 
-@media (max-width: 700px) {
-    .imagem-jogo {
-        height: 300px;
+    .botao-descricao {
+        display: inline-block;
+        padding: 14px 28px;
+        background-color: #4F4E32;
+        color: #fdf570;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        border-radius: 8px;
+        border: 3px solid #3e3c26;
+        transition: 0.3s;
+    }
+
+    .botao-descricao:hover {
+        background-color: #3e3c26;
+        color: white;
+        box-shadow: 0 0 12px #fdf570;
     }
 
     .sprites {
-        width: 95%;
-        padding: 15px;
+        width: 90%;
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 30px;
+    }
+
+    .sprites h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: white;
+    }
+
+
+    .personagens {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 35px;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    [id] {
+        scroll-margin-top: 150px;
     }
 
     .personagem {
-        width: 100%;
-        max-width: 300px;
+        flex: 1;
+        min-width: 0;
+        max-width: 450px;
+        padding: 25px;
+        background: #4F4E32;
+        border: 3px solid #3e3c26;
+        
+        text-align: center;
+        transition: 0.3s;
     }
-}
 
-.cenarios {
-    width: 95%;
-    max-width: 1400px;
-    margin: 50px auto;
-    padding: 30px 0;
-    scroll-margin-top: 120px;
-}
+    .personagem img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        background: #020805;
+        border-radius: 8px;
+    }
 
-.cenarios h2 {
-    text-align: center;
-    color: white;
-    margin-bottom: 35px;
-}
+    .personagem h3 {
+        color: #fff;
+        font-size: 26px;
+        margin: 20px 0 15px;
+    }
 
-.lista-cenarios {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 25px;
-    width: 100%;
-}
+    .personagem p {
+        color: #c6dfd0;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.7;
+    }
 
-.cenario {
-    flex: 1;
-    min-width: 0;
-    padding: 20px;
-    background: #4F4E32;
-    border: 3px solid #7F7F7F;
+
+
+    @media (max-width: 700px) {
+        .imagem-jogo {
+            height: 300px;
+        }
+
+        .sprites {
+            width: 95%;
+            padding: 15px;
+        }
+
+        .personagem {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+
+    .cenarios {
+        width: 95%;
+        max-width: 1400px;
+        margin: 50px auto;
+        padding: 30px 0;
+        scroll-margin-top: 120px;
+    }
+
+    .cenarios h2 {
+        text-align: center;
+        color: white;
+        margin-bottom: 35px;
+    }
+
+    .lista-cenarios {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .cenario {
+        flex: 1;
+        min-width: 0;
+        padding: 20px;
+        background: #4F4E32;
+        border: 3px solid #3e3c26;
+        
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .cenario:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px #fdf570;
+    }
+
+    .cenario img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        background: #020805;
+        border-radius: 8px;
+    }
+
+    .cenario h3 {
+        color: #fff;
+        font-size: 22px;
+        margin: 20px 0 12px;
+    }
+
+    .cenario p {
+        color: #c6dfd0;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .div-grande {
+        width: 90%;
+        max-width: 900px; 
+        margin: 50px auto; 
+        padding: 40px;     
+        background: #4F4E32; 
+        border: 5px solid #3e3c26;          
+                    
+        
+        text-align: center;
+    }
+
+    .div-grande h2 {
+        color: #fff;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .div-grande p {
+        color: #c6dfd0;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .div-galeria-estilo {
+        width: 90%;
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 40px;
+        background: #4F4E32; 
+        border: 5px solid #3e3c26;          
+                    
     
+        text-align: center;
+    }
+
+    .div-galeria-estilo h2 {
+        color: #fff;
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .div-galeria-estilo p {
+        color: #c6dfd0;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+
+    .grade-imagens {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .item-imagem {
+        flex: 1;
+        min-width: 250px;
+        height: 220px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 2px solid #c6dfd0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .item-imagem img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+    }
+
+
+    .item-imagem:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 15px #fdf570;
+        border-color: #3e3c26;
+    }
+
+    .item-imagem:hover img {
+        transform: scale(1.1);
+    }
+    .card-horizontal {
+    display: flex;
+    flex-direction: row;
+    background-color: #4F4E32; 
+    color: #ffffff;
+    max-width: 900px;
+    border-radius: 6px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    margin-bottom: 25px;
+    }
+
+    .imagem-projeto {
+    width: 40%;
+    object-fit: cover;
+    }
+
+    .texto-projeto {
+    width: 60%;
+    padding: 30px;
+    }
+
+    .texto-projeto h2 {
+    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 15px;
+    }
+
+    .texto-projeto p {
+    margin: 0;
+    line-height: 1.6;
+    }
+
+    .galeria-imagens {
+    display: grid;
+    
+    grid-template-columns: repeat(2, 1fr); 
+    
+    gap: 20px; 
+    width: 100%;
+    max-width: 1000px; 
+    margin: 0 auto;   
+    padding: 20px;
+    }
+
+
+
+    .item-imagem {
+    width: 100%;
+    height: 350px; 
+    border-radius: 6px;
+    overflow: hidden; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    }
+
+
+    .item-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    }
+
+
+    .container-tres-colunas {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px;                      
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;                 
+    padding: 20px;
+    }
+
+
+    .card-tutorial {
+    flex: 1;                        
+    background-color: #4F4E32;
+    border: 2px solid #3e3c26;
+    
+    padding: 25px;
+    color: #ffffff;
+    
+    }
+
+    .card-tutorial h3 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 12px;
+    }
+
+    .card-tutorial p {
+    margin: 0;
+    color: #d1d5db;
+    line-height: 1.5;
+    font-size: 15px;
+    }
+
+
+    .equipe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    }
+
+
+    .linha-desenvolvedores {
+    display: flex;
+    justify-content: center; 
+    gap: 30px;               
+    flex-wrap: wrap;
+    }
+
+
+    .card-dev {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    width: 280px; 
+    background-color: #4F4E32;
+    border: 5px solid #3e3c26;
+    
+    padding: 30px 20px; 
+    color: #ffffff;
+    }
+
+
+    .foto-bolinha {
+    width: 140px;  
+    height: 140px;
+    border-radius: 50%;       
+    object-fit: cover;        
+    border: 3px solid #fdf570; 
+    margin-bottom: 15px;
+    }
+
+
+    .card-dev h3 {
+    margin: 10px 0 5px 0;
+    font-size: 20px; 
+    color: #ffffff;
+    }
+
+    .card-dev .cargo {
+    font-size: 14px;
+    color: #fdf570;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    }
+
+
+    .card-dev p {
+    font-size: 15px; 
+    color: #d1d5db;
+    margin: 0;
+    line-height: 1.5;
+    }
+
+    .carrossel {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 15px;
+    background: #4F4E32;
+    border: 5px solid #d1d5db;
+}
+
+.carrossel-pista {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carrossel-pista::-webkit-scrollbar {
+    display: none;
+}
+
+.carrossel-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    height: 450px;
+    background: #020805;
+    border-radius: 6px;
+}
+
+.carrossel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    cursor: zoom-in;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    border: 3px solid #3e3c26;
+    border-radius: 50%;
+    background: rgba(79, 78, 50, 0.9);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.cenario:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px #fdf570;
+.carrossel-btn:hover {
+    background: #fdf570;
+    color: #4F4E32;
 }
 
-.cenario img {
-    display: block;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    background: #020805;
-    border-radius: 8px;
-}
+.carrossel-btn.anterior { left: 25px; }
+.carrossel-btn.proximo  { right: 25px; }
 
-.cenario h3 {
-    color: #fff;
-    font-size: 22px;
-    margin: 20px 0 12px;
-}
-
-.cenario p {
-    color: #c6dfd0;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.div-grande {
-    width: 90%;
-    max-width: 900px; 
-    margin: 50px auto; 
-    padding: 40px;     
-    background: #4F4E32; 
-    border: 5px solid #7F7F7F;          
-                  
-    
-    text-align: center;
-}
-
-.div-grande h2 {
-    color: #fff;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.div-grande p {
-    color: #c6dfd0;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.div-galeria-estilo {
-    width: 90%;
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 40px;
-    background: #4F4E32; 
-    border: 5px solid #7F7F7F;          
-                 
-   
-    text-align: center;
-}
-
-.div-galeria-estilo h2 {
-    color: #fff;
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.div-galeria-estilo p {
-    color: #c6dfd0;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-
-.grade-imagens {
+.carrossel-pontos {
     display: flex;
-    gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-.item-imagem {
-    flex: 1;
-    min-width: 250px;
-    height: 220px;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 2px solid #c6dfd0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.carrossel-pontos button {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 2px solid #3e3c26;
+    border-radius: 50%;
+    background: #c6dfd0;
+    cursor: pointer;
 }
 
-.item-imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-
-.item-imagem:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 15px #fdf570;
-    border-color: #7F7F7F;
-}
-
-.item-imagem:hover img {
-    transform: scale(1.1);
-}
-.card-horizontal {
-  display: flex;
-  flex-direction: row;
-  background-color: #4F4E32; 
-  color: #ffffff;
-  max-width: 900px;
-  border-radius: 6px;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-  margin-bottom: 25px;
-}
-
-.imagem-projeto {
-  width: 40%;
-  object-fit: cover;
-}
-
-.texto-projeto {
-  width: 60%;
-  padding: 30px;
-}
-
-.texto-projeto h2 {
-  margin-top: 0;
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.texto-projeto p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-.galeria-imagens {
-  display: grid;
- 
-  grid-template-columns: repeat(2, 1fr); 
- 
-  gap: 20px; 
-  width: 100%;
-  max-width: 1000px; 
-  margin: 0 auto;   
-  padding: 20px;
-}
-
-
-
-.item-imagem {
-  width: 100%;
-  height: 350px; 
-  border-radius: 6px;
-  overflow: hidden; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-}
-
-
-.item-imagem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  display: block;
-}
-
-
-.container-tres-colunas {
-  display: flex;
-  justify-content: space-between; 
-  gap: 20px;                      
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;                 
-  padding: 20px;
-}
-
-
-.card-tutorial {
-  flex: 1;                        
-  background-color: #4F4E32;
-  border: 2px solid #7F7F7F;
-  
-  padding: 25px;
-  color: #ffffff;
-  
-}
-
-.card-tutorial h3 {
-  margin-top: 0;
-  color: #fff;
-  font-size: 20px;
-  margin-bottom: 12px;
-}
-
-.card-tutorial p {
-  margin: 0;
-  color: #d1d5db;
-  line-height: 1.5;
-  font-size: 15px;
-}
-
-
-.equipe-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px; 
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-}
-
-
-.linha-desenvolvedores {
-  display: flex;
-  justify-content: center; 
-  gap: 30px;               
-  flex-wrap: wrap;
-}
-
-
-.card-dev {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 280px; 
-  background-color: #4F4E32;
-  border: 5px solid #7F7F7F;
-  
-  padding: 30px 20px; 
-  color: #ffffff;
- 
-}
-
-
-.foto-bolinha {
-  width: 140px;  
-  height: 140px;
-  border-radius: 50%;       
-  object-fit: cover;        
-  border: 3px solid #fdf570; 
-  margin-bottom: 15px;
-}
-
-
-.card-dev h3 {
-  margin: 10px 0 5px 0;
-  font-size: 20px; 
-  color: #ffffff;
-}
-
-.card-dev .cargo {
-  font-size: 14px;
-  color: #fdf570;
-  font-weight: bold;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-
-.card-dev p {
-  font-size: 15px; 
-  color: #d1d5db;
-  margin: 0;
-  line-height: 1.5;
-}
-
-
-@media (max-width: 768px) {
-  .card-dev {
-    width: 100%;
-    max-width: 320px;
-  }
+.carrossel-pontos button.ativo {
+    background: #fdf570;
 }
 
 @media (max-width: 768px) {
-  .container-tres-colunas {
-    flex-direction: column;
-  }
+    .carrossel {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .carrossel-slide {
+        height: 280px;
+    }
+
+    .carrossel-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .carrossel-btn.anterior { left: 15px; }
+    .carrossel-btn.proximo  { right: 15px; }
 }
 
-@media (max-width: 768px) {
-  .galeria-imagens {
-    grid-template-columns: 1fr; 
-  }
-}
-@media (max-width: 768px) {
-  .card-horizontal {
-    flex-direction: column;
-  }
-  .imagem-projeto, .texto-projeto {
-    width: 100%;
-  }
-}
+    @media (max-width: 768px) {
+    .card-dev {
+        width: 100%;
+        max-width: 320px;
+    }
+    }
 
+    @media (max-width: 768px) {
+    .container-tres-colunas {
+        flex-direction: column;
+    }
+    }
 
-@media (max-width: 768px) {
-  .card-horizontal {
-    flex-direction: column;
-  }
-  .imagem-projeto, .texto-projeto {
-    width: 100%;
-  }
-}
+    @media (max-width: 768px) {
+    .galeria-imagens {
+        grid-template-columns: 1fr; 
+    }
+    }
+    @media (max-width: 768px) {
+    .card-horizontal {
+        flex-direction: column;
+    }
+    .imagem-projeto, .texto-projeto {
+        width: 100%;
+    }
+    }
 
-@media (max-width: 700px) {
-    .lista-cenarios {
+    @media (max-width: 1000px) {
+    .lista-cenarios,
+    .personagens {
         flex-wrap: wrap;
     }
 
     .cenario {
-        flex: 1 1 100%;
+        flex: 1 1 300px;
     }
 
+    .personagem {
+        flex: 1 1 280px;
+        max-width: none;
+    }
+    }
+
+    @media (max-width: 700px) {
+        .lista-cenarios {
+            flex-wrap: wrap;
+        }
+
+        .cenario {
+            flex: 1 1 100%;
+        }
+
+        
+    }
+
+    @media (max-width: 1700px) {
+    .menu-icone {
+        display: block;
+        color: white;
+        font-size: 32px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    nav {
+        display: none;
+        position: fixed;
+        top: 110px;
+        max-height: calc(100vh - 130px);
+        max-height: calc(100dvh - 130px);
+        right: 3%;
+        left: auto;
+        width: 240px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        overscroll-behavior: contain;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 6px;
+        padding: 12px;
+        background: #4F4E32;
+        border: 3px solid #3e3c26;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+    nav a {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 12px;
+}
     
+
+    #menu-toggle:checked ~ nav {
+        display: flex;
+    }
+}
+.cenario img,
+.personagem img,
+.card-horizontal img,
+.item-imagem img {
+    cursor: zoom-in;
 }
 
- </style>
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 100;
+}
+
+.lightbox.aberto {
+    display: flex;
+}
+
+.lightbox-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1300px;
+    max-height: 100%;
+}
+
+.lightbox-conteudo img {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    max-height: calc(100vh - 40px);
+    object-fit: contain;
+    background: #020805;
+    border-radius: 8px;
+    cursor: default;
+}
+
+.lightbox-info {
+    flex: 0 0 320px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding: 25px;
+    background: #4F4E32;
+    border: 3px solid #3e3c26;
+    font-family: Arial, sans-serif;
+}
+
+.lightbox-info h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.lightbox-info p {
+    color: #c6dfd0;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.lightbox-fechar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 44px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.lightbox-fechar:hover {
+    color: #fdf570;
+}
+
+.painel-docs {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 110;
+}
+
+.painel-docs.aberto {
+    display: flex;
+}
+
+.painel-docs-caixa {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding: 30px;
+    background: #4F4E32;
+    border: 5px solid #3e3c26;
+    font-family: Arial, sans-serif;
+}
+
+.painel-docs-caixa h3 {
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 20px;
+    padding-right: 40px;
+}
+
+.painel-docs-fechar {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 38px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.painel-docs-fechar:hover {
+    color: #fdf570;
+}
+
+.lista-docs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.doc-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #3e3c26;
+    border: 3px solid #3e3c26;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.doc-item:hover {
+    background: #fdf570;
+    color: #4F4E32;
+}
+
+.doc-icone {
+    font-size: 30px;
+    flex-shrink: 0;
+}
+
+.doc-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.doc-texto strong {
+    font-size: 17px;
+}
+
+.doc-texto small {
+    font-size: 14px;
+    color: #c6dfd0;
+    transition: 0.3s;
+}
+
+.doc-item:hover .doc-texto small {
+    color: #4F4E32;
+}
+
+.area-jogo {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #4F4E32;
+    border: 5px solid #3e3c26;
+    text-align: center;
+}
+
+.area-jogo h2 {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.jogo-moldura {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 25px;
+    background: #020805;
+    border: 3px solid #3e3c26;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.jogo-moldura iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .area-jogo {
+        padding: 15px;
+    }
+
+    .area-jogo h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 800px) {
+    .lightbox {
+        align-items: flex-start;
+        overflow-y: auto;
+        padding: 60px 15px 20px;
+    }
+
+    .lightbox-conteudo {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .lightbox-conteudo img {
+        max-height: 60vh;
+    }
+
+    .lightbox-info {
+        flex: 0 0 auto;
+        width: 100%;
+        max-height: none;
+    }
+}
+
+#btn-documentos {
+    font-size: 16px;
+    padding: 15px 35px;
+}
+
+.jogo-moldura {
+    position: relative;
+}
+
+.btn-sair-tela-cheia {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 5;
+    padding: 10px 18px;
+    background: rgba(79, 78, 50, 0.9);
+    color: #fdf570;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid #3e3c26;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-sair-tela-cheia:hover {
+    background: #fdf570;
+    color: #4F4E32;
+}
+
+.jogo-moldura:fullscreen .btn-sair-tela-cheia {
+    display: block;
+}
+
+.jogo-moldura:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    aspect-ratio: auto;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+</style>
+</head>
 <body>
 
     <header>
-        
+        <div class="logo-header">
+            <img src="site/logo.png" alt="Turing's Code">
+        </div>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icone">☰</label>
 
         <nav>
             <a href="#home">Home</a>
-            <a href="#história">História</a>
+            <a href="#historia">História</a>
             <a href="#StoryBoard">StoryBoard</a>
             <a href="#cenarios">Cenários</a>
             <a href="#personagens">Personagens</a>
             <a href="#curiosidades">Curiosidades</a>
-            <a href="#codigos">Códigos</a> 
-            <a href="#documentação">Documentação</a>
+            <a href="#codigos">Códigos</a>
+            <a href="#documentacao">Documentação</a>
             <a href="#tutorial">Tutorial</a>
             <a href="#desenvolvedores">Desenvolvedores</a>
-            
-
         </nav>
     </header>
 
@@ -637,14 +1087,39 @@ footer {
         <h2>Sobre o projeto:</h2>
 
         <p>
-            O jogo que esse site apresenta faz parte do projeto de jogos realizados pelos os alunos do 1° de Desenvolvimento de Sistemas,
-            que tem como objetivo conectar a educação ao universo gamer. Tornando os alunos não apenas usuários, mas com agentes ativos 
-            no aprendizado das matérias aprendidas ao longo do ano.
+            Um jogo digital educativo do gênero Puzzle Adventure desenvolvido por nós, estudantes do 1º ano do Ensino Técnico Integrado em Desenvolvimento 
+            de Sistemas do IFSP (Campus São Paulo). O projeto tem como objetivo principal conectar a aprendizagem técnica à cultura de 
+            jogos eletrônicos (Game-Based Learning), direcionando-se a jovens do ensino médio e jovens adultos.
+            Utilizando o motor gráfico GameMaker (via linguagem GML) e uma direção de arte inspirada em pixel-art retrô, a 
+            narrativa e as mecânicas do jogo resgatam o contexto histórico de Bletchley Park e os primórdios da computação durante 
+            a Segunda Guerra Mundial. O enredo e a jogabilidade estruturam-se na cooperação interdisciplinar entre a lógica de software 
+            (representada pelo protagonista Alan Torres) e a engenharia de hardware e analógica (representada pelo co-protagonista Théo Torres), 
+            integrando conteúdos de Arquitetura de Computadores, Lógica de Programação e Matemática.
         </p>
     </section>
 
+    <section class="area-jogo" id="jogo">
+    <h2>Turing's Code</h2>
+
+    <div class="jogo-moldura" id="jogo-moldura">
+        <iframe id="jogo-frame"
+                src="jogo/index.html"
+                title="Turing's Code"
+                allowfullscreen
+                allow="autoplay; fullscreen; gamepad"></iframe>
+
+        <button type="button" class="btn-sair-tela-cheia" id="btn-sair-tela-cheia">
+            Diminuir tela
+        </button>
+    </div>
+
+    <button class="botao-descricao" id="btn-tela-cheia" type="button">
+        Tela cheia
+    </button>
+</section>
+
     <section>
-    <div class="div-grande" id="história">
+    <div class="div-grande" id="historia">
     <h2>História</h2>
     <p> Alan Torres é interrompido novamente de sua longa partida de video game por sua mãe que avisa ele que vão recebe a visita do 
         seu primo Theo, que traz uma misteriosa caixa de madeira antiga chamada Enigma, antes usada para criptografrar códigos.
@@ -652,11 +1127,13 @@ footer {
         bilhete resolve digitar o que está escrito 
         na caixa, mas algo inesperado acontece, o objeto começa a girar suas engrenagens levando-os para a época da Segunda Guerra Mundial. </p>
     <p>
+        <br>
         Alan e Theo são teletransportados inexplicavelmente para um galpão escuro em 1943.
         Onde eles se encontram com Alan Turing em Bletchley Park, que lhes explica que para voltarem para casa 
         precisam ajuda-ló a recolher as Válvulas de Comutação Mestra, que são as válvulas que faltam para colocar a máquina Bombe e faze-lá 
         funcionar.
     </p>
+    <br>
     <p>
         Após superarem várias missões complexas pelos huts, os primos entregam a última válvula a Alan Turing. 
         A máquina Bombe ativa-se com um brilho intenso e os dois voltam para casa, no quarto de Alan Torres. 
@@ -668,7 +1145,6 @@ footer {
 
     <section>
     <div class="div-galeria-estilo" id="StoryBoard">
-
     <h2>StoryBoard</h2>
     <p>Para dar vida a essa história, iniciaimente colocamos a imaginação no papel, fazendo um StoryBord para ficar mais claro como
         iamos realizar o projeto visualmente.
@@ -676,15 +1152,29 @@ footer {
     
     <div class="grade-imagens">
         <div class="item-imagem">
-            <img src="site/IMG-20260723-WA0009.jpg" alt="Imagem 1">
+    <img src="site/IMG-20260723-WA0009.jpg"
+         alt="StoryBoard, cena 1"
+         data-titulo="Cena 1: O quarto do Alan"
+         data-descricao="Parte 1 da história quadrinhos.">
         </div>
+
         <div class="item-imagem">
-            <img src="site/IMG-20260723-WA0012.jpg" alt="Imagem 2">
+            <img src="site/IMG-20260723-WA0011.jpg"
+                alt="StoryBoard, cena 2"
+                data-titulo="Cena 2: A caixa Enigma"
+                data-descricao="Parte 2 da história quadrinhos.">
         </div>
+
         <div class="item-imagem">
-            <img src="site/IMG-20260723-WA0011.jpg" alt="Imagem 3">
-        </div>
+            <img src="site/IMG-20260723-WA0012.jpg"
+         alt="StoryBoard, cena 3"
+         data-titulo="Cena 3: A viagem no tempo"
+         data-descricao="Descrição dos cenários">
+</div>
     </div>
+    <br>
+    <br>
+    <p>*Claro que o jogo deu uma mudada com o tempo e está um pouco diferente do StoryBoard... : ) </p>
 </div>
 </section>
 
@@ -727,7 +1217,7 @@ footer {
             Entre quadros-negros e mesas cobertas 
             de mensagens interceptadas dos temidos U-boats, cada clique mecânico da enigma 
             ecoa como uma contagem decrescente. Para encontrar a Válvula Beta e 
-            avançar na missão de voltar para casas.
+            avançar na missão de voltar para casas. </p>
         </div>
 
         
@@ -742,7 +1232,7 @@ footer {
             <h3>Bletchley Park</h3>
             <p>Um oásis de alta tensão e segredos de guerra.
                 Aqui, esconde-se os mais diversos mistérios, mas especialmente as Válvulas de Comutação Mestra, cercada por huts cheios de papeis furados, 
-                quadros-negros e fios expostos, mentes brilhantes lutam contra o relógio para quebrar o indifícil código Enigma.
+                quadros-negros e fios expostos, mentes brilhantes lutam contra o relógio para quebrar o tão difícil código Enigma.
                 Cada pista conta para encontrar as válvulas perdidas e conseguir o caminho de volta a casa.</p>
         </div>
         
@@ -799,7 +1289,7 @@ footer {
         <div class="personagem">
             <img src="site/2_20261031_125120_0001.png" alt="Outro personagem">
             <h3>Alan Turing</h3>
-            <p>O famoso pai da computação, deve dá orientações diretas  e dicas para Ala e Theo das
+            <p>O famoso pai da computação, deve dá orientações diretas  e dicas para Alan e Theo das
                 missões e concede itens-chave (como a chave-mestre da Mansão). 
             </p>
         </div>
@@ -826,10 +1316,12 @@ footer {
         </div>
 
         <div class="personagem">
-            <img src="site/Design sem nome_20261103_115319_0000.jpg" alt="Theo">
-            <h3>Gatinho créditos</h3>
-            <p>Nosso querido gatinho que dorme enquato os créditos passam a traz.</p>
+            <img src="site/aveia.png" alt="Theo">
+            <h3>Aveia</h3>
+            <p>Nosso querido gatinho que dorme enquato os créditos passam a traz. Faz referência a gata do nosso líder.</p>
         </div>
+
+    </div>
 
         
 </section>
@@ -894,7 +1386,7 @@ footer {
   <div class="texto-projeto">
     <h2>Enigma</h2>
     <p>Enigma foi uma máquina eletromecânica de criptografia com rotores. Utilizada tanto para criptografar como para descriptografar códigos de guerra, 
-    foi usada de várias formas na Europa a partir dos anos 1920.Durante a Segunda Guerra Mundial, as versões da Enigma são usadas por praticamente todas as comunicações rádio alemãs (e também as de outras potências do Eixo),
+    foi usada de várias formas na Europa a partir dos anos 1920. Durante a Segunda Guerra Mundial, as versões da Enigma são usadas por praticamente todas as comunicações rádio alemãs (e também as de outras potências do Eixo),
      tal como para as comunicações telegráficas.</p>
   </div>
 </div>
@@ -927,53 +1419,54 @@ footer {
             O sistema é estruturado utilizando o motor GameMaker e a linguagem de script GameMaker Language (GML), onde criamos 
             o jogo integralmente pela a plataforma. Trazendo a seguir, imagens dos principais códigos:
         </p>
-    </section>
+        <br>
+    <div class="carrossel">
+        <button class="carrossel-btn anterior" aria-label="Anterior">&#10094;</button>
 
-<section>
-<div class="galeria-imagens">
-  
-  <div class="item-imagem">
-    <img src="site/IMG-20261028-WA0069.jpg" alt="Imagem 1">
-  </div>
-  <div class="item-imagem">
-    <img src="site/IMG-20261028-WA0070.jpg" alt="Imagem 2">
-  </div>
+        <div class="carrossel-pista">
+            <div class="carrossel-slide">
+                <img src="site/IMG-20261028-WA0069.jpg" alt="Código 1"
+                     data-titulo="Código 1" data-descricao="Descreva este código aqui.">
+            </div>
+            <div class="carrossel-slide">
+                <img src="site/IMG-20261028-WA0070.jpg" alt="Código 2"
+                     data-titulo="Código 2" data-descricao="Descreva este código aqui.">
+            </div>
+            <div class="carrossel-slide">
+                <img src="site/IMG-20261028-WA0071.jpg" alt="Código 3"
+                     data-titulo="Código 3" data-descricao="Descreva este código aqui.">
+            </div>
+            <div class="carrossel-slide">
+                <img src="site/IMG-20261028-WA0072.jpg" alt="Código 4"
+                     data-titulo="Código 4" data-descricao="Descreva este código aqui.">
+            </div>
+            <div class="carrossel-slide">
+                <img src="site/IMG-20261028-WA0073.jpg" alt="Código 5"
+                     data-titulo="Código 5" data-descricao="Descreva este código aqui.">
+            </div>
+            <div class="carrossel-slide">
+                <img src="site/IMG-20261028-WA0074.jpg" alt="Código 6"
+                     data-titulo="Código 6" data-descricao="Descreva este código aqui.">
+            </div>
+            <div class="carrossel-slide">
+                <img src="site/IMG-20261028-WA0075.jpg" alt="Código 7"
+                     data-titulo="Código 7" data-descricao="Descreva este código aqui.">
+            </div>
+            <div class="carrossel-slide">
+                <img src="site/IMG-20261028-WA0077.jpg" alt="Código 8"
+                     data-titulo="Código 8" data-descricao="Descreva este código aqui.">
+            </div>
+        </div>
 
- 
-  <div class="item-imagem">
-    <img src="site/IMG-20261028-WA0071.jpg" alt="Imagem 3">
-  </div>
-  <div class="item-imagem">
-    <img src="site/IMG-20261028-WA0072.jpg" alt="Imagem 4">
-  </div>
-</div>
+        <button class="carrossel-btn proximo" aria-label="Próximo">&#10095;</button>
 
-</section>
-
-<section>
-<div class="galeria-imagens">
-  
-  <div class="item-imagem">
-    <img src="site/IMG-20261028-WA0073.jpg" alt="Imagem 1">
-  </div>
-  <div class="item-imagem">
-    <img src="site/IMG-20261028-WA0074.jpg" alt="Imagem 2">
-  </div>
-
- 
-  <div class="item-imagem">
-    <img src="site/IMG-20261028-WA0075.jpg" alt="Imagem 3">
-  </div>
-  <div class="item-imagem">
-    <img src="site/IMG-20261028-WA0077.jpg" alt="Imagem 4">
-  </div>
-</div>
-
+        <div class="carrossel-pontos"></div>
+    </div>
 </section>
 
 <section >
     
-    <div class="div-grande" id="documentação">
+    <div class="div-grande" id="documentacao">
 
     <h2>Documentação</h2>
     <p>O documento de projeto do jogo Turing's Code, 
@@ -991,15 +1484,9 @@ footer {
     </section>
 
 <div class="botoes-descricao">
-
-    <a href="#" class="botao-descricao">
-       Doc.Site
-    </a>
-
-    <a href="#" class="botao-descricao">
-        Doc.Jogo
-    </a>
-
+    <button type="button" class="botao-descricao" id="btn-documentos">
+        Documentação
+    </button>
 </div>
 <br>
 <br>
@@ -1061,16 +1548,11 @@ footer {
 </div>
 </section>
 <section>
-    para a gameplay
 </section>
 <div class="botoes-descricao">
 
-    <a href="#" class="botao-descricao">
-        Gameplay
-    </a>
-
-    <a href="#" class="botao-descricao">
-        Jogue 
+    <a href="#jogo" class="botao-descricao">
+        Jogo
     </a>
 
 </div>
@@ -1134,15 +1616,225 @@ footer {
         <h2>Agradecimentos</h2>
 
         <p>
-            Agradecemos a todos os professores que ajudaram no desenvolever do jogo mas especialmente a professora Miyuki que fez tornar
-            esse projeto real e direciona-ló ao longo do curso, a Ana Mamede por nos ajudar a desenvolver todo a parte do site e tornar a apresentação real ao público
-            e ao Luk que já aposentado quando ainda estava dando aula tirou da gente muitas rizadas e aprendizados. 
-            Agradecemos também a presença de todos que assistiram a nossa apresentação! E lembre-se:" Ás vezes, são as pessoas que ninguém
-            espera nada, que fazem as coisas que ninguém consegue imaginar".
+            Agradecemos a todos os professores que ajudaram no desenvolever do jogo.
         </p>
+        <p>
+            Especialmente a professora Miyuki que fez tornar esse projeto real e direciona-ló ao longo do curso;
+        </p>
+        <p>
+            A Ana Mamede por nos ajudar a desenvolver todo a parte do site e tornar a apresentação real ao público;
+        </p>
+        <p>
+            E ao Luk que já aposentado quando ainda estava dando aula tirou da gente muitas rizadas e aprendizados.
+        </p> 
+    <p>Agradecemos também a presença de todos que assistiram a nossa apresentação! E lembre-se:</p>
+        <p>" Ás vezes, são as pessoas que ninguém espera nada, que fazem as coisas que ninguém consegue imaginar".</p>
     </section>
 </section>
 
-    <footer>
-        <h3>© 2026 Turing's Code</h3>
-    </footer>
+        <footer>
+    <h3>© 2026 Turing's Code</h3>
+    <p>Todos os direitos reservados. Projeto desenvolvido por estudantes do IFSP, Campus São Paulo.</p>
+</footer>
+
+    <div id="lightbox" class="lightbox">
+    <button class="lightbox-fechar" aria-label="Fechar">&times;</button>
+    <div class="lightbox-conteudo">
+        <img id="lightbox-img" src="" alt="">
+        <div class="lightbox-info">
+            <h3 id="lightbox-titulo"></h3>
+            <p id="lightbox-texto"></p>
+        </div>
+    </div>
+</div>
+
+<div id="painel-docs" class="painel-docs" role="dialog" aria-modal="true" aria-labelledby="painel-docs-titulo">
+    <div class="painel-docs-caixa">
+        <button type="button" class="painel-docs-fechar" aria-label="Fechar">&times;</button>
+        <h3 id="painel-docs-titulo">Documentos do projeto</h3>
+
+        <div class="lista-docs">
+            <a class="doc-item" href="Documentação/historiafinal.pdf" target="_blank" rel="noopener">
+                <span class="doc-icone">📄</span>
+                <span class="doc-texto">
+                    <strong>História</strong>
+                    <small>Roteiro completo da história do nosso jogo.</small>
+                </span>
+            </a>
+
+            <a class="doc-item" href="Documentação/storyboard.pdf" target="_blank" rel="noopener">
+                <span class="doc-icone">📄</span>
+                <span class="doc-texto">
+                    <strong>StoryBoard</strong>
+                    <small>A "História em Quadrinhos" do nosso jogo, a base de toda história</small>
+                </span>
+            </a>
+
+            <a class="doc-item" href="Documentação/SITEJOGO.pdf" target="_blank" rel="noopener">
+                <span class="doc-icone">📄</span>
+                <span class="doc-texto">
+                    <strong>Site</strong>
+                    <small>Tudo sobre o site documentado.</small>
+                </span>
+            </a>
+
+            <a class="doc-item" href="Documentação/DOCprojeto.pdf" target="_blank" rel="noopener">
+                <span class="doc-icone">📄</span>
+                <span class="doc-texto">
+                    <strong>Projeto</strong>
+                    <small>Documento de todo nosso projeto.</small>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+
+    <script>
+    const menu = document.getElementById('menu-toggle');
+
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => menu.checked = false);
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('header')) {
+            menu.checked = false;
+        }
+    });
+
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbTitulo = document.getElementById('lightbox-titulo');
+    const lbTexto = document.getElementById('lightbox-texto');
+    const lbInfo = document.querySelector('.lightbox-info');
+
+    function abrirLightbox(img) {
+        const card = img.closest('.cenario, .personagem, .card-horizontal');
+        let titulo = '';
+        let texto = '';
+
+        if (card) {
+            const t = card.querySelector('h2, h3');
+            const p = card.querySelector('p');
+            titulo = img.dataset.titulo || (t ? t.textContent.trim() : '');
+            texto = img.dataset.descricao
+                || (p ? p.textContent.replace(/\s+/g, ' ').trim() : '');
+        } else {
+            titulo = img.dataset.titulo || img.alt;
+            texto = img.dataset.descricao || '';
+        }
+
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lbTitulo.textContent = titulo;
+        lbTexto.textContent = texto;
+        lbInfo.style.display = (titulo || texto) ? '' : 'none';
+
+        lightbox.classList.add('aberto');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function fecharLightbox() {
+        lightbox.classList.remove('aberto');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll(
+        '.cenario img, .personagem img, .card-horizontal img, .item-imagem img, .carrossel-slide img'
+    ).forEach(img => {
+        img.addEventListener('click', () => abrirLightbox(img));
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (!e.target.closest('#lightbox-img, .lightbox-info')) {
+            fecharLightbox();
+        }
+    });
+
+    document.querySelector('.lightbox-fechar').addEventListener('click', fecharLightbox);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') fecharLightbox();
+    });
+
+    document.querySelectorAll('.carrossel').forEach(carrossel => {
+        const pista = carrossel.querySelector('.carrossel-pista');
+        const slides = carrossel.querySelectorAll('.carrossel-slide');
+        const pontos = carrossel.querySelector('.carrossel-pontos');
+
+        slides.forEach((_, i) => {
+            const b = document.createElement('button');
+            b.setAttribute('aria-label', 'Ir para a imagem ' + (i + 1));
+            b.addEventListener('click', () => {
+                pista.scrollTo({ left: pista.clientWidth * i });
+            });
+            pontos.appendChild(b);
+        });
+
+        function atualizar() {
+            const i = Math.round(pista.scrollLeft / pista.clientWidth);
+            pontos.querySelectorAll('button').forEach((b, n) => {
+                b.classList.toggle('ativo', n === i);
+            });
+        }
+
+        carrossel.querySelector('.anterior').addEventListener('click', () => {
+            if (pista.scrollLeft <= 5) {
+                pista.scrollTo({ left: pista.scrollWidth });
+            } else {
+                pista.scrollBy({ left: -pista.clientWidth });
+            }
+        });
+
+        carrossel.querySelector('.proximo').addEventListener('click', () => {
+            if (pista.scrollLeft + pista.clientWidth >= pista.scrollWidth - 5) {
+                pista.scrollTo({ left: 0 });
+            } else {
+                pista.scrollBy({ left: pista.clientWidth });
+            }
+        });
+
+        pista.addEventListener('scroll', atualizar);
+        atualizar();
+    });
+     const moldura = document.getElementById('jogo-moldura');
+
+    document.getElementById('btn-tela-cheia').addEventListener('click', () => {
+        if (moldura.requestFullscreen) {
+            moldura.requestFullscreen();
+        }
+    });
+
+    document.getElementById('btn-sair-tela-cheia').addEventListener('click', () => {
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+        }
+    });
+    const painelDocs = document.getElementById('painel-docs');
+
+    function abrirPainelDocs() {
+        painelDocs.classList.add('aberto');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function fecharPainelDocs() {
+        painelDocs.classList.remove('aberto');
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('btn-documentos').addEventListener('click', abrirPainelDocs);
+
+    document.querySelector('.painel-docs-fechar').addEventListener('click', fecharPainelDocs);
+
+    painelDocs.addEventListener('click', (e) => {
+        if (!e.target.closest('.painel-docs-caixa')) {
+            fecharPainelDocs();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') fecharPainelDocs();
+    });
+</script>
+</body>
+</html>
