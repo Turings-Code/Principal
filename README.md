@@ -52,5 +52,7 @@ O projeto foi desenvolvido por cinco integrantes, cada um contribuindo em difere
   **TURING'S CODE**
   
   *Um projeto desenvolvido no IFSP.*
+
+  <sub>© 2026 Turing's Code. Todos os direitos reservados.</sub>
   
 </div>
