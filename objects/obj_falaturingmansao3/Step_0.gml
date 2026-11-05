@@ -6,5 +6,6 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
 		global.fragmento1=false;
 	global.fragmento2=false;
 	global.fragmento3=false;
+	instance_destroy();
     }
 }

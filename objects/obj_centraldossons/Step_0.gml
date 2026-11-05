@@ -36,3 +36,9 @@ if (room != rm_quarto && audio_is_playing(snd_backgroundquarto)) {
         audio_stop_sound(snd_backgroundquarto);
     }
 }
+
+if(room==rm_creditos2){
+		if (audio_is_playing(snd_backgroundfinal)) {
+    audio_sound_gain(snd_backgroundfinal, 1, 2000);
+}
+}

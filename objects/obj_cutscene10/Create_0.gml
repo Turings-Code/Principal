@@ -1,7 +1,7 @@
 if(!instance_exists(obj_alan)){
 	instance_create_layer(500, 500, "Instances", obj_alan);
 }
-depth = -60000;
+
 cam_zoom_vel = 0.03;
 cam_vel = 0.08;
 obj_alan.travado=true;

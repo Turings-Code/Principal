@@ -1,3 +1,5 @@
+if(!audio_is_playing(snd_whoosh)){
+	audio_play_sound(snd_whoosh, 1, false);}
 if (instance_exists(obj_alan)) {
     obj_alan.travado = true;
     obj_alan.direcao = "cima";

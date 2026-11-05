@@ -1,7 +1,8 @@
 depth = -y;
 image_xscale=8;
 image_yscale=8;
-velocidade_andar = 4; //4
+velocidade_andar = 6.5; //4
+preso_cont = 0;
 andando = true;
 saidamansao=false;
 pontos_x = [1226, 1223, 1226, 1950, 2234];

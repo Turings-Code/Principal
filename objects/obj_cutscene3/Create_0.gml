@@ -10,7 +10,7 @@ _bloco.image_xscale = 2.7;
 _bloco.image_yscale = 2.5;
 instance_create_layer(1170, 1855, "Instances", obj_falahut8);}
 
-depth = -20000;
+
 cam_zoom_vel = 0.03;
 cam_vel = 0.08;
 cutscene=false;

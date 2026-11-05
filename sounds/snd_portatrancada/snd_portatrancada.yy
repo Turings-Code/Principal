@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.84,
+  "duration":1.0320182,
   "exportDir":"",
   "name":"snd_portatrancada",
   "parent":{

@@ -9,7 +9,7 @@ if(!instance_exists(obj_turing)){
 } else{
 	obj_turing.x = 2500; obj_turing.y=2700;}
 	obj_alan.theosegue=true;
-depth = -20000;
+
 cam_zoom_vel = 0.03;
 cam_vel = 0.08;
 global.cutscene4criada=true;
@@ -49,7 +49,6 @@ dialogos = [
 	{ nome: "Turing", frase: "Espera ai, seu nome também é Alan?" },
 	{ nome: "Alan", frase: "É Alan sim, o que preciso fazer pra pegar a próxima válvula?" },
 	{ nome: "Turing", frase: "A próxima válvula, a Válvula Beta, está dentro de um rádio alemão." },
-	{ nome: "Turing", frase: "Sei que não descobriram uma forma de abrir aquilo ainda." },
 	{ nome: "Turing", frase: "Junto com ele, tem um código, que você vai precisar achar também." },
 	{ nome: "Alan", frase: "Como eu vou achar o código e o rádio?" },
 	{ nome: "Turing", frase: "Tenho um mapa da Hut 6 pra te ajudar." },

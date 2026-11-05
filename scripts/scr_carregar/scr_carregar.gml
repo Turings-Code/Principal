@@ -51,23 +51,28 @@ function scr_carregar() {
 		obj_trocaroom.usar_spawn = true;
 	}
 
-    if (_r == rm_bletchley2 && global.cutscene4criada) {
-    global.valvulaalfa = true;
-    global.folhasenigma = true;
-    obj_trocaroom.spawn_x = 2351;
-    obj_trocaroom.spawn_y = 2685;
-    obj_trocaroom.usar_spawn = true;
-	
-}
-	if (_r == rm_bletchley2 && global.cutscene6criada) {
+
+    if (_r == rm_bletchley2 && global.cutscene6criada) {
     global.valvulaalfa = true;
     global.valvulabeta = true;
-	global.folhasenigma = true;
-	global.mapahut6 = true;
-	global.codigohut6 = true;
+    global.folhasenigma = true;
+    global.mapahut6 = true;
+    global.codigohut6 = true;
+    obj_trocaroom.quartopara2 = false;
     obj_trocaroom.spawn_x = 2863;
     obj_trocaroom.spawn_y = 1167;
     obj_trocaroom.usar_spawn = true;
+}
+else if (_r == rm_bletchley2 && global.cutscene4criada) {
+    global.valvulaalfa = true;
+    global.folhasenigma = true;
+    obj_trocaroom.quartopara2 = false;
+    obj_trocaroom.spawn_x = 2351;
+    obj_trocaroom.spawn_y = 2685;
+    obj_trocaroom.usar_spawn = true;
+}
+else if (_r == rm_bletchley2) {
+    obj_trocaroom.quartopara2 = true;
 }
 
 

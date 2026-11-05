@@ -1,4 +1,4 @@
-depth = -20000;
+
 cam_zoom_vel = 0.03;
 cam_vel = 0.08;
 cutscene = false;
@@ -20,7 +20,8 @@ shake_forca = 0;
 shake_t = 1;
 shake_ox = 0;
 shake_oy = 0;
-
+if(!global.cutscene4criada&&!global.cutscene6criada){
+	alarm[0]=5;}
 delay_inicio = 120;
 
 dialogo_index = -1;
@@ -54,9 +55,7 @@ dialogos_turing = [
 	{ nome: "Turing", frase: "Aqui é Bletchley Park, centro de criptoanálise do Reino Unido." },
 	{ nome: "Alan", frase: "Como voltamos para o nosso presente, senhor Turing?" },
 	{ nome: "Turing", frase: "Isso é complicado. Os Enigmas daqui não teriam como levá-los de volta." },
-	{ nome: "Turing", frase: "Mas acho que tem outra maneira de levar vocês ao seu presente." },
-	{ nome: "Turing", frase: "Estou desenvolvendo uma máquina, a Bombe, dentro de um laboratório." },
-	{ nome: "Turing", frase: "Mas meu comandante está me impedindo de continuar a fazer ela." },
+	{ nome: "Turing", frase: "Estou desenvolvendo uma máquina, a Bombe, e ela pode levá-los ao seu presente." },
 	{ nome: "Theo", frase: "Onde fica essa máquina?" },
 	{ nome: "Turing", frase: "Ela fica na Mansão de Bletchley Park, nosso edifício principal." },
 	{ nome: "Turing", frase: "Eu não tenho mais acesso a ela, mas estava prestes de terminá-la." },
@@ -67,7 +66,6 @@ dialogos_turing = [
 	{ nome: "Turing", frase: "Acho que o conhecimento moderno de vocês pode me ajudar." },
 	{ nome: "Turing", frase: "A primeira válvula, a Válvula Alfa está trancada em um báu na Hut 8." },
 	{ nome: "Turing", frase: "A Hut 8 é minha unidade de decifrar mensagens." },
-	{ nome: "Turing", frase: "Nossa equipe não descobriu a criptografia e não abrimos o baú ainda." },
 	{ nome: "Theo", frase: "E como chegamos a essa Hut?" },
 	{ nome: "Turing", frase: "Me sigam, e tentem não chamar atenção, pois não deveriam estar aqui." },
 	{ nome: "Turing", frase: "Fiquem com esse mapa também, e tentem não se perder." },

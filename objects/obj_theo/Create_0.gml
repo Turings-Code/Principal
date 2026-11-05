@@ -22,7 +22,7 @@ image_yscale=8;}
 if(room=rm_transicao1){
 image_xscale=8;
 image_yscale=8;}
-velocidade = 5;
+velocidade = 6;
 atraso_passos = 25;
 distancia_minima = 140;
 

@@ -6,7 +6,7 @@ if(instance_exists(obj_cutscene6)){if(obj_cutscene6.cutscene) exit;}
 if(instance_exists(obj_cutscene7)){if(obj_cutscene7.cutscene) exit;}
 if(instance_exists(obj_cutscene8)){if(obj_cutscene8.cutscene) exit;}
 if(instance_exists(obj_cutscene9)){if(obj_cutscene9.cutscene) exit;}
-if(room==rm_transicao1||room==rm_transicao2||room==rm_quarto2) exit;
+if(room==rm_transicao1||room==rm_transicao2||room==rm_quarto2||room==rm_menu) exit;
 
 var _popup = instance_exists(obj_quadro) || instance_exists(obj_piano) || instance_exists(obj_cofre)
           || instance_exists(obj_enigma1) || instance_exists(obj_enigma2) || instance_exists(obj_enigma3)

@@ -1,4 +1,4 @@
-depth = -60000;
+
 cam_zoom_vel = 0.03;
 cam_vel = 0.08;
 

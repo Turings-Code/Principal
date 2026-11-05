@@ -14,13 +14,13 @@
   "exportDir":"",
   "name":"snd_backgroundquarto",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Musicas",
+    "path":"folders/Sounds/Musicas.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_backgroundquarto.mp3",
-  "volume":0.04,
+  "volume":0.18,
 }

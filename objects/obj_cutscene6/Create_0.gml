@@ -19,7 +19,7 @@ if(!instance_exists(obj_turing)){
         obj_objetivos.define_etapas([]);
 obj_alan.theosegue=true;
 
-depth = -60000;
+
 cam_zoom_vel = 0.03;
 cam_vel = 0.08;
 global.cutscene6criada=true;

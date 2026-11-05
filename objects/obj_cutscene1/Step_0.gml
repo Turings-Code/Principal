@@ -2,8 +2,8 @@ if (maeentra) {
 	if(!instance_exists(obj_mainha)){
 		instance_create_layer(1050, 1080, "Instances", obj_mainha);}
     obj_mainha.y -= 5;
-    if (obj_mainha.sprite_index != spr_maebaixo) {
-        obj_mainha.sprite_index = spr_maebaixo;
+    if (obj_mainha.sprite_index != spr_maecima) {
+        obj_mainha.sprite_index = spr_maecima;
     }
     if (obj_mainha.y <= 700) {
         acao1 = false;
@@ -64,7 +64,7 @@ if (!acao1 && !maesai) {
 
 if (maesai) {
     obj_mainha.y += 5;
-    obj_mainha.sprite_index = spr_alancima;
+    obj_mainha.sprite_index = spr_maebaixo;
 
     if (obj_mainha.y > 1250) {
         maesai = false;
@@ -81,7 +81,7 @@ if (theoentra) {
 
     if (obj_theocutscene.y <= 700) {
         obj_theocutscene.y = 700;
-        obj_theocutscene.sprite_index = spr_theoparado;
+        obj_theocutscene.sprite_index = spr_theosegurandobaixo;
         theoentra = false;
 
         dialogos = dialogos_theo;

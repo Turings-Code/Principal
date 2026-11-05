@@ -48,19 +48,19 @@ var move_x = 0;
 var move_y = 0;
 
 if (room == rm_mansao) {
-    vel = 9;
+    vel = 10;
 } else if (room == rm_bletchley) {
-    vel = 9;
+    vel = 10;
 } else if (room == rm_bletchley2) {
-    vel = 9;
+    vel = 10;
 } else if (room == rm_hut8) {
-    vel = 9;
+    vel = 10;
 } else if (room == rm_quarto) {
     vel = 7;
 } else if (room == rm_hut6) {
-    vel = 9;
+    vel = 10;
 } else if (room == rm_salafinal) {
-    vel = 9;
+    vel = 10;
 } else if (room == rm_quarto2) {
     vel = 7;
 }
@@ -336,7 +336,7 @@ if (_andando) {
     if (place_meeting(x, y, obj_passosmadeira)) {
         if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
         if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
-        if (audio_is_playing(snd_passostapete)) audio_stop_sound(snd_passostapete);
+        if (audio_is_playing(snd_passostapetes)) audio_stop_sound(snd_passostapetes);
 
         if (!audio_is_playing(snd_passosmadeira)) {
             audio_play_sound(snd_passosmadeira, 1, true);
@@ -347,14 +347,14 @@ if (_andando) {
         if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
         if (audio_is_playing(snd_passosmadeira)) audio_stop_sound(snd_passosmadeira);
 
-        if (!audio_is_playing(snd_passostapete)) {
-            audio_play_sound(snd_passostapete, 1, true);
+        if (!audio_is_playing(snd_passostapetes)) {
+            audio_play_sound(snd_passostapetes, 1, true);
         }
     }
     else if (_na_grama) {
         if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
         if (audio_is_playing(snd_passosmadeira)) audio_stop_sound(snd_passosmadeira);
-        if (audio_is_playing(snd_passostapete)) audio_stop_sound(snd_passostapete);
+        if (audio_is_playing(snd_passostapetes)) audio_stop_sound(snd_passostapetes);
 
         if (!audio_is_playing(snd_passosgrama)) {
             audio_play_sound(snd_passosgrama, 1, true);
@@ -365,7 +365,7 @@ if (_andando) {
     else {
         if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
         if (audio_is_playing(snd_passosmadeira)) audio_stop_sound(snd_passosmadeira);
-        if (audio_is_playing(snd_passostapete)) audio_stop_sound(snd_passostapete);
+        if (audio_is_playing(snd_passostapetes)) audio_stop_sound(snd_passostapetes);
 
         if (!audio_is_playing(snd_passospedra)) {
             audio_play_sound(snd_passospedra, 1, true);
@@ -377,5 +377,5 @@ else {
     if (audio_is_playing(snd_passosgrama)) audio_stop_sound(snd_passosgrama);
     if (audio_is_playing(snd_passospedra)) audio_stop_sound(snd_passospedra);
     if (audio_is_playing(snd_passosmadeira)) audio_stop_sound(snd_passosmadeira);
-    if (audio_is_playing(snd_passostapete)) audio_stop_sound(snd_passostapete);
+    if (audio_is_playing(snd_passostapetes)) audio_stop_sound(snd_passostapetes);
 }

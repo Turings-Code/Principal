@@ -1,6 +1,6 @@
 margem_x = 40;
 margem_y = 220;
-depth = -18000;
+//depth = -18000;
 image_alpha = 0.9;
 aberto = false;
 itens = [];

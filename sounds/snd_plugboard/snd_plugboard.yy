@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_plugboard",
   "parent":{
-    "name":"Hut8",
-    "path":"folders/Sounds/Efeitos sonoros/Hut8.yy",
+    "name":"Hut 8",
+    "path":"folders/Sounds/Efeitos sonoros/Hut 8.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -5,6 +5,8 @@ if (keyboard_check_pressed(ord("E")) && instance_exists(obj_letrae) && instance_
 
     if (_d_letra < _d_alfa && _d_letra < _d_mestra) {
         global.valvulabeta = false;
+		if(!audio_is_playing(snd_colocavalvula)){
+		audio_play_sound(snd_colocavalvula, 1, false);}
         instance_destroy();
     }
 }

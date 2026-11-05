@@ -14,13 +14,13 @@
   "exportDir":"",
   "name":"snd_itemnovo",
   "parent":{
-    "name":"Hut8",
-    "path":"folders/Sounds/Efeitos sonoros/Hut8.yy",
+    "name":"Hut 8",
+    "path":"folders/Sounds/Efeitos sonoros/Hut 8.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_itemnovo.mp3",
-  "volume":1.0,
+  "volume":0.32,
 }

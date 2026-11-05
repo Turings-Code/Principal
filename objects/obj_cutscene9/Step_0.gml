@@ -40,6 +40,10 @@ if (espera_final3_timer > 0) {
     if (instance_exists(obj_alan)) obj_alan.travado = true;
     if (espera_final3_timer <= 0) {
         dialogo_final3 = true;
+		if(audio_is_playing(snd_backgroundmisterio2)){
+			audio_stop_sound(snd_backgroundmisterio2);}
+		if(!audio_is_playing(snd_backgroundfinal)){
+			audio_play_sound(snd_backgroundfinal, 1, true);}
     }
 }
 
@@ -176,9 +180,10 @@ if(!global.valvulamestra){
 		instance_create_layer(2391, 1025, "Instances", obj_valvulamestrabombe)
 	}
 }
-if(instance_exists(obj_valvulaalfabombe)&&instance_exists(obj_valvulabetabombe)&&instance_exists(obj_valvulamestrabombe)){
+if(instance_exists(obj_valvulaalfabombe)&&instance_exists(obj_valvulabetabombe)&&instance_exists(obj_valvulamestrabombe)&&!foisom){
 	obj_objetivos.define_objetivo("OBJETIVO - Volte até o Turing");
     obj_objetivos.define_etapas([]);
+	foisom=true;
 	audio_play_sound(snd_objetivo, 1, false);
 	if(!instance_exists(obj_falaturingfinal2)&&!global.foifalaturing){
 		instance_create_layer(obj_turing.x, obj_turing.y, "Instances", obj_falaturingfinal2);}

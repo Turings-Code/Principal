@@ -29,7 +29,7 @@ if (dialogo_index < array_length(dialogos)) {
             with (obj_enigmainicial) instance_destroy();
         }
         if (instance_exists(obj_enigmaampl)) {
-            with (obj_enigmaampl) instance_destroy();
+            obj_enigmaampl.fading_out=true;
         }
         if (instance_exists(obj_alan)) {
             obj_alan.sprite_index = spr_alanquebraenigma;

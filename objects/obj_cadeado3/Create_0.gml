@@ -9,3 +9,4 @@ queda_grav = 0.6;
 giro_alvo = -25;
 giro_vel = 0.15;
 parado = false;
+destrancou = false;

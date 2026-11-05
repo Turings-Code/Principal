@@ -1,3 +1,15 @@
+if (room != room_anterior_blocos) {
+    room_anterior_blocos = room;
+
+    blocos_criados = false;
+    blocos_inst = [];
+    blocos_criados4 = false;
+    blocos_inst4 = [];
+    blocos_criados6 = false;
+    blocos_inst6 = [];
+    blocos_criados7 = false;
+    blocos_inst7 = [];
+}
 if(instance_exists(obj_cutscene6)){cutscene6foi=true;}
 if (keyboard_check_pressed(vk_f11)) {
     window_set_fullscreen(!window_get_fullscreen());

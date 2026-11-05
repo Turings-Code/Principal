@@ -13,10 +13,15 @@ if (dialogo_index < array_length(dialogos)) {
     if (fase == 1) {
         fase = 2;
         turing_sobe = true;
+		if(audio_is_playing(snd_backgroundtenso)){
+				audio_stop_sound(snd_backgroundtenso);}
     }
     else if (fase == 2) {
 
         if (instance_exists(obj_objetivos)) {
+			if(!audio_is_playing(snd_backgroundmisterio)){
+				audio_play_sound(snd_backgroundmisterio, 1, true);}
+			
             obj_objetivos.define_objetivo("OBJETIVO - Siga o Turing");
         }
 		if (instance_exists(obj_turing)) {
