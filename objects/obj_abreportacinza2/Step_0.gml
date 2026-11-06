@@ -16,6 +16,5 @@ if (!global.chavecinza && instance_exists(obj_alan)) {
         if(!audio_is_playing(snd_portatrancada)){
 			audio_play_sound(snd_portatrancada, 1, false);}
 
-        instance_destroy();
     }
 }

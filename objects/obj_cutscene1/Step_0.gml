@@ -96,13 +96,13 @@ if (theoentra) {
 }
 
 if (theoanda == 1) {
-    obj_theocutscene.sprite_index = spr_theobaixo;
+    obj_theocutscene.sprite_index = spr_theosegurandobaixo;
     obj_theocutscene.y = min(obj_theocutscene.y + theo_vel, theo_alvo_y);
 
     if (obj_theocutscene.y >= theo_alvo_y) theoanda = 2;
 }
 else if (theoanda == 2) {
-    obj_theocutscene.sprite_index = spr_theoesquerda;
+    obj_theocutscene.sprite_index = spr_theosegurandoesquerda;
     obj_theocutscene.x = max(obj_theocutscene.x - theo_vel, theo_alvo_x);
 
     if (obj_theocutscene.x <= theo_alvo_x) {

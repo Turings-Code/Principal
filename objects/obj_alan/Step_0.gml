@@ -1,8 +1,9 @@
-
-/*show_debug_message(
+/*
+show_debug_message(
     string(device_mouse_x_to_gui(0)) + "x" +
     string(device_mouse_y_to_gui(0))
-);*/
+);
+*/
 //show_debug_message(distance_to_object(obj_turinghut8));
 /*show_debug_message("alan:" + string(image_xscale));
 if(instance_exists(obj_theo)){

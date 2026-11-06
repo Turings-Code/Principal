@@ -11,7 +11,13 @@ image_speed = 0;
 image_index = 0;
 
 areas_menu = [
-    [502, 289, 863, 373],
-    [412, 400, 943, 487],
-    [570, 505, 793, 594]
+    [503, 334, 865, 428],
+    [415, 444, 937, 536]
 ];
+
+aviso_ativo = false;
+aviso_y = 0;
+aviso_alpha = 0;
+aviso_vel = 0.5;
+aviso_fade = 0.008;
+aviso_escala = 0.7;

@@ -11,8 +11,8 @@
   "name":"obj_objetivos",
   "overriddenProperties":[],
   "parent":{
-    "name":"Comandos",
-    "path":"folders/Objetos/Comandos.yy",
+    "name":"Interface",
+    "path":"folders/Objetos/Interface.yy",
   },
   "parentObjectId":null,
   "persistent":true,
