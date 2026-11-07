@@ -1019,8 +1019,8 @@ footer p {
 .btn-sair-tela-cheia {
     display: none;
     position: absolute;
-    top: 15px;
     right: 15px;
+    bottom: 15px;
     z-index: 5;
     padding: 10px 18px;
     background: rgba(79, 78, 50, 0.9);
@@ -1064,6 +1064,129 @@ footer p {
     color: #fff;
 }
 
+.barra-jogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.aviso-pc {
+    color: #c6dfd0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.botao-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.btn-sair-tela-cheia {
+    padding: 8px 12px;
+    line-height: 0;
+}
+
+.jogo-moldura:fullscreen .btn-sair-tela-cheia {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tutorial-janela {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.tutorial-trilho {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.tutorial-trilho.mostrando-video {
+    transform: translateX(-100%);
+}
+
+.tutorial-painel {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+#painel-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.video-moldura {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #020805;
+    border: 5px solid #3e3c26;
+}
+
+.video-moldura video,
+.video-moldura iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+.tutorial-trilho.mostrando-trailer {
+    transform: translateX(-200%);
+}
+
+#painel-trailer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.acoes-jogo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.aviso-celular {
+    display: none;
+    padding: 40px 20px;
+    background: #3e3c26;
+    border: 3px solid #3e3c26;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+}
+
+.aviso-celular h3 {
+    color: #fdf570;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.aviso-celular p {
+    color: #c6dfd0;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.area-jogo.sem-jogo .jogo-moldura,
+.area-jogo.sem-jogo .barra-jogo {
+    display: none;
+}
+
+.area-jogo.sem-jogo .aviso-celular {
+    display: block;
+}
+
 </style>
 </head>
 <body>
@@ -1085,7 +1208,7 @@ footer p {
             <a href="#curiosidades">Curiosidades</a>
             <a href="#codigos">Códigos</a>
             <a href="#documentacao">Documentação</a>
-            <a href="#tutorial">Tutorial</a>
+            <a href="#tutorial">Tutorial e Vídeos</a>
             <a href="#desenvolvedores">Desenvolvedores</a>
         </nav>
     </header>
@@ -1117,20 +1240,40 @@ footer p {
 
     <div class="jogo-moldura" id="jogo-moldura">
         <iframe id="jogo-frame"
-    src="jogo html/index.html"
+    data-src="jogo html/index.html"
     title="Turing's Code"
     allowfullscreen
     allow="autoplay; fullscreen; gamepad"
     scrolling="no"></iframe>
 
-        <button type="button" class="btn-sair-tela-cheia" id="btn-sair-tela-cheia">
-            Diminuir tela
+        <button type="button" class="btn-sair-tela-cheia" id="btn-sair-tela-cheia"
+                title="Diminuir tela" aria-label="Diminuir tela">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="square">
+                <path d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5"/>
+            </svg>
         </button>
     </div>
 
-    <button class="botao-descricao" id="btn-tela-cheia" type="button">
-        Tela cheia
-    </button>
+    <div class="barra-jogo">
+    <span class="aviso-pc">JOGO RODÁVEL APENAS EM PC OU NOTEBOOK</span>
+
+    <div class="acoes-jogo">
+        <a href="#tutorial" class="botao-descricao" id="btn-tutorial-jogo">Tutorial</a>
+
+        <button class="botao-descricao botao-icone" id="btn-tela-cheia" type="button"
+                title="Tela cheia" aria-label="Tela cheia">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="square">
+                <path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/>
+            </svg>
+        </button>
+    </div>
+</div>
+<div class="aviso-celular">
+    <h3>Jogo indisponível para celulares</h3>
+    <p>O Turing's Code só roda em PC ou notebook. Acesse este site por um computador para jogar.</p>
+</div>
 </section>
 
     <section>
@@ -1440,36 +1583,20 @@ footer p {
 
         <div class="carrossel-pista">
             <div class="carrossel-slide">
-                <img src="site/IMG-20261028-WA0069.jpg" alt="Código 1"
+                <img src="site/IMG-20261028-WA0079.jpg" alt="Código 1"
                      data-titulo="Código 1" data-descricao="Descreva este código aqui.">
             </div>
             <div class="carrossel-slide">
-                <img src="site/IMG-20261028-WA0070.jpg" alt="Código 2"
+                <img src="site/IMG-20261028-WA0080.jpg" alt="Código 2"
                      data-titulo="Código 2" data-descricao="Descreva este código aqui.">
             </div>
             <div class="carrossel-slide">
-                <img src="site/IMG-20261028-WA0071.jpg" alt="Código 3"
+                <img src="site/IMG-20261028-WA0081.jpg" alt="Código 3"
                      data-titulo="Código 3" data-descricao="Descreva este código aqui.">
             </div>
             <div class="carrossel-slide">
-                <img src="site/IMG-20261028-WA0072.jpg" alt="Código 4"
-                     data-titulo="Código 4" data-descricao="Descreva este código aqui.">
-            </div>
-            <div class="carrossel-slide">
-                <img src="site/IMG-20261028-WA0073.jpg" alt="Código 5"
-                     data-titulo="Código 5" data-descricao="Descreva este código aqui.">
-            </div>
-            <div class="carrossel-slide">
-                <img src="site/IMG-20261028-WA0074.jpg" alt="Código 6"
-                     data-titulo="Código 6" data-descricao="Descreva este código aqui.">
-            </div>
-            <div class="carrossel-slide">
-                <img src="site/IMG-20261028-WA0075.jpg" alt="Código 7"
-                     data-titulo="Código 7" data-descricao="Descreva este código aqui.">
-            </div>
-            <div class="carrossel-slide">
-                <img src="site/IMG-20261028-WA0077.jpg" alt="Código 8"
-                     data-titulo="Código 8" data-descricao="Descreva este código aqui.">
+                <img src="site/image.png" alt="Código 4"
+                     data-titulo="HTML, código do site" data-descricao="Mostra parte da seção (section) onde está hospedado o jogo, e, parte da section história">
             </div>
         </div>
 
@@ -1506,93 +1633,102 @@ footer p {
 <br>
 <br>
 <section id="tutorial">
-    <h2><center>Tutorial</center></h2>
-    <div class="container-tres-colunas">
-  <div class="card-tutorial">
-    <h3>Passo 1</h3>
-    <p>Entre no nosso perfil do GitHub e baixe o zip do arquivo. Ou jogue por aqui mesmo.</p>
-    <br>
-    <p><a href="https://github.com/Turings-Code/Principal" target="_blank" rel="noopener" style="color:#fff;">https://github.com/Turings-Code/Principal</a></p>
-  </div>
+    <h2><center>Tutorial e Vídeos</center></h2>
 
-  <div class="card-tutorial">
-    <h3>Passo 2</h3>
-    <p>Extraia o zip, abra o aquivo jogo.yyp com o Game Maker</p>
-  </div>
+    <div class="tutorial-janela">
+        <div class="tutorial-trilho" id="tutorial-trilho">
+            <div class="tutorial-painel" id="painel-passos">
+                <div class="container-tres-colunas">
+            <div class="card-tutorial">
+                        <h3>Passo 1</h3>
+           <p>Entre no nosso perfil do GitHub e baixe o zip do arquivo. Ou jogue por aqui mesmo.</p>
+                        <br>
+             <p><a href="https://github.com/Turings-Code/Principal" target="_blank" rel="noopener" style="color:#fff;">https://github.com/Turings-Code/Principal</a></p>
+                    </div>
+                    <div class="card-tutorial">
+                        <h3>Passo 2</h3>
+                        <p>Extraia o zip, abra o aquivo jogo.yyp com o Game Maker</p>
+                   </div>
+           <div class="card-tutorial">
+                     <h3>Passo 3</h3>
+                        <p>Observe a história introdutória para assim entender o contexto e os objetivos do jogo</p>
+                    </div>
+                </div>
 
-  <div class="card-tutorial">
-    <h3>Passo 3</h3>
-    <p>Observe a história introdutória para assim entender o contexto e os objetivos do jogo</p>
-  </div>
-</div>
-</section>
-<section>
-     <div class="container-tres-colunas">
-  <div class="card-tutorial">
-    <h3>Passo 4</h3>
-    <p>Após ser teletransportado para a Segunda Guerra Mundial, converse com o Alan Turing para entender uma forma
-    de voltar para a casa.
-    </p>
-  </div>
+                <div class="container-tres-colunas">
+             <div class="card-tutorial">
+                        <h3>Passo 4</h3>
+                     <p>Após ser teletransportado para a Segunda Guerra Mundial, converse com o Alan Turing para entender uma forma de voltar para a casa.</p>
+                 </div>
+                 <div class="card-tutorial">
+                        <h3>Passo 5</h3>
+                        <p>Passe por todas as fases coletando os itens e especialmente as válvulas. Não se esqueça de sempre escutar o Turing </p>
+                    </div>
+         <div class="card-tutorial">
+                        <h3>Passo 6</h3>
+                      <p>Fase 1: Seu objetivo e encontrar a Válvula Beta. Usando o Theo como jogador. </p>
+                  </div>
+                </div>
 
-  <div class="card-tutorial">
-    <h3>Passo 5</h3>
-    <p>Passe por todas as fases coletando os itens e especialmente as válvulas. Não se esqueça de sempre escutar o Turing </p>
-  </div>
+              <div class="container-tres-colunas">
+                    <div class="card-tutorial">
+                        <h3>Passo 7</h3>
+                        <p>Fase 2: Seu objetivo e encontrar a Válvula Alfa. Usando o Alan com jogador.</p>
+                    </div>
+              <div class="card-tutorial">
+                        <h3>Passo 8</h3>
+              <p>Fase 3: Seu objetivo e encontrar a Válvula Mestra. Usando agora Alan e Theo para desvendar o desafio.</p>
+                    </div>
+                    <div class="card-tutorial">
+                     <h3>Passo 9</h3>
+                   <p>Entregue as válvulas para o Turing e volte para a casa.</p>
+                    </div>
+                </div>
+            </div>
 
-  <div class="card-tutorial">
-    <h3>Passo 6</h3>
-    <p>Fase 1: Seu objetivo e encontrar a Válvula Beta. Usando o Theo como jogador. </p>
-  </div>
-</div>
-</section>
-<section>
-     <div class="container-tres-colunas">
-  <div class="card-tutorial">
-    <h3>Passo 7</h3>
-    <p>Fase 2: Seu objetivo e encontrar a Válvula Alfa. Usando o Alan com jogador.</p>
-  </div>
+            <div class="tutorial-painel" id="painel-video">
+                <div class="video-moldura">
+                <video controls preload="metadata">
+                 <source src="site/fullgame_commusica.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+              </div>
+            </div>
 
-  <div class="card-tutorial">
-    <h3>Passo 8</h3>
-    <p>Fase 3: Seu objetivo e encontrar a Válvula Mestra. Usando agora Alan e Theo para desvendar o desafio.</p>
-  </div>
+            <div class="tutorial-painel" id="painel-trailer">
+                <div class="video-moldura">
+                <video controls preload="metadata">
+                 <source src="site/video-mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+              </div>
+            </div>
 
-  <div class="card-tutorial">
-    <h3>Passo 9</h3>
-    <p>Entregue as válvulas para o Turing e volte para a casa.</p>
-  </div>
-</div>
-</section>
-<section>
+        </div>
+    </div>
+
     <div class="container-tres-colunas">
         <div class="card-tutorial">
-            <h3>Dicas</h3>
-            <p>Para melhor compreensão do jogo, leia a história, veja nossas documentações e informações presentes aqui no site.</p>
-            <br>
+           <h3>Dicas</h3>
+        <p>Para melhor compreensão do jogo, leia a história, veja nossas documentações e informações presentes aqui no site.</p>
+      <br>
             <p>Para contato direto conosco envie um email para:
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=turingscodecontato@gmail.com&su=Contato%20-%20Turing's%20Code"
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=turingscodecontato@gmail.com&su=Contato%20-%20Turing's%20Code"
                    target="_blank" rel="noopener" class="link-contato">turingscodecontato@gmail.com</a>
-            </p>
+      </p>
         </div>
     </div>
 </section>
-<section>
-
-</section>
 <div class="botoes-descricao">
+    <a href="#jogo" class="botao-descricao">Jogo</a>
 
-    <a href="#jogo" class="botao-descricao">
-        Jogo
-    </a>
+    <a href="https://github.com/Turings-Code/Principal" target="_blank" class="botao-descricao">Repositório</a>
 
-    <a href="https://github.com/Turings-Code/Principal" target="_blank" class="botao-descricao">
-        Repositório
-    </a>
+    <a href="#tutorial" class="botao-descricao" id="btn-tutorial">Tutorial</a>
 
-    <a href="#" target="_blank" class="botao-descricao">
-        Vídeo
-    </a>
+    <a href="#tutorial" class="botao-descricao" id="btn-video">Vídeo</a>
+
+    <a href="#tutorial" class="botao-descricao" id="btn-trailer">Trailer</a>
 
 </div>
 <br><br>
@@ -1606,7 +1742,7 @@ footer p {
     
     <div class="card-dev">
       <img src="site/IMG-20261031-WA0006.jpg" alt="Desenvolvedor 1" class="foto-bolinha">
-      <h3>Rodrido Makoto</h3>
+      <h3>Rodrigo Makoto</h3>
       <span class="cargo">Líder</span>
       <p>Responsável pelo o monitoramento do grupo e do jogo, organizou o decorrer do projeto ao longo do ano e ajudou bastante na produção das sprites e cenários.</p>
     </div>
@@ -1901,6 +2037,47 @@ jogoFrame.addEventListener('load', () => {
         
     }
 });
+
+const trilho = document.getElementById('tutorial-trilho');
+const paineis = [
+    document.getElementById('painel-passos'),
+    document.getElementById('painel-video'),
+    document.getElementById('painel-trailer')
+];
+
+function mostrarPainel(indice) {
+    trilho.classList.toggle('mostrando-video', indice === 1);
+    trilho.classList.toggle('mostrando-trailer', indice === 2);
+
+    paineis.forEach((painel, i) => {
+        painel.inert = (i !== indice);
+
+        if (i !== indice) {
+            const v = painel.querySelector('video');
+            if (v) v.pause();
+        }
+    });
+}
+
+mostrarPainel(0);
+
+document.getElementById('btn-tutorial').addEventListener('click', () => mostrarPainel(0));
+document.getElementById('btn-video').addEventListener('click', () => mostrarPainel(1));
+document.getElementById('btn-trailer').addEventListener('click', () => mostrarPainel(2));
+document.getElementById('btn-tutorial-jogo').addEventListener('click', () => mostrarPainel(0));
+
+const areaJogo = document.getElementById('jogo');
+
+const ehCelular =
+    /Android|iPhone|iPod|Mobi/i.test(navigator.userAgent) ||
+    (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1) ||
+    window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+if (ehCelular) {
+    areaJogo.classList.add('sem-jogo');
+} else {
+    jogoFrame.src = jogoFrame.dataset.src;
+}
 </script>
 </body>
 </html>
