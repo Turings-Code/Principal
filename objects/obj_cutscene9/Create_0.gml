@@ -1,7 +1,7 @@
 if(!instance_exists(obj_alan)){
 	instance_create_layer(500, 500, "Instances", obj_alan);
 }
-depth = -60000;
+
 cam_zoom_vel = 0.03;
 cam_vel = 0.08;
 global.valvulaalfa=true;
@@ -55,7 +55,7 @@ dialogos_final2 = [
     { nome: "Turing", frase: "Minha máquina está pronta! Finalmente posso vê-la com todas peças!" },
     { nome: "Turing", frase: "Obrigado garotos, vocês foram de grande ajuda até aqui." },
     { nome: "Alan", frase: "Nós já podemos voltar ao presente?" },
-    { nome: "Turing", frase: "Vou ligar a máquina e daqui alguns segundos vocês devem voltar a sua linha do tempo." },
+    { nome: "Turing", frase: "Vou ligar a máquina e daqui alguns segundos vocês devem voltar." },
 ];
 
 dialogo_final3 = false;
@@ -64,7 +64,7 @@ dialogos_final3 = [
     { nome: "Turing", frase: "Por vezes, são as pessoas de quem ninguém imagina nada," },
     { nome: "Turing", frase: "que fazem as coisas que ninguém sequer imagina!" },
 ];
-
+foisom=false;
 turing_indo = false;
 turing_destino_x = 2134;
 turing_destino_y = 1147;

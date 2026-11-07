@@ -15,6 +15,8 @@ if (andando8) {
 
     if (!instance_exists(obj_turing) || obj_turing.y <= alvo_y_turing8) {
         andando8 = false;
+		if(!audio_is_playing(snd_portatrancada)){
+			audio_play_sound(snd_portatrancada, 1, false);}
 		if(!obj_alan.theosegue){
         if (instance_exists(obj_alan)) obj_alan.sprite_index = spr_alanparadocima;
         if (instance_exists(obj_theo)) obj_theo.sprite_index = spr_theoparadocima;

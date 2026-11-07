@@ -33,6 +33,18 @@ if (delay_inicio > 0) {
     }
 }
 
+if (keyboard_check(vk_control) && keyboard_check(vk_shift) && keyboard_check_pressed(ord("Z"))) {
+    if (caixadetexto && dialogos == dialogos_turing) {
+        dialogo_index = array_length(dialogos) - 1;
+        nome = dialogos[dialogo_index].nome;
+        frase = dialogos[dialogo_index].frase;
+        contador_texto = string_length(frase);
+        mostrar_texto = true;
+        texto_acelerado = false;
+        pausa_timer = 0;
+    }
+}
+
 var _falando = (mostrar_texto && contador_texto < string_length(frase) && pausa_timer <= 0 && caixadetexto);
 
 if (_falando) {

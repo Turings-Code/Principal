@@ -222,6 +222,19 @@ var _my3 = min(y + 3, 2330) - y;
 if (!place_meeting(x + _mx3, y + _my3, obj_alan)) {
     x += _mx3;
     y += _my3;
+    preso_cont = 0;
+} else if (!place_meeting(x, y + _my3, obj_alan)) {
+    y += _my3;
+    preso_cont = 0;
+} else if (!place_meeting(x + _mx3, y, obj_alan)) {
+    x += _mx3;
+    preso_cont = 0;
+} else {
+    preso_cont++;
+    if (preso_cont >= 30) {
+        x += _mx3;
+        y += _my3;
+    }
 }
 
         if (y >= 2330) {

@@ -32,4 +32,5 @@ if (obj_folhacodigos.image_index == 12) {
         { texto: "- Descriptografe os códigos (3/3)", feita: true },
         "- Coloque os códigos no baú"
     ]);
-}}
+}} else{
+	}

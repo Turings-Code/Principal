@@ -1,3 +1,9 @@
+if (aviso_ativo) {
+    aviso_y += aviso_vel;
+    aviso_alpha -= aviso_fade;
+    if (aviso_alpha <= 0) aviso_ativo = false;
+}
+
 if (delay > 0) delay--;
 
 if (fading_out) {
@@ -25,16 +31,19 @@ if (!fading_out && delay <= 0) {
     }
 
     if (_frame == 2 && mouse_check_button_pressed(mb_left)) {
+    if (os_browser != browser_not_a_browser) {
+        audio_play_sound(snd_inventario, 1, false);
+        aviso_ativo = true;
+        aviso_y = 0;
+        aviso_alpha = 0.9;
+    } else {
         scr_salvar();
-        room_goto(rm_menu);
+        game_end();
     }
-	    if (_frame == 1 && mouse_check_button_pressed(mb_left)) {
-        fading_out = true;
-    }
+}
 
-    if (_frame == 3 && mouse_check_button_pressed(mb_left)) {
-		scr_salvar();
-        room_goto(rm_menu);
+    if (_frame == 1 && mouse_check_button_pressed(mb_left)) {
+        fading_out = true;
     }
 
     var _fechar = point_in_rectangle(_gx, _gy, area_fechar[0], area_fechar[1], area_fechar[2], area_fechar[3]);

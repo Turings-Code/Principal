@@ -154,6 +154,6 @@ if (_area_mouse != -1 || (delay <= 0 && !fading_out && _na_area)) {
     obj_cursormouse.mao = true;
 }
 
-if(!flagsla&&sprite_index=spr_enigma1){
+if(!flagsla&&sprite_index=spr_enigma3){
 	flagsla=true;
 	audio_play_sound(snd_plugboard, 1, false);}

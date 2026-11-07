@@ -8,8 +8,8 @@
   "name":"obj_hut8",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Interface",
+    "path":"folders/Sprites/Interface.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -4,7 +4,7 @@ if(!instance_exists(obj_alan)){
 obj_alan.travado = true;
 obj_alan.theosegue = false;
 
-depth = -60000;
+
 cam_zoom_vel = 0.03;
 cam_vel = 0.08;
 

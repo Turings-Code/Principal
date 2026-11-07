@@ -11,7 +11,7 @@
   "option_windows_description_info":"A GameMaker Game",
   "option_windows_disable_sandbox":false,
   "option_windows_display_cursor":true,
-  "option_windows_display_name":"Jogo",
+  "option_windows_display_name":"Turing's Code Projeto",
   "option_windows_enable_steam":false,
   "option_windows_executable_name":"new_blank.exe",
   "option_windows_icon":"${options_dir}/windows/icons/icon.ico",

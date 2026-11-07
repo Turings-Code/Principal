@@ -21,6 +21,7 @@ if (estado == 0) {
     }
 }
 percebeu=true;
+audio_play_sound(snd_percebeu, 1, false);
     }
 }
 if (instance_exists(npc_alvo)) {

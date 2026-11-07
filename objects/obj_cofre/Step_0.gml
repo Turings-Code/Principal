@@ -35,6 +35,7 @@ for (var i = 0; i < array_length(areas_cofre); i++) {
 }
 
 if (_area_mouse != -1 && delay <= 0 && !fading_out && mouse_check_button_pressed(mb_left)) {
+	audio_play_sound(snd_cadeadoclick, 1, false);
     var _par = _area_mouse div 2;
 
     if (_area_mouse mod 2 == 0) {

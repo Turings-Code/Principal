@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_blockobjetive",
   "parent":{
-    "name":"Bleatchley",
-    "path":"folders/Sounds/Efeitos sonoros/Bleatchley.yy",
+    "name":"Geral",
+    "path":"folders/Sounds/Efeitos sonoros/Geral.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -70,6 +70,8 @@ for (var i = 0; i < array_length(cabos_conectados); i++) {
 
 if (_todos_conectados && !conclusao_ativada) {
     conclusao_ativada = true;
+	if(!audio_is_playing(snd_voltaluz)){
+		audio_play_sound(snd_voltaluz, 1, false);}
     fading_out = true;
 	
 

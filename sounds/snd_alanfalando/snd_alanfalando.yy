@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_alanfalando",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Geral",
+    "path":"folders/Sounds/Efeitos sonoros/Geral.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

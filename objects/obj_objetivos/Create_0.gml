@@ -1,4 +1,4 @@
-depth = -40000;
+
 texto = "";
 alpha = 0;
 fade_speed = 0.03;

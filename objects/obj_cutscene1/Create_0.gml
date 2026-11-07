@@ -1,7 +1,7 @@
 alarm[0] = 300;
 maeentra = false;
 acao1 = true;
-depth = -20000;
+
 cam_zoom_vel = 0.03;
 
 contador_texto = 0;

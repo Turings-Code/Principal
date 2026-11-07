@@ -18,6 +18,10 @@ if (instance_exists(obj_cofre)) {
 }
 
 if (solto && !parado) {
+    if (!destrancou) {
+        audio_play_sound(snd_cadeadocaindo, 1, false);
+        destrancou = true;
+    }
     image_angle = lerp(image_angle, giro_alvo, giro_vel);
     queda_vel += queda_grav;
     y += queda_vel;

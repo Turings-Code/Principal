@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_natureza",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Bleatchley",
+    "path":"folders/Sounds/Efeitos sonoros/Bleatchley.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

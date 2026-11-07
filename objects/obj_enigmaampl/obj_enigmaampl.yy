@@ -11,8 +11,8 @@
   "name":"obj_enigmaampl",
   "overriddenProperties":[],
   "parent":{
-    "name":"Hut 8",
-    "path":"folders/Objetos/Hut 8.yy",
+    "name":"Comandos",
+    "path":"folders/Objetos/Comandos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

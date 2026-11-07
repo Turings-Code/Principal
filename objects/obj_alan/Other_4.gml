@@ -1,3 +1,4 @@
+
 global.t_room = current_time;
 var _spawn = obj_trocaroom.usar_spawn;
 

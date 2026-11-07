@@ -30,6 +30,7 @@ var _area = obj_caixadeenergia.areas_conectores[_destino];
 
     if (point_in_rectangle(_mx, _my, _area[0], _area[1], _area[2], _area[3])) {
     conectado = true;
+    audio_play_sound(snd_choque, 1, false);
 
     ponta_x = _cx + ((_area[0] + _area[2]) / 2) * _w / _gw;
     ponta_y = _cy + ((_area[1] + _area[3]) / 2) * _h / _gh;

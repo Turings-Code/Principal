@@ -1,4 +1,4 @@
-depth=-20001
+
 ativo = false;
 numero_npc = 0;
 caixadetexto = false;

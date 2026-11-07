@@ -11,10 +11,11 @@ if (dialogo_index < array_length(dialogos)) {
 } else {
 	if(dialogos!=dialogos_final){
 		if (instance_exists(obj_inventario)) {
+			if(!global.folhasenigma){
             obj_inventario.nome_item = "Folhas do Enigma";
             obj_inventario.ganhouitem = true;
 			global.folhasenigma=true;
-			audio_play_sound(snd_itemnovo, 1, false);
+			audio_play_sound(snd_itemnovo, 1, false);}
         }}
     caixadetexto = false;
     mostrar_texto = false;

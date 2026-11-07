@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.4555101,
+  "duration":1.8960091,
   "exportDir":"",
   "name":"snd_quebrando",
   "parent":{
@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_quebrando.mp3",
-  "volume":1.0,
+  "volume":0.21,
 }

@@ -29,6 +29,8 @@ if(tipo_dialogo==7){
 		obj_portasalafinal.abrir=true;
 		if(instance_exists(obj_falaturingmansao2)){
 			with(obj_falaturingmansao2){instance_destroy();}}
+			if(!audio_is_playing(snd_portafinal)){
+			audio_play_sound(snd_portafinal, 1, false);}
 		obj_objetivos.define_objetivo("OBJETIVO - Volte para Chamar o Alan");
         obj_objetivos.define_etapas([]);
 		if(instance_exists(obj_falaalanmansao)){
@@ -38,6 +40,10 @@ if(tipo_dialogo==7){
 		}
 		
     if (tipo_dialogo==1) {
+		if(audio_is_playing(snd_backgroundmisterio)){
+		audio_stop_sound(snd_backgroundmisterio);}
+		if(!audio_is_playing(snd_backgroundmisterio2)){
+		audio_play_sound(snd_backgroundmisterio2, 1, true);}
         obj_objetivos.define_objetivo("OBJETIVO - Abra a Sala da Bombe");
         obj_objetivos.define_etapas([
             "- Religue a Energia da Porta",

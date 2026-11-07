@@ -18,11 +18,16 @@ if(room==rm_hut6){
 	global.valvulabeta = false;
 }
 if(room==rm_hut8){
+	global.folhasenigma=false;
+	global.valvulaalfa=false;
+}
+if(room==rm_mansao){
 	global.fragmento1=false;
 	global.fragmento2=false;
 	global.fragmento3=false;
 	global.chavecinza=false;
 	global.foifalaturing=false;
 	global.valvulamestra=false;
+	global.theojogando=false;
 }
 room_restart();

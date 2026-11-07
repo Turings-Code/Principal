@@ -57,7 +57,10 @@ var _y = _vy + 485 * camera_get_view_height(_cam) / display_get_gui_height();
 
 with (obj_rotatorbase) instance_destroy();
 with (obj_radio) instance_destroy();
-
+if (!audio_is_playing(snd_makotoradio)) {
+    var _s = audio_play_sound(snd_makotoradio, 1, false);
+    audio_sound_set_track_position(_s, 1);
+}
 instance_create_depth(0, 0, _rd, obj_radiofundo);
 instance_create_depth(0, 0, _rd - 2, obj_radiotampa);
 instance_create_depth(_x, _y, _rd - 1, obj_valvulabeta);
