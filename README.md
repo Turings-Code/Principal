@@ -1,15 +1,14 @@
 
 <div align="center">
-  <img src="site/logomeioamarela (2).png" alt="Turing's Code Logo" width="300">
+  <img src="site/logomeioamarela (2).png" alt="Turing's Code Logo" width="700">
 
   
-  **Decifre o passado. Desvende os códigos.**
   
 
 </div>
 
 ---
-**Perfil de membro com conta suspensa sem justificativa:** [@daniluzzzz2](https://github.com/daniluzzzz2)
+**Perfil secundário de membro com conta suspensa sem justificativa:** [@daniluzzzz2](https://github.com/daniluzzzz2)
 ## Sobre o jogo
 
 **Turing's Code** é um jogo de puzzles que envolve a história com matérias do nosso curso de Desenvolvimento de Sistemas, inspirado na história de Alan Turing e no trabalho de decifração de códigos realizado durante a Segunda Guerra Mundial.
@@ -32,11 +31,11 @@ O projeto foi desenvolvido por cinco integrantes, cada um contribuindo em difere
 
 | Integrante | Responsabilidades |
 |:---|:---|
+| **Rodrigo Makoto Gonçalves Kanezuka** | Arte e Desenvolvimento do Site |
 | **Daniel Shoji Cornejo Fujita** | Programação e Arte |
+| **Thainá Bezerra Lima** | Documentação e Desenvolvimento do Site |
 | **Maria Eduarda Oliveira** | Desenvolvimento do Site |
 | **Maysa Vieira da Silva** | Arte |
-| **Rodrigo Makoto Gonçalves Kanezuka** | Arte e Desenvolvimento do Site |
-| **Thainá Bezerra Lima** | Documentação e Desenvolvimento do Site |
 
 ## Tecnologias e ferramentas
 
