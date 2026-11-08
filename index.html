@@ -722,6 +722,7 @@ footer p {
     }
 
     @media (max-width: 1700px) {
+
     .menu-icone {
         display: block;
         color: white;
@@ -739,8 +740,10 @@ footer p {
         right: 3%;
         left: auto;
         width: 240px;
-        overflow-y: scroll;
-        overflow-x: hidden;
+        overflow-y: auto;
+        overflow-x: auto;
+        scrollbar-width: auto;
+        scrollbar-color: #aaa #3e3c26;
         overscroll-behavior: contain;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -750,18 +753,41 @@ footer p {
         border: 3px solid #3e3c26;
         border-radius: 10px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        scrollbar-width: thin;
+        scrollbar-color: #aaa #3e3c26;
     }
+
+    nav::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    nav::-webkit-scrollbar-track {
+        background: #3e3c26;
+        border-radius: 8px;
+    }
+
+    nav::-webkit-scrollbar-thumb {
+        background: #aaa;
+        border-radius: 8px;
+    }
+
+    nav::-webkit-scrollbar-thumb:hover {
+        background: #ddd;
+    }
+
     nav a {
-    flex-shrink: 0;
-    text-align: center;
-    padding: 12px;
-}
-    
+        flex-shrink: 0;
+        text-align: center;
+        padding: 12px;
+    }
 
     #menu-toggle:checked ~ nav {
         display: flex;
     }
+
 }
+
+
 .cenario img,
 .personagem img,
 .card-horizontal img,
@@ -1102,10 +1128,12 @@ footer p {
     max-width: 1100px;
     margin: 0 auto;
     overflow: hidden;
+    transition: height 0.6s ease;
 }
 
 .tutorial-trilho {
     display: flex;
+    align-items: flex-start;
     transition: transform 0.6s ease;
 }
 
@@ -1868,16 +1896,30 @@ footer p {
 
     <script>
     const menu = document.getElementById('menu-toggle');
-
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', () => menu.checked = false);
+const nav = document.querySelector('header nav');
+menu.addEventListener('change', () => {
+    if (menu.checked) {
+        nav.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    } else {
+        nav.style.display = '';
+        document.body.style.overflow = '';
+    }
+});
+nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        menu.checked = false;
+        nav.style.display = '';
+        document.body.style.overflow = '';
     });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('header')) {
-            menu.checked = false;
-        }
-    });
+});
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('header') && menu.checked) {
+        menu.checked = false;
+        nav.style.display = '';
+        document.body.style.overflow = '';
+    }
+});
 
     const lightbox = document.getElementById('lightbox');
     const lbImg = document.getElementById('lightbox-img');
@@ -2043,6 +2085,12 @@ const paineis = [
     document.getElementById('painel-trailer')
 ];
 
+const tutorialJanela = document.querySelector('.tutorial-janela');
+
+function ajustarAlturaTutorial(indice) {
+    tutorialJanela.style.height = paineis[indice].scrollHeight + 'px';
+}
+
 function mostrarPainel(indice) {
     trilho.classList.toggle('mostrando-video', indice === 1);
     trilho.classList.toggle('mostrando-trailer', indice === 2);
@@ -2055,7 +2103,19 @@ function mostrarPainel(indice) {
             if (v) v.pause();
         }
     });
+
+    ajustarAlturaTutorial(indice);
 }
+
+window.addEventListener('resize', () => {
+    const indice = trilho.classList.contains('mostrando-video')
+        ? 1
+        : trilho.classList.contains('mostrando-trailer')
+            ? 2
+            : 0;
+
+    ajustarAlturaTutorial(indice);
+});
 
 mostrarPainel(0);
 
