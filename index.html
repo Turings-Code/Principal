@@ -732,30 +732,31 @@ footer p {
     }
 
     nav {
-        display: none;
-        position: fixed;
-        top: 110px;
-        max-height: calc(100vh - 130px);
-        max-height: calc(100dvh - 130px);
-        right: 3%;
-        left: auto;
-        width: 240px;
-        overflow-y: auto;
-        overflow-x: auto;
-        scrollbar-width: auto;
-        scrollbar-color: #aaa #3e3c26;
-        overscroll-behavior: contain;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        gap: 6px;
-        padding: 12px;
-        background: #4F4E32;
-        border: 3px solid #3e3c26;
-        border-radius: 10px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-        scrollbar-width: thin;
-        scrollbar-color: #aaa #3e3c26;
-    }
+    display: none;
+    position: fixed;
+    top: 110px;
+    right: 3%;
+    left: auto;
+    width: 240px;
+    height: 320px;
+    height: min(320px, calc(100dvh - 130px));
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    overscroll-behavior: contain;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 6px;
+    padding: 12px;
+    background: #4F4E32;
+    border: 3px solid #3e3c26;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    scrollbar-width: thin;
+    scrollbar-color: #aaa #3e3c26;
+}
 
     nav::-webkit-scrollbar {
         width: 8px;
