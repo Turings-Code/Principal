@@ -12,9 +12,9 @@
     box-sizing: border-box;
     }
 
-    html {
-    scroll-behavior: smooth;
-    }
+  html {
+      scroll-behavior: smooth;
+  }
 
         body {
         background-color: #1a1a1a;
@@ -76,9 +76,36 @@ nav a:hover {
     color: #4F4E32;
 }
 
-#menu-toggle,
+input[id^="menu-toggle"],
 .menu-icone {
     display: none;
+}
+
+.menu-icone {
+    width: 42px;
+    height: 38px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    color: transparent;
+    border: 2px solid #3e3c26;
+    border-radius: 5px;
+    background: #b7d99b;
+}
+
+.menu-icone::before {
+    content: "";
+    width: 22px;
+    height: 16px;
+    background: linear-gradient(
+        to bottom,
+        #203b29 0 3px,
+        transparent 3px 7px,
+        #203b29 7px 10px,
+        transparent 10px 13px,
+        #203b29 13px 16px
+    );
 }
 
     .titulo {
@@ -92,8 +119,8 @@ nav a:hover {
         margin-top: 15px;
     }
 
-    .descricao {
-        width: 90%;
+  .descricao {
+      width: 90%;
         max-width: 1100px;
         margin: 50px auto 40px;
         padding: 35px;
@@ -724,9 +751,9 @@ footer p {
     @media (max-width: 1700px) {
 
     .menu-icone {
-        display: block;
-        color: white;
-        font-size: 32px;
+        display: flex;
+        color: transparent;
+        font-size: 0;
         cursor: pointer;
         user-select: none;
     }
@@ -782,7 +809,14 @@ footer p {
         padding: 12px;
     }
 
-    #menu-toggle:checked ~ nav {
+    .pagina .menu-icone {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pagina input[id^="menu-toggle"]:checked ~ nav {
         display: flex;
     }
 
@@ -1034,6 +1068,16 @@ footer p {
     }
 }
 
+@media (max-width: 1700px) {
+    .pagina [id^="menu-toggle"]:checked ~ nav {
+        display: flex;
+    }
+
+    .pagina-2 #menu-toggle-2:checked ~ nav {
+        display: flex;
+    }
+}
+
 #btn-documentos {
     font-size: 16px;
     padding: 15px 35px;
@@ -1216,17 +1260,451 @@ footer p {
     display: block;
 }
 
+html,
+body {
+    width: 100%;
+    overflow-x: clip;
+}
+
+.paginas-trilho {
+    display: flex;
+    width: 200%;
+    align-items: flex-start;
+}
+
+.pagina {
+    flex: 0 0 50%;
+    width: 50%;
+    min-width: 0;
+    min-height: 100vh;
+    align-self: flex-start;
+}
+
+body.mostrar-segunda .paginas-trilho {
+    transform: translateX(-50%);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.pagina-2 {
+    background-color: #1a1a1a;
+    background-image: url('site/fundo2.jpeg');
+    background-repeat: repeat-y;
+    background-position: center top;
+    background-size: 100% auto;
+}
+
+.pagina-2 h1,
+.pagina-2 h2,
+.pagina-2 h3 {
+    color: #f1f5e9;
+}
+
+.pagina-2 header {
+    background: #315b3b;
+    border-bottom-color: #1e4029;
+}
+
+.pagina-2 nav {
+    background-color: #315b3b;
+    border-color: #1e4029;
+}
+
+.pagina-2 .menu-icone {
+    background: #b5d69b;
+    border-color: #1e4029;
+}
+
+.pagina-2 .menu-icone::before {
+    background: linear-gradient(
+        to bottom,
+        #203b29 0 3px,
+        transparent 3px 7px,
+        #203b29 7px 10px,
+        transparent 10px 13px,
+        #203b29 13px 16px
+    );
+}
+
+.pagina-2 nav a {
+    color: #ffffff;
+    border-color: #1e4029;
+}
+
+.pagina-2 nav a:hover {
+    background: #b5d69b;
+    color: #203b29;
+}
+
+.pagina-2 .descricao,
+.pagina-2 .div-grande,
+.pagina-2 .area-jogo {
+    background: #315b3b;
+    border-color: #1e4029;
+}
+
+.pagina-2 .descricao p,
+.pagina-2 .div-grande p,
+.pagina-2 .area-jogo p {
+    color: #e0f0df;
+}
+
+.pagina-2 .personagem,
+.pagina-2 .cenario {
+    background: #315b3b;
+    border-color: #1e4029;
+}
+
+.pagina-2 .personagem p,
+.pagina-2 .cenario p {
+    color: #e0f0df;
+}
+
+.pagina-2 .cenario:hover {
+    box-shadow: 0 0 15px #9acb87;
+}
+
+.pagina-2 .botao-descricao {
+    background: #b5d69b;
+    color: #203b29;
+    border-color: #1e4029;
+}
+
+.pagina-2 .botao-descricao:hover {
+    background: #203b29;
+    color: #d9edc9;
+    box-shadow: 0 0 12px #9acb87;
+}
+
+.pagina-2 .card-tutorial {
+    background: #315b3b;
+    border-color: #1e4029;
+}
+
+.pagina-2 .card-tutorial p {
+    color: #e0f0df;
+}
+
+.pagina-2 .card-dev {
+    background: #315b3b;
+    border-color: #1e4029;
+}
+
+.pagina-2 .card-dev .cargo {
+    color: #b5d69b;
+}
+
+.pagina-2 .card-dev p {
+    color: #e0f0df;
+}
+
+.pagina-2 .foto-bolinha {
+    border-color: #b5d69b;
+}
+
+.pagina-2 .carrossel {
+    background: #315b3b;
+    border-color: #1e4029;
+}
+
+.pagina-2 .carrossel-btn {
+    background: #315b3b;
+    border-color: #1e4029;
+    color: white;
+}
+
+.pagina-2 .carrossel-btn:hover {
+    background: #b5d69b;
+    color: #203b29;
+}
+
+.pagina-2 .painel-docs-caixa,
+.painel-docs-pagina-2 .painel-docs-caixa,
+.pagina-2 .lightbox-info {
+    background: #315b3b;
+    border-color: #1e4029;
+}
+
+.pagina-2 .doc-item,
+.painel-docs-pagina-2 .doc-item {
+    background: #203b29;
+    border-color: #1e4029;
+}
+
+.pagina-2 .doc-item:hover,
+.painel-docs-pagina-2 .doc-item:hover {
+    background: #b5d69b;
+    color: #203b29;
+}
+
+.pagina-2 .doc-texto small,
+.painel-docs-pagina-2 .doc-texto small {
+    color: #d0e5ce;
+}
+
+
+.pagina-2 .aviso-celular {
+    background: #203b29;
+    border-color: #1e4029;
+}
+
+.pagina-2 .aviso-celular h3 {
+    color: #b5d69b;
+}
+
+.pagina-2 .aviso-celular p,
+.pagina-2 .aviso-pc {
+    color: #e0f0df;
+}
+.pagina-2 .link-contato {
+    color: #b5d69b;
+}
+
+.pagina-2 .link-contato:hover {
+    color: white;
+}
+.pagina-2 footer {
+    background: #203b29;
+    border-top-color: #1e4029;
+    color: white;
+}
+
+.pagina-2 footer p {
+    color: #d0e5ce;
+}
+
+.pagina-2 .botao-trocar-pagina {
+    background: #b5d69b;
+    color: #203b29;
+    border-color: #1e4029;
+}
+
+.pagina-2 .botao-trocar-pagina:hover {
+    background: #203b29;
+    color: #b5d69b;
+}
+
+.botao-trocar-pagina {
+    width: 42px;
+    height: 42px;
+    background: #fdf570;
+    color: #3e3c26;
+    border: 3px solid #3e3c26;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-trocar-pagina:hover {
+    background: #3e3c26;
+    color: #fdf570;
+    transform: scale(1.08);
+}
+
+.pagina-2 .btn-sair-tela-cheia {
+    background: rgba(32, 59, 41, 0.95);
+    color: #b5d69b;
+    border-color: #1e4029;
+}
+
+.pagina-2 .btn-sair-tela-cheia:hover {
+    background: #b5d69b;
+    color: #203b29;
+}
+
+.pagina-2 [id] {
+    scroll-margin-top: 155px;
+}
+
+.pagina-2 .cenarios {
+    scroll-margin-top: 165px;
+}
+
+.paginas-trilho {
+    align-items: flex-start;
+    transition: transform 0.5s ease, height 0.3s ease;
+
+    
+    overflow-x: visible;
+    overflow-y: clip;
+}
+
+.pagina {
+    align-self: flex-start;
+    position: relative;
+}
+
+.pagina > header + section {
+    margin-top: 100px;
+}
+
+.pagina header {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+.pagina header nav {
+    z-index: 10001;
+}
+
+input[id^="menu-toggle"] {
+    display: none !important;
+    appearance: none;
+}
+
+.pagina-1 > header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.pagina-1 [id] {
+    scroll-margin-top: 155px;
+}
+
+.pagina-1 .cenarios {
+    scroll-margin-top: 165px;
+}
+
+
+.pagina-2 .titulo {
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+.pagina-2 .titulo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 1700px) {
+    .pagina-2 > header {
+        position: sticky;
+        top: 0;
+        z-index: 10000;
+        overflow: visible;
+    }
+
+    .pagina-2 > header nav {
+        position: absolute;
+        top: 100%;
+        right: 3%;
+        left: auto;
+        z-index: 10001;
+    }
+}
+.pagina-1 .menu-icone {
+    background: #fdf570;
+    border-color: #3e3c26;
+}
+
+.pagina-1 .menu-icone::before {
+    background: linear-gradient(
+        to bottom,
+        #3e3c26 0 3px,
+        transparent 3px 7px,
+        #3e3c26 7px 10px,
+        transparent 10px 13px,
+        #3e3c26 13px 16px
+    );
+}
+.pagina-2 .menu-icone {
+    background: #b5d69b;
+    border-color: #1e4029;
+}
+.pagina-2 .menu-icone::before {
+    background: linear-gradient(
+        to bottom,
+        #203b29 0 3px,
+        transparent 3px 7px,
+        #203b29 7px 10px,
+        transparent 10px 13px,
+        #203b29 13px 16px
+    );
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 20000;
+    box-sizing: border-box;
+}
+.lightbox-conteudo {
+    width: min(100%, 1300px);
+    max-height: calc(100dvh - 40px);
+    align-items: center;
+    justify-content: center;
+}
+.lightbox-conteudo img {
+    display: block;
+    flex: 1 1 0;
+    width: auto;
+    height: auto;
+    max-width: min(100%, calc(100vw - 390px));
+    max-height: calc(100dvh - 40px);
+    object-fit: contain;
+}
+.lightbox-pagina-2 .lightbox-info {
+    background: #315b3b;
+    border-color: #1e4029;
+}
+.lightbox-pagina-2 .lightbox-info p {
+    color: #e0f0df;
+}
+@media (max-width: 800px) {
+    .lightbox-conteudo {
+        flex-direction: column;
+        width: 100%;
+        max-height: calc(100dvh - 30px);
+        overflow-y: auto;
+    }
+    .lightbox-conteudo img {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 100%;
+        max-height: 55dvh;
+    }
+    .lightbox-info {
+        flex: 0 0 auto;
+        width: 100%;
+        max-height: 30dvh;
+        box-sizing: border-box;
+    }
+}
+
 </style>
 </head>
 <body>
+    <div class="paginas-trilho" id="paginas-trilho">
+
+    <div class="pagina pagina-1">
 
     <header>
-        <div class="logo-header">
-            <img src="site/logo.png" alt="Turing's Code">
-        </div>
+        <div class="logo-area">
+
+    <div class="logo-header">
+        <img src="site/logo.png" alt="Turing's Code">
+    </div>
+
+    <button type="button" class="botao-trocar-pagina"
+            aria-label="Ir para a próxima página">
+        ⇄
+    </button>
+
+</div>
 
         <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icone">☰</label>
+        <label for="menu-toggle" class="menu-icone" aria-label="Abrir menu">☰</label>
 
         <nav>
             <a href="#home">Home</a>
@@ -1633,6 +2111,7 @@ footer p {
         <div class="carrossel-pontos"></div>
     </div>
 </section>
+</section>
 
 <section >
     
@@ -1646,7 +2125,7 @@ footer p {
         A introdução do material estabelece a motivação de integrar a tecnologia dos jogos eletrônicos à educação, 
         transformando os discentes em agentes ativos no desenvolvimento de ferramentas didáticas que dialogam com conteúdos escolares.</p>
         <br>
-        <p>O documento do projeto do site do jogo Lógica de Turing, funciona formalmente como uma especificação técnica e estrutural 
+        <p>O documento do projeto do site do jogo Turing's Code, funciona formalmente como uma especificação técnica e estrutural 
             em normas ANBT, voltada para a criação da apresentação do jogo. Ele foi estruturado de
             maneira organizada para guiar todo o planeamento, desenvolvimento e suporte da página web 
             oficial associada ao projeto.</p>
@@ -1717,7 +2196,7 @@ footer p {
             <div class="tutorial-painel" id="painel-video">
                 <div class="video-moldura">
                 <video controls preload="metadata">
-                 <source src="site/fullgame_commusica.mp4" type="video/mp4">
+                 <source src="site/videodojogoinsano.mp4" type="video/mp4">
                         Seu navegador não suporta vídeo.
                     </video>
               </div>
@@ -1756,7 +2235,6 @@ footer p {
 
     <a href="#tutorial" class="botao-descricao" id="btn-video">Vídeo</a>
 
-    <a href="#tutorial" class="botao-descricao" id="btn-trailer">Trailer</a>
 
 </div>
 <br><br>
@@ -1861,7 +2339,7 @@ footer p {
         <h3 id="painel-docs-titulo">Documentos do projeto</h3>
 
         <div class="lista-docs">
-            <a class="doc-item" href="Documentação/Historia do jogo (2).PDF .PDF" target="_blank" rel="noopener">
+            <a class="doc-item" href="Documentação/Historia do jogo.PDF" target="_blank" rel="noopener">
                 <span class="doc-icone">📄</span>
                 <span class="doc-texto">
                     <strong>História</strong>
@@ -1869,7 +2347,7 @@ footer p {
                 </span>
             </a>
 
-            <a class="doc-item" href="Documentação/storyboard.pdf" target="_blank" rel="noopener">
+            <a class="doc-item" href="Documentação/StoryBoard.PDF" target="_blank" rel="noopener">
                 <span class="doc-icone">📄</span>
                 <span class="doc-texto">
                     <strong>StoryBoard</strong>
@@ -1877,7 +2355,7 @@ footer p {
                 </span>
             </a>
 
-            <a class="doc-item" href="Documentação/SITE DO JOGO.PDF" target="_blank" rel="noopener">
+            <a class="doc-item" href="Documentação/Site do jogo.PDF" target="_blank" rel="noopener">
                 <span class="doc-icone">📄</span>
                 <span class="doc-texto">
                     <strong>Site</strong>
@@ -1885,7 +2363,7 @@ footer p {
                 </span>
             </a>
 
-            <a class="doc-item" href="Documentação/PROJETO JOGO real.PDF" target="_blank" rel="noopener">
+            <a class="doc-item" href="Documentação/Projeto do jogo .PDF" target="_blank" rel="noopener">
                 <span class="doc-icone">📄</span>
                 <span class="doc-texto">
                     <strong>Projeto</strong>
@@ -1895,51 +2373,566 @@ footer p {
         </div>
     </div>
 </div>
+</div>
+ <div class="pagina pagina-2">
+    <header>
+        <div class="logo-area">
+
+    <div class="logo-header">
+        <img src="site/logo.png" alt="Turing's Code">
+    </div>
+
+    <button type="button" class="botao-trocar-pagina"
+            aria-label="Ir para a próxima página">
+        ⇄
+    </button>
+
+</div>
+
+        <input type="checkbox" id="menu-toggle-2">
+        <label for="menu-toggle-2" class="menu-icone" aria-label="Abrir menu">☰</label>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#historia">História</a>
+            <a href="#cenarios">Cenários</a>
+            <a href="#documentacao">Documentação</a>
+            <a href="#tutorial">Tutorial e Vídeos</a>
+            <a href="#desenvolvedores">Desenvolvedores</a>
+        </nav>
+    </header>
+
+   
+
+    <section class="titulo" id="home">
+        <img src="site/spr_logo2.png">
+    </section>
+
+    
+    <section class="descricao" id="codigo">
+        <h2>Sobre o projeto:</h2>
+
+        <p>
+            Turing' s Code 2 é um jogo digital educativo de gênero Puzzle desenvolvido por nós, 
+            estudantes do 1 ano do Ensino Técnico Integrado em Desenvolvimento de Sistemas do IFSP 
+            (Campus São Paulo). O projeto tem como objetivo principal conectar a aprendizagem técnica 
+            à cultura de jogos eletrônicos (Game-Based Learning), direcionando-se a jovens do ensino médio
+            e jovens adultos. Utilizando o motor gráfico GameMaker e uma direção de arte inspirada em 
+            pixel-art,  a narrativa e as mecânicas do jogo resgatam o contexto histórico de atualmente 
+            com a importância do passado no futuro.
+        </p>
+    </section>
+
+    <section class="area-jogo" id="jogo">
+    <h2>Turing's Code 2</h2>
+
+    <div class="jogo-moldura" id="jogo-moldura">
+        <iframe id="jogo-frame"
+    data-src="jogo html/index.html"
+    title="Turing's Code"
+    allowfullscreen
+    allow="autoplay; fullscreen; gamepad"
+    scrolling="no"></iframe>
+
+        <button type="button" class="btn-sair-tela-cheia" id="btn-sair-tela-cheia"
+                title="Diminuir tela" aria-label="Diminuir tela">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="square">
+                <path d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="barra-jogo">
+    <span class="aviso-pc">JOGO RODÁVEL APENAS EM PC OU NOTEBOOK</span>
+
+    <div class="acoes-jogo">
+        <a href="#tutorial" class="botao-descricao" id="btn-tutorial-jogo">Tutorial</a>
+
+        <button class="botao-descricao botao-icone" id="btn-tela-cheia" type="button"
+                title="Tela cheia" aria-label="Tela cheia">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="square">
+                <path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/>
+            </svg>
+        </button>
+    </div>
+</div>
+<div class="aviso-celular">
+    <h3>Jogo indisponível para celulares</h3>
+    <p>O Turing's Code só roda em PC ou notebook. Acesse este site por um computador para jogar.</p>
+</div>
+</section>
+
+    <section>
+    <div class="div-grande" id="historia">
+    <h2>História</h2>
+    <p> O que aconteceria se o passado decidisse visitar o futuro? Em Turing's Code 2, uma continuação de Turing' s Code, a aventura 
+        começa de forma inesperada quando um salto temporal provocado pela máquina Bombe  traz o próprio Alan Turing direto para a cozinha 
+        de Alan e Theo no século XXI. Porém, a presença do cientista no futuro causa uma mudança na tecnologia, fazendo com que o mundo
+        moderno comece a perder sua tecnologia, deixando equipamentos modernos bugados. </p>
+    <br>
+    <p>   
+       ​Para salvar a linha do tempo e garantir que o futuro continue existindo, os garotos precisam embarcar em uma jornada 
+       noturna até a histórica mansão de Bletchley Park. A aventura desenrola-se em três missões principais repletas de quebra-cabeças 
+       lógicos e desafios educacionais. Após conseguirem entrar em Bletchley Park, Turing encontra a clássica máquina Enigma 
+       protegida por uma caixa de vidro, digitando a chave que reativa o portal de retorno à sua época de origem: "A única máquina 
+       do tempo confiável é a lógica humana."
+    </p>
+    <br>
+    <p>
+        ​Com o retorno bem-sucedido de Turing ao passado, o presente se estabiliza e a alta tecnologia 
+        volta a funcionar nas ruas — bem a tempo de Alan e Théo fugirem das luzes de sirene e compreenderem 
+        a grande lição da jornada: sem o passado, o presente simplesmente não existe.
+    </p>
+    </div>
+    </section>
+
+<section class="cenarios" id="cenarios">
+    <h2>Cenários do jogo</h2>
+
+    <div class="lista-cenarios">
+
+        <div class="cenario">
+            <img src="site/casacompleta.jpeg" alt="Interior do edifício">
+            <h3>Casa do Alan</h3>
+            <p>Retratado em um estilo detalhado de pixel art, o ambiente 
+            exibe uma aconchegante integração entre a sala de estar e a cozinha. 
+            O piso quadriculado em preto e branco contrasta com os móveis modernos e a bancada 
+            equipada com eletrodomésticos. Exatamente neste cenário doméstico e familiar que 
+            o contraste  do jogo ganha vida. Enquanto Alan e Théo vão à procura de algo para comer, 
+            a rotina  do século XXI é  interrompida. Os circuitos de comutação temporal da máquina 
+            Bombe rompem a linha do tempo, fazendo com que o próprio Alan Turing surja de repente no meio do cômodo.
+            </p>
+        </div>
+
+        <div class="cenario">
+            <img src="site/IMG-20261025-WA0005.jpg" alt="Interior da área de investigação">
+            <h3>Ônibus (Noite)</h3>
+            <p>Retrata um espaço que está predendo a tecnológia, onde a iluminação moderna deu lugar 
+                a lâmpadas oscilantes e a catraca parou de funcionarnormalmente. As fileiras organizadas 
+                de bancos rígidos dispostos em pares, barras de apoio amarelas e, próximo à área de desembarque,
+                 uma catraca mecânica complexa e enferrujada que se tornou o grande obstáculo da missão. E 
+                 necessário para destravar a catraca para descer no ponto de Bletchley Park. </p>
+        </div>
+
+        <div class="cenario">
+            <img src="site/mansaoforaportao.jpeg" alt="Interior da área de investigação">
+            <h3>Portão da Bletchley Park</h3>
+            <p>Uma fachada do complexo sob a escuridão da noite, 
+                cercada por extensos gramados escuros e muros encimados 
+                por grades de ferro. Destacando uma rua e na parte inferior que conduz a um portão central trancado. 
+                Aos lados, flanqueando a entrada, estruturas arquitetônicas sóbrias — incluindo uma cabine técnica à esquerda com 
+                uma porta aberta e fiações visíveis que conectam-se ao sistema de energia, e um edifício anexo à direita com 
+                janelas e portas totalmente apagadas. Esse ambiente com um breu profundo transmite uma forte atmosfera de suspense, 
+                isolamento e mistério, servindo como o palco ideal onde os personagens precisam resolver o enigma da conversão de
+                decimal para binário para restabelecer a energia e conseguir acessar o interior do complexo histórico.</p>
+        </div>
+
+        
+    </div>
+    
+</section>
+    <section class="cenarios">
+         <div class="lista-cenarios">
+        
+        <div class="cenario">
+            <img src="site/salaentrada2.png" alt="Rua da cidade">
+            <h3>Sala de energia do portão</h3>
+            <p>O espaço é caracterizado por paredes em tons esverdeados e um piso cinzento escuro,
+                 ao fundo, temos grandes armários metálicos de aço para ferramentas ou documentos; 
+                 à direita, uma cadeira giratória e um painel de controle elétrico vertical repleto 
+                 de botões, é  aqui que Alan Turing assume o controle para solucionar desafios de conversão
+                  numérica de decimal para binário, restabelecendo o fluxo elétrico de toda a instalação e
+                   destravando o acesso ao complexo.</p>
+        </div>
+        
+        
+        <div class="cenario">
+            <img src="site/mansaocompleta2.jpeg" alt="Rua da cidade">
+            <h3>Interior da mansão nova</h3>
+            <p>Uma planta baixa completa da mansão histórica transformada em museu. Exibindo um saguão de entrada espaçoso 
+                com escadarias e plantas decorativas na base, conectando-se a um complexo 
+                labirinto de corredores centrais acarpetados e múltiplos cômodos interligados.
+                ​Cada sala funciona como uma ala temática do museu, equipada com estantes de livros em madeira,
+                mesas de estudo repletas de documentos e artefatos, exibições históricas e áreas de estar com
+                sofás e poltronas.  Navegando pela as salas até encontrar sala da Enigma.</p>
+        </div>
+
+        <div class="cenario">
+            <img src="site/salafinal2.jpeg" alt="Interior do edifício">
+            <h3>Sala final nova</h3>
+            <p>Um ambiente amplo, climatizado e de aspecto museológico situado no interior da mansão 
+                de Bletchley Park. O piso cinzento e as divisórias organizam o espaço em seções expositivas isoladas 
+                por cordas de isolamento vermevlhas com suportes metálicos, criando um ar de galeria histórica e de alta segurança. 
+​No meio da sala temos protegida por uma pesada caixa de vidro sobre um pedestal de madeira, 
+repousa a autêntica máquina Enigma, aguardando o Alan Turing, a máquina e digita a célebre chave que
+ reativa o portal temporal para retornar à sua época: "A única máquina do tempo confiável é a lógica humana."
+            </p>
+        </div>
+
+        
+    </div>
+    </section>
+<section >
+    
+    <div class="div-grande" id="documentacao">
+
+    <h2>Documentação</h2>
+    <p>O documento de projeto do jogo Turing's Code 2, 
+        funciona formalmente como um Game Design Document (GDD), utilizando normas ABNT para o seu desenvolvimento.
+        Ele foi estruturado de maneira acadêmica e modular com o propósito de guiar a criação de um jogo educativo do gênero Puzzle Adventure,
+        fundamentado na abordagem de Game-Based Learning para o público de jovens do ensino médio e  adultos.
+        A introdução do material estabelece a motivação de integrar a tecnologia dos jogos eletrônicos à educação, 
+        transformando os discentes em agentes ativos no desenvolvimento de ferramentas didáticas que dialogam com conteúdos escolares.</p>
+        <br>
+        <p>O documento do projeto do site do jogo Turing's Code 2, funciona formalmente como uma especificação técnica e estrutural 
+            em normas ANBT, voltada para a criação da apresentação do jogo. Ele foi estruturado de
+            maneira organizada para guiar todo o planeamento, desenvolvimento e suporte da página web 
+            oficial associada ao projeto.</p>
+    </div>
+    </section>
+
+<div class="botoes-descricao">
+    <button type="button" class="botao-descricao" id="btn-documentos">
+        Documentação
+    </button>
+</div>
+<br>
+<br>
+<section id="tutorial">
+    <h2><center>Tutorial e Vídeos</center></h2>
+
+    <div class="tutorial-janela">
+        <div class="tutorial-trilho" id="tutorial-trilho">
+            <div class="tutorial-painel" id="painel-passos">
+                <div class="container-tres-colunas">
+            <div class="card-tutorial">
+                        <h3>Passo 1</h3>
+           <p>Jogue aqui nesse site, sem download, ou entre no nosso repositório e baixe o zip.</p>
+                        <br>
+             <p><a href="https://github.com/Turings-Code/Principal" target="_blank" rel="noopener" style="color:#fff;">https://github.com/Turings-Code/Principal</a></p>
+                    </div>
+                    <div class="card-tutorial">
+                        <h3>Passo 2</h3>
+                        <p>Se for baixar o jogo, extraia o zip e abra o aquivo jogo.yyp com o Game Maker (Precisa ter Instalado).</p>
+                   </div>
+           <div class="card-tutorial">
+                     <h3>Passo 3</h3>
+                        <p>Observe a história introdutória para assim entender o contexto e os objetivos do jogo.</p>
+                    </div>
+                </div>
+
+                <div class="container-tres-colunas">
+             <div class="card-tutorial">
+                        <h3>Passo 4</h3>
+                     <p>Não se esqueça que tem o Turing's Code antes desse, fica nesse site, basta explorar ele...</p>
+                 </div>
+                 <div class="card-tutorial">
+                        <h3>Passo 5</h3>
+                        <p>Dicas: Passe por todas as fases coletando os itens e ajudando o turing. Não se esqueça de sempre ver suas falas.</p>
+                    </div>
+         <div class="card-tutorial">
+                        <h3>Passo 6</h3>
+                      <p>Fase 1: Seu objetivo é concertar a máquina de bilhete do ônibus, ajude Turing nessa. </p>
+                  </div>
+                </div>
+
+              <div class="container-tres-colunas">
+                    <div class="card-tutorial">
+                        <h3>Passo 7</h3>
+                        <p>Fase 2: Seu objetivo é abrir o portão da Bletchley para acessar seu interior.</p>
+                    </div>
+              <div class="card-tutorial">
+                        <h3>Passo 8</h3>
+              <p>Fase 3: Seu objetivo é quebrar a segurança, muito cuidado com isso...</p>
+                    </div>
+                    <div class="card-tutorial">
+                     <h3>Passo 9</h3>
+                   <p>Leve Turing ao Enigma, e volte para a casa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-painel" id="painel-video">
+                <div class="video-moldura">
+                <video controls preload="metadata">
+                 <source src="site/video jogo 2.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+              </div>
+            </div>
+
+            <div class="tutorial-painel" id="painel-trailer">
+                <div class="video-moldura">
+                <video controls preload="metadata">
+                 <source src="site/video jogo 2.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+              </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-tres-colunas">
+        <div class="card-tutorial">
+           <h3>Dicas</h3>
+        <p>Para melhor compreensão do jogo, leia a história, veja nossas documentações e informações presentes aqui no site.</p>
+      <br>
+            <p>Para contato direto conosco envie um email para:
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=turingscodecontato@gmail.com&su=Contato%20-%20Turing's%20Code"
+                   target="_blank" rel="noopener" class="link-contato">turingscodecontato@gmail.com</a>
+      </p>
+        </div>
+    </div>
+</section>
+<div class="botoes-descricao">
+    <a href="#jogo" class="botao-descricao">Jogo</a>
+
+    <a href="https://github.com/Turings-Code/Principal" target="_blank" class="botao-descricao">Repositório</a>
+
+    <a href="#tutorial" class="botao-descricao" id="btn-tutorial">Tutorial</a>
+
+    <a href="#tutorial" class="botao-descricao" id="btn-video">Vídeo</a>
+
+
+</div>
+<br><br>
+
+
+<section id="desenvolvedores">
+<div class="equipe-container">
+  <h2><center>Desenvolvedores</center></h2>
+
+  <div class="linha-desenvolvedores">
+    
+    <div class="card-dev">
+      <img src="site/IMG-20261031-WA0006.jpg" alt="Desenvolvedor 1" class="foto-bolinha">
+      <h3>Rodrigo Makoto</h3>
+      <span class="cargo">Líder</span>
+      <p>Responsável pelo o monitoramento do grupo e do jogo, organizou o decorrer do projeto ao longo do ano e ajudou bastante na produção das sprites e cenários.</p>
+    </div>
+
+    <div class="card-dev">
+      <img src="site/IMG_20260405_163012_511.jpg" alt="Desenvolvedor 2" class="foto-bolinha">
+      <h3>Thainá B.Lima</h3>
+      <span class="cargo">Roterista e documentalista</span>
+      <p>Desenvolveu a história do jogo e documentou todo o decorrer do projeto.</p>
+    </div>
+
+    <div class="card-dev">
+      <img src="site/IMG-20251215-WA0005.jpg" alt="Desenvolvedor 3" class="foto-bolinha">
+      <h3>Daniel Shoji</h3>
+      <span class="cargo">Programador e Artista</span>
+      <p>Programou o jogo através do GameMaker e criou a arte visual, cenários e efeitos de iluminação, criando as sprites inteiramente a mão.</p>
+    </div>
+
+  </div>
+
+
+  <div class="linha-desenvolvedores">
+
+    <div class="card-dev">
+      <img src="site/IMG-20261031-WA0026.jpg" alt="Desenvolvedor 4" class="foto-bolinha">
+      <h3>Maysa Vieira</h3>
+      <span class="cargo">Artista</span>
+      <p>Criou a arte visual dos personagens e as suas caracteristicas.</p>
+    </div>
+
+    <div class="card-dev">
+      <img src="site/IMG-20261031-WA0021.jpg" alt="Desenvolvedor 5" class="foto-bolinha">
+      <h3>Maria Eduarda</h3>
+      <span class="cargo">Web designer</span>
+      <p>Desenvolveu o site, sua estrutura e design visual para a apresentação do jogo.</p>
+    </div>
+
+  </div>
+
+</div>
+</section>
+<section>
+
+
+    <section class="descricao" >
+        <h2>Agradecimentos</h2>
+
+        <p>
+            Agradecemos a todos os professores que ajudaram no desenvolever do jogo.
+        </p>
+        <p>
+            Especialmente a professora Miyuki que fez tornar esse projeto real e direciona-ló ao longo do curso;
+        </p>
+        <p>
+            A Ana Mamede por nos ajudar a desenvolver todo a parte do site e tornar a apresentação real ao público;
+        </p>
+        <p>
+            E ao Luk que já aposentado quando ainda estava dando aula tirou da gente muitas rizadas e aprendizados.
+        </p> 
+    <p>Agradecemos também a presença de todos que assistiram a nossa apresentação! E lembre-se:</p>
+        <p>" Ás vezes, são as pessoas que ninguém espera nada, que fazem as coisas que ninguém consegue imaginar".</p>
+    </section>
+</section>
+
+   <footer>
+    <h3>© 2026 Turing's Code</h3>
+    <p>Todos os direitos reservados. Projeto desenvolvido por estudantes do IFSP, Campus São Paulo.</p>
+    <p>Contato:
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=turingscodecontato@gmail.com&su=Contato%20-%20Turing's%20Code"
+           target="_blank" rel="noopener" class="link-contato">turingscodecontato@gmail.com</a>
+    </p>
+</footer>
+
+    <div id="lightbox" class="lightbox">
+    <button class="lightbox-fechar" aria-label="Fechar">&times;</button>
+    <div class="lightbox-conteudo">
+        <img id="lightbox-img" src="" alt="">
+        <div class="lightbox-info">
+            <h3 id="lightbox-titulo"></h3>
+            <p id="lightbox-texto"></p>
+        </div>
+    </div>
+</div>
+
+<div id="painel-docs" class="painel-docs" role="dialog" aria-modal="true" aria-labelledby="painel-docs-titulo">
+    <div class="painel-docs-caixa">
+        <button type="button" class="painel-docs-fechar" aria-label="Fechar">&times;</button>
+        <h3 id="painel-docs-titulo">Documentos do projeto</h3>
+
+        <div class="lista-docs">
+            <a class="doc-item" href="Documentação/Historia do jogo 2.PDF" target="_blank" rel="noopener">
+                <span class="doc-icone">📄</span>
+                <span class="doc-texto">
+                    <strong>História</strong>
+                    <small>Roteiro completo da história do nosso jogo parte 2.</small>
+                </span>
+            </a>
+
+            <a class="doc-item" href="Documentação/Site do jogo 2.PDF" target="_blank" rel="noopener">
+                <span class="doc-icone">📄</span>
+                <span class="doc-texto">
+                    <strong>Site</strong>
+                    <small>Tudo sobre o site documentado.</small>
+                </span>
+            </a>
+
+            <a class="doc-item" href="Documentação/Projeto do jogo 2.PDF" target="_blank" rel="noopener">
+                <span class="doc-icone">📄</span>
+                <span class="doc-texto">
+                    <strong>Projeto</strong>
+                    <small>Documento de todo nosso projeto.</small>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+
+ </div>
+    </div>
 
     <script>
-    const menu = document.getElementById('menu-toggle');
-const nav = document.querySelector('header nav');
-menu.addEventListener('change', () => {
-    if (menu.checked) {
-        nav.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    } else {
-        nav.style.display = '';
-        document.body.style.overflow = '';
-    }
-});
-nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        menu.checked = false;
-        nav.style.display = '';
-        document.body.style.overflow = '';
-    });
-});
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('header') && menu.checked) {
-        menu.checked = false;
-        nav.style.display = '';
-        document.body.style.overflow = '';
-    }
-});
+    let bloqueioAtivo = false;
 
-    const lightbox = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightbox-img');
-    const lbTitulo = document.getElementById('lightbox-titulo');
-    const lbTexto = document.getElementById('lightbox-texto');
-    const lbInfo = document.querySelector('.lightbox-info');
+    function atualizarBloqueio() {
+        bloqueioAtivo = Boolean(document.querySelector(
+            '.lightbox.aberto, .painel-docs.aberto, .pagina [id^="menu-toggle"]:checked'
+        ));
+    }
+
+    function bloquearRolagemForaDoMenu(evento) {
+        if (!bloqueioAtivo) return;
+        if (evento.target.closest && evento.target.closest('header nav')) return;
+        evento.preventDefault();
+    }
+
+    document.addEventListener('wheel', bloquearRolagemForaDoMenu, { passive: false });
+    document.addEventListener('touchmove', bloquearRolagemForaDoMenu, { passive: false });
+
+document.querySelectorAll('.pagina').forEach((pagina) => {
+
+    const menu = pagina.querySelector(
+    'input[type="checkbox"][id^="menu-toggle"]'
+);
+    const nav = pagina.querySelector('header nav');
+
+    if (menu && nav) {
+
+        menu.addEventListener('change', () => {
+            atualizarBloqueio();
+        });
+
+        pagina.addEventListener('click', (e) => {
+            if (!e.target.closest('header') && menu.checked) {
+                menu.checked = false;
+                atualizarBloqueio();
+            }
+        });
+
+        pagina.querySelectorAll('a[href^="#"]').forEach((link) => {
+            link.addEventListener('click', (e) => {
+
+                const destino = link.getAttribute('href');
+                const alvo = pagina.querySelector(destino);
+
+                if (!alvo) return;
+
+                e.preventDefault();
+
+                if (menu) {
+                    menu.checked = false;
+                }
+
+                atualizarBloqueio();
+
+                if (link.id === 'btn-tutorial' ||
+                    link.id === 'btn-tutorial-jogo') {
+                    mostrarPainel(0, pagina);
+                }
+
+                if (link.id === 'btn-video') {
+                    mostrarPainel(1, pagina);
+                }
+
+
+                alvo.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    }
+
+    const lightbox = pagina.querySelector('.lightbox');
+    if (lightbox) {
+        lightbox.classList.toggle('lightbox-pagina-2', pagina.classList.contains('pagina-2'));
+        document.body.appendChild(lightbox);
+    }
+    const lbImg = lightbox?.querySelector('.lightbox-conteudo img');
+    const lbTitulo = lightbox?.querySelector('.lightbox-info h3');
+    const lbTexto = lightbox?.querySelector('.lightbox-info p');
+    const lbInfo = lightbox?.querySelector('.lightbox-info');
 
     function abrirLightbox(img) {
-        const card = img.closest('.cenario, .personagem, .card-horizontal');
+        if (!lightbox) return;
+
+        const card = img.closest(
+            '.cenario, .personagem, .card-horizontal'
+        );
+
         let titulo = '';
         let texto = '';
 
         if (card) {
             const t = card.querySelector('h2, h3');
             const p = card.querySelector('p');
-            titulo = img.dataset.titulo || (t ? t.textContent.trim() : '');
-            texto = img.dataset.descricao
-                || (p ? p.textContent.replace(/\s+/g, ' ').trim() : '');
+
+            titulo = img.dataset.titulo ||
+                (t ? t.textContent.trim() : '');
+
+            texto = img.dataset.descricao ||
+                (p ? p.textContent.replace(/\s+/g, ' ').trim() : '');
+
         } else {
             titulo = img.dataset.titulo || img.alt;
             texto = img.dataset.descricao || '';
@@ -1947,197 +2940,361 @@ document.addEventListener('click', (e) => {
 
         lbImg.src = img.src;
         lbImg.alt = img.alt;
+
         lbTitulo.textContent = titulo;
         lbTexto.textContent = texto;
+
         lbInfo.style.display = (titulo || texto) ? '' : 'none';
 
         lightbox.classList.add('aberto');
-        document.body.style.overflow = 'hidden';
+        atualizarBloqueio();
     }
 
     function fecharLightbox() {
+        if (!lightbox) return;
+
         lightbox.classList.remove('aberto');
-        document.body.style.overflow = '';
+        atualizarBloqueio();
     }
 
-    document.querySelectorAll(
+    pagina.querySelectorAll(
         '.cenario img, .personagem img, .card-horizontal img, .item-imagem img, .carrossel-slide img'
-    ).forEach(img => {
+    ).forEach((img) => {
         img.addEventListener('click', () => abrirLightbox(img));
     });
 
-    lightbox.addEventListener('click', (e) => {
-        if (!e.target.closest('#lightbox-img, .lightbox-info')) {
-            fecharLightbox();
-        }
-    });
+    if (lightbox) {
 
-    document.querySelector('.lightbox-fechar').addEventListener('click', fecharLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (
+                e.target === lightbox ||
+                e.target.closest('.lightbox-fechar')
+            ) {
+                fecharLightbox();
+            }
+        });
+    }
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') fecharLightbox();
-    });
+    pagina.querySelectorAll('.carrossel').forEach((carrossel) => {
 
-    document.querySelectorAll('.carrossel').forEach(carrossel => {
         const pista = carrossel.querySelector('.carrossel-pista');
         const slides = carrossel.querySelectorAll('.carrossel-slide');
         const pontos = carrossel.querySelector('.carrossel-pontos');
 
+        if (!pista || !pontos || slides.length === 0) return;
+
         slides.forEach((_, i) => {
-            const b = document.createElement('button');
-            b.setAttribute('aria-label', 'Ir para a imagem ' + (i + 1));
-            b.addEventListener('click', () => {
-                pista.scrollTo({ left: pista.clientWidth * i });
+            const botao = document.createElement('button');
+
+            botao.type = 'button';
+            botao.setAttribute(
+                'aria-label',
+                'Ir para a imagem ' + (i + 1)
+            );
+
+            botao.addEventListener('click', () => {
+                pista.scrollTo({
+                    left: pista.clientWidth * i,
+                    behavior: 'smooth'
+                });
             });
-            pontos.appendChild(b);
+
+            pontos.appendChild(botao);
         });
 
-        function atualizar() {
-            const i = Math.round(pista.scrollLeft / pista.clientWidth);
-            pontos.querySelectorAll('button').forEach((b, n) => {
-                b.classList.toggle('ativo', n === i);
+        function atualizarCarrossel() {
+            const i = Math.round(
+                pista.scrollLeft / pista.clientWidth
+            );
+
+            pontos.querySelectorAll('button').forEach((botao, n) => {
+                botao.classList.toggle('ativo', n === i);
             });
         }
 
-        carrossel.querySelector('.anterior').addEventListener('click', () => {
+        const anterior = carrossel.querySelector('.anterior');
+        const proximo = carrossel.querySelector('.proximo');
+
+        anterior?.addEventListener('click', () => {
+
             if (pista.scrollLeft <= 5) {
-                pista.scrollTo({ left: pista.scrollWidth });
+                pista.scrollTo({
+                    left: pista.scrollWidth,
+                    behavior: 'smooth'
+                });
             } else {
-                pista.scrollBy({ left: -pista.clientWidth });
+                pista.scrollBy({
+                    left: -pista.clientWidth,
+                    behavior: 'smooth'
+                });
             }
         });
 
-        carrossel.querySelector('.proximo').addEventListener('click', () => {
-            if (pista.scrollLeft + pista.clientWidth >= pista.scrollWidth - 5) {
-                pista.scrollTo({ left: 0 });
+        proximo?.addEventListener('click', () => {
+            if (
+                pista.scrollLeft + pista.clientWidth >=
+                pista.scrollWidth - 5
+            ) {
+                pista.scrollTo({
+                  left: 0,
+                    behavior: 'smooth'
+                });
             } else {
-                pista.scrollBy({ left: pista.clientWidth });
+                pista.scrollBy({
+                    left: pista.clientWidth,
+                    behavior: 'smooth'
+                });
             }
         });
 
-        pista.addEventListener('scroll', atualizar);
-        atualizar();
-    });
-     const moldura = document.getElementById('jogo-moldura');
+        pista.addEventListener('scroll', atualizarCarrossel);
 
-    document.getElementById('btn-tela-cheia').addEventListener('click', () => {
-        if (moldura.requestFullscreen) {
-            moldura.requestFullscreen();
-        }
+        atualizarCarrossel();
     });
+    const moldura = pagina.querySelector('.jogo-moldura');
+    const jogoFrame = pagina.querySelector('.jogo-moldura iframe');
 
-    document.getElementById('btn-sair-tela-cheia').addEventListener('click', () => {
-        if (document.fullscreenElement) {
-            document.exitFullscreen();
+    const btnTelaCheia = pagina.querySelector('#btn-tela-cheia');
+    const btnSairTelaCheia = pagina.querySelector(
+        '.btn-sair-tela-cheia'
+    );
+    const areaJogo = pagina.querySelector('.area-jogo');
+    if (moldura && jogoFrame) {
+
+        const JOGO_LARGURA = 1366;
+        const JOGO_ALTURA = 768;
+
+        function ajustarMoldura(w, h) {
+            moldura.style.setProperty('--ratio', w + ' / ' + h);
         }
-    });
-    const painelDocs = document.getElementById('painel-docs');
+        ajustarMoldura(JOGO_LARGURA, JOGO_ALTURA);
+
+        jogoFrame.addEventListener('load', () => {
+            try {
+                const canvas = jogoFrame.contentDocument.querySelector('canvas');
+
+                if (canvas && canvas.width && canvas.height) {
+                    ajustarMoldura(canvas.width, canvas.height);
+                }
+            } catch (e) {
+            }
+        });
+
+        btnTelaCheia?.addEventListener('click', async () => {
+           try {
+                if (!document.fullscreenElement) {
+                   await moldura.requestFullscreen();
+                }
+    } catch (e) {
+                console.error('Não foi possível entrar em tela cheia:', e);
+            }
+       });
+
+        btnSairTelaCheia?.addEventListener('click', async () => {
+            if (document.fullscreenElement) {
+                await document.exitFullscreen();
+            }
+        });
+
+        const ehCelular =
+            /Android|iPhone|iPod|Mobi/i.test(navigator.userAgent) ||
+            (/Macintosh/.test(navigator.userAgent) &&
+                navigator.maxTouchPoints > 1) ||
+            window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+        if (ehCelular) {
+            areaJogo?.classList.add('sem-jogo');
+        } else {
+            jogoFrame.src = jogoFrame.dataset.src;
+        }
+    }
+    const painelDocs = pagina.querySelector('.painel-docs');
+    const btnDocumentos = pagina.querySelector('#btn-documentos');
+
+    // Retira o painel do contêiner que desliza entre as páginas.
+    // Assim, o position: fixed ocupa corretamente a tela inteira também na página 2.
+    if (painelDocs) {
+        if (pagina.classList.contains('pagina-2')) {
+            painelDocs.classList.add('painel-docs-pagina-2');
+        }
+        document.body.appendChild(painelDocs);
+    }
 
     function abrirPainelDocs() {
-        painelDocs.classList.add('aberto');
-        document.body.style.overflow = 'hidden';
+        if (!painelDocs) return;
+
+      painelDocs.classList.add('aberto');
+        atualizarBloqueio();
     }
 
     function fecharPainelDocs() {
+        if (!painelDocs) return;
+
         painelDocs.classList.remove('aberto');
-        document.body.style.overflow = '';
+        atualizarBloqueio();
     }
+    btnDocumentos?.addEventListener('click', abrirPainelDocs);
+    painelDocs?.querySelector('.painel-docs-fechar')
+        ?.addEventListener('click', fecharPainelDocs);
 
-    document.getElementById('btn-documentos').addEventListener('click', abrirPainelDocs);
-
-    document.querySelector('.painel-docs-fechar').addEventListener('click', fecharPainelDocs);
-
-    painelDocs.addEventListener('click', (e) => {
-        if (!e.target.closest('.painel-docs-caixa')) {
+    painelDocs?.addEventListener('click', (e) => {
+        if (e.target === painelDocs) {
             fecharPainelDocs();
         }
     });
+    const trilho = pagina.querySelector('.tutorial-trilho');
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') fecharPainelDocs();
+    const paineis = [
+        pagina.querySelector('#painel-passos'),
+        pagina.querySelector('#painel-video'),
+        pagina.querySelector('#painel-trailer')
+    ];
+
+ const tutorialJanela = pagina.querySelector('.tutorial-janela');
+
+ function ajustarAlturaTutorial(indice) {
+        if (!tutorialJanela || !paineis[indice]) return;
+
+        tutorialJanela.style.height =
+            paineis[indice].scrollHeight + 'px';
+ }
+    function mostrarPainel(indice, paginaAtual = pagina) {
+
+        const trilhoAtual = paginaAtual.querySelector('.tutorial-trilho');
+     if (!trilhoAtual) return;
+
+        const paineisAtuais = [
+            paginaAtual.querySelector('#painel-passos'),
+            paginaAtual.querySelector('#painel-video'),
+            paginaAtual.querySelector('#painel-trailer')
+        ];
+        trilhoAtual.classList.toggle(
+            'mostrando-video',
+            indice === 1
+        );
+
+        trilhoAtual.classList.toggle(
+            'mostrando-trailer',
+            indice === 2
+        );
+        paineisAtuais.forEach((painel, i) => {
+            if (!painel) return;
+
+            painel.inert = i !== indice;
+
+            if (i !== indice) {
+                painel.querySelectorAll('video').forEach((video) => {
+                    video.pause();});
+            }
+        });
+        const janela = paginaAtual.querySelector('.tutorial-janela');
+        if (janela && paineisAtuais[indice]) {
+            janela.style.height =
+                paineisAtuais[indice].scrollHeight + 'px';
+        }
+    }
+    pagina.querySelectorAll('#btn-tutorial, #btn-tutorial-jogo')
+        .forEach((botao) => {
+            botao.addEventListener('click', () => {
+                mostrarPainel(0);
+            }); });
+    pagina.querySelector('#btn-video')
+        ?.addEventListener('click', () => mostrarPainel(1));
+
+    pagina.querySelector('#btn-trailer')
+        ?.addEventListener('click', () => mostrarPainel(2));
+    if (trilho) {
+        mostrarPainel(0);
+
+        window.addEventListener('resize', () => {
+            const indice = trilho.classList.contains('mostrando-video')
+                ? 1
+                : trilho.classList.contains('mostrando-trailer')
+                    ? 2
+                    : 0;
+
+            ajustarAlturaTutorial(indice);
+        });
+    }
+
+});
+document.addEventListener('keydown', (e) => {
+
+    if (e.key !== 'Escape') return;
+
+    document.querySelectorAll('.lightbox.aberto').forEach((janela) => {
+        janela.classList.remove('aberto');
     });
-    const JOGO_LARGURA = 1366;  
-const JOGO_ALTURA  = 768;
 
-const jogoFrame = document.getElementById('jogo-frame');
+    document.querySelectorAll('.painel-docs.aberto').forEach((painel) => {
+        painel.classList.remove('aberto');
+    });
+    document.querySelectorAll('.pagina [id^="menu-toggle"]:checked').forEach((menu) => {
+        menu.checked = false;
 
-function ajustarMoldura(w, h) {
-    moldura.style.setProperty('--ratio', w + ' / ' + h);
+        const nav = menu.closest('header')?.querySelector('nav');
+
+    });
+    atualizarBloqueio();
+});
+
+const trilhoPaginas = document.querySelector('.paginas-trilho');
+const paginas = Array.from(document.querySelectorAll('.pagina'));
+
+function obterPaginaAtiva() {
+  return document.body.classList.contains('mostrar-segunda')
+        ? paginas[1]
+      : paginas[0];
 }
 
+function ajustarAlturaPagina() {
+    if (!trilhoPaginas || paginas.length < 2) return;
 
-ajustarMoldura(JOGO_LARGURA, JOGO_ALTURA);
+    const paginaAtiva = obterPaginaAtiva();
+    const alturaConteudo = paginaAtiva.scrollHeight;
+    const alturaVisivel = paginaAtiva.getBoundingClientRect().height;
+    const alturaFinal = Math.ceil(Math.max(alturaConteudo, alturaVisivel));
 
+    trilhoPaginas.style.height = `${alturaFinal}px`;
+}
 
-jogoFrame.addEventListener('load', () => {
-    try {
-        const canvas = jogoFrame.contentDocument.querySelector('canvas');
-        if (canvas && canvas.width && canvas.height) {
-            ajustarMoldura(canvas.width, canvas.height);
-        }
-    } catch (e) {
-        
+function agendarAjusteAltura() {
+  requestAnimationFrame(() => {
+        requestAnimationFrame(ajustarAlturaPagina);
+  });
+}
+const observadorAltura = new ResizeObserver(() => {
+    agendarAjusteAltura();
+});
+
+paginas.forEach(pagina => observadorAltura.observe(pagina));
+document.addEventListener('click', event => {
+    const botao = event.target.closest('.botao-trocar-pagina');
+    if (!botao) return;
+
+    document.body.classList.toggle('mostrar-segunda');
+    agendarAjusteAltura();
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'auto'
+    });
+});
+trilhoPaginas.addEventListener('transitionend', event => {
+    if (event.propertyName === 'transform' || event.propertyName === 'height') {
+        ajustarAlturaPagina();
     }
 });
 
-const trilho = document.getElementById('tutorial-trilho');
-const paineis = [
-    document.getElementById('painel-passos'),
-    document.getElementById('painel-video'),
-    document.getElementById('painel-trailer')
-];
-
-const tutorialJanela = document.querySelector('.tutorial-janela');
-
-function ajustarAlturaTutorial(indice) {
-    tutorialJanela.style.height = paineis[indice].scrollHeight + 'px';
-}
-
-function mostrarPainel(indice) {
-    trilho.classList.toggle('mostrando-video', indice === 1);
-    trilho.classList.toggle('mostrando-trailer', indice === 2);
-
-    paineis.forEach((painel, i) => {
-        painel.inert = (i !== indice);
-
-        if (i !== indice) {
-            const v = painel.querySelector('video');
-            if (v) v.pause();
-        }
-    });
-
-    ajustarAlturaTutorial(indice);
-}
-
-window.addEventListener('resize', () => {
-    const indice = trilho.classList.contains('mostrando-video')
-        ? 1
-        : trilho.classList.contains('mostrando-trailer')
-            ? 2
-            : 0;
-
-    ajustarAlturaTutorial(indice);
+window.addEventListener('resize', agendarAjusteAltura);
+window.addEventListener('load', agendarAjusteAltura);
+document.querySelectorAll('.pagina img').forEach(imagem => {
+    if (!imagem.complete) {
+        imagem.addEventListener('load', agendarAjusteAltura, { once: true });
+    }
 });
 
-mostrarPainel(0);
-
-document.getElementById('btn-tutorial').addEventListener('click', () => mostrarPainel(0));
-document.getElementById('btn-video').addEventListener('click', () => mostrarPainel(1));
-document.getElementById('btn-trailer').addEventListener('click', () => mostrarPainel(2));
-document.getElementById('btn-tutorial-jogo').addEventListener('click', () => mostrarPainel(0));
-
-const areaJogo = document.getElementById('jogo');
-
-const ehCelular =
-    /Android|iPhone|iPod|Mobi/i.test(navigator.userAgent) ||
-    (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1) ||
-    window.matchMedia('(hover: none) and (pointer: coarse)').matches;
-
-if (ehCelular) {
-    areaJogo.classList.add('sem-jogo');
-} else {
-    jogoFrame.src = jogoFrame.dataset.src;
-}
+agendarAjusteAltura();
 </script>
 </body>
 </html>
